@@ -1,0 +1,563 @@
+/* 
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  font-family: Poppins;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+}
+
+/*
+    6. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Styling the aside component */
+aside {
+  position: relative;
+  flex: 1;
+  block-size: auto;
+  /* margin-inline-start: 35px; */
+  min-inline-size: 350px;
+
+  & header img {
+    padding-top: 20px;
+  }
+
+  & h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block-start: 30px;
+  }
+
+  & p {
+    font-size: 13px;
+    font-weight: 400;
+    min-width: 200px;
+    text-wrap: balance;
+
+    & a {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+
+  & .renting-steps {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    margin-block-start: 20px;
+    padding-bottom: 10px;
+
+    & ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      color: #d1cece;
+    }
+
+    & .number-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-self: flex-start;
+      padding: 0;
+      list-style: none;
+
+      & .active,
+      .active-number {
+        color: #000;
+        border: 1px solid var(--blue);
+      }
+
+      & li {
+        position: relative;
+        border: 1px solid #d1cece;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+
+        &.active-number::before,
+        &.active::before {
+          background-color: #007dc1;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 1px;
+          height: 30px;
+          background-color: #d1cece;
+          transform: translateX(-50%);
+        }
+
+        &:last-child::before {
+          content: none;
+        }
+      }
+    }
+
+    /* .active-number + li::before {
+      background-color: #007dc1;
+    } */
+
+    & .text-list {
+      gap: 29px;
+      align-self: self-start;
+      padding: 0;
+      text-align: start;
+
+      & li {
+        font-size: 14px;
+      }
+
+      & .active {
+        color: #000;
+      }
+    }
+  }
+
+  & footer {
+    margin-block-start: 20px;
+
+    & .footer-contact-details {
+      & .footer-contact-img {
+        margin-block-start: 20px;
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+      }
+
+      & .footer-contact-extras {
+        margin-block-end: 30px;
+      }
+    }
+  }
+}
+
+/* Mobile Screen Responsiveness for the Aside element */
+@media (width <= 767px) {
+  aside {
+    margin: 0;
+    overflow: clip;
+    .fix-header {
+      position: fixed;
+      height: 80px;
+      top: 0;
+      left: 0;
+      inline-size: 100%;
+      background-color: var(--white);
+      z-index: 99;
+      padding-inline: 19px;
+    }
+
+    & .line-through {
+      padding: 0;
+      inline-size: 100vw;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-inline-start: -16px;
+    }
+
+    .main-header {
+      padding-top: 60px;
+    }
+    & .renting-steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      margin-block-start: 20px;
+      margin-bottom: 60px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      block-size: 60px;
+
+      & ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        color: #d1cece;
+      }
+
+      & .number-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 80px;
+        width: 86%;
+        align-self: flex-start;
+        padding: 0;
+        list-style: none;
+
+        & .active {
+          color: #000;
+          border: 1px solid #007dc1;
+        }
+
+        & li {
+          position: relative;
+          border: 1px solid #d1cece;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          font-size: 11px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 145px;
+            height: 1px;
+            background-color: #d1cece;
+            transform: translateY(-50%);
+          }
+        }
+        & li:last-child::before {
+          content: none;
+        }
+      }
+
+      & .text-list {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+
+        & li {
+          font-size: 11px;
+        }
+
+        & .active,
+        .active-number {
+          color: #000;
+        }
+      }
+    }
+    .btn {
+      background-color: var(--blue);
+      color: var(--white);
+      font-size: 12px;
+      border-radius: 20px;
+      block-size: 40px;
+      inline-size: 20%;
+    }
+  }
+  .footer {
+    font-size: 14px;
+    text-wrap: balance;
+
+    & .footer-contact-img {
+      gap: 5px;
+      align-items: baseline;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (width <= 587px) {
+  .renting-steps {
+    min-inline-size: 100%;
+  }
+}
+
+@media (width <= 425px) {
+  .renting-steps {
+    padding-inline-end: 10px;
+    & .number-list {
+      min-inline-size: 100%;
+
+      & li:nth-child(2) {
+        margin-inline-start: -63px;
+      }
+
+      & li:nth-child(3) {
+        margin-inline-start: -50px;
+      }
+
+      & li:nth-child(4) {
+        margin-inline-start: -50px;
+      }
+
+      & li:nth-child(5) {
+        margin-inline-start: -50px;
+      }
+    }
+  }
+}
+
+/* Styling the button element */
+.btn {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: var(--white);
+  font-weight: bold;
+  transform: scale(1);
+}
+
+/* Styling the main component footer */
+.main-container-wrapper {
+  flex: 99;
+  background-color: #f9fafb;
+  border-left: 1px solid #e8eaee;
+  padding: 0;
+
+  & .main-header {
+    padding-top: 20px;
+    /* padding-inline-end: 30px; */
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+
+    & p {
+      font-size: 13px;
+      & a {
+        text-decoration: underline;
+        color: #000;
+      }
+    }
+  }
+
+  & .line-through {
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-inline-start: -1px;
+  }
+
+  .main-container {
+    padding-inline: 10px;
+    inline-size: 80%;
+    block-size: 69svh;
+
+    & .form-title {
+      color: var(--black);
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    & .form-container {
+      height: auto;
+      & .form {
+        max-width: 500px;
+        margin: auto;
+      }
+      & .form-group {
+        padding: 0;
+        margin: 0;
+        margin-block-end: 8px;
+
+        & label {
+          color: var(--black);
+          font-size: 12px;
+          font-weight: 500;
+          margin-block-end: 3px;
+        }
+        & input {
+          height: 30px;
+          width: 100%;
+        }
+      }
+      hr {
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+    }
+
+    .form-check {
+      border: 1px solid #ffc0cb;
+      border-radius: 5px;
+      padding-inline: 10px;
+    }
+    .form-check:hover {
+      border: 1px solid var(--blue);
+    }
+  }
+  ::placeholder {
+    color: #bababa;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+/* Styling the Pagination  */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  min-inline-size: 100%;
+  block-size: 5px;
+  background-color: #e0e0e0;
+  position: relative;
+  margin: 20px 0;
+}
+
+.slide {
+  inline-size: 20%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.main-footer {
+  display: flex;
+  align-self: center;
+  width: fit-content;
+  margin-left: auto;
+
+  & .next {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    inline-size: 100px;
+    justify-content: center;
+    margin-block-end: 18px;
+    margin-inline-end: 1.5rem;
+  }
+
+  & .circle-unicode {
+    display: flex;
+    margin-left: auto;
+    margin-right: 30px;
+    inline-size: 100px;
+    justify-content: center;
+    margin-block-end: 18px;
+    border: 1px solid #007dc1;
+    block-size: 39px;
+    inline-size: 39px;
+    border-radius: 50%;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .circle-unicode:hover,
+  .circle-unicode:focus {
+    background-color: #f0f8ff;
+    border-color: #007dc1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    outline: none;
+  }
+
+  .circle-unicode:focus {
+    border-color: #007dc1;
+    outline: none;
+  }
+}
+
+.slide.active {
+  background-color: var(--blue);
+}
+
+/* Mobile Screen Responsiveness for the Main element */
+@media (width <= 767px) {
+  .main-container-wrapper {
+    background-color: var(--white);
+  }
+
+  .form-title {
+    margin-block-start: 20px;
+  }
+}
+
+@media (width <= 500px) {
+  .main-container-wrapper {
+    margin: auto;
+    inline-size: 100%;
+    flex: 1;
+    background-color: var(--white);
+    padding-inline-start: 5px;
+
+    & .main-container {
+      inline-size: 100%;
+      block-size: initial;
+    }
+
+    & .form-container {
+      inline-size: 350px;
+
+      & input {
+        inline-size: 100%;
+      }
+    }
+  }
+}
+
+@media (width <= 350px) {
+  .main-container-wrapper {
+    margin: auto;
+    inline-size: 100%;
+    flex: 1;
+    background-color: var(--white);
+    padding-inline-start: 5px;
+
+    & .main-container {
+      inline-size: 100%;
+    }
+
+    & .form-container {
+      inline-size: 300px;
+
+      & input {
+        inline-size: 100%;
+      }
+    }
+    .next {
+      margin: 0;
+    }
+  }
+}
