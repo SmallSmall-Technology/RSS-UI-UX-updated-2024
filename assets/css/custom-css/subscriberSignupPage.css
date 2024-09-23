@@ -1,0 +1,287 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  font-family: Poppins;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Styling the aside component */
+aside {
+  background-color: #03100d;
+  color: white;
+  background: url(../../images/asidebackground.png);
+  background-repeat: no-repeat;
+  background-size: fill;
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+  position: relative;
+
+  & h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 1em;
+  }
+
+  & .list-wrapper {
+    ul {
+      margin-top: 2rem;
+      margin-inline-start: -2.5rem;
+
+      & li {
+        display: flex;
+        gap: 10px;
+        max-width: 300px;
+        min-width: 200px;
+
+        & h2 {
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        & p {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  & footer {
+    margin-block-start: 90px;
+
+    & .footer-contact-details {
+      margin-block-end: 32px;
+      & .footer-contact-img {
+        margin-block-start: 20px;
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+      }
+
+      & .footer-contact-extras {
+        margin-block-end: 30px;
+      }
+    }
+  }
+}
+
+/* Styling the main component */
+
+.form-wrapper {
+  & .company-logo {
+    margin-block-end: 2rem;
+    margin-block-start: -2rem;
+  }
+  & header {
+    inline-size: fit-content;
+    margin-left: auto;
+  }
+
+  & .form-container {
+    max-width: 600px;
+  }
+
+  & > p {
+    margin-left: auto;
+    margin-block-start: 20px;
+    width: fit-content;
+  }
+
+  & h1 {
+    color: #03100d;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  ::placeholder {
+    color: #bababa;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .form-span {
+    text-align: center;
+  }
+  & .form {
+    & .form-group {
+      position: relative;
+
+      & .far {
+        position: absolute;
+        transform: translateX(50%);
+        top: 62%;
+        left: 90%;
+      }
+      & label {
+        font-size: 12px;
+        font-weight: 500;
+        inline-size: 100%;
+        margin-block-end: -3px;
+        & input {
+          margin-block-start: 5px;
+        }
+      }
+    }
+
+    & .btn {
+      inline-size: 40%;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-block-start: 22px;
+
+      & span {
+        background-color: inherit;
+        font-size: 16px;
+        color: white;
+        font-weight: 500;
+        margin-block-start: 1px;
+      }
+    }
+  }
+  span {
+    color: #03100d;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  & .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+    flex: 1;
+
+    & .dot {
+      inline-size: 6px;
+      block-size: 6px;
+      background-color: #bccbd7;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    & .dot:hover {
+      background-color: #abc2d4;
+    }
+
+    & .dot:active {
+      background-color: #007dc1;
+    }
+  }
+}
+
+/* Styling the main component footer */
+footer {
+  & ul li {
+    font-size: 12px;
+    font-weight: 400;
+    color: #03100d;
+
+    & a {
+      color: #000;
+    }
+  }
+}
+
+/* Mobile Responsiveness */
+@media (width <= 768px) {
+  aside {
+    display: none;
+  }
+
+  .form-wrapper {
+    margin-top: 30px;
+    & .btn {
+      min-inline-size: 100%;
+    }
+    .second-logo {
+      height: 80px;
+      width: 80%;
+      margin: start;
+      margin-block-end: 30px;
+      padding-top: 20px;
+    }
+
+    & header {
+      justify-content: center;
+    }
+  }
+}
