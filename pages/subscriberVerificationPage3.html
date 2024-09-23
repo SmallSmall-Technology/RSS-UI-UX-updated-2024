@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <!-- <link rel="stylesheet" href="../assets/css/custom-css/header.css" /> -->
+    <!-- <link rel="stylesheet" href="../assets/css/custom-css/footer.css" /> -->
+    <link rel="stylesheet" href="../assets/css/custom-css/subscriberVerificationPage3.css" />
+
+    <!-- Script for sticky header -->
+    <script type="text/javascript" src="../assets/js/header.js"></script>
+
+    <title>Subscription Verification</title>
+    <!-- Google poppins font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Aside Section -->
+            <aside class="col-md-3 col-12 px-lg-5 mt-lg-2">
+                <header class="header fix-header">
+                    <a href="./" target="_blank">
+                        <img class="logo-img img-fluid" src="../assets/images/RssLogo.png" alt="Company Logo" />
+                    </a>
+                </header>
+
+                <!-- Notification for Mobile View -->
+                <section class="main-header d-flex mt-4 justify-content-between d-md-none d-block">
+                    <p>
+                        Hi Bright, you are now verifying for
+                        <br />
+                        <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
+                    </p>
+                    <button class="btn">Cancel</button>
+                </section>
+
+                <hr class="d-md-none d-block" />
+
+                <section>
+                    <h1>Let's begin your renting journey</h1>
+                    <p>
+                        This step will guide you to provide important information about yourself to help us verify you.
+                    </p>
+
+                    <!-- Renting Steps -->
+                    <nav class="renting-steps">
+                        <ul class="number-list">
+                            <li class="active-number">1</li>
+                            <li class="active-number">2</li>
+                            <li class="active-number">3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                        <ul class="text-list">
+                            <li class="active">Personal details</li>
+                            <li class="active">Rental history</li>
+                            <li class="active">Employment history</li>
+                            <li>Guarantor's details</li>
+                            <li>Income and ID verify</li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <hr class="line-through d-md-none d-block" />
+
+                <!-- Footer -->
+                <footer class="footer d-md-block d-none">
+                    <section class="footer-contact-details">
+                        <div class="d-flex footer-contact-img">
+                            <span><img src="../assets/images/life-buoy-01.svg" alt="Life Buoy Icon" /></span>
+                            <p>Having any trouble?</p>
+                        </div>
+                        <div class="footer-contact-extras">
+                            <p>
+                                Contact us and we will help
+                                <br />
+                                <span>090 363 39 800</span>
+                            </p>
+                        </div>
+                    </section>
+                    <small class="mt-4" style="font-size: 12px;">&copy;2024 Smallsmall Technology</small>
+                </footer>
+            </aside>
+
+            <!-- Main Section -->
+            <main class="main-container-wrapper col-md-9 col-12">
+                <header class="main-header d-md-block d-none px-lg-5 pt-lg-4">
+                    <p>
+                        Hi Bright, you are now verifying for
+                        <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
+                    </p>
+                    <button class="btn">Cancel</button>
+                </header>
+
+                <!-- Form Section -->
+                <section class="main-container">
+                    <article class="form-container">
+                        <form action="" class="form">
+                            <h1 class="form-title text-start mb-4">Employment history</h1>
+                            <div class="form-group">
+                                <label for="name">Employment status</label>
+                                <select class="form-control" id="employmentStatus" name="employmentStatus" required
+                                    style="font-size: 12px;">
+                                    <option value="">Status</option>
+                                    <option value="employed">Employed</option>
+                                    <option value="self-employed">Self Employed</option>
+                                    <option value="unemployed">Unemployed</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Occupation / Job title</label>
+                                <input type="text" id="income" class="form-control" required placeholder="Job Title" />
+                            </div>
+                            <div class="form-group">
+                                <label for="company-details" class="mb-2">Company name & address</label>
+                                <textarea id="current-details" class="form-control" required
+                                    style="background-color: inherit; padding: 0; margin-top: -7px; height: 100px; overflow-y: scroll;">
+                                </textarea>
+                            </div>
+
+                            <h1 class="form-title">HR / Line Manager's info</h1>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="income" class="form-control" required placeholder="Name" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required placeholder="Email" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="number">Phone number</label>
+                                <input type="tel" pattern="[0-9]*" maxlength="11" id="number" class="form-control"
+                                    required placeholder="Phone" oninput="this.value=this.value.replace(/\D/g,'')" />
+                            </div>
+
+
+                        </form>
+                    </article>
+                </section>
+
+                <!-- Pagination and Continue Button -->
+                <nav class="pagination">
+                    <span class="slide active"></span>
+                    <span class="slide active"></span>
+                    <span class="slide active"></span>
+                    <span class="slide"></span>
+                    <span class="slide"></span>
+                </nav>
+                <div class="main-footer px-lg-4">
+                    <a href=" ./subscriberVerificationPage2.html" style="text-decoration: none;">
+                        <div class="circle-unicode">&#60;</div>
+                    </a>
+                    <a href="./subscriberVerificationPage4.html" style="text-decoration: none;">
+                        <button class="btn next">Continue</button>
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script>
+        const activeElements = document.querySelectorAll('.active-number');
+        activeElements.forEach((li) => {
+            li.innerHTML = '&#10003';
+            li.style.color = '#007dc1';
+        });
+    </script>
+
+    <!-- Jquery js -->
+    <script src="../assets/js/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap js and Popper js -->
+    <script src="../assets/js/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/bootstrap-js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
