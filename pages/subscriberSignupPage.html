@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../assets/css/custom-css/header.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/subscriberSignupPage.css" />
+
+    <!-- Script for sticky header -->
+    <script type="text/javascript" src="../assets/js/header.js"></script>
+
+    <title>Subscriber Signup</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- ASIDE SECTION -->
+            <aside class="col-4 px-lg-5 d-md-block d-none">
+                <!-- Header -->
+                <header class="pt-lg-2">
+                    <a href="#" target="_blank">
+
+                        <img class="logo-img img-fluid" src="../assets/images/rentsmallsmall white 1.png"
+                            alt="company-logo" />
+                    </a>
+                </header>
+                <h1>Get started</h1>
+                <div class="list-wrapper">
+                    <ul>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <div>
+                                <h2>Zero legal & agency Fee</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <div>
+                                <h2>Monthly payment</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <div>
+                                <h2>Vetted Homes</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- footer -->
+                <footer>
+                    <small>&copy;2024 Smallsmall Technology</small>
+                </footer>
+            </aside>
+
+            <!-- MAIN SECTION -->
+            <main class="form-wrapper mx-auto col-md-8 col-12">
+
+                <div class="company-logo d-md-none d-block">
+                    <a href="#" target="_blank">
+                        <img class="logo-img img-fluid second-logo" src="../assets/images/logo.png"
+                            alt="company-logo" />
+                    </a>
+                </div>
+
+                <header class=" d-md-block d-none px-lg-5 pt-lg-4">
+                    <p>
+                        Already have an account? <a href="sign-in" target="_blank">Sign in</a>
+                    </p>
+                </header>
+                <div class="form-container px-lg-5 pt-lg-4">
+                    <h1 class="form-title text-start mb-4">Create your account</h1>
+                    <form action="" class="form">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="firstname">
+                                        Firtsname
+                                        <input type="text" id="firstname" class="form-control" required
+                                            placeholder="Firstname" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="lastname">
+                                        Lastname
+                                        <input type="text" id="lastname" class="form-control" required
+                                            placeholder="Lastname" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email
+                                <input type="email" id="email" class="form-control" required
+                                    placeholder="Email address" />
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone number
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]*" maxlength="10"
+                                    class="form-control" required placeholder="Phone number" />
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">
+                                Create password
+                                <input type="password" id="password" class="form-control" required
+                                    placeholder="Password" />
+                                <i class="far fa-eye-slash toggle-password" style="cursor: pointer">
+                                </i>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">
+                                Confirm password
+                                <input type="password" id="confirmpassword" class="form-control" required
+                                    placeholder="Create Password" />
+                                <i class="far fa-eye-slash toggle-password" style="cursor: pointer">
+                                </i>
+                            </label>
+                        </div>
+                        <div class="d-md-none d-block text-center pt-3">
+                            <span class="form-span d-block mt-3 text-start">By signing up for an account you agree to
+                                our
+                                <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms of
+                                    use</a>
+                            </span>
+                        </div>
+                        <a href="./subscriberSignupPage2.html" target="_blank" style="text-decoration: none;">
+                            <button type="submit" class="btn btn-primary mb-4">Next <span>&gt;</span></button>
+                        </a>
+                    </form>
+                    <div class="d-md-block d-none">
+
+                        <span class="form-span d-block mt-3 text-start">By signing up for an account you agree to our
+                            <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms of
+                                use</a>
+                        </span>
+                    </div>
+                    <div class="d-md-none d-block text-center">
+                        <p>
+                            Already have an account? <a href="sign-in" target="_blank">Sign in</a>
+                        </p>
+                    </div>
+                    <div class="pagination">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="main-footer">
+            <ul class="d-flex list-unstyled d-md-none d-block justify-content-center text-center text-black">
+                <li class="mx-2">
+                    <small>&copy;2024 Smallsmall Technology</small>
+                </li>
+                <li class="mx-2"><a href="about-us" target="_blank">About us</a></li>
+                <li class="mx-2">
+                    <a href="subscription-term" target="_blank">Subscription terms</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    </div>
+
+
+
+    <!-- CUSTOM JavaScript -->
+    <script>
+        // Getting all the password input elements
+        const togglePasswordEls = document.querySelectorAll(".toggle-password");
+
+        // Loop through each toggle password element
+        togglePasswordEls.forEach((togglePasswordEl) => {
+            togglePasswordEl.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const passwordInput = togglePasswordEl.previousElementSibling;
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+
+                // Toggle the eye icon
+                if (togglePasswordEl.classList.contains("fa-eye")) {
+                    togglePasswordEl.classList.remove("fa-eye");
+                    togglePasswordEl.classList.add("fa-eye-slash");
+                } else {
+                    togglePasswordEl.classList.remove("fa-eye-slash");
+                    togglePasswordEl.classList.add("fa-eye");
+                }
+            });
+        });
+
+        // The Phone number input field should only take numbers
+        const phoneInput = document.getElementById("phone");
+
+        phoneInput.addEventListener("input", function (e) {
+            // Replace any non-numeric characters with an empty string
+            phoneInput.value = phoneInput.value.replace(/\D/g, "");
+        });
+
+
+    </script>
+    <script src="../assets/js/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap js and Popper js -->
+    <script src="../assets/js/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/bootstrap-js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
