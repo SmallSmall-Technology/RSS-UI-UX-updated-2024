@@ -1,0 +1,520 @@
+/* 
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  font-family: Poppins;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+}
+
+/*
+    6. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Styling the aside component */
+aside {
+  position: relative;
+  flex: 1;
+  block-size: auto;
+  min-inline-size: 350px;
+
+  & header img {
+    padding-top: 20px;
+  }
+
+  & h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block-start: 30px;
+  }
+
+  & p {
+    font-size: 13px;
+    font-weight: 400;
+    min-width: 200px;
+    text-wrap: balance;
+
+    & a {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+
+  & .renting-steps {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    margin-block-start: 20px;
+    padding-bottom: 10px;
+
+    & ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      color: #d1cece;
+    }
+
+    & .number-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-self: flex-start;
+      padding: 0;
+      list-style: none;
+
+      & .active {
+        color: #000;
+        border: 1px solid var(--blue);
+      }
+
+      & li {
+        position: relative;
+        border: 1px solid #d1cece;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 1px;
+          height: 30px;
+          background-color: #d1cece;
+          transform: translateX(-50%);
+        }
+
+        &:last-child::before {
+          content: none;
+        }
+      }
+    }
+
+    & .text-list {
+      gap: 29px;
+      align-self: self-start;
+      padding: 0;
+      text-align: start;
+
+      & li {
+        font-size: 14px;
+      }
+
+      & .active {
+        color: #000;
+      }
+    }
+  }
+
+  & footer {
+    margin-block-start: 20px;
+
+    & .footer-contact-details {
+      & .footer-contact-img {
+        margin-block-start: 20px;
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+      }
+
+      & .footer-contact-extras {
+        margin-block-end: 30px;
+      }
+    }
+  }
+}
+
+/* Mobile Screen Responsiveness for the Aside element */
+@media (width <= 767px) {
+  aside {
+    margin: 0;
+    overflow: clip;
+    .fix-header {
+      position: fixed;
+      height: 80px;
+      top: 0;
+      left: 0;
+      inline-size: 100%;
+      background-color: var(--white);
+      z-index: 99;
+      padding-inline: 19px;
+    }
+
+    & .line-through {
+      padding: 0;
+      inline-size: 100vw;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-inline-start: -16px;
+    }
+
+    .main-header {
+      padding-top: 60px;
+    }
+    & .renting-steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      margin-block-start: 20px;
+      overflow-x: scroll;
+      overflow-y: clip;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      block-size: 60px;
+
+      & ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        color: #d1cece;
+      }
+
+      & .number-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 270px;
+        align-self: flex-start;
+        padding: 0;
+        list-style: none;
+
+        & .active {
+          color: #000;
+          border: 1px solid var(--blue);
+        }
+
+        & li {
+          position: relative;
+          border: 1px solid #d1cece;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          font-size: 11px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 400px;
+            height: 1px;
+            background-color: #d1cece;
+            transform: translateY(-50%);
+          }
+
+          &:last-child::before {
+            content: none;
+          }
+        }
+      }
+
+      & .text-list {
+        gap: 140px;
+        align-self: self-start;
+        padding: 0;
+        text-align: start;
+
+        & li {
+          font-size: 11px;
+          width: 150px;
+        }
+
+        & .active {
+          color: #000;
+        }
+      }
+    }
+    .btn {
+      background-color: var(--blue);
+      color: var(--white);
+      font-size: 12px;
+      border-radius: 20px;
+      block-size: 40px;
+      inline-size: 20%;
+    }
+  }
+
+  .footer {
+    font-size: 14px;
+    text-wrap: balance;
+
+    & .footer-contact-img {
+      gap: 5px;
+      align-items: baseline;
+      font-size: 14px;
+    }
+  }
+
+  /* Styling the main component */
+  .main-container-wrapper {
+    background-color: #f9fafb;
+    margin-bottom: 24px;
+
+    & .main-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  /* Styling the form element */
+  .form-group {
+    .form-control[readonly] {
+      border: none;
+      background-color: transparent;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    & .radio-group {
+      display: flex;
+      align-items: center;
+    }
+
+    & .radio-group div {
+      margin-right: 15px;
+
+      & label {
+        display: flex;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+/* Styling the button element */
+.btn {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: var(--white);
+  font-weight: bold;
+  transform: scale(1);
+}
+
+/* Styling the main component footer */
+.main-container-wrapper {
+  flex: 99;
+  background-color: #f9fafb;
+  border-left: 1px solid #e8eaee;
+  padding: 0;
+
+  & .main-header {
+    padding-top: 20px;
+    /* padding-inline-end: 30px; */
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+
+    & p {
+      font-size: 13px;
+      & a {
+        text-decoration: underline;
+        color: #000;
+      }
+    }
+  }
+
+  .main-container {
+    overflow: clip;
+    block-size: auto;
+    padding-inline: 10px;
+    inline-size: 80%;
+    /* block-size: 69svh; */
+
+    & .form-title {
+      color: var(--black);
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    & .form-container {
+      height: 430px;
+
+      & .form {
+        max-width: 500px;
+        margin: auto;
+      }
+      & .form-group {
+        padding: 0;
+        margin: 0;
+        margin-block-end: 8px;
+
+        & label {
+          color: var(--black);
+          font-size: 12px;
+          font-weight: 500;
+          margin-block-end: 3px;
+        }
+        & input {
+          height: 30px;
+          width: 100%;
+        }
+      }
+      hr {
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+    }
+
+    .form-check {
+      border: 1px solid #ffc0cb;
+      border-radius: 5px;
+      padding-inline: 10px;
+    }
+    .form-check:hover {
+      border: 1px solid var(--blue);
+    }
+  }
+  ::placeholder {
+    color: #bababa;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+/* Styling the Pagination  */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+  block-size: 5px;
+  background-color: #e0e0e0;
+  position: relative;
+  margin: 20px 0;
+  margin-block-start: 32px;
+}
+
+.slide {
+  inline-size: 20%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.next {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-inline-end: 1.5rem;
+  inline-size: 100px;
+}
+
+.slide.active {
+  background-color: var(--blue);
+}
+
+/* Mobile Screen Responsiveness for the Main element */
+@media (width <= 767px) {
+  .main-container-wrapper {
+    background-color: var(--white);
+
+    & .main-container {
+      block-size: initial;
+    }
+  }
+  .next {
+    margin-inline-end: 20px;
+    margin-block-end: 20px;
+  }
+}
+
+@media (width <= 500px) {
+  .main-container-wrapper {
+    margin: auto;
+    inline-size: 100%;
+    flex: 1;
+    background-color: var(--white);
+    padding-inline-start: 5px;
+
+    & .main-container {
+      inline-size: 100%;
+    }
+
+    & .form-container {
+      inline-size: 350px;
+
+      & input {
+        inline-size: 100%;
+      }
+    }
+  }
+}
+
+@media (width <= 350px) {
+  .main-container-wrapper {
+    margin: auto;
+    inline-size: 100%;
+    flex: 1;
+    background-color: var(--white);
+    padding-inline-start: 5px;
+
+    & .main-container {
+      inline-size: 100%;
+    }
+
+    & .form-container {
+      inline-size: 300px;
+
+      & input {
+        inline-size: 100%;
+      }
+    }
+  }
+}
