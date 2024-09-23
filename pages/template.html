@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon link -->
+  <link rel="icon" type="image/png" href="../assets/images/rss-favicon.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="../assets/fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="../assets/css/custom-css/header.css" />
+  <link rel="stylesheet" href="../assets/css/custom-css/footer.css" />
+  <!-- <link rel="stylesheet" href="../assets/css/custom-css/index.css" /> -->
+
+  <!-- Script for sticky header -->
+  <script type="text/javascript" src="../assets/js/header.js"></script>
+
+  <title>Template</title>
+</head>
+
+<body>
+  <header class="container-fluid bg-white header-section p-0">
+    <!-- new year notification -->
+    <div class="mb-3 d-flex p-3 justify-content-between align-items-center primary-background">
+      <p class="m-0 font-weight-bold ">Happy new year!!!</p>
+      <span>
+        <a class="text-white" href="#" target="_blank">
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </a>
+
+      </span>
+    </div>
+    <!-- new year notification ends -->
+    <!-- <nav class="mb-3 navbar navbar-dark navbar-expand-md text-black fixed-top"> -->
+    <nav id="navbar_top" class="navbar navbar-dark navbar-expand-lg text-black bg-white">
+      <!-- Brand -->
+      <div class="logo-container">
+        <a class="navbar-brand logo-link mr-4" href="./index.html">
+          <img class="logo-img img-fluid" src="../assets/images/logo.png" alt="" />
+        </a>
+      </div>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav w-100 primary-text-color justify-content-center">
+          <!-- <li class="nav-item mr-5">
+            <a class="nav-link d-sm-inline-block primary-text-color" href="#">
+              <small>Nightly stay</small>
+              <br />
+              <span class="font-weight-bold">Stayone</span>
+            </a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link d-sm-inline-block primary-text-color" href="https://buy.smallsmall.com">
+              <small>Own</small>
+              <br />
+              <span class="font-weight-bold">BuySmallsmall</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-center  mr-5" id="collapsibleNavbar">
+        <div class="search">
+          <form action="">
+            <div class="row m-0">
+              <div class="col-11 search-left">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <span class="">Location..</span>
+                <input class="search-input" type="text" placeholder="which city would you like to live in?" />
+              </div>
+              <div class="col-1 search-icon">
+                <button class="submit-container" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="login-btn">
+        <div class="user_icon nav-item dropdown">
+          <a class="nav-link dropdown-toggle dropdown-toggle--custom p-0 d-md-block d-none" data-toggle="dropdown"
+            href="#" role="button" aria-expanded="false">
+            <img src="../assets/images/users.svg" alt="users" />
+            <img class="d-none" src="../assets/images/users2.svg" alt="users" />
+          </a>
+
+          <a class="nav-link dropdown-toggle dropdown-toggle--custom p-0 d-md-none d-block" data-toggle="dropdown"
+            role="button" aria-expanded="false">
+            <img src="../assets/images/users.svg" alt="users" />
+          </a>
+          <div class="dropdown-menu user_icon--dropdown desktopDropdown p-0">
+            <!-- Desktop view for login and logout -->
+            <div class="d-md-block d-none">
+
+              <!-- Desktop view for users login and create account-->
+              <div class="mb-2">
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="./pages/subscriberLogin.html">
+                    <!-- <i class="fa-solid fa-chart-column">&nbsp;&nbsp;</i> -->
+                    <img class="img-fluid" src="../assets/images/login-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Login</span>
+                  </a>
+                </div>
+                <div class="dropdown-divider m-0"></div>
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="./pages/signup.html">
+                    <!-- <i class="fa-solid fa-chart-column">&nbsp;&nbsp;</i> -->
+                    <img class="img-fluid" src="../assets/images/create-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Create Account</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Desktop view for users that do not have a wallet-->
+              <div class="mb-2">
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="#">
+                    <!-- <i class="fa-solid fa-chart-column">&nbsp;&nbsp;</i> -->
+                    <img class="img-fluid" src="../assets/images/dashboard-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Dashboard</span>
+                  </a>
+                </div>
+                <div class="dropdown-divider m-0"></div>
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="pages/createWallet.html">
+                    <!-- <i class="fa-solid fa-chart-column">&nbsp;&nbsp;</i> -->
+                    <img class="img-fluid" src="../assets/images/walltet-dropdown-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Create wallet</span>
+                  </a>
+                </div>
+                <div class="dropdown-divider m-0"></div>
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="pages/createWallet.html">
+                    <!-- <i class="fa-solid fa-chart-column">&nbsp;&nbsp;</i> -->
+                    <img class="img-fluid" src="../assets/images/logout-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Logout</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Desktop view for users that do have a wallet-->
+              <div class="">
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="#">
+                    <img class="img-fluid" src="../assets/images/dashboard-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Dashboard</span>
+                  </a>
+                </div>
+                <div class="dropdown-divider m-0"></div>
+                <div class="px-3 py-3">
+                  <!-- <a class="dropdown-item d-flex align-items-start " href="pages/createWallet.html"> -->
+                  <div class="dropdown-item d-flex align-items-start ">
+                    <img class="img-fluid" src="../assets/images/walltet-dropdown-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <div class="d-flex align-items-start">
+                      <div class="mr-2">Wallet balance<br>&#8358;50,000</div>
+                      <a href="#" class="btn primary-background">Top up</a>
+                    </div>
+                  </div>
+                  <!-- </a> -->
+                </div>
+                <div class="dropdown-divider m-0"></div>
+                <div class="px-3 py-3">
+                  <a class="dropdown-item d-flex align-items-end " href="pages/createWallet.html">
+                    <img class="img-fluid" src="../assets/images/logout-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span>Logout</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- mobile view for login and create account -->
+            <div class="d-md-none d-block">
+              <div class="mobileDropdown">
+                <div class="px-3 py-4">
+                  <a class="dropdown-item" href="./pages/subscriberLogin.html">
+                    <img class="img-fluid img-icon" src="../assets/images/login-icon.svg" alt="">
+                    &nbsp;&nbsp;Login
+                  </a>
+                </div>
+                <div style="background-color: #ffffff; height: 1px;"></div>
+                <div class="px-3 py-4">
+                  <a class="dropdown-item " href="./pages/signup.html">
+                    <img class="img-fluid img-icon" src="../assets/images/create-icon.svg" alt="">
+                    &nbsp;&nbsp;Create Account
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- mobile view for users without wallet -->
+            <div class="d-md-none d-none">
+              <div class="mobileDropdown">
+                <div class="px-3 py-4">
+                  <a class="dropdown-item" href="#">
+                    <img class="img-fluid img-icon" src="../assets/images/dashboard-icon.svg" alt="">
+                    &nbsp;&nbsp;Dashboard
+                  </a>
+                </div>
+                <div style="background-color: #ffffff; height: 1px;"></div>
+                <div class="px-3 py-4">
+                  <a class="dropdown-item " href="./pages/createWallet.html">
+                    <img class="img-fluid img-icon" src="../assets/images/walltet-dropdown-icon.svg" alt="">
+                    &nbsp;&nbsp;Create Wallet
+                  </a>
+                </div>
+                <div style="background-color: #ffffff; height: 1px;"></div>
+                <div class="px-3 py-4">
+                  <a class="dropdown-item " href="./pages/createWallet.html">
+                    <img class="img-fluid img-icon" src="../assets/images/logout-icon.svg" alt="">
+                    &nbsp;&nbsp;Logout
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- mobile view for users with wallet -->
+            <div class="d-md-none d-block">
+              <div class="mobileDropdown">
+                <div class="px-3 py-4">
+                  <a class="dropdown-item" href="#">
+                    <img class="img-fluid img-icon" src="../assets/images/dashboard-icon.svg" alt="">
+                    &nbsp;&nbsp;Dashboard
+                  </a>
+                </div>
+                <div style="background-color: #ffffff; height: 1px;"></div>
+                <div class="px-3 py-4">
+                  <div class="dropdown-item d-flex align-items-end flex-wrap" href="./pages/createWallet.html">
+                    <img class="img-fluid img-icon" src="../assets/images/walltet-dropdown-icon.svg" alt="">
+                    &nbsp;&nbsp;
+                    <span class="font-weight-light">Wallet balance: &#8358;50,000</span>
+                    <a href="#" class="btn primary-background ml-1 py-1 px-1">Top up</a>
+                  </div>
+                </div>
+                <div style="background-color: #ffffff; height: 1px;"></div>
+                <div class="px-3 py-4">
+                  <a class="dropdown-item " href="./pages/createWallet.html">
+                    <img class="img-fluid img-icon" src="../assets/images/logout-icon.svg" alt="">
+                    &nbsp;&nbsp;Logout
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="menu_icon">
+          <a class="d-md-block d-none nav-link text-dark dropdown-toggle dropdown-toggle--custom p-0"
+            data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <span class="menu_icon--text">Menu</span>
+          </a>
+          <a class="d-md-none d-block  nav-link text-dark dropdown-toggle dropdown-toggle--custom p-0"
+            data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <span class="menu_icon--text">Menu</span>
+          </a>
+          <div class="dropdown-menu menu_icon--dropdown p-0">
+            <!-- Menu Desktop view -->
+            <div class=" menu-desktop d-md-block d-none p-4">
+              <a class="dropdown-item mb-3" href="#">Subcribe</a>
+              <a class="dropdown-item mb-3" href="./pages/landlordLanding.html">Property Owner</a>
+              <a class="dropdown-item" href="./pages/faq.html">FAQ</a>
+              <!-- <div class="dropdown-divider"></div> -->
+              <!-- <a class="dropdown-item my-4" href="#"> -->
+              <p class="pl-4 font-weight-lighter my-4">
+                <i class="fa-solid fa-envelope mr-3"></i>
+                rent@smallsmall.com
+              </p>
+              <!-- </a> -->
+              <!-- <a class="dropdown-item" href="#"> -->
+              <p class="pl-4 font-weight-lighter m-0">
+                <i class="fa-solid fa-phone mr-3"></i>
+                0903 633 9800
+              </p>
+              <!-- </a> -->
+              <!-- <a class="dropdown-item" href="#"> -->
+              <p class="pl-4 font-weight-lighter m-0">
+                <i class="fa-solid fa-phone mr-3"></i>
+                0903 722 2669
+              </p>
+              <!-- </a> -->
+            </div>
+
+            <!-- Menu mobile view -->
+            <div class="menu-mobile p-4 d-md-none d-block">
+              <div class="mb-4">
+                <i class="fa-solid fa-xmark fa-3x"></i>
+              </div>
+              <div class="mb-5">
+                <p class="mb-3">
+                  <a class="text-white mb-3" href="#">Subcribe</a>
+                </p>
+                <p class="mb-3">
+                  <a class="text-white mb-3" href="./pages/landlordLanding.html">Property Owner</a>
+                </p>
+                <p class="mb-3">
+                  <a class="text-white" href="./pages/faq.html">Faq</a>
+                </p>
+              </div>
+              <div>
+                <!-- <p><a class="text-white" href="#"><small class="font-weight-light" style="font-size:10px">Nightly
+                      stay</small><br>StayOne</a> </p> -->
+                <p><a class="text-white" href="#"><small class="font-weight-light"
+                      style="font-size:10px">Invest</small><br>BuySmallsmall</a> </p>
+              </div>
+              <div>
+                <p class="font-weight-lighter m-0">
+                  <i class="fa-solid fa-envelope mr-3"></i>
+                  rent@smallsmall.com
+                </p>
+                <p class="font-weight-lighter m-0">
+                  <i class="fa-solid fa-phone mr-3"></i>
+                  0903 633 9800
+                </p>
+                <p class="font-weight-lighter m-0">
+                  <i class="fa-solid fa-phone mr-3"></i>
+                  0903 722 2669
+                </p>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- MENU MOBILE VIEW DROPDOWN -->
+
+        <!-- <img id="toggle_menu" src="image/menulogo.svg" id="menu" alt="search" /> -->
+        <i class="fa-solid fa-bars"></i>
+
+      </div>
+    </nav>
+    <!-- Button trigger modal -->
+
+  </header>
+
+  <!-- MAIN SECTION -->
+  <main class="container-fluid">
+
+
+
+  </main>
+
+  <!-- NEW FOOTER -->
+  <footer class="container-fluid  footer mt-3">
+    <div class="px-md-5 px-2">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12 footer-logo-container d-flex justify-content-center mb-4">
+              <a href="./index.html">
+                <img src="../assets/images/rssfooterlogo.svg" class="w-100" alt="rss_logo" />
+              </a>
+            </div>
+            <div style="font-size: 14px" class="col-md-12 d-md-flex justify-content-center d-none">
+              <p>&copy; 2022 Smallsmall Technology</p>
+            </div>
+            <div class="col-md-12 d-md-none d-flex flex-column align-items-center mb-5">
+              <h5 class="mb-2">Follow Us</h5>
+              <div class="d-flex font footer-social-media">
+                <a target="_blank" href="https://twitter.com/smallsmall_tech" class="text-white mr-3">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a target="_blank" a href="https://www.instagram.com/smallsmall.tech" class="text-white mr-3">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a target="_blank" a href="#" class="text-white mr-3">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/company/small-small-technology"
+                  class="text-white mr-3">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a target="_blank" a href="#" class="text-white mr-3">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row mb-4">
+                <div class="col-md-4 col-6 mb-4">
+                  <h5>Product</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="./index.html">
+                        Rent
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="#">Nightly stay</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="https://buy.smallsmall.com">
+                        Buy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4 col-6 mb-4">
+                  <h5>Company</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="aboutUs.html">
+                        About Us
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="careers.html">
+                        Careers
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4 col-6 mb-4">
+                  <h5>Legal</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="privacyPolicy.html">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="subscriptionTerms.html">
+                        Subscription Terms
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="termsOfUse.html">
+                        Terms Of Use
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pl-0 text-white" href="faq.html">FAQ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 mb-5">
+              <h5>Customer Support</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link pl-0 text-white d-flex flex-wrap" href="mailto:customerexperience@smallsmall.com"
+                    target="_blank">
+                    <i class="fa-solid fa-envelope mr-3"></i>
+                    <span>customerexperience@smallsmall.com</span>
+
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-0 text-white d-flex flex-wrap" href="tel:+23409036339800">
+                    <i class="fa-solid fa-phone mr-3"></i>
+                    <span>0903 633 9800 &nbsp;&nbsp;0903 722 2669</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <div class="row">
+            <div class="col-md-12 d-md-block d-none">
+              <h5 class="mb-2">Follow Us</h5>
+              <div class="d-flex font footer-social-media">
+                <a target="_blank" href="https://twitter.com/smallsmall_tech" class="text-white mr-3">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a target="_blank" a href="https://www.instagram.com/smallsmall.tech" class="text-white mr-3">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a target="_blank" a href="#" class="text-white mr-3">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/company/small-small-technology"
+                  class="text-white mr-3">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a target="_blank" a href="#" class="text-white mr-3">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-12 mt-4 footer-apps-container">
+              <h6>Download the Mobile App</h6>
+              <div class="footer-apps d-flex">
+                <div class="footer-apps-child">
+                  <a href="#">
+                    <img src="../assets/images/googleplay.svg" class=" img-fluid my-2" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="../assets/images/appstore.svg" class=" img-fluid my-2" alt="" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Jquery js -->
+  <script src="../assets/js/jquery.slim.min.js"></script>
+  <!-- Bootstrap js and Popper js -->
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/bootstrap-js/bootstrap.min.js"></script>
+</body>
+
+</html>
