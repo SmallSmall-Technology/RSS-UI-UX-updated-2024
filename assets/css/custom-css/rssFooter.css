@@ -1,0 +1,82 @@
+.rss-footer-wrapper {
+  background: linear-gradient(90deg, #007dc1 0%, #0070ad 100%);
+  padding: 20px 50px;
+  margin-top: auto;
+}
+
+.rss-footer-wrapper .rss-footer-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rss-footer-content-list {
+  display: flex;
+  gap: 50px;
+  margin-block-start: 33px;
+}
+
+.rss-footer-contents ul {
+  padding: 0;
+}
+
+.rss-footer-contents small {
+  font-size: 10px;
+}
+
+.rss-footer-last-contents {
+  display: flex;
+  gap: 20px;
+  margin-block-start: 20px;
+}
+.rss-footer-last-contents small {
+  font-size: 12px;
+}
+
+.rss-footer-wrapper li {
+  list-style-type: none;
+  transition: all 0.3s ease;
+  padding-inline: 2px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.rss-footer-wrapper li:hover {
+  border-bottom: 1px solid #94e0ff;
+}
+
+.rss-footer-content:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rss-download-wrapper {
+  margin-block-start: -10px;
+  display: flex;
+  gap: 5px;
+}
+
+.rss-download-wrapper img {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rss-download-wrapperimg:hover {
+  transform: scale(1.2);
+}
+
+.rss-social-media-logos {
+  display: flex;
+  gap: 30px;
+}
+
+.rss-social-media-logos i {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.rss-social-media-logos i:hover {
+  transform: scale(1.2);
+  color: #94e0ff;
+}
