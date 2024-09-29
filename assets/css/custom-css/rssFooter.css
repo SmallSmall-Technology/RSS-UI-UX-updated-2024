@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .rss-footer-wrapper {
   background: linear-gradient(90deg, #007dc1 0%, #0070ad 100%);
   padding: 20px 50px;
@@ -67,16 +72,66 @@
 
 .rss-social-media-logos {
   display: flex;
-  gap: 30px;
 }
 
 .rss-social-media-logos i {
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
   font-size: 1.5rem;
+  margin-inline-end: 10px;
 }
 
 .rss-social-media-logos i:hover {
   transform: scale(1.2);
   color: #94e0ff;
+}
+
+.rss-footer-app-download p {
+  font-weight: 500;
+}
+
+@media (width <= 768px) {
+  .rss-footer-wrapper {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rss-footer-contents {
+    flex-direction: column;
+  }
+
+  .rss-footer-content-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rss-footer-app-download {
+    margin-block-start: 16px;
+  }
+
+  .rss-download-wrapper {
+    flex-direction: column;
+  }
+
+  .rss-footer-last-content {
+    margin-block-start: 16px;
+    text-align: center;
+  }
+
+  .rss-footer-tel {
+    display: flex;
+    gap: 10px;
+  }
+
+  .rss-footer-last-contents {
+    flex-direction: column;
+    gap: 0;
+    margin-block-end: 10px;
+  }
+
+  .rss-footer-contents .company-logo {
+    inline-size: 70%;
+    margin-block-end: -10px;
+  }
 }

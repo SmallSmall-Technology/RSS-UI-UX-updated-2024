@@ -45,22 +45,23 @@
 </head>
 
 <body>
-    <!-- <main> -->
     <footer class="rss-footer-wrapper">
-        <div class="rss-footer-contents d-flex">
+        <div class="rss-footer-contents">
             <section class="rss-footer-content">
-                <a href="#top" class="text-decoration-none">
+                <a href="#top" class="text-decoration-none company-logo">
                     <img src="../assets/images/RSS WHITE-update 2.png" alt="Company Logo" class="img-fluid"
                         style="max-width: 100%; height: auto;">
                 </a>
 
                 <div class="rss-footer-content-list">
                     <ul>
-                        <small style="color: #94E0FF;">Explore Products</small>
+                        <small style="color: #94E0FF;" class="d-md-block d-none mt-2">Explore Products</small>
+                        <small style="color: #94E0FF;" class="d-md-none d-block">Products</small>
                         <li><a href="#" class="text-white text-decoration-none">Rent</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Nightly stay</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Buy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Lease with us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-md-block d-none">Lease with us</a>
+                        </li>
                     </ul>
 
                     <ul>
@@ -77,16 +78,37 @@
                                 customerexperience@smallsmall.com
                             </a>
                         </li>
-
-                        <li class="text-white">
-                            <a href="tel:09036339800" class="text-white text-decoration-none">0903 633 9800</a>
-                        </li>
-                        <li class="text-white">
-                            <a href="tel:09037222669" class="text-white text-decoration-none">0903 722 2669</a>
-                        </li>
+                        <div class="rss-footer-tel">
+                            <li>
+                                <a href="tel:09036339800" class="text-white text-decoration-none">0903 633 9800</a>
+                            </li>
+                            <li>
+                                <a href="tel:09037222669" class="text-white text-decoration-none">0903 722 2669</a>
+                            </li>
 
                     </ul>
                 </div>
+                <!-- </div> -->
+                <small style="color: #94E0FF;" class="d-md-none d-block mb-2">Follow us</small>
+
+                <div class="rss-social-media-logos d-md-none d-block">
+                    <a href="https://x.com/smallsmallhq" target="_blank">
+                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/smallsmallhq/" target="_blank">
+                        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/small-small-technology/" target="_blank">
+                        <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/smallsmallhq/" target="_blank">
+                        <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@thesmallsmallhq" target="_blank">
+                        <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                    </a>
+                </div>
+
                 <div class="rss-footer-last-contents">
                     <a href="#" class="text-white text-decoration-none"><small>Privacy policy</small></a>
                     <a href="#" class="text-white text-decoration-none"><small>Subscription terms</small></a>
@@ -111,9 +133,9 @@
                     </div>
                 </div>
 
-                <div class="rss-footer-social-logos-wrapper">
-                    <small style="color: #94E0FF;">Follow us</small>
-                    <div class="rss-social-media-logos">
+                <div class="rss-footer-social-logos-wrapper ">
+                    <small style="color: #94E0FF;" class="d-md-block d-none mt-1 mb-2">Follow us</small>
+                    <div class="rss-social-media-logos d-md-block d-none">
                         <a href="https://x.com/smallsmallhq" target="_blank">
                             <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
                         </a>
@@ -142,12 +164,6 @@
             </section>
         </div>
     </footer>
-    <!-- </main> -->
-
-
-
-
-    <!-- <script type=" text/javascript" src="../assets/js/bootstrap-js/header.js"></script> -->
 </body>
 
 </html>
