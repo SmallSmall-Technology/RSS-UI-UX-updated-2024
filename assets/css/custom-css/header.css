@@ -111,7 +111,6 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  /* z-index: 99; */
 }
 
 /* Styling the Rent dropdown */
@@ -135,6 +134,11 @@ h6 {
       fill: white;
     }
 
+    .rent-dropdown-toggle-btn {
+      border: none;
+      background-color: transparent;
+    }
+
     & .rent-dropdown-menu {
       background-color: white;
       border-radius: 15px;
@@ -144,7 +148,6 @@ h6 {
       top: 40px;
       color: #000;
       display: none;
-      /* animation: slide-down 1s ease-in-out; */
 
       & .pagination {
         height: 5px;
@@ -211,6 +214,11 @@ h6 {
   .how-it-works-dropdown {
     display: flex;
     justify-content: space-between;
+  }
+
+  .how-it-works-dropdown-btn {
+    border: none;
+    background-color: transparent;
   }
 
   .how-it-works-content {
@@ -364,6 +372,13 @@ h6 {
   display: none;
 }
 
+.open-icon,
+.open-how-it-works-icon,
+.close-icon,
+.close-how-it-works-icon {
+  color: white;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -406,7 +421,6 @@ h6 {
     border-top-right-radius: 20px;
     inline-size: 98%;
     background-color: #007dc1;
-    /* margin-top: 10px; */
   }
 
   .small-screen-nav {
@@ -456,6 +470,11 @@ h6 {
       cursor: pointer;
     }
 
+    .open-icon,
+    .close-icon {
+      color: black;
+    }
+
     & .left-nav {
       display: flex;
       flex-direction: column;
@@ -476,6 +495,7 @@ h6 {
       & .rent-dropdown-btn,
       .buy-a-property {
         display: flex;
+
         justify-content: space-between;
         color: #000;
         font-weight: 500;

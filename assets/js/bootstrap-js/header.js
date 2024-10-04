@@ -13,13 +13,15 @@ const paginationLine = document.getElementById("pagination-line");
 const searchIconEl = document.getElementById("search-icon");
 const getStartedBtn = document.getElementById("grid-line");
 const getStartedEl = document.getElementById("get-started-dropdown");
-const howItWorksBtn = document.getElementById("how-it-works");
+const howItWorksBtn = document.getElementById("how-it-works-dropdown-btn");
 const howItWorksEl = document.getElementById("how-it-works-dropdown-menu");
 const searchContainer = document.querySelector(".search-container");
 const searchInput = document.getElementById("search-input");
 const searchIcon = document.getElementById("input-search-icon");
-const openIcon = btn.querySelector(".open-icon");
-const closeIcon = btn.querySelector(".close-icon");
+const openIcon = document.querySelector(".open-icon");
+const closeIcon = document.querySelector(".close-icon");
+const openHowItWorksIcon = document.querySelector(".open-how-it-works-icon");
+const closeHowItWorksIcon = document.querySelector(".close-how-it-works-icon");
 
 // // Toggle dropdown visibility on rent click
 rentDropdownBtn.addEventListener("click", (e) => {
@@ -127,6 +129,7 @@ function adjustContentPadding() {
     document.body.style.paddingTop = `${navBarHeight}px`;
   }
 }
+
 // Adjust padding on initial load
 window.addEventListener("load", adjustContentPadding);
 
@@ -134,22 +137,28 @@ window.addEventListener("load", adjustContentPadding);
 window.addEventListener("resize", adjustContentPadding);
 
 // Function handling the How it works dropdown menu
+
 howItWorksBtn.addEventListener("click", () => {
-  if (
-    howItWorksEl.style.display === "none" ||
-    howItWorksEl.style.display === ""
-  ) {
-    howItWorksEl.style.display = "block";
-  } else {
-    howItWorksEl.style.display = "none";
-  }
+  const isExpanded = howItWorksBtn.getAttribute("aria-expanded") === "true";
+
+  // Toggle aria-expanded attribute
+  howItWorksBtn.setAttribute("aria-expanded", !isExpanded);
+
+  howItWorksEl.style.display = isExpanded ? "none" : "block";
+
+  openHowItWorksIcon.classList.toggle("hidden", !isExpanded);
+  closeHowItWorksIcon.classList.toggle("hidden", isExpanded);
 });
 
 // Close the dropdown when clicking outside
 window.addEventListener("click", (e) => {
   if (!howItWorksBtn.contains(e.target) && !howItWorksEl.contains(e.target)) {
-    howItWorksEl.setAttribute("aria-expanded", "false");
+    howItWorksBtn.setAttribute("aria-expanded", "false");
     howItWorksEl.style.display = "none";
+
+    // Ensure the icons return to the default state
+    openHowItWorksIcon.classList.remove("hidden");
+    closeHowItWorksIcon.classList.add("hidden");
   }
 });
 
