@@ -18,8 +18,10 @@ const howItWorksEl = document.getElementById("how-it-works-dropdown-menu");
 const searchContainer = document.querySelector(".search-container");
 const searchInput = document.getElementById("search-input");
 const searchIcon = document.getElementById("input-search-icon");
+const openIcon = btn.querySelector(".open-icon");
+const closeIcon = btn.querySelector(".close-icon");
 
-// Toggle dropdown visibility on rent click
+// // Toggle dropdown visibility on rent click
 rentDropdownBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -29,6 +31,9 @@ rentDropdownBtn.addEventListener("click", (e) => {
   // Set aria-expanded and toggle the hidden class
   rentDropdownBtn.setAttribute("aria-expanded", !isExpanded ? "true" : "false");
   rentMenu.classList.toggle("hidden");
+
+  openIcon.classList.toggle("hidden", !isExpanded);
+  closeIcon.classList.toggle("hidden", isExpanded);
 
   // Show or hide based on the class
   rentMenu.style.display = rentMenu.classList.contains("hidden")
@@ -48,12 +53,6 @@ window.addEventListener("click", (e) => {
 });
 
 // Close the dropdown when clicking outside
-window.addEventListener("click", (e) => {
-  if (!rentDropdownBtn.contains(e.target) && !rentMenu.contains(e.target)) {
-    rentDropdownBtn.setAttribute("aria-expanded", "false");
-    rentMenu.classList.add("hidden");
-  }
-});
 
 // Function to update pagination line
 function updatePagination(progressPercentage) {
@@ -136,7 +135,6 @@ window.addEventListener("resize", adjustContentPadding);
 
 // Function handling the How it works dropdown menu
 howItWorksBtn.addEventListener("click", () => {
-  console.log("click");
   if (
     howItWorksEl.style.display === "none" ||
     howItWorksEl.style.display === ""

@@ -135,3 +135,9 @@
     margin-block-end: -10px;
   }
 }
+
+@media (width <= 400px) {
+  .rss-footer-contents .email {
+    font-size: 14px;
+  }
+}

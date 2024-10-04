@@ -87,11 +87,15 @@
 
                         <!-- stops here -->
 
-
                         <a href="#rent" id="rent-dropdown-btn" class="rent-dropdown-btn" aria-haspopup="true"
                             aria-expanded="false" aria-controls="rent-menu">
-                            <p>Rent</p> <span><i class="fa-solid fa-chevron-down"></i>
-                            </span>
+                            <p>Rent</p>
+                            <!-- <span><i class="fa-solid fa-chevron-down"></i>
+                            </span> -->
+                            <button class="rent-dropdown-toggle-btn" aria-expanded="false" aria-controls="rent-content">
+                                <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
+                                <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i>
+                            </button>
                         </a>
                         <section id="rent-menu" class="rent-dropdown-menu" role="menu" aria-hidden="true">
                             <div class="location-wrapper">
@@ -168,7 +172,7 @@
                     </div>
 
                     <!-- Conditionally render these elements when a user has not been authenticated -->
-                    <a href="#login" aria-label="Log in" class="log-in ">Log in</a>
+                    <a href="./subscriberLoginPage.html" target="_blank" aria-label="Log in" class="log-in ">Log in</a>
                     <a href="#get-started" aria-label="Get started" class="get-started">Get started</a>
 
                     <!-- Conditionally render these elements on on the mobile screen dropdown when a user has been authenticated -->
@@ -224,9 +228,6 @@
             </section>
         </nav>
     </header>
-
-
-
 
     <script type="text/javascript" src="../assets/js/bootstrap-js/header.js"></script>
 </body>
