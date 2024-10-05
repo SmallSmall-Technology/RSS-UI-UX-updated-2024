@@ -26,6 +26,7 @@ main {
   color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  margin-block-start: -80px;
 }
 
 .homePage-hero-section h1 {
