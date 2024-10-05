@@ -57,6 +57,8 @@
                 <img src="../assets/images/menu burger.svg" class="menu-icon" id="open-menu" />
                 <img src="../assets/images/Cancel.svg" class="cancel-icon" id="close-menu" style="display: none;" />
             </div>
+
+
             <section class="small-screen-nav open" id="dropdown-menu">
                 <div class="left-nav">
                     <div class="rent-dropdown">
@@ -90,11 +92,9 @@
                         <a href="#rent" id="rent-dropdown-btn" class="rent-dropdown-btn" aria-haspopup="true"
                             aria-expanded="false" aria-controls="rent-menu">
                             <p>Rent</p>
-                            <!-- <span><i class="fa-solid fa-chevron-down"></i>
-                            </span> -->
                             <button class="rent-dropdown-toggle-btn" aria-expanded="false" aria-controls="rent-content">
-                                <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
-                                <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i>
+                                <i class="fa-solid fa-chevron-down open-icon"></i>
+                                <i class="fa-solid fa-chevron-up close-icon hidden"></i>
                             </button>
                         </a>
                         <section id="rent-menu" class="rent-dropdown-menu" role="menu" aria-hidden="true">
@@ -135,13 +135,21 @@
                     </div>
                     <a href="#buy" aria-label="Buy a property" class="buy-a-property">
                         <p>Buy</p>
-                        <span class="d-md-none d-block"><i class="fa-solid fa-chevron-down"></i>
+                        <span class="d-md-none d-block">
+                            <button class="rent-dropdown-toggle-btn" aria-expanded="false" aria-controls="rent-content"
+                                style="border: none; background-color: transparent;">
+                                <i class="fa-solid fa-chevron-down open-icon"></i>
+                                <i class="fa-solid fa-chevron-up close-icon hidden"></i>
+                            </button>
                         </span>
                     </a>
                     <a href="#how-it-works" aria-label="Learn how it works" class="how-it-works" id="how-it-works">How
                         it works
-                        <span><i class="fa-solid fa-chevron-down"></i>
-                        </span>
+                        <button class="how-it-works-dropdown-btn" id="how-it-works-dropdown-btn" aria-expanded="false"
+                            aria-controls="how-it-works-content">
+                            <i class="fa-solid fa-chevron-down open-how-it-works-icon"></i>
+                            <i class="fa-solid fa-chevron-up close-how-it-works-icon hidden"></i>
+                        </button>
                     </a>
                     <div class="how-it-works-dropdown-menu" id="how-it-works-dropdown-menu">
                         <div class="how-it-works-dropdown">
@@ -149,6 +157,7 @@
                             <h1 class="how-it-works-content" id="Landlord"><a href="#">Landlord</a></h1>
                         </div>
                     </div>
+
                     <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
                 </div>
                 <div class="middle-nav d-md-block d-none">
@@ -156,7 +165,6 @@
                         <img src="../assets/images/rentsmallsmall white 1.png" alt="Company logo" />
                     </a>
                 </div>
-
 
                 <div class="right-nav ">
                     <!-- Search bar container -->
@@ -228,8 +236,7 @@
             </section>
         </nav>
     </header>
-
-    <script type="text/javascript" src="../assets/js/bootstrap-js/header.js"></script>
+    <script src="../assets/js/bootstrap-js/header.js"></script>
 </body>
 
 </html>
