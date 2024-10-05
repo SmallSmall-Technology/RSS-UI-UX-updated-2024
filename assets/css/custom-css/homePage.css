@@ -8,11 +8,18 @@ html {
   height: 100%;
 }
 
-main {
-  margin-top: 40px;
-}
-
 /* Styling the HomePage Hero Section */
+
+.homePage-wrapper {
+  inline-size: 100%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
 
 .homePage-hero-section {
   background: linear-gradient(180deg, #007dc1 0%, #0070ad 100%);
@@ -23,10 +30,10 @@ main {
   padding-block-end: 250px;
   inline-size: 95%;
   margin: auto;
+  margin-inline: 0;
   color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-block-start: -80px;
 }
 
 .homePage-hero-section h1 {
@@ -109,6 +116,84 @@ main {
   font-weight: 700;
 }
 
+/* Mobile responsiveness for the Hero Section */
+
+@media (width <= 1024px) {
+  .homePage-hero-section {
+    padding-block-end: 200px;
+  }
+
+  .homePage-hero-image {
+    inline-size: 80%;
+    margin: auto;
+    border-radius: 20px;
+    margin-block-start: -150px;
+    margin-block-end: 40px;
+  }
+}
+
+/* Mobile responsiveness for the Hero Section */
+@media (width <= 768px) {
+  .homePage-wrapper {
+    inline-size: 100%;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    display: initial;
+    /* place-items: center; */
+    /* margin: auto; */
+    /* border: 3px solid black; */
+  }
+
+  .homePage-hero-section {
+    display: grid;
+    padding-inline: 10px;
+    margin-top: -60px;
+    padding-top: 7rem;
+    border-radius: 20px;
+    padding-block-end: 170px;
+    inline-size: 95%;
+    margin-inline: auto;
+  }
+
+  .homePage-hero-section h1 {
+    max-width: 300px;
+  }
+
+  .homePage-hero-section p {
+    max-width: 300px;
+  }
+
+  .homePage-hero-section-btn {
+    justify-content: space-between;
+    inline-size: 90%;
+  }
+
+  .homePage-hero-section-btn .btn {
+    inline-size: 50%;
+    justify-content: center;
+  }
+
+  .homePage-hero-image {
+    inline-size: 90%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: clip;
+    margin-block-start: -100px;
+
+    margin-block-end: 40px;
+  }
+
+  .homePage-hero-image img {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+}
+
+/* Styling the RSS Articles  */
+
 .rss-article-wrapper {
   margin: auto;
   margin-block-end: 40px;
@@ -125,7 +210,6 @@ main {
 
 .box-text {
   padding: 20px;
-  /* margin-top: 40px; */
   padding-inline-start: 50px;
 }
 
@@ -150,12 +234,12 @@ main {
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
-  transition: transform all 0.3s ease-in-out;
+  /* transition: transform all 0.3s ease-in-out; */
 }
 
 .rss-box:hover {
   cursor: pointer;
-  transform: scale(0.95);
+  /* transform: scale(0.95); */
 }
 
 .rss-articles .second-box {
@@ -164,6 +248,7 @@ main {
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
+  /* transition: transform all 0.3s ease-in-out; */
 }
 
 .rss-articles .third-box {
@@ -174,6 +259,43 @@ main {
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
+  /* transition: transform all 0.3s ease-in-out; */
+}
+
+/* Mobile Responsiveness Styling for the Slider Section */
+
+@media (width <= 768px) {
+  .rss-articles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .rss-box {
+    inline-size: 100%;
+    margin-inline: 0;
+  }
+}
+
+@media (width <= 425px) {
+  .box-text {
+    padding: 0px 0px 20px 20px;
+  }
+}
+
+@media (width <= 375px) {
+  .rss-articles .first-box {
+    padding-top: 40px;
+    height: 350px;
+  }
+  .rss-articles .second-box {
+    height: 350px;
+    padding: 0;
+  }
+  .rss-articles .third-box {
+    padding-top: 40px;
+    height: 350px;
+  }
 }
 
 /* Styling the Slider Section */
@@ -212,7 +334,7 @@ main {
 }
 
 .rss-slider-carousel {
-  inline-size: 40%;
+  inline-size: 50%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -238,7 +360,7 @@ main {
   display: flex;
   list-style-type: none;
   transition: transform 0.5s ease-in-out;
-  inline-size: 100%;
+  inline-size: fit-content;
   overflow: hidden;
 }
 
@@ -357,84 +479,9 @@ main {
   }
 }
 
-@media (width <= 1024px) {
-  .homePage-hero-section {
-    padding-block-end: 200px;
-  }
-
-  .homePage-hero-image {
-    inline-size: 80%;
-    margin: auto;
-    border-radius: 20px;
-    margin-block-start: -150px;
-    margin-block-end: 40px;
-  }
-}
-
-/* Mobile responsiveness for the Hero Section */
-@media (width <= 768px) {
-  .homePage-hero-section {
-    padding-inline: 10px;
-    margin-top: -6rem;
-    padding-top: 7rem;
-    inline-size: 98%;
-    border-radius: 20px;
-    overflow: clip;
-    padding-block-end: 170px;
-  }
-
-  .homePage-hero-section h1 {
-    max-width: 300px;
-  }
-
-  .homePage-hero-section p {
-    max-width: 300px;
-  }
-
-  .homePage-hero-section-btn {
-    justify-content: space-between;
-    inline-size: 90%;
-  }
-
-  .homePage-hero-section-btn .btn {
-    inline-size: 50%;
-    justify-content: center;
-  }
-
-  .homePage-hero-image {
-    inline-size: 90%;
-    margin: auto;
-    border-radius: 20px;
-    overflow: clip;
-    margin-block-start: -100px;
-
-    margin-block-end: 40px;
-  }
-
-  .homePage-hero-image img {
-    block-size: 100%;
-    inline-size: 100%;
-  }
-
-  .rss-article-wrapper {
-    inline-size: 98%;
-  }
-
-  .rss-articles {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .rss-box {
-    inline-size: 100%;
-    margin-inline: 0;
-  }
-}
-
-@media (width <= 420px) {
-  .box-text {
-    padding: 0px 0px 20px 20px;
+@media (width <= 425px) {
+  .rss-slider-carousel {
+    margin-block-start: initial;
   }
 }
 
@@ -585,7 +632,7 @@ main {
     block-size: 400px;
     display: flex;
     gap: 20px;
-    margin-inline-start: 30px;
+    padding-inline-start: 30px;
     overflow: clip;
     flex-shrink: 0;
   }
@@ -614,21 +661,20 @@ main {
     font-size: 14px;
   }
 
-  .dot {
-    height: 3px;
-    width: 7px;
-    margin: 5px;
-    background-color: #bbb;
-    display: inline-block;
-    cursor: pointer;
-  }
-
   .dot.active {
     background-color: white;
   }
   .explore-our-homes .carousel-pagination {
     margin: auto;
     margin-top: 10px;
+  }
+
+  .explore-our-homes .carousel-pagination .dot {
+    width: 7px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #bbb;
   }
 }
 
@@ -639,6 +685,7 @@ main {
 
   .explore-our-homes-apartments {
     margin: auto;
+    padding-inline-start: 0;
   }
 }
 
@@ -710,7 +757,6 @@ main {
 
 .lagos-neighbourhood-apartments {
   position: relative;
-
   list-style-type: none;
   padding: 0;
 }
@@ -734,14 +780,28 @@ main {
 
 /* Mobile Responsiveness Styling for Find a Neighborhood Section  */
 @media (width <= 768px) {
+  .find-a-neighbourhood-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .apartment-dropdown p {
+    font-size: 1.3rem;
+  }
   .lagos-apartments-neighbourhood-list {
     grid-template-columns: repeat(3, 120px);
   }
 }
 
-@media (width <= 400px) {
+@media (width <= 460px) {
+  .find-a-neighbourhood-header h2 {
+    font-size: 1.1rem;
+  }
+  .apartment-dropdown p {
+    font-size: 0.9rem;
+  }
+
   .lagos-apartments-neighbourhood-list {
-    grid-template-columns: repeat(2, 120px);
+    grid-template-columns: repeat(2, 100px);
   }
 }
 
@@ -952,6 +1012,15 @@ main {
   border: none;
   background-color: transparent;
 }
+
+.faq-question-btn .open-icon {
+  color: #000;
+}
+
+.faq-question-btn .close-icon {
+  color: #000;
+}
+
 .see-more-faqs {
   color: #000;
   text-decoration: underline;
@@ -1037,6 +1106,7 @@ main {
     position: initial;
     inline-size: 70%;
     margin-bottom: 32px;
+    height: auto;
   }
 
   .speak-with-us-content p {
