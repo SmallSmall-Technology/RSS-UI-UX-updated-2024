@@ -96,36 +96,57 @@ toggleApartmentBtns.forEach((btn) => {
 
 // Function handling the FAQs Accordion
 
-const toggleAccordionBtns = document.querySelectorAll(".faq-toggle");
+const faqItems = document.querySelectorAll(".single-faq");
 
-toggleAccordionBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const faqAnswerId = btn.getAttribute("aria-controls");
-    const faqAnswer = document.getElementById(faqAnswerId);
-    const isExpanded = btn.getAttribute("aria-expanded") === "true";
+// Function to toggle the accordion for the clicked item
+function toggleAccordion(faqItem, toggleBtn) {
+  const faqAnswerId = toggleBtn.getAttribute("aria-controls");
+  const faqAnswer = document.getElementById(faqAnswerId);
+  const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
 
-    toggleAccordionBtns.forEach((otherBtn) => {
-      if (otherBtn !== btn) {
-        const otherFaqAnswerId = otherBtn.getAttribute("aria-controls");
-        const otherFaqAnswer = document.getElementById(otherFaqAnswerId);
+  // Close other FAQs
+  faqItems.forEach((otherFaqItem) => {
+    if (otherFaqItem !== faqItem) {
+      const otherToggleBtn = otherFaqItem.querySelector(".faq-toggle");
+      const otherFaqAnswerId = otherToggleBtn.getAttribute("aria-controls");
+      const otherFaqAnswer = document.getElementById(otherFaqAnswerId);
 
-        otherFaqAnswer.hidden = true;
-        otherBtn.setAttribute("aria-expanded", "false");
-        otherBtn.querySelector(".open-icon").hidden = false;
-        otherBtn.querySelector(".close-icon").hidden = true;
-        otherBtn.querySelector(".sr-only").textContent = "Expand question";
-      }
-    });
+      otherFaqAnswer.hidden = true;
+      otherToggleBtn.setAttribute("aria-expanded", "false");
+      otherToggleBtn.querySelector(".open-icon").hidden = false;
+      otherToggleBtn.querySelector(".close-icon").hidden = true;
+      otherToggleBtn.querySelector(".sr-only").textContent = "Expand question";
+    }
+  });
 
-    // Toggle the answer visibility
-    faqAnswer.hidden = isExpanded;
-    btn.setAttribute("aria-expanded", !isExpanded);
+  // Toggle the answer visibility for the clicked item
+  faqAnswer.hidden = isExpanded;
+  toggleBtn.setAttribute("aria-expanded", !isExpanded);
 
-    // Toggle icons
-    btn.querySelector(".open-icon").hidden = !isExpanded;
-    btn.querySelector(".close-icon").hidden = isExpanded;
-    btn.querySelector(".sr-only").textContent = isExpanded
-      ? "Expand question"
-      : "Collapse question";
+  // Toggle icons
+  toggleBtn.querySelector(".open-icon").hidden = !isExpanded;
+  toggleBtn.querySelector(".close-icon").hidden = isExpanded;
+  toggleBtn.querySelector(".sr-only").textContent = isExpanded
+    ? "Expand question"
+    : "Collapse question";
+}
+
+// Add click event listener to each FAQ box and button
+faqItems.forEach((faqItem) => {
+  const toggleBtn = faqItem.querySelector(".faq-toggle");
+
+  // Click event for the entire box
+  faqItem.addEventListener("click", (event) => {
+    // Only toggle when the click is not directly on the button
+    if (!event.target.closest("button")) {
+      toggleAccordion(faqItem, toggleBtn);
+    }
+  });
+
+  // Click event for the button
+  toggleBtn.addEventListener("click", (event) => {
+    // Prevent the event from propagating to the box click handler
+    event.stopPropagation();
+    toggleAccordion(faqItem, toggleBtn);
   });
 });

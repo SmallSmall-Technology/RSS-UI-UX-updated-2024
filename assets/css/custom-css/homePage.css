@@ -989,6 +989,7 @@ html {
   background-color: #dddddd;
   border-radius: 10px;
   padding: 20px;
+  cursor: pointer;
 }
 
 .single-faq .faq-question {
