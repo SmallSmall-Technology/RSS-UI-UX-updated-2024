@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+}
+
+header {
+  margin-block-end: 100px;
+}
+
+.main-container {
+  inline-size: 100%;
+}
+
+.logged-in {
+  border: 2px solid #e6ebf1;
+  display: block;
+}
+
+.header {
+  background: white;
+}
+
+.nav-bar {
+  background: white;
+}
+
+.small-screen-nav {
+  background: white;
+}
+
+/* Mobile responsiveness for the header */
+
+@media (width <= 768px) {
+  .nav-bar {
+    padding: 20px 15px;
+    margin: 0;
+    inline-size: 100%;
+    border-radius: initial;
+    background-color: white;
+  }
+
+  .middle-nav {
+    inline-size: 100%;
+    margin-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logged-in {
+    display: flex;
+  }
+}
+
+/* Styling the Main Nav */
+.rss-inspection-page-main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: 70%;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: auto;
+  border: 1.5px solid #e6ebf1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-block-end: 74px;
+}
+
+.rss-inspection-page-main-section p:first-child {
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  margin: 0;
+}
+
+.rss-inspection-page-main-section p:last-child {
+  color: #98a0b4;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.rss-inspection-page-main-section p:last-child:hover {
+  scale: 1.07;
+}
+
+.rss-inspection-page-main-section .btn {
+  background-color: #007dc1;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.rss-inspection-page-main-section .btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+.rss-inspection-page-main-section hr {
+  height: 20px;
+  border: 1px solid #98a0b4;
+}
+
+/* Mobile Responsiveness Styling the Main section */
+
+@media (width <= 768px) {
+  .main-container .rss-inspection-page-main-section {
+    display: none;
+  }
+}
+
+/* Styling the Apartment Component */
+
+.apartments-wrapper {
+  text-align: center;
+  margin-block-end: 100px;
+}
+
+.apartments-wrapper-header {
+  margin-block-end: 20px;
+  display: flex;
+  justify-content: center;
+  margin-inline: 25px;
+}
+
+.apartments-wrapper-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.apartments-wrapper-header h1 span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.apartments-wrapper-header p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.rss-apartments-settings {
+  border: 1px solid #bababa;
+  display: flex;
+  border-radius: 50%;
+  block-size: 40px;
+  min-inline-size: 40px;
+  cursor: pointer;
+  position: relative;
+  bottom: 10px;
+  transition: all 0.7s ease-in-out;
+}
+
+.rss-apartments-settings img {
+  block-size: 15px;
+  inline-size: 15px;
+  margin: auto;
+}
+
+.apartments {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  inline-size: 95%;
+  margin: auto;
+}
+
+.single-apartment {
+  position: relative;
+}
+
+.single-apartment-img-wrapper {
+  inline-size: 302px;
+  block-size: 286px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.single-apartment-img-wrapper img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.single-apartment-status-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  inline-size: 300px;
+  padding: 10px;
+  top: 0;
+}
+
+.single-apartment-current-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 10px;
+  border-radius: 7px;
+}
+
+.single-apartment-current-status p {
+  margin: 0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.single-apartment-current-status p span {
+  font-weight: 600;
+}
+
+.share-apartment-icon {
+  border: 1px solid white;
+  background-color: #bababa;
+  display: flex;
+  border-radius: 50%;
+  block-size: 40px;
+  inline-size: 40px;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+
+.share-apartment-icon button {
+  background-color: transparent;
+  border: none;
+  margin: auto;
+}
+
+.share-apartment-icon:hover {
+  scale: 1.2;
+  rotate: 360deg;
+}
+
+.share-apartment-icon button:focus {
+  outline: 1px solid #007dc1;
+  border-radius: 50%;
+  outline-offset: 12px;
+}
+
+.single-apartment-details {
+  text-align: start;
+}
+
+.single-apartment-details .single-apartment-name {
+  inline-size: 241px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.single-apartment-details .single-apartment-location {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.single-apartment-extras {
+  display: flex;
+  gap: 10px;
+  margin-block-start: 2px;
+}
+
+.single-apartment-extras li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.single-apartment-extras li .dot,
+.dot {
+  inline-size: 2px;
+  block-size: 2px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.single-apartment-details .single-apartment-extras li {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.single-apartment-price-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-block-start: 5px;
+}
+
+.single-apartment-details .single-apartment-discounted-price {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.single-apartment-details .single-apartment-discounted-price span {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.single-apartment-details .single-apartment-price {
+  text-decoration: line-through;
+  text-decoration-color: #007dc1;
+}
+
+@media (width <= 768px) {
+  .apartments-wrapper {
+    display: grid;
+    place-items: center;
+  }
+
+  .apartments {
+    justify-content: center;
+  }
+
+  .rss-inspection-page-main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inline-size: 90%;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: auto;
+    border: none;
+    box-shadow: initial;
+    margin-block-end: 74px;
+  }
+
+  .rss-inspection-page-main-section hr {
+    height: initial;
+    border: 1px solid #98a0b4;
+  }
+}
+
+/* Styling the apartment Dropdown Menu */
+@media (width <=768px) {
+  .rss-inspection-page-main-section .single-section p,
+  label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-block-end: 10px;
+    text-align: start;
+    display: block;
+  }
+
+  select {
+    width: 378px;
+    height: 38px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid #b0b0b0;
+    inline-size: 100%;
+    margin-block-end: 25px;
+  }
+
+  .rss-inspection-page-main-section hr {
+    border: 1px solid #dddddd;
+  }
+
+  .rss-inspection-page-main-section button {
+    background: none;
+    border: 1px solid #dddddd;
+    padding: 6px 13px;
+    border-radius: 16px;
+    transition: all 0.3s ease-in;
+    font-size: 14px;
+    font-weight: 500;
+    color: #414042;
+  }
+
+  .rss-inspection-page-main-section button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .rss-inspection-page-main-section button:focus {
+    outline: 1px solid black;
+    outline-offset: 2px;
+  }
+
+  .single-section-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .single-section-btn-wrapper .btn {
+    border-radius: 25px;
+  }
+
+  .single-section-btn-wrapper .btn-wrapper {
+    border: 1px solid #dddddd;
+    display: flex;
+    justify-content: center;
+    inline-size: 100%;
+    border-radius: 25px;
+    gap: 10px;
+  }
+
+  .btn-wrapper .btn {
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .single-section .budget-plan-price {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 10px;
+  }
+
+  .budget-plan-price small {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .budget-plan .payment-line {
+    border: 3px solid #dddddd;
+    border-radius: 10px;
+    inline-size: 100%;
+    margin-block-end: -30px;
+  }
+
+  .rss-apartments-settings-dropdown-menu .filter-btn {
+    margin-block-start: 20px;
+    margin-bottom: 40px;
+    background: none;
+    border: 1px solid #dddddd;
+    padding: 6px 13px;
+    border-radius: 7px;
+    transition: all 0.3s ease-in;
+    font-size: 14px;
+    font-weight: 500;
+    color: #414042;
+    inline-size: 80%;
+  }
+  .filter-btn:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .rss-inspection-page-main-section .btn {
+    inline-size: 90%;
+    background-color: white;
+    color: black;
+  }
+
+  #rss-apartments-settings-apartment-dropdown-menu-close {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+  }
+
+  #rss-apartments-settings-apartment-dropdown-menu-close:hover {
+    border: 2px solid #b0b0b0;
+    transform: scale(1.1);
+  }
+
+  .rss-apartments-settings-dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 20010;
+    padding-top: 20px;
+    inline-size: 100%;
+    /* margin-inline: auto; */
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+}
+
+/* Styling the Pagination Component */
+
+.apartment-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-block-end: 100px;
+}
+
+.apartment-pagination .btn {
+  border: 1px solid #e9e9e9;
+  padding: 6px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.apartment-pagination .btn.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.apartment-pagination .btn:hover {
+  scale: 1.1;
+}
+
+.apartment-pagination .dots {
+  padding: 0 5px;
+}
+
+.apartment-pagination .hidden {
+  display: none;
+}
+
+/* Mobile Responsiveness Styling for the Pagination Component */
+
+@media (width <= 768px) {
+}
