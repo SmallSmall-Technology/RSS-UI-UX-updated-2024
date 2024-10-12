@@ -103,7 +103,7 @@ h6 {
 
 .nav-bar,
 .small-screen-nav {
-  background: linear-gradient(180deg, #007dc1 0%, #0070ad 100%);
+  background: #007dc1;
   display: flex;
   justify-content: space-between;
   align-items: center;

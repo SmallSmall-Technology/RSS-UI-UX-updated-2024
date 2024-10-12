@@ -6,16 +6,17 @@
 body,
 html {
   height: 100%;
+  font-family: "DM Sans", sans-serif;
 }
 
+header {
+  /* border: 3px solid red; */
+  margin-block-end: 60px;
+}
 /* Styling the HomePage Hero Section */
 
 .homePage-wrapper {
   inline-size: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   place-items: center;
   margin: auto;
@@ -40,10 +41,13 @@ html {
   font-weight: 700;
   color: #94e0ff;
   margin-block-end: 20px;
-  max-width: 400px;
+  max-width: 700px;
+  font-size: 65px;
 }
 
 .homePage-hero-section p {
+  font-size: 20px;
+  font-weight: 400;
   margin-block-end: 20px;
 }
 
@@ -86,6 +90,8 @@ html {
 }
 
 .homePage-hero-section small {
+  font-size: 11px;
+  font-weight: 400;
   max-width: 500px;
   text-align: center;
 }
@@ -111,11 +117,15 @@ html {
 }
 
 .homePage-hero-section-h2 h2 {
-  font-size: 40px;
-  max-width: 600px;
+  font-size: 55px;
   font-weight: 700;
+  max-width: 800px;
 }
 
+.homePage-hero-section-h2 p {
+  font-size: 18px;
+  font-weight: 400;
+}
 /* Mobile responsiveness for the Hero Section */
 
 @media (width <= 1024px) {
@@ -197,7 +207,7 @@ html {
 .rss-article-wrapper {
   margin: auto;
   margin-block-end: 40px;
-  inline-size: 95%;
+  inline-size: 90%;
 }
 
 .rss-articles {
@@ -208,19 +218,28 @@ html {
   /* animation: slide-up 3s ease-out forwards; */
 }
 
+.rss-box {
+  position: relative;
+}
+
 .box-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
   padding: 20px;
   padding-inline-start: 50px;
 }
 
 .box-text h2 {
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 600;
   margin-top: 100px;
 }
 
 .box-text small {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -229,7 +248,7 @@ html {
 }
 
 .rss-articles .first-box {
-  block-size: 300px;
+  block-size: 596px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
@@ -243,7 +262,7 @@ html {
 }
 
 .rss-articles .second-box {
-  block-size: 300px;
+  block-size: 596px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
@@ -252,9 +271,9 @@ html {
 }
 
 .rss-articles .third-box {
-  padding-top: 40px;
+  /* padding-top: 40px; */
   grid-column: span 2;
-  block-size: 300px;
+  block-size: 596px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
@@ -300,10 +319,10 @@ html {
 
 /* Styling the Slider Section */
 .rss-slider-section {
-  inline-size: 95%;
+  inline-size: 90%;
   margin: auto;
   margin-block-end: 60px;
-  block-size: 500px;
+  block-size: 608px;
 }
 
 .rss-slider-image-bg {
@@ -323,7 +342,8 @@ html {
 }
 
 .rss-slider-text h1 {
-  font-size: 45px;
+  font-size: 65px;
+  font-weight: 700;
   color: white;
   max-width: 800px;
 }
@@ -487,7 +507,7 @@ html {
 
 /* Styling the Explore Our Homes Section  */
 .explore-our-homes {
-  inline-size: 95%;
+  inline-size: 90%;
   margin: auto;
   margin-block-end: 60px;
 }
@@ -503,8 +523,7 @@ html {
 }
 
 .explore-our-homes-apartments {
-  block-size: 500px;
-  /* display: flex; */
+  block-size: 572px;
   display: grid;
   grid-template-columns: 27% 27% 1fr;
   gap: 20px;
@@ -693,12 +712,17 @@ html {
 
 .find-a-neighbourhood {
   inline-size: 100%;
-  padding: 40px;
+  padding: 80px 100px;
   background-color: #007dc1;
   margin-block-end: 60px;
   color: white;
+  position: relative;
 }
 
+.find-a-neighbourhood-header h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
 .find-a-neighbourhood .location-wrapper h1 a {
   color: white;
   font-size: 16px;
@@ -807,6 +831,8 @@ html {
 
 /* Styling the Result Analytics Section */
 .result-analytics {
+  inline-size: 90%;
+  margin: auto;
   padding: 20px 40px;
   margin-block-end: 60px;
 }
@@ -817,14 +843,15 @@ html {
 }
 
 .result-analytics-header p {
-  font-size: 1.2rem;
-  max-width: 700px;
+  font-size: 35px;
+  max-width: 1100px;
   font-weight: 600;
 }
 
 .result-analytics-data-wrapper {
   display: flex;
-  max-width: 700px;
+  max-width: 900px;
+  margin-top: 40px;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
@@ -837,12 +864,14 @@ html {
 }
 
 .result-analytics-data h2 {
+  font-size: 70px;
   padding: 0;
   margin: 0;
   font-weight: 600;
 }
 
 .result-analytics-data p {
+  font-size: 20px;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -967,7 +996,7 @@ html {
 }
 
 .faqs-header h1 {
-  font-size: 1.5rem;
+  font-size: 35px;
   font-weight: 600;
 }
 
@@ -999,6 +1028,7 @@ html {
 }
 
 .single-faq .faq-question p {
+  font-size: 25px;
   margin: 0;
   font-weight: 500;
 }
@@ -1046,25 +1076,27 @@ html {
   background: url(../../images/LadyOnYellow.png);
   background-repeat: no-repeat;
   background-size: cover;
-  block-size: 300px;
+  block-size: 479px;
   inline-size: 100%;
   border-radius: 20px;
   position: relative;
+  padding: 40px;
 }
 
 .speak-with-us-content {
-  block-size: 200px;
+  /* block-size: 200px; */
   justify-content: start;
   background-color: white;
   border-radius: 20px;
   position: absolute;
-  bottom: 50px;
-  left: 40px;
-  padding: 20px;
+  bottom: 80px;
+  left: 80px;
+  padding: 40px 80px;
+  min-width: 200px;
 }
 
 .speak-with-us-content h1 {
-  font-size: 1.4rem;
+  font-size: 36px;
   font-weight: 700;
   max-width: 250px;
 }
@@ -1084,6 +1116,8 @@ html {
   cursor: pointer;
   inline-size: fit-content;
   transition: all 0.3s ease-in;
+  display: flex;
+  margin: auto;
 }
 
 .speak-with-us-content .btn:hover {
@@ -1108,6 +1142,7 @@ html {
     inline-size: 70%;
     margin-bottom: 32px;
     height: auto;
+    padding: 10px;
   }
 
   .speak-with-us-content p {

@@ -12,6 +12,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css" />
     <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -435,51 +440,40 @@
                 <h1 class="location" id="abuja-neighbourhood-apartments"><a href="#">Abuja</a></h1>
             </div>
             <hr class="pagination-line" id="pagination-line" />
-
-
-            <div id="apartment-dropdown-btn" class="apartment-dropdown" aria-haspopup="true" aria-expanded="false"
-                aria-controls="rent-menu">
-                <p style="color: white;">Select a location in Lagos</p>
-                <div class="apartment-dropdown-btn">
-                    <button class="apartment-dropdown-toggle-btn" aria-expanded="false"
-                        aria-controls="apartment-content">
-                        <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
-                        <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i>
-                    </button>
+            <div class="apartment-dropdown dropdown">
+                <h1 class="my-4" id="apartmentDropdown" data-toggle="dropdown" type="button" aria-haspopup="true"
+                    aria-expanded="false">Select a location in Lagos</h1>
+                <!-- <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false"> -->
+                <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
+                <!-- <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i> -->
+                <!-- </button> -->
+                <div class="dropdown-menu apartment-dropdown-menu" aria-labelledby="apartmentDropdown">
+                    <section class="lagos-neighbourhood-apartments">
+                        <ul class="lagos-apartments-neighbourhood-list">
+                            <li><a class="dropdown-item" href="#">Lekki</a></li>
+                            <li><a class="dropdown-item" href="#">Yaba</a></li>
+                            <li><a class="dropdown-item" href="#">Ikoyi</a></li>
+                            <li><a class="dropdown-item" href="#">Salem</a></li>
+                            <li><a class="dropdown-item" href="#">Awoyaya</a></li>
+                            <li><a class="dropdown-item" href="#">Oniru</a></li>
+                            <li><a class="dropdown-item" href="#">Igbo Efon</a></li>
+                            <li><a class="dropdown-item" href="#">Ikeja</a></li>
+                            <li><a class="dropdown-item" href="#">Chevron</a></li>
+                            <li><a class="dropdown-item" href="#">Ologbo</a></li>
+                            <li><a class="dropdown-item" href="#">Elegushi</a></li>
+                            <li><a class="dropdown-item" href="#">Sangotedo</a></li>
+                            <li><a class="dropdown-item" href="#">Eleganza</a></li>
+                            <li><a class="dropdown-item" href="#">VGC</a></li>
+                            <li><a class="dropdown-item" href="#">Lekki phase 1</a></li>
+                            <li><a class="dropdown-item" href="#">Mobil road</a></li>
+                            <li><a class="dropdown-item" href="#">Ikota</a></li>
+                            <li><a class="dropdown-item" href="#">Osapa-Jakande</a></li>
+                            <li><a class="dropdown-item" href="#">Owode</a></li>
+                        </ul>
+                    </section>
                 </div>
             </div>
 
-
-            <section id="apartment-dropdown-menu" class="apartment-dropdown-menu" role="menu">
-                <section class="lagos-neighbourhood-apartments">
-                    <ul class="lagos-apartments-neighbourhood-list">
-                        <li><a href="#">Lekki</a></li>
-                        <li><a href="#">Yaba</a></li>
-                        <li><a href="#">Ikoyi</a></li>
-                        <li><a href="#">Salem</a></li>
-                        <li><a href="#">Awoyaya</a></li>
-                        <li><a href="#">Oniru</a></li>
-                        <li><a href="#">Igbo Efon</a></li>
-                        <li><a href="#">Ikeja</a></li>
-                        <li><a href="#">Chevron</a></li>
-                        <li><a href="#">Ologbo</a></li>
-                        <li><a href="#">Elegushi</a></li>
-                        <li><a href="#">Sangotedo</a></li>
-                        <li><a href="#">Eleganza</a></li>
-                        <li><a href="#">VGC</a></li>
-                        <li><a href="#">Lekki phase 1</a></li>
-                        <li><a href="#">Mobil road</a></li>
-                        <li><a href="#">Ikota</a></li>
-                        <li><a href="#">Osapa-Jakande</a></li>
-                        <li><a href="#">Owode</a></li>
-                    </ul>
-                </section>
-
-                <!-- <div class="abuja-apartments" style="display:none;">
-                    <ul>
-                    </ul>
-                </div> -->
-            </section>
         </section>
 
         <!-- Result Analytics Section -->
