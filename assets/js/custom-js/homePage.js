@@ -37,33 +37,65 @@ setInterval(() => {
 }, 5000); // Change slide every 5 seconds
 
 // Function handling the Apartment Carousel
+// document.addEventListener("DOMContentLoaded", function () {
+//   const slides = document.querySelectorAll(
+//     ".explore-our-homes-apartments .carousel-item"
+//   );
+//   const dots = document.querySelectorAll(".carousel-pagination .dot");
+//   let currentSlide = 0;
+//   const slideInterval = 3000;
 
-// function showApartments(apartmentIndex) {
-//   // Remove active class from all slides, apartments, and dashes
-//   apartmentsSlide.forEach((apartment) => apartment.classList.remove("active"));
-//   dash.forEach((dot) => dot.classList.remove("active"));
+//   // Function to show the current slide
+//   function showSlide(index) {
+//     // Hide all slides
+//     slides.forEach((slide) => (slide.style.display = "none"));
+//     // Remove active class from all dots
+//     dots.forEach((dot) => dot.classList.remove("active"));
 
-//   // Set active class to the current slide and corresponding dot
-//   apartmentsSlide[apartmentIndex].classList.add("active");
-//   dot[apartmentIndex].classList.add("active");
-// }
+//     // Show the selected slide
+//     slides[index].style.display = "flex";
+//     // Add active class to the corresponding dot
+//     dots[index].classList.add("active");
+//   }
 
-// // Initial display of the first slide
-// showApartments(currentApartment);
-
-// // Add click event to each dot for pagination control
-// dot.forEach((dot, index) => {
-//   dot.addEventListener("click", () => {
-//     currentApartment = index;
-//     showApartments(currentApartment);
+//   // Add click event to each dot
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//       currentSlide = index;
+//       showSlide(currentSlide);
+//     });
 //   });
+
+//   //Function to go to the next slide
+//   function nextSlide() {
+//     currentSlide = (currentSlide + 1) % slides.length;
+//     showSlide(currentSlide);
+//   }
+
+//   // Initialize by showing the first slide
+//   showSlide(currentSlide);
+
+//   let autoSlide = setInterval(nextSlide, slideInterval);
 // });
 
-// // Auto-slide functionality (every 5 seconds)
-// setInterval(() => {
-//   currentApartment = (currentApartment + 1) % apartmentsSlide.length;
-//   showApartments(currentApartment);
-// }, 5000); // Change slide every 5 seconds
+// document.addEventListener("DOMContentLoaded", function () {
+//   const homesSection = document.querySelector(".explore-our-homes-apartments");
+
+//   // Function to add the animation class when the container is in view
+//   function handleIntersection(entries) {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         homesSection.classList.add("animate-container-slide-in");
+//       }
+//     });
+//   }
+
+//   const observer = new IntersectionObserver(handleIntersection, {
+//     threshold: 0.2, // Trigger when 20% of the section is visible
+//   });
+
+//   observer.observe(homesSection);
+// });
 
 // Function handling the Find a neighbourhood dropdown
 
