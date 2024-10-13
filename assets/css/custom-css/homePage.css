@@ -10,7 +10,6 @@ html {
 }
 
 header {
-  /* border: 3px solid red; */
   margin-block-end: 60px;
 }
 /* Styling the HomePage Hero Section */
@@ -248,7 +247,7 @@ header {
 }
 
 .rss-articles .first-box {
-  block-size: 596px;
+  block-size: 500px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
@@ -262,7 +261,7 @@ header {
 }
 
 .rss-articles .second-box {
-  block-size: 596px;
+  block-size: 500px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
@@ -273,7 +272,7 @@ header {
 .rss-articles .third-box {
   /* padding-top: 40px; */
   grid-column: span 2;
-  block-size: 596px;
+  block-size: 500px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
@@ -635,29 +634,45 @@ header {
 /* Mobile responsiveness for the Explore Our Homes Section  */
 
 @media (width <= 768px) {
+  .explore-our-homes {
+    overflow: clip;
+  }
+
+  .close-apartments-on-mobile {
+    display: hidden;
+  }
+
   .explore-our-homes-header {
     max-width: 410px;
+    margin-inline-start: 30px;
   }
 
   .explore-our-homes-header h2 {
-    font-size: 25px;
+    font-size: 35px;
   }
 
   .explore-our-homes p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
+  .explore-our-homes-items {
+    inline-size: 100%;
+  }
   .explore-our-homes-apartments {
     block-size: 400px;
+    scroll-behavior: smooth;
     display: flex;
     gap: 20px;
-    padding-inline-start: 30px;
-    overflow: clip;
-    flex-shrink: 0;
+    inline-size: 100%;
+    animation: slide-in 10s ease-in-out infinite alternate;
   }
 
   .explore-our-homes-apartments.active {
     display: block;
+  }
+
+  .top-middle-apartment {
+    inline-size: 100%;
   }
 
   .explore-our-homes-apartments .middle-apartment-wrapper {
@@ -680,9 +695,6 @@ header {
     font-size: 14px;
   }
 
-  .dot.active {
-    background-color: white;
-  }
   .explore-our-homes .carousel-pagination {
     margin: auto;
     margin-top: 10px;
@@ -693,7 +705,35 @@ header {
     margin: 5px;
     display: inline-block;
     cursor: pointer;
-    border: 1px solid #bbb;
+    border: 2px solid #bbb;
+    border-radius: 10px;
+  }
+
+  .explore-our-homes .carousel-pagination .dot.active {
+    border: 2px solid #007dc1;
+  }
+
+  .bottom-middle-apartments {
+    /* border: 3px solid red; */
+  }
+
+  .carousel-item {
+    display: none;
+  }
+  .carousel-item.active {
+    display: block;
+  }
+  .dot.active {
+    background-color: #333;
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
 
@@ -708,11 +748,18 @@ header {
   }
 }
 
+@media (width <= 375px) {
+  .explore-our-homes-apartments {
+    inline-size: 100%;
+    flex: 1;
+  }
+}
+
 /* Styling the Find a Neighborhood Section  */
 
 .find-a-neighbourhood {
   inline-size: 100%;
-  padding: 80px 100px;
+  padding: 40px 100px 100px 80px;
   background-color: #007dc1;
   margin-block-end: 60px;
   color: white;
@@ -777,6 +824,9 @@ header {
 
 .apartment-dropdown-menu {
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .lagos-neighbourhood-apartments {
@@ -785,13 +835,16 @@ header {
   padding: 0;
 }
 
+.lagos-neighbourhood-apartments p {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
 .lagos-apartments-neighbourhood-list {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: white;
   inline-size: fit-content;
-  border-radius: 15px;
-  padding: 20px;
-  top: 40px;
+  /* padding: 20px; */
+  /* top: 40px; */
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(5, 120px);
@@ -989,6 +1042,7 @@ header {
 .frequently-asked-questions {
   margin: auto;
   margin-block-end: 60px;
+  inline-size: 90%;
 }
 
 .faqs-header {
@@ -1007,6 +1061,7 @@ header {
 
 .faqs-wrapper {
   inline-size: 60%;
+  /* inline-size: 100%; */
   margin: auto;
   margin-block-end: 40px;
   display: grid;
@@ -1061,7 +1116,12 @@ header {
 /* Mobile Responsiveness Styling the FAQs Section */
 @media (width <= 768px) {
   .faqs-wrapper {
-    inline-size: 90%;
+    inline-size: 100%;
+  }
+  .frequently-asked-questions {
+    margin: auto;
+    margin-block-end: 60px;
+    inline-size: 95%;
   }
 }
 
