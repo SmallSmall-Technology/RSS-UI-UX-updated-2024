@@ -205,7 +205,7 @@ header {
 
 .rss-article-wrapper {
   margin: auto;
-  margin-block-end: 40px;
+  margin-block-end: 20px;
   inline-size: 90%;
 }
 
@@ -320,7 +320,7 @@ header {
 .rss-slider-section {
   inline-size: 90%;
   margin: auto;
-  margin-block-end: 60px;
+  margin-block-end: 100px;
   block-size: 608px;
 }
 
@@ -508,7 +508,7 @@ header {
 .explore-our-homes {
   inline-size: 90%;
   margin: auto;
-  margin-block-end: 60px;
+  margin-block-end: 100px;
 }
 
 .explore-our-homes-header {
@@ -664,7 +664,7 @@ header {
     display: flex;
     gap: 20px;
     inline-size: 100%;
-    animation: slide-in 10s ease-in-out infinite alternate;
+    animation: slide-in 15s ease-in-out infinite alternate;
   }
 
   .explore-our-homes-apartments.active {
@@ -729,10 +729,12 @@ header {
 
   @keyframes slide-in {
     0% {
-      transform: translateX(100%);
+      opacity: 1;
+      transform: translateX(1000px);
     }
     100% {
-      transform: translateX(-100%);
+      opacity: 2;
+      transform: translateX(-2000px);
     }
   }
 }
@@ -761,7 +763,7 @@ header {
   inline-size: 100%;
   padding: 40px 100px 100px 80px;
   background-color: #007dc1;
-  margin-block-end: 60px;
+  margin-block-end: 100px;
   color: white;
   position: relative;
 }
@@ -843,8 +845,6 @@ header {
 .lagos-apartments-neighbourhood-list {
   background-color: white;
   inline-size: fit-content;
-  /* padding: 20px; */
-  /* top: 40px; */
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(5, 120px);
@@ -870,13 +870,32 @@ header {
 }
 
 @media (width <= 460px) {
+  .find-a-neighbourhood {
+    inline-size: 100%;
+    padding-block: 60px;
+    padding-inline: 40px;
+    padding-bottom: 150px;
+  }
+
   .find-a-neighbourhood-header h2 {
-    font-size: 1.1rem;
+    font-size: 30px;
   }
   .apartment-dropdown p {
     font-size: 0.9rem;
   }
 
+  .lagos-apartments-neighbourhood-list {
+    grid-template-columns: repeat(2, 150px);
+  }
+}
+
+@media (width <= 460px) {
+  .lagos-apartments-neighbourhood-list {
+    grid-template-columns: repeat(2, 130px);
+  }
+}
+
+@media (width <= 460px) {
   .lagos-apartments-neighbourhood-list {
     grid-template-columns: repeat(2, 100px);
   }
@@ -995,22 +1014,18 @@ header {
 /* Mobile Responsiveness Styling the Result Analytics Section */
 
 @media (width<= 768px) {
-  .result-analytics-data-wrapper {
-    display: grid;
-    justify-content: start;
-    gap: 20px;
+  .result-analytics {
+    padding-inline: 0;
   }
 
-  .result-analytics-tenancy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .result-analytics-header h1 {
+    font-size: 18px;
   }
 
-  .result-analytics-tenancy-plan {
-    inline-size: 100%;
+  .result-analytics-header p {
+    font-size: 35px;
+    font-weight: 600;
   }
-
   .result-analytics-image-wrapper {
     block-size: 345px;
     inline-size: 100%;
@@ -1021,10 +1036,33 @@ header {
 
   .result-analytics-image-wrapper img {
     object-fit: cover;
-    inline-size: 80%;
+    inline-size: 100%;
     margin: auto;
     margin-top: 35px;
   }
+
+  .result-analytics-data-wrapper {
+    display: grid;
+    justify-content: start;
+    gap: 20px;
+  }
+
+  .result-analytics-tenancy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-inline-size: 100%;
+    padding: 0;
+  }
+
+  .result-analytics-tenancy-plan {
+    inline-size: 100%;
+  }
+  .result-analytics-tenancy-plan h2 {
+    inline-size: 100%;
+    font-size: 35px;
+  }
+
   .result-analytics-tenancy-qrcode-wrapper {
     inline-size: fit-content;
   }
@@ -1061,7 +1099,6 @@ header {
 
 .faqs-wrapper {
   inline-size: 60%;
-  /* inline-size: 100%; */
   margin: auto;
   margin-block-end: 40px;
   display: grid;
@@ -1129,7 +1166,7 @@ header {
 .speak-with-us-wrapper {
   inline-size: 95%;
   margin: auto;
-  margin-block-end: 60px;
+  margin-block-end: 120px;
 }
 
 .speak-with-us {
@@ -1144,30 +1181,29 @@ header {
 }
 
 .speak-with-us-content {
-  /* block-size: 200px; */
   justify-content: start;
   background-color: white;
   border-radius: 20px;
   position: absolute;
   bottom: 80px;
   left: 80px;
-  padding: 40px 80px;
+  padding: 40px 40px;
   min-width: 200px;
 }
 
 .speak-with-us-content h1 {
   font-size: 36px;
   font-weight: 700;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .speak-with-us-content p {
-  max-width: 200px;
-  font-size: 0.7rem;
+  max-width: 250px;
+  font-size: 1rem;
 }
 
 .speak-with-us-content .btn {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   background-color: black;
   color: white;
@@ -1200,17 +1236,37 @@ header {
   .speak-with-us-content {
     position: initial;
     inline-size: 70%;
-    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: auto;
-    padding: 10px;
+  }
+
+  .speak-with-us-content h1 {
+    font-size: 26px;
   }
 
   .speak-with-us-content p {
     max-width: 170px;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 
   .speak-with-us-content .btn {
     inline-size: 80%;
+    display: flex;
+    justify-content: center;
+    /* padding-inline: 80px; */
+  }
+}
+
+@media (width <= 425px) {
+  .speak-with-us-content {
+    position: initial;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
   }
 }
