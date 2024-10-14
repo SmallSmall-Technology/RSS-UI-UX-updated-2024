@@ -21,15 +21,15 @@ header {
 }
 
 .get-started h1 {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
-  max-width: 400px;
+  max-width: 700px;
 }
 
 .get-started .btn-wrapper {
   display: flex;
   gap: 15px;
-  margin-block-start: 30px;
+  margin-block-start: 10px;
 }
 
 .get-started .btn-wrapper .btn {
@@ -116,6 +116,12 @@ aside p:last-child {
 
   .get-started {
     margin-block-start: 20px;
+  }
+
+  .get-started h1 {
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 600px;
   }
 
   .container-fluid {
