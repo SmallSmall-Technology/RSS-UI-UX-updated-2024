@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="../assets/images/rss-favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../assets/css/custom-css/header.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/rssPropertyInspectionPage.css" />
+
+
+    <!-- Script for fixed header -->
+    <!-- <script type="text/javascript" src="../assets/js/header.js"></script> -->
+
+    <!-- Script for GSAP -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+
+
+
+    <title>RSS Property Inspection Page</title>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-bar" aria-label="Main Navigation">
+            <!-- Header for the smaller screen -->
+            <div class="middle-nav d-md-none">
+
+                <a href="#home" aria-label="Home page">
+                    <img src="../assets/images/RssLogo.png" alt="Company logo" />
+                </a>
+
+                <div class="right-nav">
+                    <div class="logged-in">
+                        <a href="user-dashboard" class="user-dashboard">
+                            <img src="../assets/images/circle-user.png" alt="circle-user" />
+                        </a>
+                        <div class="vertical-line"></div>
+                        <a href="#">
+                            <div class="grid-line" id="grid-line">
+                                <div class="one-line"></div>
+                                <div class="one-line"></div>
+                            </div>
+
+                        </a>
+                        <div class="get-started-dropdown" id="get-started-dropdown">
+                            <a href="#logout" aria-label="Log out" class="log-out">Log out</a>
+
+                            <div class="line-through"></div>
+
+                            <a href="#dashboard" aria-label="dashboard">
+                                Dashboard
+                            </a>
+                            <a href="#create-wallet" aria-label="create wallet" class="create-wallet">
+                                Create wallet</a>
+                            <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
+
+                            <div class="line-through"></div>
+
+                            <a href="#flexible-properties" aria-label="flexible properties"
+                                class="flexible-properties">Flexible properties</a>
+                            <a href="#upfront-properties" aria-label="upfront properties"
+                                class="upfront-properties">Upfront properties</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hamburger icon for mobile screen -->
+            <div class="hamburger d-none" id="hamburger">
+                <img src="../assets/images/menu burger.svg" class="menu-icon" id="open-menu" />
+                <img src="../assets/images/Cancel.svg" class="cancel-icon" id="close-menu" style="display: none;" />
+            </div>
+            <section class="small-screen-nav open" id="dropdown-menu">
+                <div class="left-nav">
+                    <div class="rent-dropdown">
+
+                        <!-- Conditionally render these elements when a user has been authenticated -->
+
+                        <a href="#dashboard" aria-label="dashboard" class="dashboard d-md-none d-block">
+                            <img src="../assets/images/dashboard 1.png" alt="dashboard-icon" />Dashboard
+                        </a>
+                        <!-- If user already has a wallet don't show this -->
+                        <!-- <a href="#create-wallet" aria-label="create wallet" class="create-wallet d-md-none d-block">
+                        <img src="../assets/images/wallet(1) 2.png" alt="wallet-icon" />Create
+                        wallet</a> -->
+
+                        <!-- Show this instead -->
+                        <!-- <div
+                        class="wallet-balance d-md-none d-block d-flex justify-content-between align-items-baseline">
+                        <p class="wallet-text">Wallet balance: <small>N50,000.00</small></p>
+                        <button class="wallet-btn">Top up</button>
+                    </div> -->
+                        <!--  -->
+                        <!-- <hr class="d-md-none d-block" />
+                    <a href="#flexible-properties" aria-label="flexible properties"
+                        class="flexible-properties d-md-none d-block">Flexible properties</a>
+                    <a href="#upfront-properties" aria-label="upfront properties"
+                        class="upfront-properties d-md-none d-block">Upfront properties</a>
+                    <hr class="d-md-none d-block" /> -->
+
+                        <!-- stops here -->
+
+
+                        <a href="#rent" id="rent-dropdown-btn" class="rent-dropdown-btn" aria-haspopup="true"
+                            style="color: black;" aria-expanded="false" aria-controls="rent-menu">
+                            <p>Rent</p> <span><i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <section id="rent-menu" class="rent-dropdown-menu" role="menu" aria-hidden="true">
+                            <div class="location-wrapper">
+                                <h1 class="location" id="lagos"><a href="#">Lagos</a></h1>
+                                <h1 class="location" id="abuja"><a href="#">Abuja</a></h1>
+                            </div>
+                            <hr class="pagination-line" id="pagination-line" />
+                            <div class="lagos-apartments" style="display:none;">
+                                <ul class="lagos-apartments-list">
+                                    <li><a href="#">Lekki</a></li>
+                                    <li><a href="#">Yaba</a></li>
+                                    <li><a href="#">Ikoyi</a></li>
+                                    <li><a href="#">Salem</a></li>
+                                    <li><a href="#">Awoyaya</a></li>
+                                    <li><a href="#">Oniru</a></li>
+                                    <li><a href="#">Igbo Efon</a></li>
+                                    <li><a href="#">Ikeja</a></li>
+                                    <li><a href="#">Chevron</a></li>
+                                    <li><a href="#">Ologbo</a></li>
+                                    <li><a href="#">Elegushi</a></li>
+                                    <li><a href="#">Sangotedo</a></li>
+                                    <li><a href="#">Eleganza</a></li>
+                                    <li><a href="#">VGC</a></li>
+                                    <li><a href="#">Lekki phase 1</a></li>
+                                    <li><a href="#">Mobil road</a></li>
+                                    <li><a href="#">Ikota</a></li>
+                                    <li><a href="#">Osapa-Jakande</a></li>
+                                    <li><a href="#">Owode</a></li>
+                                </ul>
+                            </div>
+                            <div class="abuja-apartments" style="display:none;">
+                                <ul>
+                                    <!-- <li><a href="#">None</a></li> -->
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <a href="#buy" aria-label="Buy a property" class="buy-a-property" style="color: black;">
+                        <p>Buy</p>
+                        <span class="d-md-none d-block"><i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </a>
+                    <a href="#how-it-works" aria-label="Learn how it works" class="how-it-works" id="how-it-works"
+                        style="color: black;">How
+                        it works
+                        <span><i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                    </a>
+                    <div class="how-it-works-dropdown-menu" id="how-it-works-dropdown-menu" style="color: black;">
+                        <div class="how-it-works-dropdown">
+                            <h1 class="how-it-works-content" id="tenant"><a href="#">Tenant</a></h1>
+                            <h1 class="how-it-works-content" id="Landlord"><a href="#">Landlord</a></h1>
+                        </div>
+                    </div>
+                    <a href="#faq" aria-label="Frequently Asked Questions" style="color: black;">FAQ</a>
+                </div>
+                <div class="middle-nav d-md-block d-none">
+                    <a href="#home" aria-label="Home page">
+                        <img src="../assets/images/RssLogo.png" alt="Company logo" />
+                    </a>
+                </div>
+
+
+                <div class="right-nav">
+                    <!-- Search bar container -->
+                    <div class="search-container">
+                        <a href="#search" aria-label="Search" class="search-icon" id="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
+                                <path fill="black" stroke="#000000"
+                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                            </svg>
+                        </a>
+                        <form class="search-input-container ">
+                            <input type="text" id="search-input" class="search-input"
+                                placeholder=" Where would you like to live?">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
+                                class="input-search-icon" id="input-search-icon">
+                                <path fill="black" stroke="#000000" stroke-width="10"
+                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                            </svg>
+                        </form>
+                    </div>
+
+                    <hr class="d-md-none d-block" />
+                    <div class="header-footer d-md-none d-block" aria-label="Header Footer">
+                        <small>Customer Support</small>
+                        <a href="mailto:customerexperience@smallsmall.com">
+                            customerexperience@smallsmall.com
+                        </a>
+                        <div class="tel-wrapper">
+                            <a href="tel:+2349036339800">09036339800</a>
+                            <a href="tel:+2349037222669">09037222669</a>
+                        </div>
+                    </div>
+
+                    <!-- Conditionally render this div when a user has been authenticated -->
+                    <div class="logged-in">
+                        <a href="user-dashboard" class="user-dashboard">
+                            <img src="../assets/images/circle-user.png" alt="circle-user" />
+                        </a>
+                        <div class="vertical-line"></div>
+                        <a href="#">
+                            <div class="grid-line" id="grid-line">
+                                <div class="one-line"></div>
+                                <div class="one-line"></div>
+                            </div>
+
+                        </a>
+                        <div class="get-started-dropdown" id="get-started-dropdown">
+                            <a href="#logout" aria-label="Log out" class="log-out">Log out</a>
+
+                            <div class="line-through"></div>
+
+                            <a href="#dashboard" aria-label="dashboard">
+                                Dashboard
+                            </a>
+                            <a href="#create-wallet" aria-label="create wallet" class="create-wallet">
+                                Create wallet</a>
+                            <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
+
+                            <div class="line-through"></div>
+
+                            <a href="#flexible-properties" aria-label="flexible properties"
+                                class="flexible-properties">Flexible properties</a>
+                            <a href="#upfront-properties" aria-label="upfront properties"
+                                class="upfront-properties">Upfront properties</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main-container">
+        <!-- Main Nav -->
+        <section class="rss-inspection-page-main-section d-md-flex d-none">
+            <section class="single-section">
+                <p>City</p>
+                <p>All Locations <span><i class="fa-solid fa-chevron-down"></i>
+                    </span></p>
+            </section>
+            <hr />
+            <section class="single-section">
+                <p>Bedroom</p>
+                <p>All Bedroom <span><i class="fa-solid fa-chevron-down"></i>
+                    </span></p>
+            </section>
+            <hr />
+            <section class="single-section">
+                <p>Bathroom</p>
+                <p>All Bathroom <span><i class="fa-solid fa-chevron-down"></i>
+                    </span></p>
+            </section>
+            <hr />
+            <section class="single-section">
+                <p>Furnishing</p>
+                <p>Any <span><i class="fa-solid fa-chevron-down"></i>
+                    </span></p>
+            </section>
+            <hr />
+            <section class="single-section">
+                <p>Budget</p>
+                <p>Any <span><i class="fa-solid fa-chevron-down"></i>
+                    </span></p>
+            </section>
+            <button class="btn">Filter</button>
+        </section>
+
+
+        <!-- Apartment Component -->
+        <section class="apartments-wrapper">
+            <div class="apartments-wrapper-header">
+                <div class="apartments-wrapper-header-content">
+                    <h1>Lekki Phase 1 <span>(302 properties)</span></h1>
+                    <p> &#x263C; Schedule to see any property for free, Inspect between Monday to Saturday.</p>
+                </div>
+
+                <div class=" d-md-none d-block">
+                    <!-- Dropdown Button -->
+                    <button class="rss-apartments-settings" type="button" aria-expanded="false"
+                        id="rss-apartments-settings-apartment-dropdown-btn">
+                        <img src="/assets/images/settings-sliders 2.png" alt="setting-icon" />
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div class="rss-apartments-settings-dropdown-menu" hidden
+                        id="rss-apartments-settings-apartment-dropdown-menu">
+                        <div class="d-flex mx-4 justify-content-between">
+                            <i class="fas fa-times" id="rss-apartments-settings-apartment-dropdown-menu-close"></i>
+                            <p class="d-md-none d-block">Filter</p>
+                            <span></span>
+                        </div>
+                        <hr />
+                        <section class="rss-inspection-page-main-section d-md-none d-block open-settings">
+
+                            <!-- Reset All -->
+                            <a class="pb-4 d-inline-block d-flex justify-content-end"
+                                style="cursor: pointer; color: #000;">Reset all</a>
+
+                            <!-- Location Filter -->
+                            <section class="single-section">
+                                <label class="pb-2">Location</label>
+                                <select class="form-control">
+                                    <option>Any location</option>
+                                    <option>Eti-Osa</option>
+                                    <option>Yaba</option>
+                                    <option>Abuja</option>
+                                </select>
+                            </section>
+                            <hr />
+
+                            <!-- Bedroom Filter -->
+                            <section class="single-section">
+                                <p class="pb-2">Bedroom</p>
+                                <div class="single-section-btn-wrapper pb-4">
+                                    <button class="btn btn-light">Any</button>
+                                    <button class="btn btn-light">1</button>
+                                    <button class="btn btn-light">2</button>
+                                    <button class="btn btn-light">3</button>
+                                    <button class="btn btn-light">4+</button>
+                                </div>
+                            </section>
+                            <hr />
+
+                            <!-- Bathroom Filter -->
+                            <section class="single-section">
+                                <p class="pb-2">Bathroom</p>
+                                <div class="single-section-btn-wrapper pb-4">
+                                    <button class="btn btn-light">Any</button>
+                                    <button class="btn btn-light">1</button>
+                                    <button class="btn btn-light">2</button>
+                                    <button class="btn btn-light">3</button>
+                                    <button class="btn btn-light">4+</button>
+                                </div>
+                            </section>
+                            <hr />
+
+                            <!-- Furnishing Filter -->
+                            <section class="single-section">
+                                <p class="pb-2">Furnishing</p>
+                                <div class="single-section-btn-wrapper pb-4">
+                                    <div class="btn-wrapper">
+                                        <button class="btn btn-light">Unfurnished</button>
+                                        <button class="btn btn-light">Furnished</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <hr />
+
+                            <!-- Budget Filter -->
+                            <section class="single-section">
+                                <p class="pb-2">Budget</p>
+                                <div class="budget-plan">
+                                    <div class="budget-plan-price">
+                                        <small>₦150k</small>
+                                        <small>₦300k</small>
+                                    </div>
+                                    <div class="payment-line"></div>
+                                </div>
+                            </section>
+                        </section>
+                        <hr />
+                        <!-- Filter Button -->
+                        <button class="btn btn-primary filter-btn">Filter</button>
+                    </div>
+
+                </div>
+
+
+        </section>
+        <section class="apartments">
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/Olivia-Court.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+
+                    <!-- Display this when the apartment is not avaialable yet -->
+                    <!-- <div class="single-apartment-current-status">
+                            <span><img src="../assets/images/time-delete 1.png" alt="checkbox" /></span>
+                            <p>Available: <span>Oct 2024</span></p>
+                        </div> -->
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID2.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID3.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID4.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/Olivia-Court.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID3.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID4.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/Olivia-Court.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID2.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID3.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="single-apartment">
+                <div class="single-apartment-img-wrapper">
+                    <img src="../assets/images/HouseID4.png" alt="apartment image" />
+                </div>
+                <div class="single-apartment-status-wrapper">
+                    <div class="single-apartment-current-status">
+                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                        <p>Available: <span>Now</span></p>
+                    </div>
+                    <div class="share-apartment-icon">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="single-apartment-details">
+                    <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
+                    <p class="single-apartment-location">Fola Osibo Phase 1, Lekki</p>
+                    <ul class="single-apartment-extras">
+                        <li><img src="../assets/images/bed-alt(1) 2.png" />1 Bed</li>
+
+                        <li><span class="dot"></span> <img src="../assets/images/shower 1.png" alt="shower-icon" />
+                            Bath</li>
+                        <!-- <span>.</span> -->
+                        <li><span class="dot"></span><img src="../assets/images/location.svg"
+                                alt="location-icon" />Lekki
+                        </li>
+                    </ul>
+                    <div class="single-apartment-price-wrapper">
+                        <p class="single-apartment-discounted-price">N87,000/<span>month</span></p>
+                        <span class="dot"></span>
+                        <p class="single-apartment-price">N1,150,000 / year</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        </section>
+
+        <!-- Pagination Conponent -->
+        <section class="apartment-pagination">
+            <button class="btn" id="first-btn">&lt;&lt; First</button>
+            <button class="btn" id="back-btn">&lt; Back</button>
+
+            <button class="btn">1</button>
+            <button class="btn active">2</button>
+            <button class="btn">3</button>
+            <button class="btn d-md-block d-none">4</button>
+
+            <span class="dots">...</span>
+
+            <button class="btn hidden" id="page-6">6</button>
+            <!-- More hidden pages until page 25 -->
+            <button class="btn hidden" id="page-20">20</button>
+
+
+            <button class="btn d-md-block d-none">25</button>
+
+            <button class="btn d-md-block d-none" id="next-btn">Next &gt;</button>
+            <button class="btn" id="last-btn">Last &gt;&gt;</button>
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="rss-footer-wrapper">
+        <div class="rss-footer-contents d-flex">
+            <section class="rss-footer-content">
+                <a href="#top" class="text-decoration-none">
+                    <img src="../assets/images/RSS WHITE-update 2.png" alt="Company Logo" class="img-fluid"
+                        style="max-width: 100%; height: auto;">
+                </a>
+
+                <div class="rss-footer-content-list">
+                    <ul>
+                        <small style="color: #94E0FF;">Explore Products</small>
+                        <li><a href="#" class="text-white text-decoration-none">Rent</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Nightly stay</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Buy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Lease with us</a></li>
+                    </ul>
+
+                    <ul>
+                        <small style="color: #94E0FF;">Company</small>
+                        <li><a href="#" class="text-white text-decoration-none">About us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+
+                    <ul>
+                        <small style="color: #94E0FF;">Customer Support</small>
+                        <li>
+                            <a href="mailto:customerexperience@smallsmall.com"
+                                class="email text-white text-decoration-none">
+                                customerexperience@smallsmall.com
+                            </a>
+                        </li>
+
+                        <li class="text-white">
+                            <a href="tel:09036339800" class="text-white text-decoration-none">0903 633 9800</a>
+                        </li>
+                        <li class="text-white">
+                            <a href="tel:09037222669" class="text-white text-decoration-none">0903 722 2669</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="rss-footer-last-contents">
+                    <a href="#" class="text-white text-decoration-none"><small>Privacy policy</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>Subscription terms</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>Terms of use</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>FAQ</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>GRDP</small></a>
+                </div>
+            </section>
+
+            <section class="rss-footer-content">
+                <div class="rss-footer-app-download">
+                    <p class="text-white text-decoration-none">Download the Mobile app</p>
+                    <div class="rss-download-wrapper">
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="../assets/images/kindpng_255271 6 1.png" alt="Google Play Download Logo"
+                                class="img-fluid" style="max-width: 100%; height: auto;">
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="../assets/images/kindpng_255271 5 1.png" alt="App Store Download Logo"
+                                class="img-fluid" style="max-width: 100%; height: auto;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rss-footer-social-logos-wrapper">
+                    <small style="color: #94E0FF;">Follow us</small>
+                    <div class="rss-social-media-logos">
+                        <a href="https://x.com/smallsmallhq" target="_blank">
+                            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/smallsmallhq/" target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/small-small-technology/" target="_blank">
+                            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.facebook.com/smallsmallhq/" target="_blank">
+                            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@thesmallsmallhq" target="_blank">
+                            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                        </a>
+                    </div>
+
+                    <div class="rss-footer-last-content">
+                        <small class="text-white" style="font-weight: 300;">
+                            <a href="#" class="text-white text-decoration-none">
+                                &copy; 2023 Smallsmall Technology
+                            </a>
+                        </small>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Jquery js -->
+    <script src="../assets/js/jquery.slim.min.js"></script>
+    <!-- Bootstrap js and Popper js -->
+    <!-- <script src="../assets/js/popper.min.js"></script> -->
+    <script src="../assets/js/bootstrap-js/bootstrap.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="../assets//js/custom-js/rssPropertyInspectionPage.js"></script>
+    <script src="../assets/js/custom-js/header.js"></script>
+
+</body>
+
+</html>

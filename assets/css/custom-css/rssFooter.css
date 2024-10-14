@@ -5,13 +5,14 @@
 
 .rss-footer-wrapper {
   background: linear-gradient(90deg, #007dc1 0%, #0070ad 100%);
-  padding: 20px 50px;
+  padding: 20px 100px;
   margin-top: auto;
 }
 
 .rss-footer-wrapper .rss-footer-contents {
   display: flex;
   justify-content: space-between;
+  margin-inline-end: 70px;
 }
 
 .rss-footer-content-list {
