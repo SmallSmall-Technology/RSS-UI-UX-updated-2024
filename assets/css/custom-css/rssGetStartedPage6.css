@@ -11,9 +11,7 @@ header {
 .container-fluid {
   padding: 30px 80px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .get-started {
@@ -23,13 +21,21 @@ header {
 .get-started h1 {
   font-size: 40px;
   font-weight: 600;
-  max-width: 700px;
+  max-width: 800px;
 }
 
+.get-started a {
+  font-size: 14px;
+  font-weight: 400;
+  margin-inline-start: 20px;
+  color: #222224;
+  text-decoration: underline;
+}
 .get-started .btn-wrapper {
   display: flex;
   gap: 15px;
-  margin-block-start: 10px;
+  margin-block-start: 15px;
+  margin-block-end: 20px;
 }
 
 .get-started .btn-wrapper .btn {
