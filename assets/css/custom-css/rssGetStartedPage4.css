@@ -16,20 +16,19 @@ header {
   flex-wrap: wrap;
 }
 
-.get-started p {
-  font-size: 14px;
-  font-weight: 400;
+.get-started {
+  margin-block-start: 50px;
 }
 
 .get-started h1 {
   font-size: 30px;
   font-weight: 600;
-  max-width: 400px;
+  max-width: 550px;
 }
 
 .get-started .btn-wrapper {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   margin-block-start: 30px;
 }
 
@@ -37,8 +36,9 @@ header {
   border: 1px solid #bccbd7;
   font-size: 14px;
   font-weight: 400;
-  inline-size: 70%;
-  padding-block: 10px;
+  max-width: 330px;
+  text-align: start;
+  padding: 10px 15px;
   transition: all 0.3s ease-in;
   border-radius: 8px;
 }
@@ -103,8 +103,7 @@ aside p:first-child {
 aside p:last-child {
   font-size: 14px;
   font-weight: 400;
-  max-width: 400px;
-  text-wrap: balance;
+  max-width: 390px;
   margin: 0;
 }
 
@@ -112,11 +111,11 @@ aside p:last-child {
 
 @media (width <= 768px) {
   header {
-    padding: 10px;
+    padding: 20px;
   }
 
   .get-started {
-    margin-block-end: 90px;
+    margin-block-start: 20px;
   }
 
   .container-fluid {
@@ -124,16 +123,31 @@ aside p:last-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .btn-wrapper {
     flex-direction: column;
-    inline-size: 60%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .get-started .btn-wrapper .btn {
+    inline-size: 270px;
   }
 }
 
 @media (width <= 425px) {
+  .btn-wrapper {
+    flex-direction: column;
+    inline-size: 70%;
+  }
+
+  .get-started .btn-wrapper .btn {
+    inline-size: 270px;
+  }
+}
+
+@media (width <= 320px) {
   .btn-wrapper {
     flex-direction: column;
     inline-size: 70%;
