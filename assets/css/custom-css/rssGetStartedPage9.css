@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px 80px;
+}
+
+.container-fluid {
+  padding: 30px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.get-started {
+  margin-block-start: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-started small {
+  font-size: 14px;
+  font-weight: 400;
+  margin-block-end: 20px;
+}
+
+.get-started p {
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.get-started .btn-wrapper {
+  margin-block-start: 15px;
+}
+
+.get-started .btn-wrapper .btn {
+  border: 1px solid #007dc1;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 50px;
+  transition: all 0.3s ease-in;
+  border-radius: 8px;
+}
+
+.get-started .btn-wrapper .btn:hover {
+  background-color: black;
+  transform: scale(1.01);
+  color: white;
+}
+
+.get-started .btn-wrapper .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.5);
+  background-color: black;
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Styling the Pagination  */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+  block-size: 3px;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+.slide {
+  inline-size: 20%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.slide.active {
+  background-color: var(--blue);
+}
+
+@media (width <= 768px) {
+  header {
+    padding: 20px;
+  }
+
+  .get-started small {
+    font-size: 12px;
+    font-weight: 400;
+    margin-block-end: 20px;
+  }
+
+  .get-started p {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 800px;
+  }
+
+  .get-started {
+    margin-block-start: 20px;
+  }
+
+  .container-fluid {
+    padding: 20px;
+  }
+}
