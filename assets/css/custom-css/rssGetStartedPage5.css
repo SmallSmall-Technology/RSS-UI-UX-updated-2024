@@ -11,9 +11,7 @@ header {
 .container-fluid {
   padding: 30px 80px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .get-started {
@@ -23,38 +21,24 @@ header {
 .get-started h1 {
   font-size: 40px;
   font-weight: 600;
-  max-width: 600px;
+  max-width: 800px;
+  margin-block-end: 30px;
 }
 
 .get-started .btn-wrapper {
   display: flex;
   gap: 15px;
-  margin-block-start: 10px;
+  margin-block-start: 30px;
 }
 
-.get-started .btn-wrapper .btn {
+input {
   border: 1px solid #bccbd7;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   max-width: 330px;
   text-align: start;
-  padding: 5px 15px;
-  transition: all 0.3s ease-in;
+  padding: 10px 15px;
   border-radius: 8px;
-}
-
-.get-started .btn-wrapper .btn:hover {
-  background-color: black;
-  color: white;
-  transform: scale(1.01);
-}
-
-.get-started .btn-wrapper .btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.5);
-  background-color: black;
-  color: white;
-  transform: scale(1.03);
 }
 
 /* Styling the Pagination  */
@@ -108,25 +92,19 @@ aside p:last-child {
 }
 
 /* Mobile Responsiveness*/
-
 @media (width <= 768px) {
-  header {
-    padding: 10px 20px;
-  }
-
-  aside {
-    position: relative;
-    bottom: 0px;
-  }
-
-  .get-started {
-    margin-block-start: 20px;
-  }
-
   .get-started h1 {
     font-size: 30px;
     font-weight: 600;
     max-width: 600px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .get-started {
+    margin-block-start: 20px;
   }
 
   .container-fluid {
@@ -134,34 +112,5 @@ aside p:last-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .btn-wrapper {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  .get-started .btn-wrapper .btn {
-    inline-size: 270px;
-  }
-}
-
-@media (width <= 425px) {
-  .btn-wrapper {
-    flex-direction: column;
-    inline-size: 70%;
-  }
-
-  .get-started .btn-wrapper .btn {
-    inline-size: 270px;
-  }
-}
-
-@media (width <= 320px) {
-  .btn-wrapper {
-    flex-direction: column;
-    inline-size: 70%;
   }
 }

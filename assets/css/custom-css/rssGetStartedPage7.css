@@ -11,9 +11,7 @@ header {
 .container-fluid {
   padding: 30px 80px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .get-started {
@@ -23,13 +21,21 @@ header {
 .get-started h1 {
   font-size: 40px;
   font-weight: 600;
-  max-width: 600px;
+  max-width: 800px;
 }
 
+.get-started a {
+  font-size: 14px;
+  font-weight: 400;
+  margin-inline-start: 20px;
+  color: #222224;
+  text-decoration: underline;
+}
 .get-started .btn-wrapper {
   display: flex;
   gap: 15px;
-  margin-block-start: 10px;
+  margin-block-start: 15px;
+  margin-block-end: 20px;
 }
 
 .get-started .btn-wrapper .btn {
@@ -38,7 +44,7 @@ header {
   font-weight: 400;
   max-width: 330px;
   text-align: start;
-  padding: 5px 15px;
+  padding: 10px 15px;
   transition: all 0.3s ease-in;
   border-radius: 8px;
 }
@@ -111,12 +117,7 @@ aside p:last-child {
 
 @media (width <= 768px) {
   header {
-    padding: 10px 20px;
-  }
-
-  aside {
-    position: relative;
-    bottom: 0px;
+    padding: 20px;
   }
 
   .get-started {
@@ -134,7 +135,6 @@ aside p:last-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .btn-wrapper {

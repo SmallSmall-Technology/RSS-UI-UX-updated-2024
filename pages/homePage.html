@@ -363,7 +363,7 @@
             </section>
 
             <!-- Explore Our Homes Section -->
-            <section class="explore-our-homes">
+            <section class="explore-our-homes d-none d-md-block">
                 <div class="explore-our-homes-header" aria-label="Explore our homes header text">
                     <h2>Explore our homes</h2>
                     <p>Whatever stage you are in your life you can find a home that suits your budget.</p>
@@ -423,7 +423,7 @@
                 </div>
 
                 <!-- Mobile View -->
-                <!-- <div class="explore-our-homes-apartments d-md-none d-flex" aria-label="Apartments available for you">
+                <div class="explore-our-homes-apartments d-md-none d-flex" aria-label="Apartments available for you">
 
                     <article class="left-apartment apartment carousel-item">
                         <div class="left-apartment-header">
@@ -470,7 +470,126 @@
                     <div class="bottom-middle-apartments apartment carousel-item">
                         <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
                     </div>
-                </div> -->
+                </div>
+
+                <!-- Pagination for Mobile View -->
+                <div class="carousel-pagination d-md-none d-block" aria-label="Carousel navigation">
+                    <button class="dot" aria-label="Go to slide 1" data-slide="0"></button>
+                    <button class="dot" aria-label="Go to slide 2" data-slide="1"></button>
+                    <button class="dot" aria-label="Go to slide 3" data-slide="2"></button>
+                    <button class="dot" aria-label="Go to slide 4" data-slide="3"></button>
+                    <button class="dot" aria-label="Go to slide 5" data-slide="4"></button>
+                </div>
+            </section>
+
+            <section class="explore-our-homes d-block d-md-none ">
+                <div class="explore-our-homes-header" aria-label="Explore our homes header text">
+                    <h2>Explore our homes</h2>
+                    <p>Whatever stage you are in your life you can find a home that suits your budget.</p>
+                </div>
+                <div class="explore-our-homes-apartments close-apartments-on-mobile "
+                    aria-label="Apartments available for you">
+                    <article class="left-apartment apartment">
+                        <div class="left-apartment-header">
+                            <h2>Studio apartment</h2>
+                            <p>Vetted homes from verified landlords</p>
+                        </div>
+                        <button class="btn">
+                            View 104+ Studios &rarr;
+                        </button>
+                    </article>
+
+                    <article class="middle-apartment-wrapper">
+                        <div class="top-middle-apartment apartment">
+                            <div class="middle-apartment-header">
+                                <h2>1 bed apartment</h2>
+                                <p>Comfortable and functional living experience</p>
+                            </div>
+                            <button class="btn">
+                                View 60+ 1 beds &rarr;
+                            </button>
+                        </div>
+
+                        <div class="bottom-middle-apartments apartment">
+                            <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
+                        </div>
+                    </article>
+
+                    <article class="right-apartment-wrapper">
+                        <div class="top-right-apartment apartment">
+                            <div class="right-apartment-header">
+                                <h2>2 bed apartment</h2>
+                                <p>Vibrant neighborhood for individuals & couples</p>
+                            </div>
+                            <button class="btn">
+                                View 200+ 2 beds &rarr;
+                            </button>
+                        </div>
+
+                        <div class="bottom-right-apartment apartment">
+                            <div class="right-apartment-header">
+                                <h2>3+ bed flat</h2>
+                                <p>Comfortable living space for families</p>
+                            </div>
+                            <button class="btn">
+                                View 10+ 3+ beds &rarr;
+                            </button>
+                        </div>
+                    </article>
+                    <!-- <div class="bottom-middle-apartments apartment d-md-block d-none">
+                        <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
+                    </div> -->
+                </div>
+
+                <!-- Mobile View -->
+                <div class="explore-our-homes-apartments  d-flex" aria-label="Apartments available for you">
+
+                    <article class="left-apartment apartment carousel-item">
+                        <div class="left-apartment-header">
+                            <h2>Studio apartment</h2>
+                            <p>Vetted homes from verified landlords</p>
+                        </div>
+                        <button class="btn">
+                            View 104+ Studios &rarr;
+                        </button>
+                    </article>
+
+                    <article class="middle-apartment-wrapper apartment carousel-item">
+                        <div class="top-middle-apartment apartment">
+                            <div class="middle-apartment-header">
+                                <h2>1 bed apartment</h2>
+                                <p>Comfortable and functional living experience</p>
+                            </div>
+                            <button class="btn">
+                                View 60+ 1 beds &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <div class="top-right-apartment apartment carousel-item">
+                        <div class="right-apartment-header">
+                            <h2>2 bed apartment</h2>
+                            <p>Vibrant neighborhood for individuals & couples</p>
+                        </div>
+                        <button class="btn">
+                            View 200+ 2 beds &rarr;
+                        </button>
+                    </div>
+
+                    <div class="bottom-right-apartment apartment carousel-item">
+                        <div class="right-apartment-header">
+                            <h2>3+ bed flat</h2>
+                            <p>Comfortable living space for families</p>
+                        </div>
+                        <button class="btn">
+                            View 10+ 3+ beds &rarr;
+                        </button>
+                    </div>
+
+                    <div class="bottom-middle-apartments apartment carousel-item">
+                        <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
+                    </div>
+                </div>
 
                 <!-- Pagination for Mobile View -->
                 <div class="carousel-pagination d-md-none d-block" aria-label="Carousel navigation">
@@ -492,13 +611,13 @@
                     <p>Find a neighbourhood that fits your needs and starts your new chapter.</p>
                 </div>
                 <div class="find-a-neighbourhood-location-wrapper">
-                    <h1 class="location" id="lagos-neighbourhood-apartments"><a>Lagos</a></h1>
-                    <h1 class="location" id="abuja-neighbourhood-apartments"><a>Abuja</a></h1>
+                    <button class="location location-btn" id="lagos-neighbourhood-apartments"><a>Lagos</a></button>
+                    <button class="location location-btn" id="abuja-neighbourhood-apartments"><a>Abuja</a></button>
                 </div>
                 <hr class="pagination-line" id="pagination-line" />
                 <div class="apartment-dropdown dropdown">
                     <h1 class="my-4" id="apartmentDropdown" data-toggle="dropdown" type="button" aria-haspopup="true"
-                        aria-expanded="false">Select a location in Lagos</h1>
+                        aria-expanded="false">Select a location in <span id="selected-location"></span></h1>
                     <!-- <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false"> -->
                     <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
                     <!-- <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i> -->
@@ -527,6 +646,13 @@
                                 <li><a class="dropdown-item" href="#">Mobil road</a></li>
                                 <li><a class="dropdown-item" href="#">Ikota</a></li>
                                 <li><a class="dropdown-item" href="#">Owode</a></li>
+                            </ul>
+                        </section>
+                        <section class="abuja-neighbourhood-apartments">
+                            <p>Abuja</p>
+                            <hr />
+                            <ul class="abuja-apartments-neighbourhood-list">
+
                             </ul>
                         </section>
                     </div>

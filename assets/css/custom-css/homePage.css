@@ -713,10 +713,6 @@ header {
     border: 2px solid #007dc1;
   }
 
-  .bottom-middle-apartments {
-    /* border: 3px solid red; */
-  }
-
   .carousel-item {
     display: none;
   }
@@ -725,17 +721,6 @@ header {
   }
   .dot.active {
     background-color: #333;
-  }
-
-  @keyframes slide-in {
-    0% {
-      opacity: 1;
-      transform: translateX(1000px);
-    }
-    100% {
-      opacity: 2;
-      transform: translateX(-2000px);
-    }
   }
 }
 
@@ -772,14 +757,31 @@ header {
   font-size: 35px;
   font-weight: 600;
 }
+
 .find-a-neighbourhood .location-wrapper h1 a {
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
-.find-a-neighbourhood .location-wrapper h1 a:hover {
-  text-decoration: underline;
+/* .dropdown-menu.show {
+  display: hidden;
+} */
+
+.find-a-neighbourhood .location-btn {
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.find-a-neighbourhood .location-btn:hover {
+  color: white;
+  border-bottom: 2px solid black;
+}
+
+.find-a-neighbourhood .location-btn:focus {
+  color: white;
+  border-bottom: 2px solid black;
 }
 
 .find-a-neighbourhood .pagination-line {
@@ -861,6 +863,11 @@ header {
     font-size: 1.3rem;
     font-weight: 600;
   }
+
+  .apartment-dropdown h1 {
+    font-size: 1.5rem;
+  }
+
   .apartment-dropdown p {
     font-size: 1.3rem;
   }
@@ -905,7 +912,7 @@ header {
 .result-analytics {
   inline-size: 90%;
   margin: auto;
-  padding: 20px 40px;
+  padding-block: 20px;
   margin-block-end: 60px;
 }
 
@@ -1164,7 +1171,7 @@ header {
 
 /* Styling the Speak with us Section */
 .speak-with-us-wrapper {
-  inline-size: 95%;
+  inline-size: 90%;
   margin: auto;
   margin-block-end: 120px;
 }
@@ -1173,6 +1180,7 @@ header {
   background: url(../../images/LadyOnYellow.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50%;
   block-size: 479px;
   inline-size: 100%;
   border-radius: 20px;
