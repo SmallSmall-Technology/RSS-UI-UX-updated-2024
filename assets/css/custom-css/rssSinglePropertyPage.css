@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+}
+
+header {
+  margin-block-end: 100px;
+}
+
+.logged-in {
+  border: 2px solid #e6ebf1;
+  display: block;
+}
+
+.header {
+  background: white;
+}
+
+.nav-bar {
+  background: white;
+}
+
+.small-screen-nav {
+  background: white;
+  /* inline-size: 90%; */
+}
+
+/* Mobile responsiveness for the header */
+
+@media (width <= 768px) {
+  .nav-bar {
+    padding: 20px 15px;
+    margin: 0;
+    inline-size: 100%;
+    border-radius: initial;
+    background-color: white;
+  }
+
+  .middle-nav {
+    inline-size: 100%;
+    margin-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logged-in {
+    display: flex;
+  }
+}
+
+/* Styling the main container */
+.main-container {
+  padding-inline: 4rem;
+}
+
+.single-apartment-header-payment {
+  display: flex;
+}
+
+.single-apartment-first-image img {
+  inline-size: 100%;
+}
+
+.single-apartment-right-images-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  inline-size: 100%;
+  position: relative;
+}
+
+.single-apartment-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.single-apartment-right-images {
+  gap: 7px;
+  display: grid;
+  inline-size: 100%;
+}
+
+.single-apartment-right-images-wrapper .single-img {
+  inline-size: 100%;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.see-more-apartment a {
+  background-color: white;
+  border-radius: 7px;
+  color: #000;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+}
+
+/* Mobile responsiveness styling for the main container */
+
+@media (width <= 768px) {
+  .main-container {
+    padding-inline: 1rem;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+    gap: 20px;
+  }
+
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 400px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (width <= 500px) {
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 315px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (width <= 375px) {
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 300px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (width <= 320px) {
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 250px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* Styling the single apartment extras */
+.single-apartment-details-wrapper {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-apartment-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.single-apartment-extras {
+  position: sticky;
+  display: grid;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.single-apartment-extras ul {
+  display: flex;
+  gap: 10px;
+  /* inline-size: fit-content; */
+}
+
+.single-apartment-extras ul li {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.single-apartment-extras ul li:hover {
+  text-decoration: underline;
+}
+
+.single-apartment-details-wrapper .btn-wrapper {
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+  background-color: black;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.single-apartment-details-wrapper .btn-wrapper .btn {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  inline-size: 50%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.single-apartment-details-wrapper hr {
+  margin-top: 0;
+}
+
+.single-apartment-details-wrapper .btn-wrapper .btn {
+  background-color: black;
+  color: white;
+}
+
+.single-apartment-details-wrapper .btn-wrapper .btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1);
+}
+
+.single-apartment-details-wrapper .btn-wrapper .btn:focus {
+  background-color: white;
+  color: black;
+}
+
+.single-property-amenities ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  inline-size: 50%;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.single-property-amenities ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.single-property-rules ul {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 14px;
+  display: grid;
+  gap: 5px;
+}
+
+.single-property-rules ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (width <= 768px) {
+  .single-apartment-details-wrapper {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .single-apartment-header-payment {
+    display: none;
+  }
+}
+
+@media (width <= 500px) {
+  .single-property-amenities ul {
+    grid-template-columns: repeat(2, 1fr);
+    inline-size: 100%;
+    gap: 10px;
+  }
+}
+
+/* Styling the affordability calculator */
+.affordability-calculator {
+  inline-size: 80%;
+  margin-bottom: 10rem;
+  background-color: #dddddd;
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.form-label {
+  inline-size: 100%;
+}
+
+.affordability-calculator input {
+  inline-size: 80%;
+}
+
+.affordability-income {
+  background-color: white;
+  border-radius: 9px;
+  border: 1px solid #dddddd;
+  padding: 25px 15px;
+}
+
+@media (width <= 768px) {
+  .affordability-calculator {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.single-apartment-details-wrapper-sticky {
+  inline-size: 96%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  padding-inline-start: 4rem;
+  border-radius: 10px;
+}
+
+@media (width<= 768px) {
+  .single-apartment-details-wrapper-sticky {
+    display: none;
+  }
+}
+
+.single-apartment-details-wrapper-sticky li p {
+  margin-bottom: 0;
+}
+
+.single-apartment-details-wrapper-sticky li h3 {
+  margin-bottom: 0;
+}
+
+.single-apartment-details-wrapper-sticky .btn-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: black;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.single-apartment-details-wrapper-sticky .btn-wrapper .btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.single-apartment-details-wrapper-sticky .btn-wrapper .btn:hover {
+  display: flex;
+  color: black;
+  background-color: white;
+}
+
+/* Styling the Neighbourhood section */
+
+.single-neighbourhood {
+  padding-block-end: 5rem;
+}
+.neighbourhood-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.neighbourhood {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.neighbourhood-details p {
+  margin: 0;
+}
+
+.neighbourhood-details p:first-child {
+  font-weight: 500;
+  margin: 0;
+}
+
+.neighbourhood-details p:nth-child(2) {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media (width<= 768px) {
+  .neighbourhood-wrapper {
+    display: grid;
+    gap: 20px;
+  }
+}
+
+/* Styling the Modal footer */
+
+.modal-header {
+  display: flex;
+  justify-content: start;
+  gap: 25%;
+}
+
+.modal-title {
+  padding-top: 20px;
+  margin: 0;
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: baseline;
+}
+
+.modal-footer .btn {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.modal-header .close {
+  margin: 0;
+}
+
+.modal-footer .btn {
+  inline-size: 100%;
+  color: black;
+  text-decoration: underline;
+}
+
+.modal-footer .btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1);
+}
+
+@media (width <= 768px) {
+  .modal-footer {
+    margin: auto;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .modal-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .modal-footer .btn {
+    inline-size: 100%;
+  }
+}
+
+@media (width <= 425px) {
+  .modal-header {
+    gap: 20%;
+  }
+}
