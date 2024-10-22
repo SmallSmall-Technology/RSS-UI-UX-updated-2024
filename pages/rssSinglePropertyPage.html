@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="../assets/images/rss-favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <link href="../assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../assets/css/custom-css/header.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/rssSinglePropertyPage.css" />
+
+
+    <!-- Script for fixed header -->
+    <!-- <script type="text/javascript" src="../assets/js/header.js"></script> -->
+
+    <!-- Script for GSAP -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+
+
+
+    <title>RSS Property Inspection Page</title>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <main class="container-fluid">
+
+        <header class="header mx-5">
+            <nav class="nav-bar" aria-label="Main Navigation">
+                <!-- Header for the smaller screen -->
+                <div class="middle-nav d-md-none">
+
+                    <a href="#home" aria-label="Home page">
+                        <img src="../assets/images/RssLogo.png" alt="Company logo" />
+                    </a>
+
+                    <div class="right-nav">
+                        <div class="logged-in">
+                            <a href="user-dashboard" class="user-dashboard">
+                                <img src="../assets/images/circle-user.png" alt="circle-user" />
+                            </a>
+                            <div class="vertical-line"></div>
+                            <a href="#">
+                                <div class="grid-line" id="grid-line">
+                                    <div class="one-line"></div>
+                                    <div class="one-line"></div>
+                                </div>
+
+                            </a>
+                            <div class="get-started-dropdown" id="get-started-dropdown">
+                                <a href="#logout" aria-label="Log out" class="log-out">Log out</a>
+
+                                <div class="line-through"></div>
+
+                                <a href="#dashboard" aria-label="dashboard">
+                                    Dashboard
+                                </a>
+                                <a href="#create-wallet" aria-label="create wallet" class="create-wallet">
+                                    Create wallet</a>
+                                <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
+
+                                <div class="line-through"></div>
+
+                                <a href="#flexible-properties" aria-label="flexible properties"
+                                    class="flexible-properties">Flexible properties</a>
+                                <a href="#upfront-properties" aria-label="upfront properties"
+                                    class="upfront-properties">Upfront properties</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hamburger icon for mobile screen -->
+                <div class="hamburger d-none" id="hamburger">
+                    <img src="../assets/images/menu burger.svg" class="menu-icon" id="open-menu" />
+                    <img src="../assets/images/Cancel.svg" class="cancel-icon" id="close-menu" style="display: none;" />
+                </div>
+                <section class="small-screen-nav open" id="dropdown-menu">
+                    <div class="left-nav">
+                        <div class="rent-dropdown">
+
+                            <!-- Conditionally render these elements when a user has been authenticated -->
+
+                            <a href="#dashboard" aria-label="dashboard" class="dashboard d-md-none d-block">
+                                <img src="../assets/images/dashboard 1.png" alt="dashboard-icon" />Dashboard
+                            </a>
+                            <!-- If user already has a wallet don't show this -->
+                            <!-- <a href="#create-wallet" aria-label="create wallet" class="create-wallet d-md-none d-block">
+                                <img src="../assets/images/wallet(1) 2.png" alt="wallet-icon" />Create
+                                wallet</a> -->
+
+                            <!-- Show this instead -->
+                            <!-- <div
+                                class="wallet-balance d-md-none d-block d-flex justify-content-between align-items-baseline">
+                                <p class="wallet-text">Wallet balance: <small>N50,000.00</small></p>
+                                <button class="wallet-btn">Top up</button>
+                            </div> -->
+                            <!--  -->
+                            <!-- <hr class="d-md-none d-block" />
+                            <a href="#flexible-properties" aria-label="flexible properties"
+                                class="flexible-properties d-md-none d-block">Flexible properties</a>
+                            <a href="#upfront-properties" aria-label="upfront properties"
+                                class="upfront-properties d-md-none d-block">Upfront properties</a>
+                            <hr class="d-md-none d-block" /> -->
+
+                            <!-- stops here -->
+
+
+                            <a href="#rent" id="rent-dropdown-btn" class="rent-dropdown-btn" aria-haspopup="true"
+                                style="color: black;" aria-expanded="false" aria-controls="rent-menu">
+                                <p>Rent</p> <span><i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </a>
+                            <section id="rent-menu" class="rent-dropdown-menu" role="menu" aria-hidden="true">
+                                <div class="location-wrapper">
+                                    <h1 class="location" id="lagos"><a href="#">Lagos</a></h1>
+                                    <h1 class="location" id="abuja"><a href="#">Abuja</a></h1>
+                                </div>
+                                <hr class="pagination-line" id="pagination-line" />
+                                <div class="lagos-apartments" style="display:none;">
+                                    <ul class="lagos-apartments-list">
+                                        <li><a href="#">Lekki</a></li>
+                                        <li><a href="#">Yaba</a></li>
+                                        <li><a href="#">Ikoyi</a></li>
+                                        <li><a href="#">Salem</a></li>
+                                        <li><a href="#">Awoyaya</a></li>
+                                        <li><a href="#">Oniru</a></li>
+                                        <li><a href="#">Igbo Efon</a></li>
+                                        <li><a href="#">Ikeja</a></li>
+                                        <li><a href="#">Chevron</a></li>
+                                        <li><a href="#">Ologbo</a></li>
+                                        <li><a href="#">Elegushi</a></li>
+                                        <li><a href="#">Sangotedo</a></li>
+                                        <li><a href="#">Eleganza</a></li>
+                                        <li><a href="#">VGC</a></li>
+                                        <li><a href="#">Lekki phase 1</a></li>
+                                        <li><a href="#">Mobil road</a></li>
+                                        <li><a href="#">Ikota</a></li>
+                                        <li><a href="#">Osapa-Jakande</a></li>
+                                        <li><a href="#">Owode</a></li>
+                                    </ul>
+                                </div>
+                                <div class="abuja-apartments" style="display:none;">
+                                    <ul>
+                                        <!-- <li><a href="#">None</a></li> -->
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <a href="#buy" aria-label="Buy a property" class="buy-a-property" style="color: black;">
+                            <p>Buy</p>
+                            <span class="d-md-none d-block"><i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <a href="#how-it-works" aria-label="Learn how it works" class="how-it-works" id="how-it-works"
+                            style="color: black;">How
+                            it works
+                            <span><i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="how-it-works-dropdown-menu" id="how-it-works-dropdown-menu" style="color: black;">
+                            <div class="how-it-works-dropdown">
+                                <h1 class="how-it-works-content" id="tenant"><a href="#">Tenant</a></h1>
+                                <h1 class="how-it-works-content" id="Landlord"><a href="#">Landlord</a></h1>
+                            </div>
+                        </div>
+                        <a href="#faq" aria-label="Frequently Asked Questions" style="color: black;">FAQ</a>
+                    </div>
+                    <div class="middle-nav d-md-block d-none">
+                        <a href="#home" aria-label="Home page">
+                            <img src="../assets/images/RssLogo.png" alt="Company logo" />
+                        </a>
+                    </div>
+
+
+                    <div class="right-nav">
+                        <!-- Search bar container -->
+                        <div class="search-container">
+                            <a href="#search" aria-label="Search" class="search-icon" id="search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
+                                    <path fill="black" stroke="#000000"
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                                </svg>
+                            </a>
+                            <form class="search-input-container ">
+                                <input type="text" id="search-input" class="search-input"
+                                    placeholder=" Where would you like to live?">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
+                                    class="input-search-icon" id="input-search-icon">
+                                    <path fill="black" stroke="#000000" stroke-width="10"
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                                </svg>
+                            </form>
+                        </div>
+
+                        <hr class="d-md-none d-block" />
+                        <div class="header-footer d-md-none d-block" aria-label="Header Footer">
+                            <small>Customer Support</small>
+                            <a href="mailto:customerexperience@smallsmall.com">
+                                customerexperience@smallsmall.com
+                            </a>
+                            <div class="tel-wrapper">
+                                <a href="tel:+2349036339800">09036339800</a>
+                                <a href="tel:+2349037222669">09037222669</a>
+                            </div>
+                        </div>
+
+                        <!-- Conditionally render this div when a user has been authenticated -->
+                        <div class="logged-in">
+                            <a href="user-dashboard" class="user-dashboard">
+                                <img src="../assets/images/circle-user.png" alt="circle-user" />
+                            </a>
+                            <div class="vertical-line"></div>
+                            <a href="#">
+                                <div class="grid-line" id="grid-line">
+                                    <div class="one-line"></div>
+                                    <div class="one-line"></div>
+                                </div>
+
+                            </a>
+                            <div class="get-started-dropdown" id="get-started-dropdown">
+                                <a href="#logout" aria-label="Log out" class="log-out">Log out</a>
+
+                                <div class="line-through"></div>
+
+                                <a href="#dashboard" aria-label="dashboard">
+                                    Dashboard
+                                </a>
+                                <a href="#create-wallet" aria-label="create wallet" class="create-wallet">
+                                    Create wallet</a>
+                                <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
+
+                                <div class="line-through"></div>
+
+                                <a href="#flexible-properties" aria-label="flexible properties"
+                                    class="flexible-properties">Flexible properties</a>
+                                <a href="#upfront-properties" aria-label="upfront properties"
+                                    class="upfront-properties">Upfront properties</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </nav>
+            <hr />
+        </header>
+        <!-- Main -->
+        <div>
+
+            <section class=" main-container">
+                <p class="border rounded px-3 py-2 mb-5" style="background-color: #E0EFF7; width: fit-content;" ;>
+                    <span class="font-bold pr-1">&larr;</span>Apartments in
+                    Lekki Phase 1
+                </p>
+                <div class="single-apartment-header d-flex justify-content-between">
+                    <div>
+                        <h2 style="font-size: 23px; font-weight: 600;">Furnished 2 Bedroom penthouse</h2>
+                        <p>Jide Alakija Street, Ikate, Lekki Phase 1</p>
+                    </div>
+                    <ul class=" single-apartment-header-payment" style="list-style-type: none;">
+                        <li class="mr-4">
+                            <small>Subscription Price</small>
+                            <h3 style="font-size: 18px; font-weight: bold;">₦220,000 /mo</h3>
+                        </li>
+                        <div class="mr-4 mt-4"
+                            style="width: 6px; height: 6px; background-color: black; border-radius: 50%;">
+                        </div>
+
+                        <li class="mr-4">
+                            <small>Security deposit</small>
+                            <h3 style="font-size: 18px; font-weight: bold;">₦220,000 /mo</h3>
+                        </li>
+
+                        <li style="list-style-type: none;">
+                            <div style="display: flex; align-items: baseline; gap: 2px;">
+                                <div style="width: 10px; height: 10px; background-color: #00CDA6; border-radius: 50%;">
+                                </div>
+                                <p style="color: #00CDA6;">
+                                    Available
+                                </p>
+                                <!-- Render this when the apartment is not available -->
+                                <!-- <div style="width: 10px; height: 10px; background-color: red; border-radius: 50%;">
+                            </div>
+                            <p style="color: red;">
+                                Unavailable
+                            </p> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desktop Single Apartment Images -->
+                <section class="single-apartment-images-wrapper mb-5 desktop-view">
+                    <div class="single-apartment-images">
+                        <article class="single-apartment-first-image">
+                            <img src="../assets/images/Rectangle 2.png" alt="Property Image" />
+                        </article>
+                        <div class="single-apartment-right-images-wrapper">
+                            <article class="single-apartment-right-images">
+                                <img class="single-img" src="../assets/images/Rectangle 3.2.png" alt="Property Image" />
+                                <img class="single-img" src="../assets/images/Rectangle 3 (1).png"
+                                    alt="Property Image" />
+                            </article>
+                            <article class="single-apartment-right-images">
+                                <img class="single-img" src="../assets/images/Rectangle 3.1.png" alt="Property Image" />
+                                <div class="see-more-apartment">
+                                    <a class="d-flex " href=""><img src="../assets//images/seemore.svg"
+                                            alt="see-more-logo" class="mr-1" />See more
+                                        photos</a>
+                                    <img class="single-img" src="../assets/images/Rectangle 3.3.png"
+                                        alt="Property Image" />
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mobile Single Apartment Images -->
+                <section class="single-apartment-images-wrapper carousel slide  mb-5 mobile-view" data-ride="carousel"
+                    id="carouselExampleIndicators">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <article class="single-apartment-wrapper carousel-item active">
+                            <img class="single-img" src="../assets/images/Rectangle 2.png" alt="First slide" />
+                        </article>
+                        <article class="single-apartment-wrapper carousel-item">
+                            <img class="single-img" src="../assets/images/Rectangle 3.2.png" alt="Second slide" />
+                        </article>
+                        <article class="single-apartment-wrapper carousel-item">
+                            <img class="single-img" src="../assets/images/Rectangle 3 (1).png" alt="Third slide" />
+                        </article>
+                        <article class="single-apartment-wrapper carousel-item">
+                            <img class="single-img" src="../assets/images/Rectangle 3.1.png" alt="Fourth slide" />
+                        </article>
+                        <article class="single-apartment-wrapper carousel-item">
+                            <img class="single-img" src="../assets/images/Rectangle 3.3.png" alt="Fifth slide" />
+                        </article>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </section>
+                <div class="mx-2">
+                    <section>
+                        <div class="single-apartment-details-wrapper">
+                            <!-- <div class="single-apartment-details-w"> -->
+
+                            <div class="single-apartment-details-mobile">
+                                <h2 style="font-size: 23px; font-weight: 600;">Furnished 2 Bedroom penthouse</h2>
+                                <div class="d-flex mr-2">
+                                    <ul class="d-flex">
+                                        <li class="mr-4" style="list-style-type: none;">
+                                            <p>BEDROOM <span><strong>1</strong></span></p>
+                                        </li>
+                                        <li class="mr-4">
+                                            <p>BATHROOM <span><strong>1</strong></span></p>
+                                        </li>
+                                        <li class="mr-4">
+                                            <p>TOILET <span><strong>2</strong></span></p>
+                                        </li>
+                                        <li class="mr-4">
+                                            <p>LEKKI, PHASE 1</p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <ul class="d-flex" style="list-style-type: none;">
+                                    <li class="mr-4">
+                                        <small>Subscription Price</small>
+                                        <h3 style="font-size: 18px; font-weight: bold;">₦220,000 /mo</h3>
+                                    </li>
+                                    <div class="dot mr-4 mt-4"
+                                        style="width: 6px; height: 6px; background-color: black; border-radius: 50%;">
+                                    </div>
+
+                                    <li class="mr-4">
+                                        <small>Security deposit</small>
+                                        <h3 style="font-size: 18px; font-weight: bold;">₦220,000 /mo</h3>
+                                    </li>
+
+                                    <li style="list-style-type: none;">
+                                        <div style="display: flex; align-items: baseline; gap: 2px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: #00CDA6; border-radius: 50%;">
+                                            </div>
+                                            <p style="color: #00CDA6;">
+                                                Available
+                                            </p>
+                                            <!-- Render this when the apartment is not available -->
+                                            <!-- <div style="width: 10px; height: 10px; background-color: red; border-radius: 50%;">
+                                    </div>
+                                    <p style="color: red;">
+                                      Unavailable
+                                    </p> -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="single-apartment-extras border">
+                                <ul>
+                                    <button style="border: none; background-color: transparent;">
+                                        <a href="#" style="color: black;">
+                                            <li>
+                                                Verified Property <span><img
+                                                        src="../assets/images/shield-tick.png" /></span>
+                                            </li>
+                                        </a>
+                                    </button>
+                                    <button style="border: none; background-color: transparent;">
+                                        <a href="#" style="color: black;">
+                                            <li>Share <span><img src="../assets/images/share-06.png" /></span></li>
+                                        </a>
+                                    </button>
+                                    <button style="border: none; background-color: transparent;">
+                                        <a href="#" style="color: black;">
+                                            <li>Video tour <span><img
+                                                        src="../assets/images/video-recorder.png" /></span>
+                                            </li>
+                                        </a>
+                                    </button>
+                                </ul>
+                                <hr />
+                                <div class="btn-wrapper">
+                                    <button type="button" class="btn" data-toggle="modal"
+                                        data-target="#schedulingInspection">Schedule a
+                                        visit</button>
+
+                                    <button class="btn">Subscribe now</button>
+
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="schedulingInspection" tabindex="-1" role="dialog"
+                                    aria-labelledby="schedulingInspectionTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <p class="modal-title" id="schedulingInspectionTitle">Schedule
+                                                    inspection
+                                                </p>
+
+                                            </div>
+                                            <div class="modal-body ">
+                                                <p>Request to inspect</p>
+                                                <div style="border: 1.5px solid black; border-radius: 10px;">
+                                                    <div class="form-group px-3 pt-2"> <select class="form-control p-0"
+                                                            id="inspectionType">
+                                                            <option selected disabled>Inspection Type</option>
+                                                            <option>Physical</option>
+                                                            <option>Online</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <hr class="mb-0" />
+                                                    <div class="d-flex px-4"
+                                                        style="display: flex; justify-content: space-between;">
+                                                        <div
+                                                            style="display: flex; justify-content: space-between; align-items: center; width: 50%;">
+                                                            <p style="margin-bottom: 0;">Date</p>
+                                                            <img src="../assets/images/date-icon.svg" alt="date logo"
+                                                                width="25" />
+                                                        </div>
+                                                        <div class="border-left mx-3" style="height: 60px;"></div>
+                                                        <div
+                                                            style="display: flex; justify-content: space-between; align-items: center; width: 50%;">
+                                                            <p style="margin-bottom: 0;">Time</p>
+                                                            <div class="">
+                                                                <img src="../assets/images/clock.svg" alt="clock logo"
+                                                                    width="25" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <p class="pb-3 mt-4" style="font-size: 14px;"><span class="pr-1"
+                                                        style="font-size: 16px;">&#9788;</span>Schedule to see
+                                                    any
+                                                    property for
+                                                    free. No payment
+                                                    required.</p>
+
+                                                <div class="modal-checkbox">
+                                                    <input type="checkbox" />
+                                                    <p class="pl-2">I agree to RentSmallsmall's <a
+                                                            href="#"><strong>terms&consitions</strong></a>
+                                                </div>
+                                                </p>
+                                            </div>
+
+                                            <div class="modal-footer d-grid d-md-flex"
+                                                style="justify-content: space-between;">
+                                                <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn">Schedule visit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-4" style="border:1px solid black;"></div>
+
+                    </section>
+                </div>
+
+                <section class="single-property-about">
+                    <h2 style="font-size: 23px; font-weight: 600;">About the property</h2>
+                    <article aria-label="About the property">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+
+                        <p>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit
+                            in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non
+                            proident, sunt in culpa qui officia deserunt mollitanim id est laborum."</p>
+
+                        <p>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit
+                            in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat
+                            non
+                            proident, sunt in culpa qui officia deserunt mollitanim id est laborum."</p>
+
+                        <p>MANAGED BY <strong>RentSmallsmall</strong></p>
+                    </article>
+                </section>
+                <div class="my-4" style="border:1px solid black;"></div>
+                <section class="single-property-amenities pb-5">
+                    <h2 style="font-size: 23px; font-weight: 600;">Amenities</h2>
+                    <ul>
+                        <li><span><img src="../assets/images/power-meter.svg" /></span>Prepaid meter</li>
+                        <li> <span><img src="../assets/images/kitchen-table 1.svg" /></span>Kitchen</li>
+                        <li> <span><img src="../assets/images/gen.svg" /></span>Gen</li>
+                        <li> <span><img src="../assets/images/water-faucet 1.svg" /></span>Water</li>
+                        <li> <span><img src="../assets/images/wardrobe 1.svg" /></span>Wardrobe</li>
+                        <li> <span><img src="../assets/images/ac.svg" /></span>AC</li>
+                        <li> <span><img src="../assets/images/security.svg" /></span>Security</li>
+                        <li> <span><img src="../assets/images/dinning.svg" /></span>Dinning</li>
+                        <li><span><img src="../assets/images/waste-disposal.svg" /></span>Waste disposal</li>
+                    </ul>
+                </section>
+
+                <div class="my-4" style="border:1px solid black;"></div>
+                <section class="single-property-rules pb-5">
+                    <h2 style="font-size: 23px; font-weight: 600;">House rules</h2>
+                    <p>House rules violation may result in a subscription fine</p>
+                    <ul>
+                        <li><span><img src="../assets/images/no-smoking(1) 1.svg" /></span>No smoking</li>
+                        <li> <span><img src="../assets/images/no-pets 1.svg" /></span>No pets</li>
+                    </ul>
+                </section>
+
+                <div class="my-4" style="border:1px solid black;"></div>
+                <section class="single-property-affordability">
+                    <h2 style="font-size: 23px; font-weight: 600; padding-bottom: 2rem;">Affordability calculator
+                    </h2>
+                    <article class="affordability-calculator border rounded p-4">
+                        <div>
+                            <div>
+                                <p style="font-size: 14px; font-weight: 500;">Bedroom</p>
+                                <h3 style="font-size: 24px; font-weight: 600;">1 bedroom</h3>
+                            </div>
+                            <div class="pb-3">
+                                <p style="font-size: 14px; font-weight: 500;">Rent to income ration</p>
+                                <label for="customRange1" class="form-label" id="rangeLabel"
+                                    style="font-size: 24px; font-weight: 600;"></label><br />
+                                <input type="range" class="form-range" min="0" max="4" step="1" id="customRange1">
+                            </div>
+                            <p style="font-size: 14px; font-weight: 400; max-width: 340px;">Adjust the percentage of
+                                monthly
+                                income you are
+                                willing to spend on rent.</p>
+                        </div>
+                        <div class="affordability-income">
+                            <p style="font-size: 14px; font-weight: 500;">Recommended Income</p>
+                            <h3 class="pb-5" style="font-size: 28px; font-weight: 600;"><span>₦400,000/month</span>
+                            </h3>
+                            <p style="font-size: 14px; font-weight: 400;">With your selected rent-to-income ratio,
+                                you'd
+                                ideally want to make <span>₦92,000</span>
+                                annually to afford this studio monthly rent price of <span>₦240,300</span>.</p>
+                        </div>
+
+                    </article>
+                </section>
+                <div class="my-4" style="border:1px solid black;"></div>
+                <section class="single-property-rules pb-5">
+                    <h2 style="font-size: 23px; font-weight: 600;">See location on map</h2>
+                    <div class="pt-5">
+                        <iframe class="rounded-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248381.2173544304!2d3.9687185769557356!3d6.708134395739489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1729443677799!5m2!1sen!2sng"
+                            width="98%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+        </div>
+        </section>
+        <div class="single-apartment-details-wrapper-sticky mb-5">
+
+            <div>
+                <h2 style="font-size: 23px; font-weight: 600;">Furnished 2 Bedroom penthouse</h2>
+                <ul class="d-flex">
+                    <li class="mr-4" style="list-style-type: none;">
+                        <p>BEDROOM
+                            <strong>1</strong>
+                        </p>
+                    </li>
+                    <li class="mr-4">
+                        BATHROOM <strong>1</strong>
+                    </li>
+                    <li class="mr-4">
+                        <p>TOILET
+                            <strong>2</strong>
+                        </p>
+                    </li>
+                    <li class="mr-4">
+                        <p>LEKKI, PHASE 1</p>
+                    </li>
+                </ul>
+            </div>
+            <hr style="border: 1px solid #DDDDDD; height: 50px;" />
+            <ul class="d-flex" style="list-style-type: none;">
+                <li class="d-block">
+                    <small>Subscription Price</small>
+                    <h3 style="font-size: 18px; font-weight: bold;">₦220,000</h3>
+                </li>
+                <div class="mx-2 mt-4" style="width: 3px; height: 3px; background-color: black; border-radius: 50%;">
+                </div>
+                <li class="d-block">
+                    <small>Security deposit</small>
+                    <h3 style="font-size: 18px; font-weight: bold;">₦400,800.00</h3>
+                </li>
+            </ul>
+            <hr style="border: 1px solid #DDDDDD; height: 50px;" />
+            <div class="btn-wrapper">
+                <button type="button" class="btn" data-toggle="modal" data-target="#schedulingInspection">Schedule a
+                    visit</button>
+                <button class="btn">Subscribe now</button>
+            </div>
+        </div>
+        <div class="main-container py-4">
+            <div class="my-4" style="border:1px solid black;"></div>
+
+            <section class="single-neighbourhood mb-5">
+                <h2 class="pb-4" style="font-size: 23px; font-weight: 600;">Neighbourhood</h2>
+                <div class="neighbourhood-wrapper">
+                    <div class="neighbourhood">
+                        <div class="neighbourhood-image">
+                            <img src="../assets/images/pizza-hut.png" alt="Image of the neighbourhood" />
+                        </div>
+                        <div class="neighbourhood-details">
+                            <p class="">Pizza hut</p>
+                            <p class="pb-2">Restaurant</p>
+                            <p>Under ₦1000 cab</p>
+                        </div>
+                    </div>
+
+                    <div class="neighbourhood">
+                        <div class="neighbourhood-image">
+                            <img src="../assets/images/beach.png" alt="Image of the neighbourhood" />
+                        </div>
+                        <div class="neighbourhood-details">
+                            <p class="">Civic centre</p>
+                            <p class="pb-2">Beach</p>
+                            <p>Walking distance</p>
+                        </div>
+                    </div>
+
+                    <div class="neighbourhood">
+                        <div class="neighbourhood-image">
+                            <img src="../assets/images/filmhouse.png" alt="Image of the neighbourhood" />
+                        </div>
+                        <div class="neighbourhood-details">
+                            <p class="">Film house</p>
+                            <p class="pb-2">Cinema</p>
+                            <p>Under ₦500 cab</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="rss-footer-wrapper">
+        <div class="rss-footer-contents d-flex">
+            <section class="rss-footer-content">
+                <a href="#top" class="text-decoration-none">
+                    <img src="../assets/images/RSS WHITE-update 2.png" alt="Company Logo" class="img-fluid"
+                        style="max-width: 100%; height: auto;">
+                </a>
+
+                <div class="rss-footer-content-list">
+                    <ul>
+                        <small style="color: #94E0FF;">Explore Products</small>
+                        <li><a href="#" class="text-white text-decoration-none">Rent</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Nightly stay</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Buy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Lease with us</a></li>
+                    </ul>
+
+                    <ul>
+                        <small style="color: #94E0FF;">Company</small>
+                        <li><a href="#" class="text-white text-decoration-none">About us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+
+                    <ul>
+                        <small style="color: #94E0FF;">Customer Support</small>
+                        <li>
+                            <a href="mailto:customerexperience@smallsmall.com"
+                                class="email text-white text-decoration-none">
+                                customerexperience@smallsmall.com
+                            </a>
+                        </li>
+
+                        <li class="text-white">
+                            <a href="tel:09036339800" class="text-white text-decoration-none">0903 633 9800</a>
+                        </li>
+                        <li class="text-white">
+                            <a href="tel:09037222669" class="text-white text-decoration-none">0903 722 2669</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="rss-footer-last-contents">
+                    <a href="#" class="text-white text-decoration-none"><small>Privacy policy</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>Subscription terms</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>Terms of use</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>FAQ</small></a>
+                    <a href="#" class="text-white text-decoration-none"><small>GRDP</small></a>
+                </div>
+            </section>
+
+            <section class="rss-footer-content">
+                <div class="rss-footer-app-download">
+                    <p class="text-white text-decoration-none">Download the Mobile app</p>
+                    <div class="rss-download-wrapper">
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="../assets/images/kindpng_255271 6 1.png" alt="Google Play Download Logo"
+                                class="img-fluid" style="max-width: 100%; height: auto;">
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="../assets/images/kindpng_255271 5 1.png" alt="App Store Download Logo"
+                                class="img-fluid" style="max-width: 100%; height: auto;">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rss-footer-social-logos-wrapper">
+                    <small style="color: #94E0FF;">Follow us</small>
+                    <div class="rss-social-media-logos">
+                        <a href="https://x.com/smallsmallhq" target="_blank">
+                            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/smallsmallhq/" target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/small-small-technology/" target="_blank">
+                            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.facebook.com/smallsmallhq/" target="_blank">
+                            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@thesmallsmallhq" target="_blank">
+                            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                        </a>
+                    </div>
+
+                    <div class="rss-footer-last-content">
+                        <small class="text-white" style="font-weight: 300;">
+                            <a href="#" class="text-white text-decoration-none">
+                                &copy; 2023 Smallsmall Technology
+                            </a>
+                        </small>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom-js/rssSinglePropertyPage.js"></script>
+    <script src="../assets/js/custom-js/rssPropertyInspectionPage.js"></script>
+    <script src="../assets/js/custom-js/header.js"></script>
+
+</body>
+
+</html>
