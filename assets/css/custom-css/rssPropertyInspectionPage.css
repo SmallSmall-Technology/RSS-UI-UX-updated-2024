@@ -349,6 +349,26 @@ header {
   }
 }
 
+.single-section label {
+  margin-block-end: -6px;
+}
+
+.single-section select {
+  background-color: transparent;
+  border: none;
+  padding-inline-start: 0;
+}
+
+.single-section select:active {
+  outline: none;
+  border: none;
+}
+
+.single-section .form-control {
+  height: auto;
+  padding: 0;
+}
+
 /* Styling the apartment Dropdown Menu */
 @media (width <=768px) {
   .rss-inspection-page-main-section .single-section p,

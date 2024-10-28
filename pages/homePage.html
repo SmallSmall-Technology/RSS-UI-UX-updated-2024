@@ -32,12 +32,6 @@
     <link rel="stylesheet" href="../assets/css/custom-css/header.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/homePage.css" />
-
-
-    <!-- Script for fixed header -->
-    <!-- <script type="text/javascript" src="../assets/js/header.js"></script> -->
-
-    <!-- Script for GSAP -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
 
 
@@ -228,602 +222,533 @@
         </nav>
     </header>
 
-    <script type="text/javascript" src="../assets/js/bootstrap-js/header.js"></script>
-
     <!-- Main -->
-    <main class="container-wrapper">
+    <main class="container-wrapper" id="smooth-wrapper">
+        <div class="scroll-container">
 
-        <!--  HomePageHero Section -->
-        <section class="homePage-wrapper">
-            <section class="homePage-hero-section">
-                <h1>
-                    Simplify your life,
-                    Pay rent your way
-                </h1>
-                <p>Find your space with affordable monthly & flexible plans.</p>
-                <nav class="homePage-hero-section-btn" aria-label="Primary navigation button">
-                    <button class="btn" aria-label="Get Started">Get Started</button>
-                    <button class="btn" aria-label="How it works">How it works<span><i class="fa-regular fa-circle-play"
-                                style="color: #fafafa;" aria-hidden="true"></i></span></button>
-                </nav>
-                <small>RentSmallsmall is a property technology platform that offers flexible rent payment on all listed
-                    properties, not a rent financing platform.</small>
-            </section>
-            <section class="homePage-hero-image">
-                <img src="../assets/images/remote-worker.png" alt="Person working remotely at a desk"
-                    class="d-md-block d-none" />
-                <img src="../assets/images/remote-worker2.png" alt="Person working remotely at a desk"
-                    class="d-md-none d-block" />
-            </section>
-            <section class="supported-brands">
-                <img src="../assets/images/Group 90.png" alt="list of supported brands" class="d-md-block d-none" />
-                <img src="../assets/images/Group 102.png" alt="list of supported brands in smaller format"
-                    class="d-md-none d-block" />
-            </section>
-            <div class="homePage-hero-section-h2">
-                <h2>
-                    Flexible living, boundless opportunities.
-                </h2>
-                <p>Experience a better way to live and pay rent.</p>
-            </div>
+            <!--  HomePageHero Section -->
+            <section class="homePage-wrapper">
+                <section class="homePage-hero-section">
+                    <h1 class="headline">
+                        Simplify your life,
+                        Pay rent your way
+                    </h1>
 
-            <!-- RSS Articles -->
-
-            <article class="rss-article-wrapper">
-                <div class="rss-articles">
-                    <div class="first-box rss-box">
-                        <div class="box-text">
-                            <h2>Flexible payment</h2>
-                            <small>Flexible plans with simple payments that fit your lifestyle.</small>
+                    <p>Find your space with affordable monthly & flexible plans.</p>
+                    <nav class="homePage-hero-section-btn" aria-label="Primary navigation button">
+                        <button class="btn" aria-label="Get Started">Get Started</button>
+                        <button class="btn" aria-label="How it works" data-toggle="modal" data-target="#howItWorks">How
+                            it works<span><i class="fa-regular fa-circle-play" style="color: #fafafa;"
+                                    aria-hidden="true"></i></span></button>
+                    </nav>
+                    <!-- How it Works Modal  -->
+                    <div class="modal fade" id="howItWorks" tabindex="-1" role="dialog"
+                        aria-labelledby="howItWorksLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div style="padding:56.67% 0 0 0;position:relative;">
+                                        <iframe
+                                            src="https://player.vimeo.com/video/1023873952?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                            width="992" height="562" frameborder="0"
+                                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                            title="RSS Explainer Video 2024"></iframe>
+                                    </div>
+                                    <script src="https://player.vimeo.com/api/player.js"></script>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="second-box rss-box">
-                        <div class="box-text">
-                            <h2>Peace of mind</h2>
-                            <small>Feel secure with our carefully curated selection of properties designed to simplify
+
+                    <small>RentSmallsmall is a property technology platform that offers flexible rent payment on all
+                        listed
+                        properties, not a rent financing platform.</small>
+                </section>
+                <section class="homePage-hero-image zoom-up">
+                    <img src="../assets/images/remote-worker.png" alt="Person working remotely at a desk"
+                        class="d-md-block d-none" />
+                    <img src="../assets/images/remote-worker2.png" alt="Person working remotely at a desk"
+                        class="d-md-none d-block" />
+                </section>
+                <section class="supported-brands zoom-up">
+                    <img src="../assets/images/Group 90.png" alt="list of supported brands" class="d-md-block d-none" />
+                    <img src="../assets/images/Group 102.png" alt="list of supported brands in smaller format"
+                        class="d-md-none d-block" />
+                </section>
+                <div class="homePage-hero-section-h2 zoom-up">
+                    <h2>
+                        Flexible living, boundless opportunities.
+                    </h2>
+                    <p>Experience a better way to live and pay rent.</p>
+                </div>
+
+                <!-- RSS Articles -->
+
+                <article class="rss-article-wrapper zoom-up">
+                    <div class="rss-articles">
+                        <div class="first-box rss-box">
+                            <div class="box-text">
+                                <h2>Flexible payment</h2>
+                                <small>Flexible plans with simple payments that fit your lifestyle.</small>
+                            </div>
+                        </div>
+                        <div class="second-box rss-box">
+                            <div class="box-text">
+                                <h2>Peace of mind</h2>
+                                <small>Feel secure with our carefully curated selection of properties designed to
+                                    simplify
+                                    your
+                                    search and provide peace of mind. Each home in our portfolio has undergone a
+                                    rigorous
+                                    vetting
+                                    process.</small>
+                            </div>
+                        </div>
+                        <div class="third-box rss-box">
+                            <div class="box-text">
+
+                                <h2>No legal & agency fee</h2>
+                                <small>Discover and live in our verified properties without paying brokerage & legal
+                                    fees.
+                                    No
+                                    scam,
+                                    no surprises, no hidden fees.</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- RSS Slider Section -->
+
+                <section class="rss-slider-section zoom-up">
+                    <div class="rss-slider-image-bg">
+                        <div class="rss-slider-text">
+                            <h1>Switch to a life of quality and convenience</h1>
+                            <p>Choose how you would like to pay rent from any of our plans, enjoy convenience and
+                                control
                                 your
-                                search and provide peace of mind. Each home in our portfolio has undergone a rigorous
-                                vetting
-                                process.</small>
+                                spending every month.</p>
                         </div>
-                    </div>
-                    <div class="third-box rss-box">
-                        <div class="box-text">
-
-                            <h2>No legal & agency fee</h2>
-                            <small>Discover and live in our verified properties without paying brokerage & legal fees.
-                                No
-                                scam,
-                                no surprises, no hidden fees.</small>
+                        <div class="rss-slider-carousel">
                         </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- RSS Slider Section -->
-
-            <section class="rss-slider-section">
-                <div class="rss-slider-image-bg">
-                    <div class="rss-slider-text">
-                        <h1>Switch to a life of quality and convenience</h1>
-                        <p>Choose how you would like to pay rent from any of our plans, enjoy convenience and control
-                            your
-                            spending every month.</p>
-                    </div>
-                    <div class="rss-slider-carousel">
-                    </div>
-                    <div class="rss-sliders">
-                        <ul class="rss-single-slider-wrapper">
-                            <li class="rss-single-slider">
-                                <div class="carousel-wrapper d-flex">
-                                    <div class="rss-slider-carousel-logo mr-3"><img
-                                            src="../assets/images/computer 2.png" alt="Computer" />
+                        <div class="rss-sliders">
+                            <ul class="rss-single-slider-wrapper">
+                                <li class="rss-single-slider">
+                                    <div class="carousel-wrapper d-flex">
+                                        <div class="rss-slider-carousel-logo mr-3"><img
+                                                src="../assets/images/computer 2.png" alt="Computer" />
+                                        </div>
+                                        <div class="rss-slider-carousel-text">
+                                            <p>Apply onine</p>
+                                            <p>Browse and get access to our listings from trusted
+                                                landlords.</p>
+                                        </div>
                                     </div>
-                                    <div class="rss-slider-carousel-text">
-                                        <p>Apply onine</p>
-                                        <p>Browse and get access to our listings from trusted
-                                            landlords.</p>
+                                </li>
+                                <li class="rss-single-slider">
+                                    <div class="carousel-wrapper d-flex">
+
+                                        <div class="rss-slider-carousel-logo mr-3"><img
+                                                src="../assets/images/clock 3.png" alt="Clock" />
+                                        </div>
+                                        <div class="rss-slider-carousel-text">
+                                            <p>Schedule a visit</p>
+                                            <p>Take a tour & inspect any of our properties in person or virtually.</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="rss-single-slider">
-                                <div class="carousel-wrapper d-flex">
+                                </li>
+                                <li class=" rss-single-slider">
+                                    <div class="carousel-wrapper d-flex">
 
-                                    <div class="rss-slider-carousel-logo mr-3"><img src="../assets/images/clock 3.png"
-                                            alt="Clock" />
+                                        <div class="rss-slider-carousel-logo mr-3"><img
+                                                src="../assets/images/shield(3) 2.png" alt="Shield" />
+                                        </div>
+                                        <div class="rss-slider-carousel-text">
+                                            <p>Get verified & pay online</p>
+                                            <p>Verify your renter profile, sign digital contract & enjoy secured living.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="rss-slider-carousel-text">
-                                        <p>Schedule a visit</p>
-                                        <p>Take a tour & inspect any of our properties in person or virtually.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class=" rss-single-slider">
-                                <div class="carousel-wrapper d-flex">
-
-                                    <div class="rss-slider-carousel-logo mr-3"><img
-                                            src="../assets/images/shield(3) 2.png" alt="Shield" />
-                                    </div>
-                                    <div class="rss-slider-carousel-text">
-                                        <p>Get verified & pay online</p>
-                                        <p>Verify your renter profile, sign digital contract & enjoy secured living.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="carousel-pagination">
-                            <span class="dash" data-slide="0"></span>
-                            <span class="dash" data-slide="1"></span>
-                            <span class="dash" data-slide="2"></span>
-                        </div>
-
-                        <button class="btn">Find your home now</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Explore Our Homes Section -->
-            <section class="explore-our-homes d-none d-md-block">
-                <div class="explore-our-homes-header" aria-label="Explore our homes header text">
-                    <h2>Explore our homes</h2>
-                    <p>Whatever stage you are in your life you can find a home that suits your budget.</p>
-                </div>
-                <div class="explore-our-homes-apartments close-apartments-on-mobile "
-                    aria-label="Apartments available for you">
-                    <article class="left-apartment apartment">
-                        <div class="left-apartment-header">
-                            <h2>Studio apartment</h2>
-                            <p>Vetted homes from verified landlords</p>
-                        </div>
-                        <button class="btn">
-                            View 104+ Studios &rarr;
-                        </button>
-                    </article>
-
-                    <article class="middle-apartment-wrapper">
-                        <div class="top-middle-apartment apartment">
-                            <div class="middle-apartment-header">
-                                <h2>1 bed apartment</h2>
-                                <p>Comfortable and functional living experience</p>
-                            </div>
-                            <button class="btn">
-                                View 60+ 1 beds &rarr;
-                            </button>
-                        </div>
-
-                        <div class="bottom-middle-apartments apartment">
-                            <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
-                        </div>
-                    </article>
-
-                    <article class="right-apartment-wrapper">
-                        <div class="top-right-apartment apartment">
-                            <div class="right-apartment-header">
-                                <h2>2 bed apartment</h2>
-                                <p>Vibrant neighborhood for individuals & couples</p>
-                            </div>
-                            <button class="btn">
-                                View 200+ 2 beds &rarr;
-                            </button>
-                        </div>
-
-                        <div class="bottom-right-apartment apartment">
-                            <div class="right-apartment-header">
-                                <h2>3+ bed flat</h2>
-                                <p>Comfortable living space for families</p>
-                            </div>
-                            <button class="btn">
-                                View 10+ 3+ beds &rarr;
-                            </button>
-                        </div>
-                    </article>
-                    <!-- <div class="bottom-middle-apartments apartment d-md-block d-none">
-                        <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
-                    </div> -->
-                </div>
-
-                <!-- Mobile View -->
-                <div class="explore-our-homes-apartments d-md-none d-flex" aria-label="Apartments available for you">
-
-                    <article class="left-apartment apartment carousel-item">
-                        <div class="left-apartment-header">
-                            <h2>Studio apartment</h2>
-                            <p>Vetted homes from verified landlords</p>
-                        </div>
-                        <button class="btn">
-                            View 104+ Studios &rarr;
-                        </button>
-                    </article>
-
-                    <article class="middle-apartment-wrapper apartment carousel-item">
-                        <div class="top-middle-apartment apartment">
-                            <div class="middle-apartment-header">
-                                <h2>1 bed apartment</h2>
-                                <p>Comfortable and functional living experience</p>
-                            </div>
-                            <button class="btn">
-                                View 60+ 1 beds &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <div class="top-right-apartment apartment carousel-item">
-                        <div class="right-apartment-header">
-                            <h2>2 bed apartment</h2>
-                            <p>Vibrant neighborhood for individuals & couples</p>
-                        </div>
-                        <button class="btn">
-                            View 200+ 2 beds &rarr;
-                        </button>
-                    </div>
-
-                    <div class="bottom-right-apartment apartment carousel-item">
-                        <div class="right-apartment-header">
-                            <h2>3+ bed flat</h2>
-                            <p>Comfortable living space for families</p>
-                        </div>
-                        <button class="btn">
-                            View 10+ 3+ beds &rarr;
-                        </button>
-                    </div>
-
-                    <div class="bottom-middle-apartments apartment carousel-item">
-                        <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
-                    </div>
-                </div>
-
-                <!-- Pagination for Mobile View -->
-                <div class="carousel-pagination d-md-none d-block" aria-label="Carousel navigation">
-                    <button class="dot" aria-label="Go to slide 1" data-slide="0"></button>
-                    <button class="dot" aria-label="Go to slide 2" data-slide="1"></button>
-                    <button class="dot" aria-label="Go to slide 3" data-slide="2"></button>
-                    <button class="dot" aria-label="Go to slide 4" data-slide="3"></button>
-                    <button class="dot" aria-label="Go to slide 5" data-slide="4"></button>
-                </div>
-            </section>
-
-            <section class="explore-our-homes d-block d-md-none ">
-                <div class="explore-our-homes-header" aria-label="Explore our homes header text">
-                    <h2>Explore our homes</h2>
-                    <p>Whatever stage you are in your life you can find a home that suits your budget.</p>
-                </div>
-                <div class="explore-our-homes-apartments close-apartments-on-mobile "
-                    aria-label="Apartments available for you">
-                    <article class="left-apartment apartment">
-                        <div class="left-apartment-header">
-                            <h2>Studio apartment</h2>
-                            <p>Vetted homes from verified landlords</p>
-                        </div>
-                        <button class="btn">
-                            View 104+ Studios &rarr;
-                        </button>
-                    </article>
-
-                    <article class="middle-apartment-wrapper">
-                        <div class="top-middle-apartment apartment">
-                            <div class="middle-apartment-header">
-                                <h2>1 bed apartment</h2>
-                                <p>Comfortable and functional living experience</p>
-                            </div>
-                            <button class="btn">
-                                View 60+ 1 beds &rarr;
-                            </button>
-                        </div>
-
-                        <div class="bottom-middle-apartments apartment">
-                            <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
-                        </div>
-                    </article>
-
-                    <article class="right-apartment-wrapper">
-                        <div class="top-right-apartment apartment">
-                            <div class="right-apartment-header">
-                                <h2>2 bed apartment</h2>
-                                <p>Vibrant neighborhood for individuals & couples</p>
-                            </div>
-                            <button class="btn">
-                                View 200+ 2 beds &rarr;
-                            </button>
-                        </div>
-
-                        <div class="bottom-right-apartment apartment">
-                            <div class="right-apartment-header">
-                                <h2>3+ bed flat</h2>
-                                <p>Comfortable living space for families</p>
-                            </div>
-                            <button class="btn">
-                                View 10+ 3+ beds &rarr;
-                            </button>
-                        </div>
-                    </article>
-                    <!-- <div class="bottom-middle-apartments apartment d-md-block d-none">
-                        <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
-                    </div> -->
-                </div>
-
-                <!-- Mobile View -->
-                <div class="explore-our-homes-apartments  d-flex" aria-label="Apartments available for you">
-
-                    <article class="left-apartment apartment carousel-item">
-                        <div class="left-apartment-header">
-                            <h2>Studio apartment</h2>
-                            <p>Vetted homes from verified landlords</p>
-                        </div>
-                        <button class="btn">
-                            View 104+ Studios &rarr;
-                        </button>
-                    </article>
-
-                    <article class="middle-apartment-wrapper apartment carousel-item">
-                        <div class="top-middle-apartment apartment">
-                            <div class="middle-apartment-header">
-                                <h2>1 bed apartment</h2>
-                                <p>Comfortable and functional living experience</p>
-                            </div>
-                            <button class="btn">
-                                View 60+ 1 beds &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <div class="top-right-apartment apartment carousel-item">
-                        <div class="right-apartment-header">
-                            <h2>2 bed apartment</h2>
-                            <p>Vibrant neighborhood for individuals & couples</p>
-                        </div>
-                        <button class="btn">
-                            View 200+ 2 beds &rarr;
-                        </button>
-                    </div>
-
-                    <div class="bottom-right-apartment apartment carousel-item">
-                        <div class="right-apartment-header">
-                            <h2>3+ bed flat</h2>
-                            <p>Comfortable living space for families</p>
-                        </div>
-                        <button class="btn">
-                            View 10+ 3+ beds &rarr;
-                        </button>
-                    </div>
-
-                    <div class="bottom-middle-apartments apartment carousel-item">
-                        <h2>See all verified properties <a href="#" target="_blank">&rarr;</a></h2>
-                    </div>
-                </div>
-
-                <!-- Pagination for Mobile View -->
-                <div class="carousel-pagination d-md-none d-block" aria-label="Carousel navigation">
-                    <button class="dot" aria-label="Go to slide 1" data-slide="0"></button>
-                    <button class="dot" aria-label="Go to slide 2" data-slide="1"></button>
-                    <button class="dot" aria-label="Go to slide 3" data-slide="2"></button>
-                    <button class="dot" aria-label="Go to slide 4" data-slide="3"></button>
-                    <button class="dot" aria-label="Go to slide 5" data-slide="4"></button>
-                </div>
-            </section>
-
-
-            <!-- </section> -->
-
-            <!-- Find a Neighborhood Section -->
-            <section class="find-a-neighbourhood">
-                <div class="find-a-neighbourhood-header">
-                    <h2>Find a neighbourhood near you</h2>
-                    <p>Find a neighbourhood that fits your needs and starts your new chapter.</p>
-                </div>
-                <div class="find-a-neighbourhood-location-wrapper">
-                    <button class="location location-btn" id="lagos-neighbourhood-apartments"><a>Lagos</a></button>
-                    <button class="location location-btn" id="abuja-neighbourhood-apartments"><a>Abuja</a></button>
-                </div>
-                <hr class="pagination-line" id="pagination-line" />
-                <div class="apartment-dropdown dropdown">
-                    <h1 class="my-4" id="apartmentDropdown" data-toggle="dropdown" type="button" aria-haspopup="true"
-                        aria-expanded="false">Select a location in <span id="selected-location"></span></h1>
-                    <!-- <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false"> -->
-                    <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
-                    <!-- <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i> -->
-                    <!-- </button> -->
-                    <div class="dropdown-menu apartment-dropdown-menu" aria-labelledby="apartmentDropdown">
-                        <section class="lagos-neighbourhood-apartments">
-                            <p>Lagos</p>
-                            <hr />
-                            <ul class="lagos-apartments-neighbourhood-list">
-                                <li><a class="dropdown-item" href="#">Lekki</a></li>
-                                <li><a class="dropdown-item" href="#">Yaba</a></li>
-                                <li><a class="dropdown-item" href="#">Ikoyi</a></li>
-                                <li><a class="dropdown-item" href="#">Salem</a></li>
-                                <li><a class="dropdown-item" href="#">Awoyaya</a></li>
-                                <li><a class="dropdown-item" href="#">Oniru</a></li>
-                                <li><a class="dropdown-item" href="#">Igbo Efon</a></li>
-                                <li><a class="dropdown-item" href="#">Ikeja</a></li>
-                                <li><a class="dropdown-item" href="#">Chevron</a></li>
-                                <li><a class="dropdown-item" href="#">Ologbo</a></li>
-                                <li><a class="dropdown-item" href="#">Osapa-Jakande</a></li>
-                                <li><a class="dropdown-item" href="#">Elegushi</a></li>
-                                <li><a class="dropdown-item" href="#">Sangotedo</a></li>
-                                <li><a class="dropdown-item" href="#">Eleganza</a></li>
-                                <li><a class="dropdown-item" href="#">VGC</a></li>
-                                <li><a class="dropdown-item" href="#">Lekki phase 1</a></li>
-                                <li><a class="dropdown-item" href="#">Mobil road</a></li>
-                                <li><a class="dropdown-item" href="#">Ikota</a></li>
-                                <li><a class="dropdown-item" href="#">Owode</a></li>
+                                </li>
                             </ul>
-                        </section>
-                        <section class="abuja-neighbourhood-apartments">
-                            <p>Abuja</p>
-                            <hr />
-                            <ul class="abuja-apartments-neighbourhood-list">
+                            <div class="carousel-pagination">
+                                <span class="dash" data-slide="0"></span>
+                                <span class="dash" data-slide="1"></span>
+                                <span class="dash" data-slide="2"></span>
+                            </div>
 
+                            <button class="btn">Find your home now</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Explore Our Homes Section -->
+                <section class="explore-our-homes zoom-up">
+                    <div class="explore-our-homes-header" aria-label="Explore our homes header text">
+                        <h2>Explore our homes</h2>
+                        <p>Whatever stage you are in your life you can find a home that suits your budget.</p>
+                    </div>
+                    <div class="explore-our-homes-apartments " aria-label="Apartments available for you">
+                        <article class="left-apartment apartment">
+                            <div class="left-apartment-header">
+                                <h2>Studio apartment</h2>
+                                <p>Vetted homes from verified landlords</p>
+                            </div>
+                            <button class="btn">
+                                View 104+ Studios &rarr;
+                            </button>
+                        </article>
+
+                        <article class="middle-apartment-wrapper">
+                            <div class="top-middle-apartment apartment">
+                                <div class="middle-apartment-header">
+                                    <h2>1 bed apartment</h2>
+                                    <p>Comfortable and functional living experience</p>
+                                </div>
+                                <button class="btn">
+                                    View 60+ 1 beds &rarr;
+                                </button>
+                            </div>
+
+                            <div class="bottom-middle-apartments apartment">
+                                <h2><a href="#" target="_blank" class="color-white">See all verified properties
+                                        &rarr;</a></h2>
+                            </div>
+                        </article>
+
+                        <article class="right-apartment-wrapper">
+                            <div class="top-right-apartment apartment">
+                                <div class="right-apartment-header">
+                                    <h2>2 bed apartment</h2>
+                                    <p>Vibrant neighborhood for individuals & couples</p>
+                                </div>
+                                <button class="btn">
+                                    View 200+ 2 beds &rarr;
+                                </button>
+                            </div>
+
+                            <div class="bottom-right-apartment apartment">
+                                <div class="right-apartment-header">
+                                    <h2>3+ bed flat</h2>
+                                    <p>Comfortable living space for families</p>
+                                </div>
+                                <button class="btn">
+                                    View 10+ 3+ beds &rarr;
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Mobile Explore Our Homes Section -->
+                <section class="explore-our-homes-mobile mb-5 zoom-up">
+                    <div class="explore-our-homes-header" aria-label="Explore our homes header text">
+                        <h2>Explore our homes</h2>
+                        <p>Whatever stage you are in your life you can find a home that suits your budget.</p>
+                    </div>
+
+                    <div id="apartmentCarousel" class="carousel slide" data-ride="carousel"
+                        aria-label="Apartments available for you">
+                        <ol class="carousel-indicators">
+                            <li data-target="#apartmentCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#apartmentCarousel" data-slide-to="1"></li>
+                            <li data-target="#apartmentCarousel" data-slide-to="2"></li>
+                            <li data-target="#apartmentCarousel" data-slide-to="3"></li>
+                            <li data-target="#apartmentCarousel" data-slide-to="4"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active item-1">
+                                <article class="text-start">
+                                    <div>
+                                        <h2>Studio apartment</h2>
+                                        <p>Vetted homes from verified landlords</p>
+                                    </div>
+                                    <button class="btn btn-primary">View 104+ Studios &rarr;</button>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item item-2">
+                                <article class="text-start">
+                                    <div>
+                                        <h2>1 bed apartment</h2>
+                                        <p>Comfortable and functional living experience</p>
+                                    </div>
+                                    <button class="btn btn-primary">View 60+ 1 beds &rarr;</button>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item item-3">
+                                <article class="text-start">
+                                    <div>
+                                        <h2>2 bed apartment</h2>
+                                        <p>Vibrant neighborhood for individuals & couples</p>
+                                    </div>
+                                    <button class="btn btn-primary">View 200+ 2 beds &rarr;</button>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item item-4">
+                                <article class="text-start">
+                                    <div>
+                                        <h2>3+ bed flat</h2>
+                                        <p>Comfortable living space for families</p>
+                                    </div>
+                                    <button class="btn btn-primary">View 10+ 3+ beds &rarr;</button>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item item-5">
+                                <article class="text-start">
+                                    <div></div>
+                                    <h2><a href="#" target="_blank">See all verified properties &rarr;</a></h2>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <a class="carousel-control-prev" href="#apartmentCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#apartmentCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Find a Neighborhood Section -->
+                <section class="find-a-neighbourhood zoom-up">
+                    <div class="find-a-neighbourhood-header">
+                        <h2>Find a neighbourhood near you</h2>
+                        <p>Find a neighbourhood that fits your needs and starts your new chapter.</p>
+                    </div>
+                    <div class="find-a-neighbourhood-location-wrapper">
+                        <button class="location location-btn" id="lagos-neighbourhood-apartments"><a>Lagos</a></button>
+                        <button class="location location-btn" id="abuja-neighbourhood-apartments"><a>Abuja</a></button>
+                    </div>
+                    <hr class="pagination-line" id="pagination-line" />
+                    <div class="apartment-dropdown dropdown">
+                        <h1 class="my-4" id="apartmentDropdown" data-toggle="dropdown" type="button"
+                            aria-haspopup="true" aria-expanded="false">Select a location in <span
+                                id="selected-location"></span></h1>
+                        <!-- <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false"> -->
+                        <i class="fa-solid fa-chevron-down open-icon" style="color: white;"></i>
+                        <!-- <i class="fa-solid fa-chevron-up close-icon hidden" style="color: white;"></i> -->
+                        <!-- </button> -->
+                        <div class="dropdown-menu apartment-dropdown-menu" aria-labelledby="apartmentDropdown">
+                            <section class="lagos-neighbourhood-apartments">
+                                <p>Lagos</p>
+                                <hr />
+                                <ul class="lagos-apartments-neighbourhood-list">
+                                    <li><a class="dropdown-item" href="#">Lekki</a></li>
+                                    <li><a class="dropdown-item" href="#">Yaba</a></li>
+                                    <li><a class="dropdown-item" href="#">Ikoyi</a></li>
+                                    <li><a class="dropdown-item" href="#">Salem</a></li>
+                                    <li><a class="dropdown-item" href="#">Awoyaya</a></li>
+                                    <li><a class="dropdown-item" href="#">Oniru</a></li>
+                                    <li><a class="dropdown-item" href="#">Igbo Efon</a></li>
+                                    <li><a class="dropdown-item" href="#">Ikeja</a></li>
+                                    <li><a class="dropdown-item" href="#">Chevron</a></li>
+                                    <li><a class="dropdown-item" href="#">Ologbo</a></li>
+                                    <li><a class="dropdown-item" href="#">Osapa-Jakande</a></li>
+                                    <li><a class="dropdown-item" href="#">Elegushi</a></li>
+                                    <li><a class="dropdown-item" href="#">Sangotedo</a></li>
+                                    <li><a class="dropdown-item" href="#">Eleganza</a></li>
+                                    <li><a class="dropdown-item" href="#">VGC</a></li>
+                                    <li><a class="dropdown-item" href="#">Lekki phase 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Mobil road</a></li>
+                                    <li><a class="dropdown-item" href="#">Ikota</a></li>
+                                    <li><a class="dropdown-item" href="#">Owode</a></li>
+                                </ul>
+                            </section>
+                            <section class="abuja-neighbourhood-apartments">
+                                <p>Abuja</p>
+                                <hr />
+                                <ul class="abuja-apartments-neighbourhood-list">
+
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Result Analytics Section -->
+                <section class="result-analytics zoom-up" aria-labelledby="results-heading">
+                    <div class="result-analytics-header">
+                        <h1 id="results-heading">Our results</h1>
+                        <p>Over 30,000+ young professionals use our services to improve the quality of their lives and
+                            live
+                            within their means.</p>
+                    </div>
+                    <div class="result-analytics-data-wrapper">
+                        <div class="result-analytics-data">
+                            <h2>N800 million</h2>
+                            <p>Saved on legal and agency fees</p>
+                        </div>
+                        <div class="result-analytics-data">
+                            <h2>300k</h2>
+                            <p>Monthly stays</p>
+                        </div>
+                        <div class="result-analytics-data">
+                            <h2>20</h2>
+                            <p>Locations</p>
+                        </div>
+                    </div>
+
+                    <div class="result-analytics-tenancy">
+                        <div class="result-analytics-image-wrapper">
+                            <img src="../assets/images/Subtract.png"
+                                alt="A mobile phone displaying the SmallSmall website interface" />
+                        </div>
+                        <div class="result-analytics-tenancy-plan">
+                            <h2>Manage your tenancy on the go</h2>
+                            <ul>
+                                <li>Inspect and subscribe to any property</li>
+                                <li>Manage your stay</li>
+                                <li>Pay and renew rent</li>
                             </ul>
-                        </section>
-                    </div>
-                </div>
+                            <div class="result-analytics-tenancy-qrcode-wrapper">
+                                <div class="result-analytics-tenancy-qrcode">
+                                    <img src="../assets/images/MOBILE-APP-LINKS 12-09-2024 1.png"
+                                        alt="SmallSmall App QR Code" />
+                                </div>
+                                <div class="result-analytics-tenancy-qrcode-text">
+                                    <h2>Get the RentSmallsmall App</h2>
+                                    <p>Scan the QR code with your device and download our app</p>
+                                </div>
+                            </div>
+                        </div>
+                </section>
 
+                <!-- FAQs Section -->
+                <section class="frequently-asked-questions zoom-up">
+                    <div class="faqs-header">
+                        <h1>Frequently asked questions</h1>
+                        <p>Get answers about renting with RentSmallsmall</p>
+                    </div>
+                    <div class="faqs-wrapper">
+
+                        <div class="single-faq">
+                            <div class="faq-question">
+                                <p>What is about RentSmallsmall?</p>
+                                <div class="faq-question-btn">
+                                    <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-1">
+                                        <span class="open-icon" aria-hidden="true">&#43;</span>
+                                        <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
+                                        <span class="sr-only">Expand question</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="faq-answer" id="faq-content-1" hidden>
+                                <p>
+                                    RentSmallsmall is a platform that offers customers access to flexible payment plans
+                                    on
+                                    homes.
+                                    Payment plans include monthly, bimonthly, biannual, and quarterly. We do not collect
+                                    agency
+                                    or
+                                    agreement fees.
+                                </p>
+                                <p>
+                                    We also provide property owners with premium services that include providing
+                                    verified
+                                    subscribers (tenants) for their property, saving them time and stress in getting
+                                    tenants.
+                                    With us, you earn your rental income as and when due without suffering any payment
+                                    defaults.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single-faq">
+                            <div class="faq-question">
+                                <p>Does RentSmallsmall pay my rent?</p>
+                                <div class="faq-question-btn">
+                                    <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-2">
+                                        <span class="open-icon" aria-hidden="true">&#43;</span>
+                                        <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
+                                        <span class="sr-only">Expand question</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="faq-answer" id="faq-content-2" hidden>
+                                <p>
+                                    RentSmallsmall offers customers access to flexible payment plans on homes. Payment
+                                    plans
+                                    include
+                                    monthly, bimonthly, biannual, and quarterly. We do not collect agency or agreement
+                                    fees.
+                                </p>
+                                <p>
+                                    We also provide property owners with premium services that include providing
+                                    verified
+                                    subscribers
+                                    (tenants) for their property, saving them time and stress in getting tenants. With
+                                    us,
+                                    you
+                                    earn your
+                                    rental income as and when due without suffering any payment defaults.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single-faq">
+                            <div class="faq-question">
+                                <p>How do I schedule to inspect a property?</p>
+                                <div class="faq-question-btn">
+                                    <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-3">
+                                        <span class="open-icon" aria-hidden="true">&#43;</span>
+                                        <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
+                                        <span class="sr-only">Expand question</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="faq-answer" id="faq-content-3" hidden>
+                                <p>
+                                    To schedule a property inspection, you can contact our customer service or visit our
+                                    website
+                                    to
+                                    choose a suitable time. We aim to provide a convenient and flexible experience for
+                                    our
+                                    users.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single-faq">
+                            <div class="faq-question">
+                                <p>Do I pay for property inspection?</p>
+                                <div class="faq-question-btn">
+                                    <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-4">
+                                        <span class="open-icon" aria-hidden="true">&#43;</span>
+                                        <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
+                                        <span class="sr-only">Expand question</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="faq-answer" id="faq-content-4" hidden>
+                                <p>
+                                    No, property inspections arranged through RentSmallsmall are free of charge for
+                                    customers.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <a href="#" class="see-more-faqs mx-3">See more FAQ &rarr;</a>
+                    </div>
+                </section>
             </section>
-
-            <!-- Result Analytics Section -->
-            <section class="result-analytics" aria-labelledby="results-heading">
-                <div class="result-analytics-header">
-                    <h1 id="results-heading">Our results</h1>
-                    <p>Over 30,000+ young professionals use our services to improve the quality of their lives and live
-                        within their means.</p>
-                </div>
-                <div class="result-analytics-data-wrapper">
-                    <div class="result-analytics-data">
-                        <h2>N800 million</h2>
-                        <p>Saved on legal and agency fees</p>
-                    </div>
-                    <div class="result-analytics-data">
-                        <h2>300k</h2>
-                        <p>Monthly stays</p>
-                    </div>
-                    <div class="result-analytics-data">
-                        <h2>20</h2>
-                        <p>Locations</p>
-                    </div>
-                </div>
-
-                <div class="result-analytics-tenancy">
-                    <div class="result-analytics-image-wrapper">
-                        <img src="../assets/images/Subtract.png"
-                            alt="A mobile phone displaying the SmallSmall website interface" />
-                    </div>
-                    <div class="result-analytics-tenancy-plan">
-                        <h2>Manage your tenancy on the go</h2>
-                        <ul>
-                            <li>Inspect and subscribe to any property</li>
-                            <li>Manage your stay</li>
-                            <li>Pay and renew rent</li>
-                        </ul>
-                        <div class="result-analytics-tenancy-qrcode-wrapper">
-                            <div class="result-analytics-tenancy-qrcode">
-                                <img src="../assets/images/MOBILE-APP-LINKS 12-09-2024 1.png"
-                                    alt="SmallSmall App QR Code" />
-                            </div>
-                            <div class="result-analytics-tenancy-qrcode-text">
-                                <h2>Get the RentSmallsmall App</h2>
-                                <p>Scan the QR code with your device and download our app</p>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <!-- FAQs Section -->
-            <section class="frequently-asked-questions">
-                <div class="faqs-header">
-                    <h1>Frequently asked questions</h1>
-                    <p>Get answers about renting with RentSmallsmall</p>
-                </div>
-                <div class="faqs-wrapper">
-
-                    <div class="single-faq">
-                        <div class="faq-question">
-                            <p>What is about RentSmallsmall?</p>
-                            <div class="faq-question-btn">
-                                <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-1">
-                                    <span class="open-icon" aria-hidden="true">&#43;</span>
-                                    <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                    <span class="sr-only">Expand question</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="faq-answer" id="faq-content-1" hidden>
-                            <p>
-                                RentSmallsmall is a platform that offers customers access to flexible payment plans on
-                                homes.
-                                Payment plans include monthly, bimonthly, biannual, and quarterly. We do not collect
-                                agency
-                                or
-                                agreement fees.
-                            </p>
-                            <p>
-                                We also provide property owners with premium services that include providing verified
-                                subscribers (tenants) for their property, saving them time and stress in getting
-                                tenants.
-                                With us, you earn your rental income as and when due without suffering any payment
-                                defaults.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="single-faq">
-                        <div class="faq-question">
-                            <p>Does RentSmallsmall pay my rent?</p>
-                            <div class="faq-question-btn">
-                                <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-2">
-                                    <span class="open-icon" aria-hidden="true">&#43;</span>
-                                    <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                    <span class="sr-only">Expand question</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="faq-answer" id="faq-content-2" hidden>
-                            <p>
-                                RentSmallsmall offers customers access to flexible payment plans on homes. Payment plans
-                                include
-                                monthly, bimonthly, biannual, and quarterly. We do not collect agency or agreement fees.
-                            </p>
-                            <p>
-                                We also provide property owners with premium services that include providing verified
-                                subscribers
-                                (tenants) for their property, saving them time and stress in getting tenants. With us,
-                                you
-                                earn your
-                                rental income as and when due without suffering any payment defaults.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="single-faq">
-                        <div class="faq-question">
-                            <p>How do I schedule to inspect a property?</p>
-                            <div class="faq-question-btn">
-                                <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-3">
-                                    <span class="open-icon" aria-hidden="true">&#43;</span>
-                                    <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                    <span class="sr-only">Expand question</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="faq-answer" id="faq-content-3" hidden>
-                            <p>
-                                To schedule a property inspection, you can contact our customer service or visit our
-                                website
-                                to
-                                choose a suitable time. We aim to provide a convenient and flexible experience for our
-                                users.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="single-faq">
-                        <div class="faq-question">
-                            <p>Do I pay for property inspection?</p>
-                            <div class="faq-question-btn">
-                                <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-4">
-                                    <span class="open-icon" aria-hidden="true">&#43;</span>
-                                    <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                    <span class="sr-only">Expand question</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="faq-answer" id="faq-content-4" hidden>
-                            <p>
-                                No, property inspections arranged through RentSmallsmall are free of charge for
-                                customers.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <a href="#" class="see-more-faqs mx-3">See more FAQ &rarr;</a>
-                </div>
-                </div>
-            </section>
-
-
 
             <!-- Speak with us Section -->
-            <section class="speak-with-us-wrapper">
+            <section class="speak-with-us-wrapper zoom-up">
                 <div class="speak-with-us">
                     <div class="speak-with-us-content">
                         <h1>List your property with us</h1>
@@ -832,16 +757,10 @@
                     </div>
                 </div>
             </section>
+        </div>
     </main>
-
-
-
-
-
-
-
     <!-- FOOTER -->
-    <footer class="rss-footer-wrapper">
+    <footer class="rss-footer-wrapper zoom-up">
         <div class="rss-footer-contents d-flex">
             <section class="rss-footer-content">
                 <a href="#top" class="text-decoration-none">
@@ -940,13 +859,22 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="../assets/js/custom-js/homePage.js"></script>
-    <script src="../assets/js/bootstrap-js/homePage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+    <script src="../assets/js/custom-js/homePage.js" defer></script>
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollSmoother.min.js"></script>
+
     <!-- Jquery js -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <!-- Bootstrap js and Popper js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="../assets/js/bootstrap-js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>

@@ -7,11 +7,13 @@ body,
 html {
   height: 100%;
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
   margin-block-end: 60px;
 }
+
 /* Styling the HomePage Hero Section */
 
 .homePage-wrapper {
@@ -125,6 +127,7 @@ header {
   font-size: 18px;
   font-weight: 400;
 }
+
 /* Mobile responsiveness for the Hero Section */
 
 @media (width <= 1024px) {
@@ -146,14 +149,7 @@ header {
   .homePage-wrapper {
     inline-size: 100%;
     margin: auto;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     display: initial;
-    /* place-items: center; */
-    /* margin: auto; */
-    /* border: 3px solid black; */
   }
 
   .homePage-hero-section {
@@ -168,7 +164,12 @@ header {
   }
 
   .homePage-hero-section h1 {
-    max-width: 300px;
+    max-width: 400px;
+  }
+
+  .homePage-hero-section-h2 {
+    inline-size: 90%;
+    margin: auto;
   }
 
   .homePage-hero-section p {
@@ -201,6 +202,17 @@ header {
   }
 }
 
+@media (width <= 425px) {
+  .homePage-hero-section h1 {
+    font-size: 50px;
+    max-width: 90%;
+  }
+
+  .homePage-hero-section-h2 h2 {
+    font-size: 28px;
+  }
+}
+
 /* Styling the RSS Articles  */
 
 .rss-article-wrapper {
@@ -214,7 +226,6 @@ header {
   grid-template-columns: 40% 1fr;
   grid-template-rows: auto;
   gap: 20px;
-  /* animation: slide-up 3s ease-out forwards; */
 }
 
 .rss-box {
@@ -247,37 +258,32 @@ header {
 }
 
 .rss-articles .first-box {
-  block-size: 500px;
+  block-size: 400px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
-  /* transition: transform all 0.3s ease-in-out; */
 }
 
 .rss-box:hover {
   cursor: pointer;
-  /* transform: scale(0.95); */
 }
 
 .rss-articles .second-box {
-  block-size: 500px;
+  block-size: 400px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
-  /* transition: transform all 0.3s ease-in-out; */
 }
 
 .rss-articles .third-box {
-  /* padding-top: 40px; */
   grid-column: span 2;
-  block-size: 500px;
+  block-size: 400px;
   border-radius: 10px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
-  /* transition: transform all 0.3s ease-in-out; */
 }
 
 /* Mobile Responsiveness Styling for the Slider Section */
@@ -321,7 +327,7 @@ header {
   inline-size: 90%;
   margin: auto;
   margin-block-end: 100px;
-  block-size: 608px;
+  block-size: 550px;
 }
 
 .rss-slider-image-bg {
@@ -522,7 +528,7 @@ header {
 }
 
 .explore-our-homes-apartments {
-  block-size: 572px;
+  block-size: 500px;
   display: grid;
   grid-template-columns: 27% 27% 1fr;
   gap: 20px;
@@ -554,10 +560,99 @@ header {
   transition: all 0.3s ease-in;
 }
 
+.modal-footer .btn:hover,
 .explore-our-homes-apartments .btn:hover {
   background-color: black;
   color: white;
   transform: scale(1.05);
+}
+
+.explore-our-homes-mobile {
+  display: none;
+  inline-size: 90%;
+  margin: auto;
+}
+
+.carousel-item article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+
+.modal-footer .btn,
+.carousel-item .btn {
+  background-color: white;
+  color: #000;
+  inline-size: fit-content;
+  border: none;
+  transition: all 0.3s ease-in;
+}
+
+.modal-content {
+  background: linear-gradient(230deg, #007dc1 0%, #969899 50%, #007dc1 50%);
+  border-radius: 10px;
+}
+
+.modal-body {
+  border-radius: 20px;
+}
+
+.bottom-middle-apartments a,
+.item-5 a {
+  color: white;
+}
+
+.item-1 {
+  background: url(../../images/left-apartment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90%;
+  padding: 20px;
+  block-size: 500px;
+  border-radius: 20px;
+  color: white;
+}
+
+.item-2 {
+  background: url(../../images/middle-apartment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  padding: 20px;
+  block-size: 500px;
+  border-radius: 20px;
+  color: white;
+}
+
+.item-3 {
+  background: url(../../images/top-right-apartment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  padding: 20px;
+  block-size: 500px;
+  color: white;
+  border-radius: 20px;
+}
+
+.item-4 {
+  background: url(../../images/bottom-right-apartment.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  padding: 20px;
+  block-size: 500px;
+  color: white;
+  border-radius: 20px;
+}
+
+.item-5 {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #007dc1;
+  color: white;
+  block-size: 500px;
 }
 
 .explore-our-homes-apartments .left-apartment {
@@ -634,17 +729,21 @@ header {
 /* Mobile responsiveness for the Explore Our Homes Section  */
 
 @media (width <= 768px) {
-  .explore-our-homes {
-    overflow: clip;
+  .carousel-inner {
+    margin: auto;
   }
 
-  .close-apartments-on-mobile {
-    display: hidden;
+  .explore-our-homes {
+    display: none;
+  }
+
+  .explore-our-homes-mobile {
+    display: block;
   }
 
   .explore-our-homes-header {
     max-width: 410px;
-    margin-inline-start: 30px;
+    margin-inline-start: 0px;
   }
 
   .explore-our-homes-header h2 {
@@ -664,10 +763,10 @@ header {
     display: flex;
     gap: 20px;
     inline-size: 100%;
-    animation: slide-in 15s ease-in-out infinite alternate;
+    /* animation: slide-in 15s ease-in-out infinite alternate; */
   }
 
-  .explore-our-homes-apartments.active {
+  /* .explore-our-homes-apartments.active {
     display: block;
   }
 
@@ -681,9 +780,9 @@ header {
 
   .explore-our-homes-apartments .right-apartment-wrapper {
     display: flex;
-  }
+  } */
 
-  .apartment {
+  /* .apartment {
     min-inline-size: 300px;
   }
 
@@ -698,9 +797,9 @@ header {
   .explore-our-homes .carousel-pagination {
     margin: auto;
     margin-top: 10px;
-  }
+  } */
 
-  .explore-our-homes .carousel-pagination .dot {
+  /* .explore-our-homes .carousel-pagination .dot {
     width: 7px;
     margin: 5px;
     display: inline-block;
@@ -721,10 +820,10 @@ header {
   }
   .dot.active {
     background-color: #333;
-  }
+  } */
 }
 
-@media (width <= 400px) {
+/* @media (width <= 400px) {
   .explore-our-homes-header {
     margin: auto;
   }
@@ -740,7 +839,7 @@ header {
     inline-size: 100%;
     flex: 1;
   }
-}
+} */
 
 /* Styling the Find a Neighborhood Section  */
 
