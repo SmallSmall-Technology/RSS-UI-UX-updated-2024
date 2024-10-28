@@ -1,7 +1,5 @@
 const slides = document.querySelectorAll(".rss-single-slider");
-const apartmentsSlide = document.querySelectorAll(
-  ".explore-our-homes-apartments"
-);
+
 const dash = document.querySelectorAll(".dash");
 const dot = document.querySelectorAll(".dot");
 let currentSlide = 0;
@@ -20,15 +18,15 @@ function showSlide(slideIndex) {
 }
 
 // Initial display of the first slide
-showSlide(currentSlide);
+// showSlide(currentSlide);
 
 // Add click event to each dash for pagination control
-dash.forEach((dash, index) => {
-  dash.addEventListener("click", () => {
-    currentSlide = index;
-    showSlide(currentSlide);
-  });
-});
+// dash.forEach((dash, index) => {
+//   dash.addEventListener("click", () => {
+//     currentSlide = index;
+//     showSlide(currentSlide);
+//   });
+// });
 
 // Auto-slide functionality (every 5 seconds)
 setInterval(() => {
@@ -37,64 +35,64 @@ setInterval(() => {
 }, 5000); // Change slide every 5 seconds
 
 // Function handling the Apartment Carousel
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll(
-    ".explore-our-homes-apartments .carousel-item"
-  );
-  const dots = document.querySelectorAll(".carousel-pagination .dot");
-  let currentSlide = 0;
-  const slideInterval = 3000;
+// document.addEventListener("DOMContentLoaded", function () {
+//   const slides = document.querySelectorAll(
+//     ".explore-our-homes-apartments .carousel-item"
+//   );
+//   const dots = document.querySelectorAll(".carousel-pagination .dot");
+//   let currentSlide = 0;
+//   const slideInterval = 3000;
 
-  // Function to show the current slide
-  function showSlide(index) {
-    // Hide all slides
-    slides.forEach((slide) => (slide.style.display = "none"));
-    // Remove active class from all dots
-    dots.forEach((dot) => dot.classList.remove("active"));
+//   // Function to show the current slide
+//   function showSlide(index) {
+//     // Hide all slides
+//     slides.forEach((slide) => (slide.style.display = "none"));
+//     // Remove active class from all dots
+//     dots.forEach((dot) => dot.classList.remove("active"));
 
-    // Show the selected slide
-    slides[index].style.display = "flex";
-    // Add active class to the corresponding dot
-    dots[index].classList.add("active");
-  }
+//     // Show the selected slide
+//     slides[index].style.display = "flex";
+//     // Add active class to the corresponding dot
+//     dots[index].classList.add("active");
+//   }
 
-  // Add click event to each dot
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentSlide = index;
-      showSlide(currentSlide);
-    });
-  });
+//   // Add click event to each dot
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//       currentSlide = index;
+//       showSlide(currentSlide);
+//     });
+//   });
 
-  //Function to go to the next slide
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+//   //Function to go to the next slide
+//   function nextSlide() {
+//     currentSlide = (currentSlide + 1) % slides.length;
+//     showSlide(currentSlide);
+//   }
 
-  // Initialize by showing the first slide
-  showSlide(currentSlide);
+//   // Initialize by showing the first slide
+//   showSlide(currentSlide);
 
-  let autoSlide = setInterval(nextSlide, slideInterval);
-});
+//   let autoSlide = setInterval(nextSlide, slideInterval);
+// });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const homesSection = document.querySelector(".explore-our-homes-apartments");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const homesSection = document.querySelector(".explore-our-homes-apartments");
 
-  function handleIntersection(entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        homesSection.classList.add("animate-container-slide-in");
-      }
-    });
-  }
+//   function handleIntersection(entries) {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         homesSection.classList.add("animate-container-slide-in");
+//       }
+//     });
+//   }
 
-  const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.2,
-  });
+//   const observer = new IntersectionObserver(handleIntersection, {
+//     threshold: 0.2,
+//   });
 
-  observer.observe(homesSection);
-});
+//   observer.observe(homesSection);
+// });
 
 // Function handling the Find a neighbourhood dropdown
 
@@ -233,5 +231,59 @@ faqItems.forEach((faqItem) => {
     // Prevent the event from propagating to the box click handler
     event.stopPropagation();
     toggleAccordion(faqItem, toggleBtn);
+  });
+});
+
+// Adding animations
+
+// Load GSAP first, then apply this script
+document.addEventListener("DOMContentLoaded", () => {
+  const headlines = document.querySelectorAll(".headline");
+
+  headlines.forEach((headline) => {
+    const letters = headline.innerText.split("");
+    headline.innerText = "";
+
+    // Create a span for each letter to animate individually
+    letters.forEach((letter) => {
+      const span = document.createElement("span");
+      span.innerText = letter;
+      headline.appendChild(span);
+    });
+
+    // Animate each span (letter) smoothly
+    gsap.fromTo(
+      ".headline span",
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.05,
+        ease: "power2.out",
+        duration: 0.4,
+        scrollTrigger: {
+          trigger: headline,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Select each element with a `zoom-up` class
+gsap.utils.toArray(".zoom-up").forEach((element) => {
+  gsap.from(element, {
+    duration: 1,
+    opacity: 0,
+    y: 20,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+      toggleActions: "restart none none none",
+    },
   });
 });
