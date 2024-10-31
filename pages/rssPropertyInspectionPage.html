@@ -319,9 +319,6 @@
 
             <button type="submit" class="btn">Filter</button>
         </form>
-
-
-
         <!-- Apartment Component -->
         <section class="apartments-wrapper">
             <div class="apartments-wrapper-header">
@@ -406,10 +403,11 @@
                                 <p class="pb-2">Budget</p>
                                 <div class="budget-plan">
                                     <div class="budget-plan-price">
-                                        <small>₦150k</small>
-                                        <small>₦300k</small>
+                                        <small>₦50k</small>
+                                        <small for="customRange1" class="form-label" id="rangeLabel"></small>
                                     </div>
-                                    <div class="payment-line"></div>
+                                    <input type="range" class="form-range" min="50" max="1000000" step="50"
+                                        id="customRange1">
                                 </div>
                             </section>
                         </section>
@@ -417,10 +415,7 @@
                         <!-- Filter Button -->
                         <button class="btn btn-primary filter-btn" id="filter-btn">Filter</button>
                     </div>
-
                 </div>
-
-
         </section>
         <section class="apartments mb-5">
             <article class="single-apartment zoom-up">
@@ -868,10 +863,8 @@
                     </div>
                 </div>
             </article>
-
         </section>
         </section>
-
         <!-- Pagination Conponent -->
         <section class="apartment-pagination zoom-up">
             <button class="btn" id="first-btn">&lt;&lt; First</button>
@@ -894,15 +887,7 @@
             <button class="btn d-md-block d-none" id="next-btn">Next &gt;</button>
             <button class="btn" id="last-btn">Last &gt;&gt;</button>
         </section>
-
     </main>
-
-
-
-
-
-
-
     <!-- Footer -->
     <footer class="rss-footer-wrapper zoom-up">
         <div class="rss-footer-contents d-flex">
