@@ -1,0 +1,832 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+}
+
+.header {
+  margin-block-end: 50px;
+}
+
+.logged-in {
+  border: 2px solid #e6ebf1;
+  display: block;
+}
+
+.nav-bar {
+  background: white;
+}
+
+.small-screen-nav {
+  padding-inline: 5rem;
+  background: white;
+  margin: auto;
+}
+
+.single-apartment-images-wrapper {
+  gap: 0;
+  inline-size: 100%;
+}
+.single-apartment-images-wrapper img {
+  border-radius: 0;
+  inline-size: 100%;
+}
+
+/* Mobile responsiveness for the header */
+
+@media (width <= 768px) {
+  .nav-bar {
+    padding: 20px 15px;
+    margin: 0;
+    inline-size: 100%;
+    border-radius: initial;
+    background-color: white;
+  }
+
+  .middle-nav {
+    inline-size: 100%;
+    margin-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logged-in {
+    display: flex;
+  }
+}
+
+/* Styling the main container */
+
+.main-container {
+  margin-inline: 6rem;
+}
+
+.apartment-location-header {
+  background-color: #e0eff7;
+  width: fit-content;
+  margin-top: 5rem;
+
+  & a {
+    color: #000;
+  }
+}
+
+.single-apartment-header-details h2 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.single-apartment-header-payment {
+  display: flex;
+}
+
+.single-apartment-header-payment h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.availability-status {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.availability-status .status-indicator {
+  width: 7px;
+  height: 7px;
+  background-color: #00cda6;
+  border-radius: 50%;
+}
+
+.availability-status .status-indicator.inactive {
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.single-apartment-first-image img {
+  inline-size: 100%;
+}
+
+.single-apartment-right-images-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  inline-size: 100%;
+  position: relative;
+}
+
+.single-apartment-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.single-apartment-right-images {
+  gap: 7px;
+  display: grid;
+  inline-size: 100%;
+}
+
+.single-apartment-right-images-wrapper .single-img {
+  inline-size: 100%;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.see-more-apartment a {
+  background-color: white;
+  border-radius: 7px;
+  color: #000;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.see-more-apartment a img {
+  height: 15px;
+  width: 15px;
+}
+
+.line-through-black {
+  border: 1px solid black;
+  margin-block: 2rem;
+}
+
+.single-property-about h2,
+.single-property-rules h2,
+.single-property-amenities h2,
+.single-property-affordability h2 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Mobile responsiveness styling for the main container */
+
+@media (width <= 768px) {
+  .main-container {
+    margin-inline: 1rem;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+    gap: 20px;
+  }
+
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 400px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+
+  .single-apartment-details-mobile h2 {
+    display: none;
+  }
+}
+
+@media (width <= 500px) {
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 315px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (width <= 375px) {
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 300px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (width <= 320px) {
+  .single-apartment-wrapper {
+    inline-size: 100%;
+    block-size: 250px;
+  }
+
+  .single-img {
+    block-size: 100%;
+    border-radius: 10px;
+  }
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* Styling the single apartment extras */
+.single-apartment-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-apartment-details-mobile {
+  display: grid;
+  /* flex: 1; */
+  flex-direction: column;
+  gap: 7px;
+}
+
+.single-apartment-details-mobile .line-through-black {
+  /* display: none; */
+}
+
+.single-apartment-details-mobile-content {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.line-through-black.none {
+  display: none;
+}
+
+.bull {
+  margin-inline: 10px;
+}
+
+.single-apartment-extras {
+  border: 1.5px solid #dddddd;
+  /* display: grid; */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.single-apartment-extras ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.single-apartment-extras ul li {
+  display: flex;
+  list-style-type: none;
+  transition: all 0.3s ease-in;
+}
+
+.single-apartment-extras ul li a {
+  display: flex;
+  transition: all 0.3s ease-in;
+  gap: 10px;
+}
+
+.single-apartment-extras ul li:hover {
+  text-decoration: underline;
+}
+
+.single-apartment-extras .btn-wrapper {
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+  background-color: black;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.single-apartment-extras .btn-wrapper .btn {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  inline-size: 50%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.single-apartment-extras hr {
+  margin-top: 0;
+}
+
+.single-apartment-extras .btn-wrapper .btn {
+  background-color: black;
+  color: white;
+}
+
+.single-apartment-extras .btn-wrapper .btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1);
+}
+
+.single-apartment-extras .btn-wrapper .btn:focus {
+  background-color: white;
+  color: black;
+}
+
+.line-through-black.dot {
+  display: block;
+  width: 60%;
+  margin-top: 0;
+}
+
+@media (width <= 768px) {
+  .single-apartment-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+
+  .single-apartment-header-payment h3 {
+    /* border: 3px solid red; */
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .single-apartment-header-payment {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .single-apartment-details-mobile {
+    margin: auto;
+  }
+
+  .single-apartment-details-mobile .line-through-black {
+    display: none;
+  }
+
+  .line-through-black.none {
+    display: block;
+  }
+
+  .line-through-black.dot {
+    display: none;
+  }
+
+  .single-apartment-extras {
+    /* flex: 1; */
+    /* inline-size: 80%; */
+    margin: auto;
+    border: 1.5px solid #dddddd;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .single-apartment-extras ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .single-apartment-extras ul li {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .single-apartment-extras .btn {
+    font-size: 13px;
+  }
+
+  .bull {
+    margin-inline: 5px;
+  }
+}
+
+@media (width <= 425px) {
+  .single-apartment-details-mobile-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .single-apartment-extras {
+    /* flex: 1; */
+  }
+
+  .bull:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (width <= 320px) {
+  .bull:nth-child(6) {
+    display: block;
+  }
+
+  .bull:nth-child(4) {
+    /* display: none; */
+  }
+
+  .single-apartment-extras {
+  }
+}
+
+.single-property-amenities ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  inline-size: 50%;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.single-property-amenities ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.single-property-rules ul {
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 14px;
+  display: grid;
+  gap: 5px;
+}
+
+.single-property-rules ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Styling the affordability calculator */
+.affordability-calculator {
+  inline-size: 80%;
+  margin-bottom: 10rem;
+  background-color: #dddddd;
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.affordability-calculator-text p,
+.affordability-income p {
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 340px;
+}
+
+.affordability-calculator-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form-label {
+  inline-size: 100%;
+}
+
+.affordability-calculator input {
+  inline-size: 80%;
+}
+
+.affordability-income {
+  background-color: white;
+  border-radius: 9px;
+  border: 1px solid #dddddd;
+  padding: 25px 15px;
+}
+
+.affordability-income h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.affordability-income p:last-child {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (width <= 768px) {
+  .affordability-calculator {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.single-apartment-details-wrapper-sticky {
+  inline-size: 96%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  padding-inline-start: 4rem;
+  border-radius: 10px;
+}
+
+@media (width<= 768px) {
+  .single-apartment-details-wrapper-sticky {
+    display: none;
+  }
+}
+
+.single-apartment-details-wrapper-sticky li p {
+  margin-bottom: 0;
+}
+
+.single-apartment-details-wrapper-sticky li h3 {
+  margin-bottom: 0;
+}
+
+.single-apartment-details-wrapper-sticky .btn-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: black;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.single-apartment-details-wrapper-sticky .btn-wrapper .btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.single-apartment-details-wrapper-sticky .btn-wrapper .btn:hover {
+  display: flex;
+  color: black;
+  background-color: white;
+}
+
+/* Styling the Neighbourhood section */
+
+.single-neighbourhood {
+  padding-block-end: 5rem;
+  margin-bottom: 5rem;
+}
+
+.single-neighbourhood h2 {
+  padding-bottom: 4rem;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.neighbourhood-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.neighbourhood {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.neighbourhood-details p {
+  margin: 0;
+}
+
+.neighbourhood-details p:first-child {
+  font-weight: 500;
+  margin: 0;
+}
+
+.neighbourhood-details p:nth-child(2) {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media (width<= 768px) {
+  .neighbourhood-wrapper {
+    display: grid;
+    gap: 20px;
+  }
+}
+
+/* Styling the Modal */
+
+.modal-content {
+  margin-top: 4rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.modal-header {
+  padding: 10;
+  margin: 0;
+}
+
+.modal-header .close {
+  padding: 0;
+  margin: 0;
+}
+
+.modal-body-wrapper {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.modal-body {
+  border: 1.5px solid #b0b0b0;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.modal-body select {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.form-group select {
+  outline: none;
+  border: none;
+}
+
+select,
+input {
+  outline: none;
+  background: transparent;
+}
+
+select:focus,
+input:focus {
+  background: transparent;
+
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control {
+  border: none;
+  inline-size: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.modal-backdrop {
+  /* position: initial; */
+}
+
+.form-group {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.subscription-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  padding-inline: 10px;
+}
+
+.subscription-price p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subscription-payment-plan-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  overflow: clip;
+}
+
+.subscription-payment-plan {
+  inline-size: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.subscription-payment-plan select {
+  border: none;
+  outline: none;
+}
+
+.line-division {
+  height: 50px;
+  border: 1px solid #dddddd;
+  margin-inline: 10px;
+}
+
+.subscription-payment-plan p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.subscription-details-wrapper {
+  padding: 10px;
+}
+
+.subscription-details-wrapper p:first-child {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.subscription-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.subscription-details p:first-child {
+  font-weight: 400;
+}
+
+.subscription-details p span {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.subscription-details p:last-child {
+  font-weight: 600;
+}
+
+.subscription-total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.subscription-caution p {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.modal-body-wrapper .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-footer .btn {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in;
+}
+
+.modal-body-wrapper .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header .close {
+  margin: 0;
+}
+
+.modal-footer .btn {
+  color: black;
+  text-decoration: underline;
+}
+
+.modal-footer .btn:hover {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+}
+
+@media (width <= 768px) {
+  .modal-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .modal-footer .btn {
+    inline-size: 80%;
+  }
+}
