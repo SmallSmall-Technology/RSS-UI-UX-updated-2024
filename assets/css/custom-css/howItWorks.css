@@ -1,0 +1,240 @@
+.secondary-color {
+  background: #94e0ff;
+}
+.tertiary-color {
+  background: #f4fbfe;
+}
+
+.banner-section {
+  background-color: #94e0ff;
+  padding-bottom: 15em;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.banner-content {
+  /* padding: 2em 25em; */
+  width: 600px;
+}
+
+.banner-content h1 {
+  color: #007dc1;
+  font-size: 65px;
+  font-weight: 700;
+}
+.banner-content p:nth-child(3) {
+  color: #007dc1;
+  font-size: 20px;
+  font-weight: 400;
+}
+.banner-content p:nth-child(4) {
+  color: #007dc1;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.custom-btn {
+  border-radius: 25px;
+  color: #03100d;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 6px 14px;
+  text-decoration: none;
+}
+
+.custom-btn-secondary {
+  border-radius: 25px;
+  background: #007dc1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+.custom-btn-secondary:hover {
+  color: #94e0ff;
+  text-decoration: none;
+}
+.custom-btn:hover {
+  background-color: #007dc1;
+  color: white;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.section-title {
+  color: #03100d;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.custom-btn-acc {
+  border: none;
+  background-color: unset;
+  color: #03100d;
+  font-size: 18px;
+  font-weight: 600;
+}
+.custom-content-acc {
+  border-radius: 0 0 10px 10px;
+  background: #f4fbfe;
+  color: #03100d;
+  font-size: 16px;
+  font-style: normal;
+  /* font-weight: 400; */
+  letter-spacing: 0.8px;
+}
+
+.section-container {
+  margin: 14em 0;
+}
+
+.custom-btn-acc-faq {
+  border: none;
+  background-color: unset;
+  color: #03100d;
+  font-size: 25px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.custom-link {
+  color: #03100d;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ready-to-start-content {
+  border-radius: 10px;
+}
+.ready-to-start-content h2 {
+  color: #03100d;
+  font-size: 35px;
+  font-weight: 600;
+}
+.ready-to-start-content p {
+  color: #03100d;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.ready-to-start-content a {
+  border-radius: 12px;
+  background: #007dc1;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+.ready-to-start-content a:hover {
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+  color: #007dc1;
+  border: 1px solid #007dc1;
+  transform: scale(1.05);
+}
+.ready-to-start-container {
+  margin: 10em 0;
+}
+
+.image-container {
+  position: relative;
+}
+.img-ad {
+  position: absolute;
+  top: 110px;
+  right: -127px;
+}
+.img-ad-2 {
+  position: absolute;
+  top: 103px;
+  right: -36px;
+  width: 248px;
+}
+.img-ad-location {
+  position: absolute;
+  top: 28px;
+  left: -39px;
+}
+
+.video-section {
+  margin-top: -12em;
+}
+
+.supported-brands {
+  display: flex;
+  justify-content: center;
+  margin-block-end: 60px;
+}
+
+/*****MEDIA QUERY****/
+
+/* Small devices (landscape phones, 480px and below) */
+@media screen and (max-width: 480px) {
+  /* .banner-section {
+  background-color: #94e0ff;
+  padding-bottom: 15em;
+  border-radius: 0px 0px 20px 20px;
+} */
+  .banner-content {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .banner-content h1 {
+    font-size: 52px;
+    font-weight: 600;
+  }
+  .banner-content p:nth-child(3) {
+    font-size: 20px;
+  }
+  .banner-content p:nth-child(4) {
+    font-size: 11px;
+  }
+
+  .img-ad,
+  .img-ad-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: unset;
+    padding: 10px;
+    width: 100%;
+  }
+  .img-ad-location {
+    position: absolute;
+    left: unset;
+    top: -27px !important;
+    right: 16px;
+  }
+
+  .video-section {
+    padding: 5px 30px;
+    margin-top: -5em;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media screen and (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (992px <=width <=1024px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) {
+}
