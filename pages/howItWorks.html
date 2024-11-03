@@ -30,9 +30,6 @@
   <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
   <link rel="stylesheet" href="../assets/css/custom-css/howItWorks.css" />
 
-  <!-- Script for sticky header -->
-  <script type="text/javascript" src="../assets/js/header.js"></script>
-
   <title>How It Works</title>
 </head>
 
@@ -436,7 +433,7 @@
       <div class="col-md-12 d-flex justify-content-center">
         <div class="banner-content text-center">
           <a class="custom-btn-secondary" href="#">How it works</a>
-          <h1 class="my-3">A smarter way to rent and live</h1>
+          <h1 class="my-3 headline">A smarter way to rent and live</h1>
           <p class="my-3">Rent a home, Pay flexibly, Live happily</p>
           <p class="my-3">RentSmallsmall is a property technology platform that offers flexible rent payment on all
             listed
@@ -447,15 +444,15 @@
     </div>
   </section>
 
-  <section class="d-flex justify-content-center video-section">
-    <div class="video-container ">
+  <section class="d-flex justify-content-center video-section zoom-up">
+    <div class="video-container">
       <iframe class=""
         src="https://player.vimeo.com/video/1023873952?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         width="992" height="562" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
         title="RSS Explainer Video 2024"></iframe>
     </div>
   </section>
-  <section class="supported-brands my-5">
+  <section class="supported-brands my-5 zoom-up">
     <img src="../assets/images/Group 90.png" alt="list of supported brands" class="d-md-block d-none" />
     <img src="../assets/images/Group 102.png" alt="list of supported brands in smaller format"
       class="d-md-none d-block" />
@@ -467,7 +464,7 @@
     <section>
 
       <!-- Getting Started -->
-      <div class="row section-container">
+      <div class="row section-container zoom-up">
         <div class="col-md-5 order-md-1 order-2">
           <div class="my-3">
             <a href="#" class="d-inline-block custom-btn secondary-color ">Getting started</a>
@@ -544,7 +541,7 @@
       </div>
 
       <!-- Rent, move in and living -->
-      <div class="row section-container">
+      <div class="row section-container zoom-up">
         <div class="col-md-7 ">
           <div class="image-container">
             <!-- desktop view -->
@@ -652,7 +649,7 @@
       </div>
 
       <!-- Renew or ending your lease -->
-      <div class="row section-container">
+      <div class="row section-container zoom-up">
         <div class="col-md-5 order-md-1 order-2 ">
           <div class="my-3">
             <a href="#" class="d-inline-block custom-btn secondary-color ">Renewing or ending your lease</a>
@@ -719,7 +716,7 @@
     </section>
 
     <!-- FAQ section -->
-    <section class="faq-container">
+    <section class="faq-container zoom-up">
       <div class="row">
         <div class="col-12  text-center">
           <h2>Frequently asked questions</h2>
@@ -833,7 +830,7 @@
 
 
     <!-- Ready to start section -->
-    <section class="ready-to-start-container">
+    <section class="ready-to-start-container zoom-up">
       <div class="row">
         <div class="col-12">
           <div class="ready-to-start-content py-5  px-md-3 px-2 tertiary-color d-flex justify-content-center">
@@ -851,7 +848,7 @@
   </main>
 
   <!-- NEW FOOTER -->
-  <footer class="rss-footer-wrapper">
+  <footer class="rss-footer-wrapper zoom-up">
     <div class="rss-footer-contents">
       <section class="rss-footer-content">
         <a href="./homePage.html" class="text-decoration-none company-logo">
@@ -926,7 +923,7 @@
         <div class="rss-footer-app-download">
           <p class="text-white text-decoration-none">Download the Mobile app</p>
           <div class="rss-download-wrapper">
-            <a href="https://play.google.com/store" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.smallsmallfair.app&hl=en" target="_blank">
               <img src="../assets/images/kindpng_255271 6 1.png" alt="Google Play Download Logo" class="img-fluid"
                 style="max-width: 100%; height: auto;">
             </a>
@@ -978,6 +975,14 @@
   <script src="../assets/js/popper.min.js"></script>
   <script src="../assets/js/bootstrap-js/bootstrap.min.js"></script>
 
+  <!-- GSAP for Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+  <!-- ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollSmoother.min.js"></script>
+
+
   <!-- header script -->
   <script type="text/javascript" src="../assets/js/custom-js/newHeader.js"></script>
 
@@ -1019,6 +1024,60 @@
 
 
 
+    });
+
+    // Load GSAP first, then apply this script
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const headlines = document.querySelectorAll(".headline");
+
+      headlines.forEach((headline) => {
+        const letters = headline.innerText.split("");
+        headline.innerText = "";
+
+        // Create a span for each letter to animate individually
+        letters.forEach((letter) => {
+          const span = document.createElement("span");
+          span.innerText = letter;
+          headline.appendChild(span);
+        });
+
+        // Animate each span (letter) smoothly
+        gsap.fromTo(
+          ".headline span",
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.05,
+            ease: "power2.out",
+            duration: 0.4,
+            scrollTrigger: {
+              trigger: headline,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select each element with a `zoom-up` class
+    gsap.utils.toArray(".zoom-up").forEach((element) => {
+      gsap.from(element, {
+        duration: 1,
+        opacity: 0,
+        y: 20,
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          toggleActions: "restart none none none",
+        },
+      });
     });
   </script>
 </body>

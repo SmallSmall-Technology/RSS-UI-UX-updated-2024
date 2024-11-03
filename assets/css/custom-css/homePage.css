@@ -14,6 +14,16 @@ header {
   margin-block-end: 60px;
 }
 
+.container-fluid {
+  width: 96.5%;
+  margin: auto;
+}
+
+@media (width <= 768px) {
+  .container-fluid {
+    width: 95%;
+  }
+}
 /* Styling the HomePage Hero Section */
 
 .homePage-wrapper {
@@ -30,7 +40,7 @@ header {
   text-align: center;
   padding: 60px;
   padding-block-end: 250px;
-  inline-size: 95%;
+  inline-size: 96.5%;
   margin: auto;
   margin-inline: 0;
   color: white;
@@ -62,7 +72,7 @@ header {
 .homePage-hero-section-btn button:first-child {
   color: #000;
   background-color: white;
-  border-radius: 17px;
+  border-radius: 25px;
   padding: 5px 10px;
   transition: all 0.3s ease;
 }
@@ -77,7 +87,7 @@ header {
   color: #ffffff;
   background-color: transparent;
   border: 2px solid #007dc1;
-  border-radius: 17px;
+  border-radius: 25px;
   display: flex;
   gap: 3px;
   align-items: center;
@@ -108,6 +118,7 @@ header {
   display: flex;
   justify-content: center;
   margin-block-end: 60px;
+  overflow: clip;
 }
 
 .homePage-hero-section-h2 {
@@ -138,7 +149,7 @@ header {
   .homePage-hero-image {
     inline-size: 80%;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-block-start: -150px;
     margin-block-end: 40px;
   }
@@ -157,14 +168,14 @@ header {
     padding-inline: 10px;
     margin-top: -60px;
     padding-top: 7rem;
-    border-radius: 20px;
+    border-radius: 15px;
     padding-block-end: 170px;
     inline-size: 95%;
     margin-inline: auto;
   }
 
   .homePage-hero-section h1 {
-    max-width: 400px;
+    max-width: initial;
   }
 
   .homePage-hero-section-h2 {
@@ -189,7 +200,7 @@ header {
   .homePage-hero-image {
     inline-size: 90%;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: clip;
     margin-block-start: -100px;
 
@@ -259,7 +270,7 @@ header {
 
 .rss-articles .first-box {
   block-size: 400px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
@@ -271,7 +282,7 @@ header {
 
 .rss-articles .second-box {
   block-size: 400px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
@@ -280,7 +291,7 @@ header {
 .rss-articles .third-box {
   grid-column: span 2;
   block-size: 400px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
   background-size: cover;
   background-repeat: no-repeat;
@@ -336,7 +347,7 @@ header {
   background-position: 20%;
   background-repeat: no-repeat;
   position: relative;
-  border-radius: 20px;
+  border-radius: 15px;
   padding-inline-start: 50px;
   block-size: 100%;
 }
@@ -350,7 +361,7 @@ header {
   font-size: 65px;
   font-weight: 700;
   color: white;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .rss-slider-text p {
@@ -359,25 +370,22 @@ header {
 }
 
 .rss-slider-carousel {
-  inline-size: 50%;
+  inline-size: 40%;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 40px;
+  padding: 10px;
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  block-size: 230px;
 }
 
 .rss-sliders {
   padding: 20px;
-  position: relative;
-  bottom: 220px;
   gap: 10px;
 }
 
@@ -418,12 +426,11 @@ header {
   font-size: 16px;
   font-weight: 600;
   background-color: white;
-  inline-size: 30%;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 30px;
+  border-radius: 7px;
   cursor: pointer;
   transition: all 0.3s ease-in;
-  margin-inline-start: 30px;
+  margin-inline-start: 50px;
 }
 
 .rss-sliders .btn:hover {
@@ -433,7 +440,7 @@ header {
 }
 
 .carousel-pagination {
-  margin-inline-start: 70px;
+  margin-inline-start: 50px;
   inline-size: fit-content;
   margin-top: -20px;
   margin-block-end: 20px;
@@ -467,9 +474,10 @@ header {
 
   .rss-slider-text h1 {
     inline-size: 100%;
-    font-size: 30px;
+    font-size: 40px;
     padding: 0;
     margin: 0;
+    padding-top: 1rem;
   }
 
   .rss-slider-text {
@@ -478,6 +486,9 @@ header {
     margin: auto;
   }
 
+  .rss-sliders {
+    padding-inline: 0;
+  }
   .rss-slider-carousel-logo {
     margin-inline-start: 20px;
   }
@@ -496,17 +507,33 @@ header {
     margin-block-start: 30px;
   }
 
-  .rss-sliders .btn {
-    inline-size: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+  .carousel-pagination {
+    margin-inline-start: 70px;
   }
 }
 
 @media (width <= 425px) {
   .rss-slider-carousel {
     margin-block-start: initial;
+  }
+
+  .rss-slider-text h1 {
+    inline-size: 100%;
+    font-size: 35px;
+  }
+
+  .rss-slider-section {
+    block-size: 600px;
+  }
+}
+
+@media (width <= 320px) {
+  .rss-slider-text h1 {
+    inline-size: 100%;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    padding-top: 1rem;
   }
 }
 
@@ -554,7 +581,7 @@ header {
   font-weight: 600;
   background-color: white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
   inline-size: fit-content;
   transition: all 0.3s ease-in;
@@ -589,13 +616,13 @@ header {
   transition: all 0.3s ease-in;
 }
 
-.modal-content {
+#howItWorks .modal-content {
   background: linear-gradient(230deg, #007dc1 0%, #969899 50%, #007dc1 50%);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .modal-body {
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .bottom-middle-apartments a,
@@ -610,7 +637,7 @@ header {
   background-position: 90%;
   padding: 20px;
   block-size: 500px;
-  border-radius: 20px;
+  border-radius: 15px;
   color: white;
 }
 
@@ -621,7 +648,7 @@ header {
   background-position: 100%;
   padding: 20px;
   block-size: 500px;
-  border-radius: 20px;
+  border-radius: 15px;
   color: white;
 }
 
@@ -633,7 +660,7 @@ header {
   padding: 20px;
   block-size: 500px;
   color: white;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .item-4 {
@@ -644,7 +671,7 @@ header {
   padding: 20px;
   block-size: 500px;
   color: white;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .item-5 {
@@ -662,7 +689,7 @@ header {
   background-position: 100%;
   padding: 20px;
   block-size: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -687,7 +714,7 @@ header {
 
 .explore-our-homes-apartments .bottom-middle-apartments {
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: #007dc1;
   display: flex;
   align-items: end;
@@ -708,7 +735,7 @@ header {
   background: url(../../images/top-right-apartment.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -719,7 +746,7 @@ header {
   background: url(../../images/bottom-right-apartment.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -757,97 +784,22 @@ header {
   .explore-our-homes-items {
     inline-size: 100%;
   }
+
   .explore-our-homes-apartments {
     block-size: 400px;
     scroll-behavior: smooth;
     display: flex;
     gap: 20px;
     inline-size: 100%;
-    /* animation: slide-in 15s ease-in-out infinite alternate; */
-  }
-
-  /* .explore-our-homes-apartments.active {
-    display: block;
-  }
-
-  .top-middle-apartment {
-    inline-size: 100%;
-  }
-
-  .explore-our-homes-apartments .middle-apartment-wrapper {
-    display: flex;
-  }
-
-  .explore-our-homes-apartments .right-apartment-wrapper {
-    display: flex;
-  } */
-
-  /* .apartment {
-    min-inline-size: 300px;
-  }
-
-  .apartment h2 {
-    font-size: 25px;
-  }
-
-  .apartment p {
-    font-size: 14px;
-  }
-
-  .explore-our-homes .carousel-pagination {
-    margin: auto;
-    margin-top: 10px;
-  } */
-
-  /* .explore-our-homes .carousel-pagination .dot {
-    width: 7px;
-    margin: 5px;
-    display: inline-block;
-    cursor: pointer;
-    border: 2px solid #bbb;
-    border-radius: 10px;
-  }
-
-  .explore-our-homes .carousel-pagination .dot.active {
-    border: 2px solid #007dc1;
-  }
-
-  .carousel-item {
-    display: none;
-  }
-  .carousel-item.active {
-    display: block;
-  }
-  .dot.active {
-    background-color: #333;
-  } */
-}
-
-/* @media (width <= 400px) {
-  .explore-our-homes-header {
-    margin: auto;
-  }
-
-  .explore-our-homes-apartments {
-    margin: auto;
-    padding-inline-start: 0;
   }
 }
-
-@media (width <= 375px) {
-  .explore-our-homes-apartments {
-    inline-size: 100%;
-    flex: 1;
-  }
-} */
-
 /* Styling the Find a Neighborhood Section  */
 
 .find-a-neighbourhood {
   inline-size: 100%;
   padding: 40px 100px 100px 80px;
   background-color: #007dc1;
-  margin-block-end: 100px;
+  margin-block: 100px;
   color: white;
   position: relative;
 }
@@ -864,7 +816,7 @@ header {
 }
 
 /* .dropdown-menu.show {
-  display: hidden;
+  display: none;
 } */
 
 .find-a-neighbourhood .location-btn {
@@ -926,14 +878,12 @@ header {
 }
 
 .apartment-dropdown-menu {
-  position: relative;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   padding: 10px;
 }
 
 .lagos-neighbourhood-apartments {
-  position: relative;
   list-style-type: none;
   padding: 0;
 }
@@ -1013,6 +963,8 @@ header {
   margin: auto;
   padding-block: 20px;
   margin-block-end: 60px;
+  position: relative;
+  /* z-index: 10; */
 }
 
 .result-analytics-header h1 {
@@ -1282,7 +1234,7 @@ header {
   background-position: 50%;
   block-size: 479px;
   inline-size: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
   position: relative;
   padding: 40px;
 }
@@ -1290,7 +1242,7 @@ header {
 .speak-with-us-content {
   justify-content: start;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   position: absolute;
   bottom: 80px;
   left: 80px;
@@ -1315,7 +1267,7 @@ header {
   background-color: black;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
   inline-size: fit-content;
   transition: all 0.3s ease-in;

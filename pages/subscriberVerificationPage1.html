@@ -28,12 +28,8 @@
     <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-    <!-- <link rel="stylesheet" href="../assets/css/custom-css/header.css" /> -->
-    <!-- <link rel="stylesheet" href="../assets/css/custom-css/footer.css" /> -->
     <link rel="stylesheet" href="../assets/css/custom-css/subscriberVerificationPage1.css" />
 
-    <!-- Script for sticky header -->
-    <script type="text/javascript" src="../assets/js/header.js"></script>
 
     <title>Subscription Verification</title>
     <!-- Google poppins font link -->
@@ -45,14 +41,12 @@
 </head>
 
 <body>
-
-
     <div class="container-fluid">
         <div class="row">
             <!-- Aside Section -->
             <aside class="col-md-3 col-12 px-lg-5 mt-lg-2">
                 <header class="header fix-header">
-                    <a href="./homePage.html" target="_blank">
+                    <a href="./homePage.html">
                         <img class="logo-img img-fluid" src="../assets/images/RssLogo.png" alt="Company Logo" />
                     </a>
                 </header>
@@ -166,12 +160,12 @@
                                         <div class="radio-group d-flex">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio1" value="option1">
+                                                    required id="inlineRadio1" value="option1">
                                                 <label class="form-check-label" for="inlineRadio1">Male</label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio2" value="option2">
+                                                    required id="inlineRadio2" value="option2">
                                                 <label class="form-check-label" for="inlineRadio2">Female</label>
                                             </div>
                                         </div>
@@ -180,7 +174,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="maritalStatus">Marital Status</label>
-                                <select class="form-control" id="maritalStatus" name="maritalStatus"
+                                <select class="form-control" id="maritalStatus" name="maritalStatus" required
                                     style="font-size: 12px;">
                                     <option value="">Select your marital status</option>
                                     <option value="single">Single</option>
@@ -191,7 +185,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="dob">Date of Birth</label>
-                                <input type="date" class="form-control" id="dob" name="dob" style="font-size: 12px;" />
+                                <input type="date" class="form-control" id="dob" name="dob" style="font-size: 12px;"
+                                    required />
                             </div>
                         </form>
                     </article>
