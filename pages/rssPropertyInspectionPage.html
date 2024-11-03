@@ -24,17 +24,9 @@
     <link href="../assets/fontawesome/css/solid.css" rel="stylesheet" />
 
     <!-- custom CSS -->
-    <link rel="stylesheet" href="../assets/css/custom-css/header.css" />
+    <link rel="stylesheet" href="../assets/css/custom-css/headerNew.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/rssPropertyInspectionPage.css" />
-
-
-    <!-- Script for fixed header -->
-    <!-- <script type="text/javascript" src="../assets/js/header.js"></script> -->
-
-    <!-- Script for GSAP -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
-
 
 
     <title>RSS Property Inspection Page</title>
@@ -43,225 +35,331 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-bar" aria-label="Main Navigation">
-            <!-- Header for the smaller screen -->
-            <div class="middle-nav d-md-none">
+    <header class="container-fluid header-section primary-background p-0">
 
-                <a href="./homePage.html" aria-label="Home page">
-                    <img src="../assets/images/RssLogo.png" alt="Company logo" />
+        <nav id="navbar_top" class="navbar navbar-expand-lg  primary-background justify-content-around">
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-center  flex-grow-0" id="collapsibleNavbar">
+                <ul class="navbar-nav w-100 justify-content-center" aria-label="main" style="color: #000;">
+
+                    <li class="nav-item">
+                        <a class="nav-link d-sm-inline-block " href="#" role="button" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Rent
+                        </a>
+
+                        <!-- Modal -->
+                        <div class="modal fade modal-custom" id="exampleModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-custom">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <nav>
+                                            <div class="nav nav-tabs nav-tabs-custom" id="nav-tab" role="tablist">
+                                                <button class="active" id="nav-home-tab" data-toggle="tab"
+                                                    data-target="#nav-home" type="button" role="tab"
+                                                    aria-controls="nav-home" aria-selected="true">Lagos</button>
+                                                <button class="" id="nav-profile-tab" data-toggle="tab"
+                                                    data-target="#nav-profile" type="button" role="tab"
+                                                    aria-controls="nav-profile" aria-selected="false">Abuja</button>
+
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content tab-content-menu p-3" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                                aria-labelledby="nav-home-tab">
+                                                <div class="row my-3">
+                                                    <div class="col">
+                                                        <a href="#">Lekki</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Awoyaya</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Chevron</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Eleganza</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Ikota</a>
+                                                    </div>
+                                                    <!-- </div> -->
+                                                    <!-- <div class="row my-3"> -->
+                                                    <div class="col">
+                                                        <a href="#">Yaba</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Oniru</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Ologolo</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">VGC</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Osapa -Jakande</a>
+                                                    </div>
+                                                    <!-- </div> -->
+                                                    <!-- <div class="row my-3"> -->
+                                                    <div class="col">
+                                                        <a href="#">Ikoyi</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Igbo efon</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Elegushi</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Lekki phase 1</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Owode</a>
+                                                    </div>
+                                                    <!-- </div> -->
+                                                    <!-- <div class="row my-3"> -->
+                                                    <div class="col">
+                                                        <a href="#">Salem</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Ikeja</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Sangotedo</a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="#">Mobile road</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                                aria-labelledby="nav-profile-tab">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                                perferendis minus autem
+                                                repellendus distinctio aspernatur pariatur magni blanditiis iure cumque
+                                                fugiat quos qui,
+                                                dignissimos aperiam quisquam quae dolore assumenda error!
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-sm-inline-block " href="#">
+                            Buy
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown dropdown-custom">
+                        <a class="nav-link " href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            How it Works
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Tenant</a>
+                            <a class="dropdown-item" href="#">Landlord</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-sm-inline-block " href="#">
+                            FAQ
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Brand logo -->
+            <div class="logo-container">
+                <a class="navbar-brand logo-link mr-4" href="./homePage.html">
+                    <img class="logo-img img-fluid" src="../assets/images/RssLogo.png" alt="Rent smallsmall logo" />
+
                 </a>
+            </div>
 
-                <div class="right-nav">
-                    <div class="logged-in">
-                        <a href="user-dashboard" class="user-dashboard">
-                            <img src="../assets/images/circle-user.png" alt="circle-user" />
-                        </a>
-                        <div class="vertical-line"></div>
-                        <a href="#">
-                            <div class="grid-line" id="grid-line">
-                                <div class="one-line"></div>
-                                <div class="one-line"></div>
+            <!-- SEARCH AND LOGIN -->
+            <div class="d-md-flex align-items-center collapse">
+
+                <!-- Search input form -->
+                <div class="search d-none">
+                    <form action="">
+                        <div class="row m-0">
+                            <div class="col-11 search-left">
+                                <input class="search-input" type="text" placeholder="Where would you like to live?" />
                             </div>
+                            <div class="col-1 search-icon">
+                                <button class="submit-container" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
-                        </a>
-                        <div class="get-started-dropdown" id="get-started-dropdown">
-                            <a href="#logout" aria-label="Log out" class="log-out">Log out</a>
+                <!-- search icon -->
+                <div class="col-1 search-icon">
+                    <button class="search-icon-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
 
-                            <div class="line-through"></div>
-
-                            <a href="#dashboard" aria-label="dashboard">
-                                Dashboard
+                <div class="login-container ml-3 dropdown ">
+                    <div class="login-btn px-3 py-2" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        tabindex="0">
+                        <div class="user_icon nav-item">
+                            <a class="nav-link dropdown-toggle dropdown-toggle--custom p-0" href="#" role="button"
+                                aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_8170_3374)">
+                                        <path
+                                            d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM6.66667 17.6367V17.5C6.66667 15.6617 8.16167 14.1667 10 14.1667C11.8383 14.1667 13.3333 15.6617 13.3333 17.5V17.6367C12.3117 18.0842 11.185 18.3333 10 18.3333C8.815 18.3333 7.68833 18.0842 6.66667 17.6367ZM14.9375 16.7092C14.5575 14.3267 12.4883 12.5 10 12.5C7.51167 12.5 5.44333 14.3267 5.0625 16.7092C3.00417 15.19 1.66667 12.7483 1.66667 10C1.66667 5.405 5.405 1.66667 10 1.66667C14.595 1.66667 18.3333 5.405 18.3333 10C18.3333 12.7483 16.9958 15.19 14.9375 16.7092ZM10 4.16667C8.16167 4.16667 6.66667 5.66167 6.66667 7.5C6.66667 9.33833 8.16167 10.8333 10 10.8333C11.8383 10.8333 13.3333 9.33833 13.3333 7.5C13.3333 5.66167 11.8383 4.16667 10 4.16667ZM10 9.16667C9.08083 9.16667 8.33333 8.41917 8.33333 7.5C8.33333 6.58083 9.08083 5.83333 10 5.83333C10.9192 5.83333 11.6667 6.58083 11.6667 7.5C11.6667 8.41917 10.9192 9.16667 10 9.16667Z"
+                                            fill="#007DC1" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_8170_3374">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
                             </a>
-                            <a href="#create-wallet" aria-label="create wallet" class="create-wallet">
-                                Create wallet</a>
-                            <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
+                        </div>
 
-                            <div class="line-through"></div>
+                        <div class="ml-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M3.33334 12.5V10.8333H16.6667V12.5H3.33334ZM3.33334 9.16667V7.5H16.6667V9.16667H3.33334Z"
+                                    fill="#03100D" />
+                            </svg>
+                        </div>
+                    </div>
 
-                            <a href="#flexible-properties" aria-label="flexible properties"
-                                class="flexible-properties">Flexible properties</a>
-                            <a href="#upfront-properties" aria-label="upfront properties"
-                                class="upfront-properties">Upfront properties</a>
+                    <div class="dropdown-menu user_icon--dropdown desktopDropdown p-0 ">
+                        <!-- Dropdown Content -->
+                        <div class="mb-2">
+                            <div class=" py-2">
+                                <a class="dropdown-item d-flex " href="#"><span>Log out</span></a>
+                            </div>
+                            <div class="dropdown-divider my-3 m-0"></div>
+                            <div class=" py-2">
+                                <a class="dropdown-item d-flex " href="#"><span>Dashboard</span></a>
+                            </div>
+                            <!-- If user doesn't has a wallet show this -->
+                            <div class=" py-2">
+                                <a class="dropdown-item d-flex " href="#"><span>Create Wallet</span></a>
+                            </div>
+                            <!-- If user already has a wallet show this -->
+                            <!-- <div class="wallet-balance d-flex  align-items-baseline  py-2">
+                                <p class=" dropdown-item wallet-text">Wallet balance:
+                                    <small>₦50,000.00</small>
+                                </p>
+                                <button class="wallet-btn">Top up</button>
+                            </div> -->
+                            <div class=" py-2">
+                                <a class="dropdown-item d-flex " href="#"><span>FAQ</span></a>
+                            </div>
+                            <div class="dropdown-divider my-3 m-0"></div>
+                            <div class=" py-2">
+                                <a class="dropdown-item d-flex " href="#"><span>Monthly
+                                        properties</span></a>
+                            </div>
+                            <div class=" py-2">
+                                <a class="dropdown-item d-flex " href="#"><span>Upfront
+                                        properties</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Hamburger icon for mobile screen -->
-            <div class="hamburger d-none" id="hamburger">
-                <img src="../assets/images/menu burger.svg" class="menu-icon" id="open-menu" />
-                <img src="../assets/images/Cancel.svg" class="cancel-icon" id="close-menu" style="display: none;" />
+
+            <!-- Change to this after login-->
+            <div class="login-container ml-3 dropdown d-block d-md-none">
+                <div class="login-btn px-3 py-2" role="button" data-toggle="dropdown" aria-haspopup="true" tabindex="0">
+                    <div class="user_icon nav-item">
+                        <a class="nav-link dropdown-toggle dropdown-toggle--custom p-0" href="#" role="button"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <g clip-path="url(#clip0_8170_3374)">
+                                    <path
+                                        d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM6.66667 17.6367V17.5C6.66667 15.6617 8.16167 14.1667 10 14.1667C11.8383 14.1667 13.3333 15.6617 13.3333 17.5V17.6367C12.3117 18.0842 11.185 18.3333 10 18.3333C8.815 18.3333 7.68833 18.0842 6.66667 17.6367ZM14.9375 16.7092C14.5575 14.3267 12.4883 12.5 10 12.5C7.51167 12.5 5.44333 14.3267 5.0625 16.7092C3.00417 15.19 1.66667 12.7483 1.66667 10C1.66667 5.405 5.405 1.66667 10 1.66667C14.595 1.66667 18.3333 5.405 18.3333 10C18.3333 12.7483 16.9958 15.19 14.9375 16.7092ZM10 4.16667C8.16167 4.16667 6.66667 5.66167 6.66667 7.5C6.66667 9.33833 8.16167 10.8333 10 10.8333C11.8383 10.8333 13.3333 9.33833 13.3333 7.5C13.3333 5.66167 11.8383 4.16667 10 4.16667ZM10 9.16667C9.08083 9.16667 8.33333 8.41917 8.33333 7.5C8.33333 6.58083 9.08083 5.83333 10 5.83333C10.9192 5.83333 11.6667 6.58083 11.6667 7.5C11.6667 8.41917 10.9192 9.16667 10 9.16667Z"
+                                        fill="#007DC1" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8170_3374">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="ml-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M3.33334 12.5V10.8333H16.6667V12.5H3.33334ZM3.33334 9.16667V7.5H16.6667V9.16667H3.33334Z"
+                                fill="#03100D" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="dropdown-menu user_icon--dropdown desktopDropdown p-0 ">
+                    <!-- Dropdown Content -->
+                    <div class="mb-2">
+                        <div class=" py-2">
+                            <a class="dropdown-item d-flex " href="#"><span>Log out</span></a>
+                        </div>
+                        <div class="dropdown-divider my-3 m-0"></div>
+                        <div class=" py-2">
+                            <a class="dropdown-item d-flex " href="#"><span>Dashboard</span></a>
+                        </div>
+                        <!-- If user doesn't has a wallet show this -->
+                        <div class=" py-2">
+                            <a class="dropdown-item d-flex " href="#"><span>Create Wallet</span></a>
+                        </div>
+                        <!-- If user already has a wallet show this -->
+                        <!-- <div class="wallet-balance d-flex  align-items-baseline  py-2">
+                                <p class=" dropdown-item wallet-text">Wallet balance:
+                                    <small>₦50,000.00</small>
+                                </p>
+                                <button class="wallet-btn">Top up</button>
+                            </div> -->
+                        <div class=" py-2">
+                            <a class="dropdown-item d-flex " href="#"><span>FAQ</span></a>
+                        </div>
+                        <div class="dropdown-divider my-3 m-0"></div>
+                        <div class=" py-2">
+                            <a class="dropdown-item d-flex " href="#"><span>Monthly
+                                    properties</span></a>
+                        </div>
+                        <div class=" py-2">
+                            <a class="dropdown-item d-flex " href="#"><span>Upfront
+                                    properties</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <section class="small-screen-nav open" id="dropdown-menu">
-                <div class="left-nav">
-                    <div class="rent-dropdown">
 
-                        <!-- Conditionally render these elements when a user has been authenticated -->
-
-                        <a href="#dashboard" aria-label="dashboard" class="dashboard d-md-none d-block">
-                            <img src="../assets/images/dashboard 1.png" alt="dashboard-icon" />Dashboard
-                        </a>
-                        <!-- If user already has a wallet don't show this -->
-                        <!-- <a href="#create-wallet" aria-label="create wallet" class="create-wallet d-md-none d-block">
-                        <img src="../assets/images/wallet(1) 2.png" alt="wallet-icon" />Create
-                        wallet</a> -->
-
-                        <!-- Show this instead -->
-                        <!-- <div
-                        class="wallet-balance d-md-none d-block d-flex justify-content-between align-items-baseline">
-                        <p class="wallet-text">Wallet balance: <small>N50,000.00</small></p>
-                        <button class="wallet-btn">Top up</button>
-                    </div> -->
-                        <!--  -->
-                        <!-- <hr class="d-md-none d-block" />
-                    <a href="#flexible-properties" aria-label="flexible properties"
-                        class="flexible-properties d-md-none d-block">Flexible properties</a>
-                    <a href="#upfront-properties" aria-label="upfront properties"
-                        class="upfront-properties d-md-none d-block">Upfront properties</a>
-                    <hr class="d-md-none d-block" /> -->
-
-                        <!-- stops here -->
-
-
-                        <a href="#rent" id="rent-dropdown-btn" class="rent-dropdown-btn" aria-haspopup="true"
-                            style="color: black;" aria-expanded="false" aria-controls="rent-menu">
-                            <p>Rent</p> <span><i class="fa-solid fa-chevron-down"></i>
-                            </span>
-                        </a>
-                        <section id="rent-menu" class="rent-dropdown-menu" role="menu" aria-hidden="true">
-                            <div class="location-wrapper">
-                                <h1 class="location" id="lagos"><a href="#">Lagos</a></h1>
-                                <h1 class="location" id="abuja"><a href="#">Abuja</a></h1>
-                            </div>
-                            <hr class="pagination-line" id="pagination-line" />
-                            <div class="lagos-apartments" style="display:none;">
-                                <ul class="lagos-apartments-list">
-                                    <li><a href="#">Lekki</a></li>
-                                    <li><a href="#">Yaba</a></li>
-                                    <li><a href="#">Ikoyi</a></li>
-                                    <li><a href="#">Salem</a></li>
-                                    <li><a href="#">Awoyaya</a></li>
-                                    <li><a href="#">Oniru</a></li>
-                                    <li><a href="#">Igbo Efon</a></li>
-                                    <li><a href="#">Ikeja</a></li>
-                                    <li><a href="#">Chevron</a></li>
-                                    <li><a href="#">Ologbo</a></li>
-                                    <li><a href="#">Elegushi</a></li>
-                                    <li><a href="#">Sangotedo</a></li>
-                                    <li><a href="#">Eleganza</a></li>
-                                    <li><a href="#">VGC</a></li>
-                                    <li><a href="#">Lekki phase 1</a></li>
-                                    <li><a href="#">Mobil road</a></li>
-                                    <li><a href="#">Ikota</a></li>
-                                    <li><a href="#">Osapa-Jakande</a></li>
-                                    <li><a href="#">Owode</a></li>
-                                </ul>
-                            </div>
-                            <div class="abuja-apartments" style="display:none;">
-                                <ul>
-                                    <!-- <li><a href="#">None</a></li> -->
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                    <a href="#buy" aria-label="Buy a property" class="buy-a-property" style="color: black;">
-                        <p>Buy</p>
-                        <span class="d-md-none d-block"><i class="fa-solid fa-chevron-down"></i>
-                        </span>
-                    </a>
-                    <a href="#how-it-works" aria-label="Learn how it works" class="how-it-works" id="how-it-works"
-                        style="color: black;">How
-                        it works
-                        <span><i class="fa-solid fa-chevron-down"></i>
-                        </span>
-                    </a>
-                    <div class="how-it-works-dropdown-menu" id="how-it-works-dropdown-menu" style="color: black;">
-                        <div class="how-it-works-dropdown">
-                            <h1 class="how-it-works-content" id="tenant"><a href="#">Tenant</a></h1>
-                            <h1 class="how-it-works-content" id="Landlord"><a href="#">Landlord</a></h1>
-                        </div>
-                    </div>
-                    <a href="#faq" aria-label="Frequently Asked Questions" style="color: black;">FAQ</a>
-                </div>
-                <div class="middle-nav d-md-block d-none">
-                    <a href="./homePage.html" aria-label="Home page">
-                        <img src="../assets/images/RssLogo.png" alt="Company logo" />
-                    </a>
-                </div>
-
-
-                <div class="right-nav">
-                    <!-- Search bar container -->
-                    <div class="search-container">
-                        <a href="#search" aria-label="Search" class="search-icon" id="search-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
-                                <path fill="black" stroke="#000000"
-                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                            </svg>
-                        </a>
-                        <form class="search-input-container ">
-                            <input type="text" id="search-input" class="search-input"
-                                placeholder=" Where would you like to live?">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
-                                class="input-search-icon" id="input-search-icon">
-                                <path fill="black" stroke="#000000" stroke-width="10"
-                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6 .1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                            </svg>
-                        </form>
-                    </div>
-
-                    <hr class="d-md-none d-block" />
-                    <div class="header-footer d-md-none d-block" aria-label="Header Footer">
-                        <small>Customer Support</small>
-                        <a href="mailto:customerexperience@smallsmall.com">
-                            customerexperience@smallsmall.com
-                        </a>
-                        <div class="tel-wrapper">
-                            <a href="tel:+2349036339800">09036339800</a>
-                            <a href="tel:+2349037222669">09037222669</a>
-                        </div>
-                    </div>
-
-                    <!-- Conditionally render this div when a user has been authenticated -->
-                    <div class="logged-in">
-                        <a href="user-dashboard" class="user-dashboard">
-                            <img src="../assets/images/circle-user.png" alt="circle-user" />
-                        </a>
-                        <div class="vertical-line"></div>
-                        <a href="#">
-                            <div class="grid-line" id="grid-line">
-                                <div class="one-line"></div>
-                                <div class="one-line"></div>
-                            </div>
-
-                        </a>
-                        <div class="get-started-dropdown" id="get-started-dropdown">
-                            <a href="#logout" aria-label="Log out" class="log-out">Log out</a>
-
-                            <div class="line-through"></div>
-
-                            <a href="#dashboard" aria-label="dashboard">
-                                Dashboard
-                            </a>
-                            <a href="#create-wallet" aria-label="create wallet" class="create-wallet">
-                                Create wallet</a>
-                            <a href="#faq" aria-label="Frequently Asked Questions">FAQ</a>
-
-                            <div class="line-through"></div>
-
-                            <a href="#flexible-properties" aria-label="flexible properties"
-                                class="flexible-properties">Flexible properties</a>
-                            <a href="#upfront-properties" aria-label="upfront properties"
-                                class="upfront-properties">Upfront properties</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </nav>
+
     </header>
+    <hr class="d-block d-md-none" />
 
     <!-- Main -->
     <main class="main-container">
+
         <!-- Main Nav -->
         <form class="rss-inspection-page-main-section d-md-flex d-none zoom-up" role="form">
             <section class="single-section">
@@ -319,6 +417,7 @@
 
             <button type="submit" class="btn">Filter</button>
         </form>
+
         <!-- Apartment Component -->
         <section class="apartments-wrapper">
             <div class="apartments-wrapper-header">
@@ -864,7 +963,7 @@
                 </div>
             </article>
         </section>
-        </section>
+
         <!-- Pagination Conponent -->
         <section class="apartment-pagination zoom-up">
             <button class="btn" id="first-btn">&lt;&lt; First</button>
@@ -888,6 +987,7 @@
             <button class="btn" id="last-btn">Last &gt;&gt;</button>
         </section>
     </main>
+
     <!-- Footer -->
     <footer class="rss-footer-wrapper zoom-up">
         <div class="rss-footer-contents d-flex">
@@ -997,13 +1097,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- GSAP JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollSmoother.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="../assets/js/custom-js/rssPropertyInspectionPage.js" defer></script>
-    <script src="../assets/js/custom-js/header.js"></script>
+    <script src="../assets/js/custom-js/rssPropertyInspectionPage.js"></script>
+    <script src="../assets/js/custom-js/newHeader.js"></script>
 </body>
 
 </html>

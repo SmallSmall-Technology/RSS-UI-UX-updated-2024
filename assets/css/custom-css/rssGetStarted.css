@@ -33,7 +33,7 @@ header {
   margin-block-start: 2rem;
 }
 
-.get-started .btn-wrapper .btn {
+.get-started .btn-wrapper a {
   border: 1px solid #bccbd7;
   font-size: 14px;
   font-weight: 400;
@@ -41,15 +41,23 @@ header {
   padding-block: 10px;
   transition: all 0.3s ease-in;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.get-started .btn-wrapper .btn:hover {
+.get-started .btn-wrapper a:hover {
   background-color: black;
   color: white;
   transform: scale(1.01);
 }
 
-.get-started .btn-wrapper .btn:focus {
+.get-started .btn-wrapper a:hover {
+  color: white;
+  transform: scale(1.01);
+}
+
+.get-started .btn-wrapper a:focus {
   outline: none;
   box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.5);
   background-color: black;
