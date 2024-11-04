@@ -86,7 +86,7 @@ header {
 .homePage-hero-section-btn button:last-child {
   color: #ffffff;
   background-color: transparent;
-  border: 2px solid #007dc1;
+  border: 2px solid white;
   border-radius: 25px;
   display: flex;
   gap: 3px;
@@ -98,6 +98,7 @@ header {
   background-color: black;
   color: white;
   transform: scale(1.05);
+  border: 2px solid transparent;
 }
 
 .homePage-hero-section small {
@@ -228,7 +229,7 @@ header {
 
 .rss-article-wrapper {
   margin: auto;
-  margin-block-end: 20px;
+  margin-block-end: 30px;
   inline-size: 90%;
 }
 
@@ -236,7 +237,7 @@ header {
   display: grid;
   grid-template-columns: 40% 1fr;
   grid-template-rows: auto;
-  gap: 20px;
+  gap: 30px;
 }
 
 .rss-box {
@@ -535,6 +536,12 @@ header {
     margin: 0;
     padding-top: 1rem;
   }
+  .rss-sliders .btn {
+    padding: 10px 20px;
+    margin: auto;
+    display: grid;
+    /* place-items: center; */
+  }
 }
 
 /* Styling the Explore Our Homes Section  */
@@ -571,9 +578,10 @@ header {
   margin: 0;
 }
 
-.explore-our-homes-apartments p {
+.explore-our-homes-apartments p,
+.text-start p {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .explore-our-homes-apartments .btn {
@@ -797,7 +805,7 @@ header {
 
 .find-a-neighbourhood {
   inline-size: 100%;
-  padding: 40px 100px 100px 80px;
+  padding: 50px 100px 120px 80px;
   background-color: #007dc1;
   margin-block: 100px;
   color: white;
@@ -945,15 +953,9 @@ header {
   }
 }
 
-@media (width <= 460px) {
+@media (width <= 320px) {
   .lagos-apartments-neighbourhood-list {
-    grid-template-columns: repeat(2, 130px);
-  }
-}
-
-@media (width <= 460px) {
-  .lagos-apartments-neighbourhood-list {
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(1, 100px);
   }
 }
 
@@ -964,7 +966,6 @@ header {
   padding-block: 20px;
   margin-block-end: 60px;
   position: relative;
-  /* z-index: 10; */
 }
 
 .result-analytics-header h1 {
@@ -974,16 +975,17 @@ header {
 
 .result-analytics-header p {
   font-size: 35px;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   font-weight: 600;
 }
 
 .result-analytics-data-wrapper {
   display: flex;
-  max-width: 900px;
+  max-width: 950px;
+  margin-inline-start: 4rem;
   margin-top: 40px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
   margin-block-end: 60px;
 }
@@ -1027,6 +1029,8 @@ header {
   object-fit: cover;
   inline-size: 80%;
   margin: auto;
+  display: flex;
+  justify-content: center;
   margin-top: 35px;
 }
 
@@ -1135,71 +1139,19 @@ header {
 }
 
 /* Styling the FAQs Section */
-.frequently-asked-questions {
+.faq-container {
   margin: auto;
   margin-block-end: 60px;
   inline-size: 90%;
 }
 
-.faqs-header {
-  text-align: center;
-}
-
-.faqs-header h1 {
-  font-size: 35px;
-  font-weight: 600;
-}
-
-.faqs-header p {
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-.faqs-wrapper {
-  inline-size: 60%;
-  margin: auto;
-  margin-block-end: 40px;
-  display: grid;
-  gap: 10px;
-}
-
-.single-faq {
-  border: 1px solid #dddddd;
-  background-color: #dddddd;
-  border-radius: 10px;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.single-faq .faq-question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.single-faq .faq-question p {
-  font-size: 25px;
-  margin: 0;
-  font-weight: 500;
-}
-
-.single-faq .faq-question-btn span {
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.faq-question-btn button {
-  outline: none;
+.custom-btn-acc-faq {
   border: none;
-  background-color: transparent;
-}
-
-.faq-question-btn .open-icon {
-  color: #000;
-}
-
-.faq-question-btn .close-icon {
-  color: #000;
+  background-color: unset;
+  color: #03100d;
+  font-size: 25px;
+  font-weight: 500;
+  width: 100%;
 }
 
 .see-more-faqs {

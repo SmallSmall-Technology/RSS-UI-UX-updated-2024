@@ -111,99 +111,105 @@
 
             <!-- Main Section -->
             <main class="main-container-wrapper col-md-9 col-12">
-                <header class="main-header d-md-block d-none px-lg-5 pt-lg-4">
-                    <p>
-                        Hi Bright, you are now verifying for
-                        <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
-                    </p>
-                    <button class="btn">Cancel</button>
-                </header>
+                <div>
+                    <div class="main-header d-md-block d-none px-lg-5 pt-lg-4">
+                        <p>
+                            Hi Bright, you are now verifying for
+                            <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
+                        </p>
+                        <button class="btn">Cancel</button>
+                    </div>
 
-                <!-- Form Section -->
-                <section class="main-container">
-                    <article class="form-container">
-                        <form action="" class="form">
-                            <h1 class="form-title text-start mb-4">Personal details</h1>
-                            <div class="row">
-                                <div class="col-5">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" id="name" class="form-control" readonly
-                                            placeholder="Bright Nwachukwu"
-                                            style="border: none; background-color: inherit; padding: 0; margin-top: -7px;" />
+                    <!-- Form Section -->
+                    <section class="main-container">
+                        <div class="form-container">
+                            <form action="" class="form">
+                                <h1 class="form-title text-start mb-4">Personal details</h1>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" class="form-control" readonly
+                                                placeholder="Bright Nwachukwu"
+                                                style="border: none; background-color: inherit; padding: 0; margin-top: -7px;" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="email" style="margin-inline-start: -14px">Email</label>
+                                            <input type="text" id="email" class="form-control" readonly
+                                                placeholder="brightnwachukwu@gmail.com"
+                                                style="border: none; width: 215px; background-color: inherit; padding: 0; margin-top: -7px; margin-inline-start: -14px;" />
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="email" style="margin-inline-start: -14px">Email</label>
-                                        <input type="text" id="email" class="form-control" readonly
-                                            placeholder="brightnwachukwu@gmail.com"
-                                            style="border: none; width: 215px; background-color: inherit; padding: 0; margin-top: -7px; margin-inline-start: -14px;" />
-                                    </div>
+                                <div class="form-group">
+                                    <label for="number">Phone number</label>
+                                    <input type="text" id="number" class="form-control" readonly
+                                        placeholder="0809 0303 0940"
+                                        style="border: none; background-color: inherit; padding: 0; margin-top: -7px;" />
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="number">Phone number</label>
-                                <input type="text" id="number" class="form-control" readonly
-                                    placeholder="0809 0303 0940"
-                                    style="border: none; background-color: inherit; padding: 0; margin-top: -7px;" />
-                            </div>
-                            <hr />
-                            <div class="form-group">
-                                <label for="income">Monthly income</label>
-                                <input type="text" id="income" class="form-control" required placeholder="N0.00" />
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="gender">Gender</label>
-                                        <div class="radio-group d-flex">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    required id="inlineRadio1" value="option1">
-                                                <label class="form-check-label" for="inlineRadio1">Male</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    required id="inlineRadio2" value="option2">
-                                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                                <hr />
+                                <div class="form-group">
+                                    <label for="income">Monthly income</label>
+                                    <input type="text" id="income" class="form-control" required placeholder="N0.00" />
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label>
+                                            <div class="radio-group d-flex">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" required id="inlineRadio1"
+                                                        value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" required id="inlineRadio2"
+                                                        value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="maritalStatus">Marital Status</label>
-                                <select class="form-control" id="maritalStatus" name="maritalStatus" required
-                                    style="font-size: 12px;">
-                                    <option value="">Select your marital status</option>
-                                    <option value="single">Single</option>
-                                    <option value="married">Married</option>
-                                    <option value="divorced">Divorced</option>
-                                    <option value="widowed">Widowed</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="dob">Date of Birth</label>
-                                <input type="date" class="form-control" id="dob" name="dob" style="font-size: 12px;"
-                                    required />
-                            </div>
-                        </form>
-                    </article>
-                </section>
+                                <div class="form-group">
+                                    <label for="maritalStatus">Marital Status</label>
+                                    <select class="form-control" id="maritalStatus" name="maritalStatus" required
+                                        style="font-size: 12px;">
+                                        <option value="">Select your marital status</option>
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                        <option value="divorced">Divorced</option>
+                                        <option value="widowed">Widowed</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" style="font-size: 12px;"
+                                        required />
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
 
-                <!-- Pagination and Continue Button -->
-                <nav class="pagination">
-                    <span class="slide active"></span>
-                    <span class="slide"></span>
-                    <span class="slide"></span>
-                    <span class="slide"></span>
-                    <span class="slide"></span>
-                </nav>
-                <div class="main-footer px-lg-4">
-                    <a href="./subscriberVerificationPage2.html" target="#" style="text-decoration: none;">
-                        <button class="btn next">Continue</button>
-                    </a>
+                <div>
+                    <!-- Pagination and Continue Button -->
+                    <nav class="pagination">
+                        <span class="slide active"></span>
+                        <span class="slide"></span>
+                        <span class="slide"></span>
+                        <span class="slide"></span>
+                        <span class="slide"></span>
+                    </nav>
+                    <div class="main-footer px-lg-4">
+                        <a href="./subscriberVerificationPage2.html" target="#" style="text-decoration: none;">
+                            <button class="btn next">Continue</button>
+                        </a>
+                    </div>
                 </div>
             </main>
         </div>

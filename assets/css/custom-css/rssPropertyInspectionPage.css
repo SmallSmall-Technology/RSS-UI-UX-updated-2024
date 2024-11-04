@@ -103,7 +103,7 @@ header {
   justify-content: space-between;
   align-items: center;
   inline-size: 70%;
-  padding: 5px 15px;
+  padding: 5px 35px;
   border-radius: 20px;
   margin: auto;
   border: 1.5px solid #e6ebf1;
@@ -230,6 +230,7 @@ header {
   block-size: 286px;
   border-radius: 10px;
   display: inline-block;
+  margin-block-end: 10px;
 }
 
 .single-apartment-img-wrapper img {
@@ -295,6 +296,15 @@ header {
 
 .single-apartment-details {
   text-align: start;
+  transition: transform 3s ease;
+}
+
+.single-apartment-details a {
+  color: #000;
+}
+
+.single-apartment-details:hover {
+  transform: translateY(5%);
 }
 
 .single-apartment-details .single-apartment-name {
@@ -390,6 +400,8 @@ header {
 
 .single-section label {
   margin-block-end: -6px;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .single-section select {
@@ -397,6 +409,9 @@ header {
   border: none;
   padding-inline-start: 0;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #98a0b4;
 }
 
 .single-section select:active {

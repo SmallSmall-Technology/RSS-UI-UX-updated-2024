@@ -75,58 +75,35 @@ document
   });
 
 // Function handling the FAQs Accordion
-const faqItems = document.querySelectorAll(".single-faq");
+$(document).ready(function () {
+  $(".custom-btn-acc").each(function () {
+    $(this).on("click", function () {
+      $(this).parent().parent().toggleClass("tertiary-color");
 
-// Function to toggle the accordion for the clicked item
-function toggleAccordion(faqItem, toggleBtn) {
-  const faqAnswerId = toggleBtn.getAttribute("aria-controls");
-  const faqAnswer = document.getElementById(faqAnswerId);
-  const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+      //icon element within the button
+      const iconElement = $(this).find("i");
 
-  // Close other FAQs
-  faqItems.forEach((otherFaqItem) => {
-    if (otherFaqItem !== faqItem) {
-      const otherToggleBtn = otherFaqItem.querySelector(".faq-toggle");
-      const otherFaqAnswerId = otherToggleBtn.getAttribute("aria-controls");
-      const otherFaqAnswer = document.getElementById(otherFaqAnswerId);
-
-      otherFaqAnswer.hidden = true;
-      otherToggleBtn.setAttribute("aria-expanded", "false");
-      otherToggleBtn.querySelector(".open-icon").hidden = false;
-      otherToggleBtn.querySelector(".close-icon").hidden = true;
-      otherToggleBtn.querySelector(".sr-only").textContent = "Expand question";
-    }
+      // Toggle the Font Awesome icon classes
+      if (iconElement.hasClass("fa-plus")) {
+        iconElement.removeClass("fa-plus").addClass("fa-minus");
+      } else if (iconElement.hasClass("fa-minus")) {
+        iconElement.removeClass("fa-minus").addClass("fa-plus");
+      }
+    });
   });
 
-  // Toggle the answer visibility for the clicked item
-  faqAnswer.hidden = isExpanded;
-  toggleBtn.setAttribute("aria-expanded", !isExpanded);
+  $(".custom-btn-acc-faq").each(function () {
+    $(this).on("click", function () {
+      //icon element within the button
+      const iconElement = $(this).find("i");
 
-  // Toggle icons
-  toggleBtn.querySelector(".open-icon").hidden = !isExpanded;
-  toggleBtn.querySelector(".close-icon").hidden = isExpanded;
-  toggleBtn.querySelector(".sr-only").textContent = isExpanded
-    ? "Expand question"
-    : "Collapse question";
-}
-
-// Add click event listener to each FAQ box and button
-faqItems.forEach((faqItem) => {
-  const toggleBtn = faqItem.querySelector(".faq-toggle");
-
-  // Click event for the entire box
-  faqItem.addEventListener("click", (event) => {
-    // Only toggle when the click is not directly on the button
-    if (!event.target.closest("button")) {
-      toggleAccordion(faqItem, toggleBtn);
-    }
-  });
-
-  // Click event for the button
-  toggleBtn.addEventListener("click", (event) => {
-    // Prevent the event from propagating to the box click handler
-    event.stopPropagation();
-    toggleAccordion(faqItem, toggleBtn);
+      // Toggle the Font Awesome icon classes
+      if (iconElement.hasClass("fa-plus")) {
+        iconElement.removeClass("fa-plus").addClass("fa-minus");
+      } else if (iconElement.hasClass("fa-minus")) {
+        iconElement.removeClass("fa-minus").addClass("fa-plus");
+      }
+    });
   });
 });
 
