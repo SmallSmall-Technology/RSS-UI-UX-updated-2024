@@ -352,6 +352,10 @@ aside {
 
 /* Styling the main component footer */
 .main-container-wrapper {
+  block-size: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0;
   flex: 99;
   background-color: #f9fafb;
