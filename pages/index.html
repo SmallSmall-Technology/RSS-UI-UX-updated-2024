@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="../assets/css/custom-css/headerNew.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/index.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/custom-css/howItWorks.css" /> -->
+
+
 
     <title>Home Page</title>
 </head>
@@ -508,7 +511,7 @@
                     <h2>
                         Flexible living, boundless opportunities.
                     </h2>
-                    <p>Experience a better way to live and pay rent.</p>
+                    <p class="pb-5">Experience a better way to live and pay rent.</p>
                 </div>
 
                 <!-- RSS Articles -->
@@ -856,123 +859,152 @@
         </section>
 
         <!-- FAQs Section -->
-        <section class="frequently-asked-questions zoom-up">
-            <div class="faqs-header">
-                <h1>Frequently asked questions</h1>
-                <p>Get answers about renting with RentSmallsmall</p>
+        <section class="faq-container zoom-up">
+            <div class="row">
+                <div class="col-12  text-center">
+                    <h2>Frequently asked questions</h2>
+                    <p>Get answers about renting with RentSmallsmall</p>
+                </div>
+
+                <!-- FAQ accordion -->
+                <div class="col-12 my-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-9 col-12">
+                            <div class="accordion" id="accordionExample">
+
+                                <div class="card my-2">
+                                    <div class="card-header" id="faq1">
+                                        <h2 class="mb-0">
+                                            <button class="custom-btn-acc-faq text-left d-flex justify-content-between"
+                                                type="button" data-toggle="collapse" data-target="#faqCollapse1"
+                                                aria-expanded="false" aria-controls="faqCollapse1">
+                                                <p class="m-0">What is about RentSmallsmall?</p>
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="faqCollapse1" class="collapse" aria-labelledby="faq1"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>
+                                                RentSmallsmall is a platform that offers customers access to flexible
+                                                payment plans
+                                                on
+                                                homes.
+                                                Payment plans include monthly, bimonthly, biannual, and quarterly. We do
+                                                not collect
+                                                agency
+                                                or
+                                                agreement fees.
+                                            </p>
+                                            <p>
+                                                We also provide property owners with premium services that include
+                                                providing
+                                                verified
+                                                subscribers (tenants) for their property, saving them time and stress in
+                                                getting
+                                                tenants.
+                                                With us, you earn your rental income as and when due without suffering
+                                                any payment
+                                                defaults.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card my-2">
+                                    <div class="card-header" id="faq2">
+                                        <h2 class="mb-0">
+                                            <button class="custom-btn-acc-faq text-left d-flex justify-content-between"
+                                                type="button" data-toggle="collapse" data-target="#faqCollapse2"
+                                                aria-expanded="true" aria-controls="faqCollapse2">
+                                                <span class="mx-2">Does RentSmallsmall pay my rent?</span>
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="faqCollapse2" class="collapse" aria-labelledby="faq2"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>RentSmallsmall offers customers access to flexible payment plans on
+                                                homes. Payment plans
+                                                include monthly, bimonthly, biannual, and quarterly. We do not collect
+                                                agency or
+                                                agreement fees.</p>
+                                            <p>We also provide property owners with premium services that include
+                                                providing verified
+                                                subscribers (tenants) for their property, saving them time and stress in
+                                                getting
+                                                tenants. With us, you earn your rental income as and when due without
+                                                suffering any
+                                                payment defaults.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card my-2">
+                                    <div class="card-header" id="faq2">
+                                        <h2 class="mb-0">
+                                            <button class="custom-btn-acc-faq text-left d-flex justify-content-between"
+                                                type="button" data-toggle="collapse" data-target="#faqCollapse2"
+                                                aria-expanded="false" aria-controls="faqCollapse2">
+                                                <span>How do I schedule to inspect a property?</span>
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="faqCollapse2" class="collapse" aria-labelledby="faq2"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>To schedule a property inspection, you can contact our customer service
+                                                or visit our
+                                                website to choose a suitable time. We aim to provide a convenient and
+                                                flexible
+                                                experience for our users.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card my-2">
+                                    <div class="card-header" id="faq3">
+                                        <h2 class="mb-0">
+                                            <button class="custom-btn-acc-faq text-left d-flex justify-content-between"
+                                                type="button" data-toggle="collapse" data-target="#faqCollapse3"
+                                                aria-expanded="false" aria-controls="faqCollapse3">
+                                                <span>
+                                                    Do I pay for property inspection?
+                                                </span>
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="faqCollapse3" class="collapse" aria-labelledby="faq3"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>No, property inspections arranged through RentSmallsmall are free of
+                                                charge for
+                                                customers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="my-4 ">
+                                <a href="#" class="see-more-faqs mx-3">See more FAQ &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
             </div>
-            <div class="faqs-wrapper">
-
-                <div class="single-faq">
-                    <div class="faq-question">
-                        <p>What is about RentSmallsmall?</p>
-                        <div class="faq-question-btn">
-                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-1">
-                                <span class="open-icon" aria-hidden="true">&#43;</span>
-                                <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                <span class="sr-only">Expand question</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="faq-answer" id="faq-content-1" hidden>
-                        <p>
-                            RentSmallsmall is a platform that offers customers access to flexible payment plans
-                            on
-                            homes.
-                            Payment plans include monthly, bimonthly, biannual, and quarterly. We do not collect
-                            agency
-                            or
-                            agreement fees.
-                        </p>
-                        <p>
-                            We also provide property owners with premium services that include providing
-                            verified
-                            subscribers (tenants) for their property, saving them time and stress in getting
-                            tenants.
-                            With us, you earn your rental income as and when due without suffering any payment
-                            defaults.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="single-faq">
-                    <div class="faq-question">
-                        <p>Does RentSmallsmall pay my rent?</p>
-                        <div class="faq-question-btn">
-                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-2">
-                                <span class="open-icon" aria-hidden="true">&#43;</span>
-                                <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                <span class="sr-only">Expand question</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="faq-answer" id="faq-content-2" hidden>
-                        <p>
-                            RentSmallsmall offers customers access to flexible payment plans on homes. Payment
-                            plans
-                            include
-                            monthly, bimonthly, biannual, and quarterly. We do not collect agency or agreement
-                            fees.
-                        </p>
-                        <p>
-                            We also provide property owners with premium services that include providing
-                            verified
-                            subscribers
-                            (tenants) for their property, saving them time and stress in getting tenants. With
-                            us,
-                            you
-                            earn your
-                            rental income as and when due without suffering any payment defaults.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="single-faq">
-                    <div class="faq-question">
-                        <p>How do I schedule to inspect a property?</p>
-                        <div class="faq-question-btn">
-                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-3">
-                                <span class="open-icon" aria-hidden="true">&#43;</span>
-                                <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                <span class="sr-only">Expand question</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="faq-answer" id="faq-content-3" hidden>
-                        <p>
-                            To schedule a property inspection, you can contact our customer service or visit our
-                            website
-                            to
-                            choose a suitable time. We aim to provide a convenient and flexible experience for
-                            our
-                            users.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="single-faq">
-                    <div class="faq-question">
-                        <p>Do I pay for property inspection?</p>
-                        <div class="faq-question-btn">
-                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-content-4">
-                                <span class="open-icon" aria-hidden="true">&#43;</span>
-                                <span class="close-icon" aria-hidden="true" hidden>&#8722;</span>
-                                <span class="sr-only">Expand question</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="faq-answer" id="faq-content-4" hidden>
-                        <p>
-                            No, property inspections arranged through RentSmallsmall are free of charge for
-                            customers.
-                        </p>
-                    </div>
-                </div>
-
-
-                <a href="#" class="see-more-faqs mx-3">See more FAQ &rarr;</a>
-            </div>
-        </section>
         </section>
 
         <!-- Speak with us Section -->
@@ -1103,7 +1135,7 @@
 
     <!-- Custom JS -->
     <script type="text/javascript" src="../assets/js/custom-js/newHeader.js"></script>
-    <script src="../assets/js/custom-js/homePage.js"></script>
+    <script src="../assets/js/custom-js/index.js"></script>
 </body>
 
 </html>

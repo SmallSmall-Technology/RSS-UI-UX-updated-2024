@@ -29,6 +29,10 @@ header {
   text-decoration: none;
 }
 
+.modal-content {
+  border-radius: 20px;
+}
+
 .modal-custom {
   color: #03100d;
 }
