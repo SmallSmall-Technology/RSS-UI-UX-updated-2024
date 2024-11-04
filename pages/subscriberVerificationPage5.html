@@ -112,70 +112,73 @@
 
             <!-- Main Section -->
             <main class="main-container-wrapper col-md-9 col-12">
-                <header class="main-header d-md-block d-none px-lg-5 pt-lg-4">
-                    <p>
-                        Hi Bright, you are now verifying for
-                        <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
-                    </p>
-                    <button class="btn">Cancel</button>
-                </header>
+                <div>
+                    <div class="main-header d-md-block d-none px-lg-5 pt-lg-4">
+                        <p>
+                            Hi Bright, you are now verifying for
+                            <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
+                        </p>
+                        <button class="btn">Cancel</button>
+                    </div>
 
-                <!-- Form Section -->
-                <section class="main-container" style="height: auto;">
-                    <h1 class="form-title text-start mb-4" style="margin-block-start: 2px;">Income & ID verify</h1>
-                    <section class="verification-wrapper">
-                        <div class="verification">
-                            <div class="income-verification">
-                                <div class="income-text">
-                                    <img src="../assets/images/bank-note-02.svg" alt="bank-note image" />
-                                    <p>Income Verification</p>
+                    <!-- Form Section -->
+                    <section class="main-container" style="height: auto;">
+                        <h1 class="form-title text-start mb-4" style="margin-block-start: 2px;">Income & ID verify</h1>
+                        <section class="verification-wrapper">
+                            <div class="verification">
+                                <div class="income-verification">
+                                    <div class="income-text">
+                                        <img src="../assets/images/bank-note-02.svg" alt="bank-note image" />
+                                        <p>Income Verification</p>
+                                    </div>
+                                    <button class="btn verify">Verify</button>
                                 </div>
-                                <button class="btn verify">Verify</button>
-                            </div>
-                            <hr />
-                            <div class="income-verification">
-                                <div class="income-text">
-                                    <img src="../assets/images/face-id.svg" alt="face-id image" />
-                                    <p style="min-width: 30px;">ID Verification</p>
+                                <hr />
+                                <div class="income-verification">
+                                    <div class="income-text">
+                                        <img src="../assets/images/face-id.svg" alt="face-id image" />
+                                        <p style="min-width: 30px;">ID Verification</p>
+                                    </div>
+                                    <button class="btn inactive">Verify</button>
                                 </div>
-                                <button class="btn inactive">Verify</button>
                             </div>
-                        </div>
 
-                        <div class="completed-btn d-lg-block d-none" style=" min-width: 110px;">
-                            <button class=" btn completed">Completed
-                                <span>&#10003;</span></button>
+                            <div class="completed-btn d-lg-block d-none" style=" min-width: 110px;">
+                                <button class=" btn completed">Completed
+                                    <span>&#10003;</span></button>
+                            </div>
+                        </section>
+                        <hr class="d-md-block d-none " style="width: 90%;" />
+                        <label class="pt-3">
+                            <input type="checkbox" required />
+                            <p>I agree that the submission of this information does not guarantee that RentSmallSmall
+                                will offer this property to me and that RentSmallSmall may reject the application
+                                without giving any reasons. <a href="#" target="_blank">See Subscription terms</a></p>
+
+                        </label>
+                        <div class="checkbox px-lg-2 ">
+                            <input type="checkbox" class="d-md-block d-none" required />
                         </div>
                     </section>
-                    <hr class="d-md-block d-none " style="width: 90%;" />
-                    <label class="pt-3">
-                        <input type="checkbox" required />
-                        <p>I agree that the submission of this information does not guarantee that RentSmallSmall
-                            will offer this property to me and that RentSmallSmall may reject the application
-                            without giving any reasons. <a href="#" target="_blank">See Subscription terms</a></p>
-
-                    </label>
-                    <div class="checkbox px-lg-2 ">
-                        <input type="checkbox" class="d-md-block d-none" required />
+                </div>
+                <div>
+                    <!-- Pagination and Continue Button -->
+                    <nav class="pagination">
+                        <span class="slide active"></span>
+                        <span class="slide active"></span>
+                        <span class="slide active"></span>
+                        <span class="slide active"></span>
+                        <span class="slide active"></span>
+                    </nav>
+                    <div class="main-footer px-lg-4">
+                        <a href="./subscriberVerificationPage4.html" target="#" style="text-decoration: none;">
+                            <div class="circle-unicode">&#60;</div>
+                        </a>
+                        <a href="./subscriberVerificationComplete.html" target="#" style="text-decoration: none;">
+                            <button class="btn next inactive">Submit
+                                verification</button>
+                        </a>
                     </div>
-                </section>
-
-                <!-- Pagination and Continue Button -->
-                <nav class="pagination">
-                    <span class="slide active"></span>
-                    <span class="slide active"></span>
-                    <span class="slide active"></span>
-                    <span class="slide active"></span>
-                    <span class="slide active"></span>
-                </nav>
-                <div class="main-footer px-lg-4">
-                    <a href="./subscriberVerificationPage4.html" target="#" style="text-decoration: none;">
-                        <div class="circle-unicode">&#60;</div>
-                    </a>
-                    <a href="./subscriberVerificationComplete.html" target="#" style="text-decoration: none;">
-                        <button class="btn next inactive">Submit
-                            verification</button>
-                    </a>
                 </div>
             </main>
         </div>

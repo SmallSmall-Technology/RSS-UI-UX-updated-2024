@@ -112,77 +112,81 @@
 
             <!-- Main Section -->
             <main class="main-container-wrapper col-md-9 col-12">
-                <header class="main-header d-md-block d-none px-lg-5 pt-lg-4">
-                    <p>
-                        Hi Bright, you are now verifying for
-                        <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
-                    </p>
-                    <button class="btn">Cancel</button>
-                </header>
+                <div>
+                    <div class="main-header d-md-block d-none px-lg-5 pt-lg-4">
+                        <p>
+                            Hi Bright, you are now verifying for
+                            <a href="#">2 bedroom at Cardinal Heritage Estate VGC</a>
+                        </p>
+                        <button class="btn">Cancel</button>
+                    </div>
 
-                <!-- Form Section -->
-                <section class="main-container">
-                    <article class="form-container">
-                        <form action="" class="form">
-                            <h1 class="form-title text-start mb-4">Employment history</h1>
-                            <div class="form-group">
-                                <label for="name">Employment status</label>
-                                <select class="form-control" id="employmentStatus" name="employmentStatus" required
-                                    style="font-size: 12px;">
-                                    <option value="">Status</option>
-                                    <option value="employed">Employed</option>
-                                    <option value="self-employed">Self Employed</option>
-                                    <option value="unemployed">Unemployed</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Occupation / Job title</label>
-                                <input type="text" id="income" class="form-control" required placeholder="Job Title" />
-                            </div>
-                            <div class="form-group">
-                                <label for="company-details" class="mb-2">Company name & address</label>
-                                <textarea id="current-details" class="form-control" required
-                                    style="background-color: inherit; padding: 0; margin-top: -7px; height: 100px; overflow-y: scroll;">
+                    <!-- Form Section -->
+                    <section class="main-container">
+                        <div class="form-container">
+                            <form action="" class="form">
+                                <h1 class="form-title text-start mb-4">Employment history</h1>
+                                <div class="form-group">
+                                    <label for="name">Employment status</label>
+                                    <select class="form-control" id="employmentStatus" name="employmentStatus" required
+                                        style="font-size: 12px;">
+                                        <option value="">Status</option>
+                                        <option value="employed">Employed</option>
+                                        <option value="self-employed">Self Employed</option>
+                                        <option value="unemployed">Unemployed</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Occupation / Job title</label>
+                                    <input type="text" id="income" class="form-control" required
+                                        placeholder="Job Title" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="company-details" class="mb-2">Company name & address</label>
+                                    <textarea id="current-details" class="form-control" required
+                                        style="background-color: inherit; padding: 0; margin-top: -7px; height: 100px; overflow-y: scroll;">
                                 </textarea>
-                            </div>
+                                </div>
 
-                            <h1 class="form-title">HR / Line Manager's info</h1>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="income" class="form-control" required placeholder="Name" />
-                            </div>
+                                <h1 class="form-title">HR / Line Manager's info</h1>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="income" class="form-control" required placeholder="Name" />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" required placeholder="Email" />
-                            </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" class="form-control" required placeholder="Email" />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="number">Phone number</label>
-                                <input type="tel" pattern="[0-9]*" maxlength="11" id="number" class="form-control"
-                                    required placeholder="Phone" oninput="this.value=this.value.replace(/\D/g,'')" />
-                            </div>
+                                <div class="form-group">
+                                    <label for="number">Phone number</label>
+                                    <input type="tel" pattern="[0-9]*" maxlength="11" id="number" class="form-control"
+                                        required placeholder="Phone"
+                                        oninput="this.value=this.value.replace(/\D/g,'')" />
+                                </div>
 
 
-                        </form>
-                    </article>
-                </section>
-
-                <!-- Pagination and Continue Button -->
-                <nav class="pagination">
-                    <span class="slide active"></span>
-                    <span class="slide active"></span>
-                    <span class="slide active"></span>
-                    <span class="slide"></span>
-                    <span class="slide"></span>
-                </nav>
-                <div class="main-footer px-lg-4">
-                    <a href=" ./subscriberVerificationPage2.html" style="text-decoration: none;">
-                        <div class="circle-unicode">&#60;</div>
-                    </a>
-                    <a href="./subscriberVerificationPage4.html" style="text-decoration: none;">
-                        <button class="btn next">Continue</button>
-                    </a>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+                <div> <!-- Pagination and Continue Button -->
+                    <nav class="pagination">
+                        <span class="slide active"></span>
+                        <span class="slide active"></span>
+                        <span class="slide active"></span>
+                        <span class="slide"></span>
+                        <span class="slide"></span>
+                    </nav>
+                    <div class="main-footer px-lg-4">
+                        <a href=" ./subscriberVerificationPage2.html" style="text-decoration: none;">
+                            <div class="circle-unicode">&#60;</div>
+                        </a>
+                        <a href="./subscriberVerificationPage4.html" style="text-decoration: none;">
+                            <button class="btn next">Continue</button>
+                        </a>
+                    </div>
                 </div>
             </main>
         </div>

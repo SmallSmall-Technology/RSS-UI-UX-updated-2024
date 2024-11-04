@@ -344,6 +344,10 @@ aside {
 
 /* Styling the main component footer */
 .main-container-wrapper {
+  block-size: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 99;
   background-color: #f9fafb;
   border-left: 1px solid #e8eaee;
@@ -351,7 +355,6 @@ aside {
 
   & .main-header {
     padding-top: 20px;
-    /* padding-inline-end: 30px; */
     display: flex;
     flex-direction: column;
     text-align: end;
