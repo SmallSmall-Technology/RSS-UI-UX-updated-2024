@@ -79,17 +79,6 @@ h6 {
 body {
   display: grid;
   place-items: center;
-
-  & header {
-    display: flex;
-    justify-self: start;
-    margin-inline-start: 2rem;
-
-    & img {
-      display: flex;
-      justify-self: start;
-    }
-  }
 }
 
 .form-wrapper {

@@ -688,6 +688,7 @@ header {
   background-color: #007dc1;
   color: white;
   block-size: 500px;
+  border-radius: 15px;
 }
 
 .explore-our-homes-apartments .left-apartment {
@@ -713,7 +714,7 @@ header {
   background: url(../../images/middle-apartment.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
   display: flex;
   flex-direction: column;

@@ -6,6 +6,7 @@
 .rss-footer-wrapper {
   background: linear-gradient(90deg, #007dc1 0%, #0070ad 100%);
   padding: 20px 100px;
+  padding-top: 40px;
   margin-top: auto;
 }
 
