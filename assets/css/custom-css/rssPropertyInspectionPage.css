@@ -108,7 +108,7 @@ header {
   margin: auto;
   border: 1.5px solid #e6ebf1;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-block-end: 74px;
+  margin-block-end: 30px;
 }
 
 .rss-inspection-page-main-section p:first-child {
@@ -166,7 +166,7 @@ header {
 
 .apartments-wrapper {
   text-align: center;
-  margin-block-end: 100px;
+  margin-block-end: 50px;
 }
 
 .apartments-wrapper-header {

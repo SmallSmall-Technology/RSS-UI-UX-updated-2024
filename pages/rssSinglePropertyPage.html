@@ -364,32 +364,28 @@
                 <p>Jide Alakija Street, Ikate, Lekki Phase 1</p>
             </div>
             <ul class=" single-apartment-header-payment list-unstyled d-none d-md-flex">
-                <li class="mr-4">
+                <li>
                     <small>Subscription Price</small>
                     <h3>₦220,000 /mo</h3>
                 </li>
-                <div class="mr-4 mt-4" style="width: 6px; height: 6px; background-color: black; border-radius: 50%;"
-                    aria-hidden="true">
-                </div>
+                <div class="single-apartment-header-line-divider mx-4"></div>
 
-                <li class="mr-4">
+                <li>
                     <small>Security deposit</small>
-                    <h3>₦220,000 /mo</h3>
+                    <h3>₦220,000</h3>
                 </li>
+                <div class="single-apartment-header-line-divider mx-4"></div>
 
                 <li class="list-unstyled">
                     <div class="availability-status" aria-live="polite">
-                        <div class="status-indicator" aria-label="Availability Status">
-                        </div>
-                        <p style="color: #00CDA6;" aria-live="polite">
+                        <p aria-live="polite">
                             Available
                         </p>
                         <!-- Render this when the apartment is not available -->
-                        <!-- <div class="status-indicator .inactive" aria-label="Availability Status">
-                            </div>
-                            <p style="color: red;" aria-live="polite">
-                                Unavailable
-                            </p> -->
+
+                        <!-- <p class="unavailable" aria-live="polite">
+                            Unavailable
+                        </p> -->
                     </div>
                 </li>
             </ul>
@@ -473,12 +469,12 @@
         </a>
     </section>
 
-    <section class=" main-container ">
+    <section class=" main-container">
 
-        <div class="mx-2 zoom-up">
+        <div class="mx-2">
             <section>
                 <div class="single-apartment-details-wrapper">
-                    <div class="single-apartment-details-mobile">
+                    <div class="single-apartment-details-mobile zoom-up">
                         <h2>Furnished 2 Bedroom penthouse</h2>
                         <ul class="single-apartment-details-mobile-content">
                             <li>
@@ -506,49 +502,47 @@
                                 <h3>₦220,000 /mo</h3>
                             </li>
 
-                            <span class="bull">&bull;</span>
+                            <div class="single-apartment-header-line-divider mx-4"></div>
+
                             <li>
                                 <small>Security deposit</small>
-                                <h3>₦220,000 /mo</h3>
+                                <h3>₦220,000</h3>
                             </li>
+
+                            <div class="single-apartment-header-line-divider mx-4"></div>
 
                             <li class="list-unstyled">
                                 <div class="availability-status">
-                                    <div class="status-indicator">
-                                    </div>
                                     <p style="color: #00CDA6;">
                                         Available
                                     </p>
                                     <!-- Render this when the apartment is not available -->
-                                    <!-- <div class="status-indicator .inactive">
-                                    </div>
-                                    <p style="color: red;">
+                                    <!-- <p class="unavailable" aria-live="polite">
                                         Unavailable
                                     </p> -->
                                 </div>
                             </li>
                         </ul>
-                        <!-- <div class="line-through-black"></div> -->
                     </div>
-                    <div class="single-apartment-extras">
+                    <div class="single-apartment-extras zoom-up">
                         <ul>
                             <li>
                                 <a href="#" style="color: black;" class="d-flex align-items-center"
                                     aria-label="Verified Property">
-                                    Verified Property <span><img src="../assets/images/shield-tick.png"
+                                    Verified Property <span><img src="../assets/images/shield-tick.svg"
                                             alt="Verified Property Icon" /></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Share">
-                                    Share <span><img src="../assets/images/share-06.png"
+                                    Share <span><img src="../assets/images/share-icon1.svg"
                                             alt="Share Video Icon" /></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" style="color: black;" class="d-flex align-items-center"
                                     aria-label="Video Tour">
-                                    Video tour <span><img src="../assets/images/video-recorder.png"
+                                    Video tour <span><img src="../assets/images/video-recorder.svg"
                                             alt="Video Tour Icon" /></span>
                                 </a>
                             </li>
@@ -805,7 +799,7 @@
         <section class="single-property-affordability zoom-up" aria-labelledby="affordability-heading">
             <h2>Affordability calculator
             </h2>
-            <article class="affordability-calculator border rounded p-4" aria-labelledby="calculator-title">
+            <article class="affordability-calculator p-4" aria-labelledby="calculator-title">
                 <div>
                     <div class="affordability-calculator-text">
                         <p>Bedroom</p>
@@ -848,42 +842,49 @@
     <section class="single-apartment-details-wrapper-sticky mb-5 zoom-up" aria-labelledby="apartment-details-heading">
 
         <div>
-            <h2 class="h5 font-weight-bold">Furnished 2 Bedroom penthouse</h2>
-            <ul class="d-flex">
-                <li class="mr-4" style="list-style-type: none;">
-                    <p>BEDROOM
-                        <strong>1</strong>
-                    </p>
+            <h2 class="h5">Furnished 2 Bedroom penthouse</h2>
+            <ul class="d-flex ">
+                <li style="list-style-type: none;">
+                    BEDROOM
+                    <strong>1</strong>
+
                 </li>
-                <li class="mr-4">
+                <span class="bull">&bull;</span>
+
+                <li class>
                     BATHROOM <strong>1</strong>
                 </li>
-                <li class="mr-4">
-                    <p>TOILET
-                        <strong>2</strong>
-                    </p>
+                <span class="bull">&bull;</span>
+
+                <li>
+                    TOILET
+                    <strong>2</strong>
                 </li>
-                <li class="mr-4">
-                    <p>LEKKI, PHASE 1</p>
+                <span class="bull">&bull;</span>
+
+                <li>
+                    LEKKI, PHASE 1
                 </li>
+
             </ul>
         </div>
 
-        <hr aria-hidden="true" style="border: 1px solid #DDDDDD; height: 50px;" />
+        <hr aria-hidden="true" style="border: 1px solid #DDDDDD; height: 40px;" />
 
-        <ul class="d-flex" style="list-style-type: none;">
+        <ul class=" sticky-price" style="list-style-type: none;">
             <li class="subscription-price">
                 <small>Subscription Price</small>
                 <p>₦220,000</p>
             </li>
-            <div class="mx-2 mt-4" style="width: 4px; height: 4px; background-color: black; border-radius: 50%;">
-            </div>
+
+            <div class="single-apartment-header-line-divider mx-4"></div>
+
             <li class="subscription-price">
                 <small>Security deposit</small>
                 <p>₦400,800.00</p>
             </li>
         </ul>
-        <hr aria-hidden="true" style="border: 1px solid #DDDDDD; height: 50px;" />
+        <hr aria-hidden="true" style="border: 1px solid #DDDDDD; height: 40px;" />
         <div class="btn-wrapper">
             <button type="button" class="btn" data-toggle="modal" data-target="#schedulingInspection"
                 aria-label="Schedule a visit for this apartment">Schedule a
