@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // add padding top to show content behind navbar
       navbar_height = document.querySelector('.navbar').offsetHeight;
       document.body.style.paddingTop = navbar_height + 'px';
+      $(".fixed-top").css("z-index", "2000")
     } else {
       document.getElementById('navbar_top').classList.remove('fixed-top');
       // remove padding top from body
