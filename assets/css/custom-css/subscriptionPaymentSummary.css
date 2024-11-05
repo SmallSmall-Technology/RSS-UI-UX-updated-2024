@@ -1,0 +1,248 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  block-size: 100%;
+  inline-size: 100%;
+  font-family: poppins;
+}
+
+/* Styling the main box */
+
+.container-fluid {
+  overflow: clip;
+}
+
+.main-container-wrapper {
+  flex: 1;
+
+  & .section-intro h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  & .section-intro p {
+    font-weight: 400;
+  }
+
+  & section small {
+    font-size: 12px;
+  }
+
+  & section p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  & .main-header {
+    padding-top: 40px;
+    margin-block-end: 40px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    inline-size: 50%;
+    z-index: 99;
+    block-size: 80px;
+  }
+
+  & .main-container {
+    block-size: 100%;
+
+    & .division-line {
+      inline-size: 102%;
+      position: relative;
+      right: 4px;
+      margin-top: 0;
+    }
+
+    & .custom-bg {
+      background-color: #e5f2f8;
+    }
+
+    & .user-name {
+      display: none;
+      font-size: 13px;
+    }
+
+    & .fixed-container {
+      margin-block-start: 7rem;
+    }
+  }
+
+  & .footer {
+    font-size: 14px;
+    margin-block-start: 70px;
+    margin-block-end: 30px;
+
+    & .footer-contact-details {
+      display: flex;
+      gap: 5px;
+      margin-block-end: 20px;
+
+      & span p:last-child {
+        margin-block-start: -12px;
+      }
+    }
+  }
+}
+
+/* Styling the aside bar */
+aside .label-footer {
+  display: none;
+}
+
+aside {
+  border-left: 1px solid #dddada;
+  min-block-size: 100svh;
+  flex: 1;
+  background-color: #f9fafb;
+  inline-size: 100%;
+
+  & .user-name {
+    font-size: 13px;
+  }
+  & header {
+    text-align: end;
+    padding-block-start: 40px;
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    margin-bottom: 2rem;
+    block-size: 80px;
+  }
+
+  & .custom-bg {
+    background-color: #e5f2f8;
+  }
+
+  & .custom-height {
+    height: 90px;
+  }
+
+  & .payment-summary {
+    padding-inline: 16px;
+    line-height: 3;
+  }
+
+  & .payment-subscription {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    & p {
+      font-size: 14px;
+    }
+
+    & .payment-subscription-fee {
+      inline-size: 40%;
+      display: flex;
+      justify-content: space-between;
+
+      & p {
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      & small {
+        font-size: 11px;
+        font-weight: 400;
+        color: rgba(144, 152, 163, 1);
+        margin-inline-start: 3px;
+      }
+    }
+  }
+
+  & form .form-control {
+    inline-size: 100%;
+  }
+  & .total-pay {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+
+    & .total-pay-amount {
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  ::placeholder {
+    font-weight: 500px;
+    font-size: 13px;
+  }
+}
+
+.custom-border-radius {
+  border-radius: 20px;
+}
+
+/* Mobile View Responsiveness for Main Element and Aside */
+@media (width <= 767px) {
+  .main-container-wrapper {
+    margin-block-end: 60px;
+
+    & .footer {
+      display: none;
+    }
+
+    & .main-container {
+      & .user-name {
+        display: flex;
+        margin-inline-start: 10px;
+      }
+
+      & .section-intro {
+        margin-inline-start: 10px;
+      }
+    }
+    & .main-header {
+      min-inline-size: 100%;
+      left: 0;
+      padding-inline: 1rem;
+      margin-inline-start: 10px;
+    }
+  }
+
+  aside {
+    border-top: 1px solid #dddada;
+
+    .fixed-container {
+      margin-top: -20px;
+    }
+    .payment-subscription {
+      display: grid;
+      grid-template-columns: 60% 90px 1fr;
+    }
+
+    & .payment-summary {
+      line-height: 1;
+    }
+    & header {
+      position: initial;
+      block-size: 5px;
+
+      & span {
+        display: none;
+      }
+    }
+    .footer {
+      display: block;
+      font-size: 14px;
+
+      & .footer-contact-details {
+        display: flex;
+        gap: 5px;
+        margin-block-end: 20px;
+
+        & p:last-child {
+          margin-block-start: -15px;
+        }
+      }
+    }
+    & small {
+      margin-bottom: 20px;
+    }
+  }
+}
