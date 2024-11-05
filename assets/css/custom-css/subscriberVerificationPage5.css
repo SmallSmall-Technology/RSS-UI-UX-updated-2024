@@ -348,7 +348,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 99;
+  flex: 1;
   background-color: #f9fafb;
   border-left: 1px solid #e8eaee;
   padding: 0;
@@ -458,6 +458,10 @@ aside {
     }
   }
 }
+/* .main-footer-wrapper {
+  margin-top: -0.8rem;
+  block-size: 20svh;
+} */
 
 /* State of the button */
 
