@@ -339,7 +339,7 @@ header {
   inline-size: 90%;
   margin: auto;
   margin-block-end: 100px;
-  block-size: 550px;
+  block-size: 608px;
 }
 
 .rss-slider-image-bg {
@@ -562,7 +562,7 @@ header {
 }
 
 .explore-our-homes-apartments {
-  block-size: 500px;
+  block-size: 572px;
   display: grid;
   grid-template-columns: 27% 27% 1fr;
   gap: 20px;
@@ -976,7 +976,6 @@ header {
 
 .result-analytics-header p {
   font-size: 35px;
-  /* max-width: 1100px; */
   font-weight: 600;
 }
 
@@ -988,7 +987,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  margin-block-end: 60px;
+  margin-block-end: 100px;
 }
 
 .result-analytics-data {
@@ -1039,8 +1038,10 @@ header {
   inline-size: 50%;
 }
 .result-analytics-tenancy-plan h2 {
-  font-size: 1.5rem;
   font-weight: 600;
+  font-size: 35px;
+  line-height: 45.57px;
+  letter-spacing: -0.04em;
 }
 
 .result-analytics-tenancy-plan ul {
@@ -1055,6 +1056,7 @@ header {
   border: 1px solid #dddddd;
   border-radius: 15px;
   padding-inline: 10px;
+  inline-size: 80%;
 }
 
 .result-analytics-tenancy-qrcode-text {
@@ -1066,12 +1068,16 @@ header {
   image-rendering: pixelated;
 }
 
-.result-analytics-tenancy-qrcode-text h2 {
-  font-size: 1.5rem;
+.result-analytics-tenancy-qrcode-text p:first-child {
+  font-weight: 600;
+  line-height: 24px;
 }
 
-.result-analytics-tenancy-qrcode-text p {
+.result-analytics-tenancy-qrcode-text p:last-child {
   max-width: 250px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
 }
 
 /* Mobile Responsiveness Styling the Result Analytics Section */
