@@ -76,34 +76,24 @@ document
 
 // Function handling the FAQs Accordion
 $(document).ready(function () {
-  $(".custom-btn-acc").each(function () {
-    $(this).on("click", function () {
-      $(this).parent().parent().toggleClass("tertiary-color");
+  // Reset all icons to 'fa-plus' initially
+  $(".custom-btn-acc-faq i").addClass("fa-plus").removeClass("fa-minus");
 
-      //icon element within the button
-      const iconElement = $(this).find("i");
-
-      // Toggle the Font Awesome icon classes
-      if (iconElement.hasClass("fa-plus")) {
-        iconElement.removeClass("fa-plus").addClass("fa-minus");
-      } else if (iconElement.hasClass("fa-minus")) {
-        iconElement.removeClass("fa-minus").addClass("fa-plus");
-      }
-    });
+  // Listen for the collapse show event
+  $(".collapse").on("shown.bs.collapse", function () {
+    // Set the icon to minus for the opened (shown) element
+    $(this).prev().find("i").removeClass("fa-plus").addClass("fa-minus");
   });
 
-  $(".custom-btn-acc-faq").each(function () {
-    $(this).on("click", function () {
-      //icon element within the button
-      const iconElement = $(this).find("i");
+  // Listen for the collapse hide event
+  $(".collapse").on("hidden.bs.collapse", function () {
+    // Set the icon back to plus for the closed (hidden) element
+    $(this).prev().find("i").removeClass("fa-minus").addClass("fa-plus");
+  });
 
-      // Toggle the Font Awesome icon classes
-      if (iconElement.hasClass("fa-plus")) {
-        iconElement.removeClass("fa-plus").addClass("fa-minus");
-      } else if (iconElement.hasClass("fa-minus")) {
-        iconElement.removeClass("fa-minus").addClass("fa-plus");
-      }
-    });
+  $(".custom-btn-acc-faq").on("click", function () {
+    // Close any open accordion sections by resetting icons
+    $(".custom-btn-acc-faq i").removeClass("fa-minus").addClass("fa-plus");
   });
 });
 

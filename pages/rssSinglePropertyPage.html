@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../assets/css/custom-css/headerNew.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/rssFooter.css" />
     <link rel="stylesheet" href="../assets/css/custom-css/rssSinglePropertyPage.css" />
-    <title>RSS SIngle Property Page</title>
+    <title>RSS Single Property Page</title>
 </head>
 
 
@@ -351,13 +351,13 @@
     <hr class="d-block d-md-none" />
 
     <section class=" main-container ">
-        <header class="apartment-location-header border rounded px-3 py-2 mb-5 zoom-up">
+        <div class="apartment-location-header border rounded px-3 py-2 mb-5 zoom-up">
             <a href="./rssPropertyInspectionPage.html">
                 <span class="font-bold pr-1">&larr;</span>
                 <span>Apartments in
                     Lekki Phase 1</span>
             </a>
-        </header>
+        </div>
         <div class="single-apartment-header d-flex justify-content-between zoom-up" role="header">
             <div class="single-apartment-header-details">
                 <h2>Furnished 2 Bedroom penthouse</h2>
@@ -561,8 +561,8 @@
 
                     <!-- Apartment Subscription Modal -->
 
-                    <div class="modal fade px-4" id="subscribing" tabindex="-1" role="dialog"
-                        aria-labelledby="subscribing" aria-hidden="true">
+                    <div class="modal fade px-md-4
+                    " id="subscribing" tabindex="-1" role="dialog" aria-labelledby="subscribing" aria-hidden="true">
 
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -576,12 +576,13 @@
                                     </p>
                                     <div></div>
                                 </div>
-                                <div class="modal-body-wrapper">
-                                    <p>Request to subscribe</p>
+                                <div class="modal-body-wrapper mx-2">
+                                    <p class="ml-md-3">Request to subscribe</p>
 
                                     <div class="modal-body mb-5" aria-labelledby="modal body">
                                         <div class="form-group ">
-                                            <select class="form-control p-0" id="inspectionType" style="border: black;">
+                                            <select class="form-control p-0 ml-2" id="inspectionType"
+                                                style="border: black;">
                                                 <option selected disabled>Duration</option>
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
@@ -589,7 +590,7 @@
                                         </div>
 
                                         <div class="subscription-plan">
-                                            <div class="subscription-payment-plan">
+                                            <div class="subscription-payment-plan ml-2">
                                                 <select>
                                                     <option>Payment plan</option>
                                                 </select>
@@ -603,7 +604,7 @@
                                         </div>
 
 
-                                        <div class="subscription-details-wrapper">
+                                        <div class="subscription-details-wrapper ml-2">
                                             <p>Subscription details</p>
                                             <div class="subscription-details">
                                                 <p>Subscription fee</p>
@@ -649,8 +650,8 @@
                         aria-labelledby="schedulingInspectionTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <div>
+                                <div class="modal-header ">
+                                    <div class="ml-md-4">
 
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
@@ -661,7 +662,7 @@
                                     </p>
                                     <div></div>
                                 </div>
-                                <div class="modal-body-wrapper">
+                                <div class="modal-body-wrapper mx-md-3">
                                     <p>Request to inspect</p>
                                     <div style="border: 1.5px solid #B0B0B0; border-radius: 10px;">
                                         <div class="form-group px-3 pt-2">
@@ -689,14 +690,14 @@
                                         </div>
 
                                     </div>
-                                    <p class="pb-3 mt-4" style="font-size: 14px;"><span class="pr-1"
-                                            style="font-size: 16px;">&#9788;</span>Schedule to see
+                                    <p class="schedule-text pb-3 mt-4 mx-md-2" style="font-size: 14px;"><span
+                                            class="pr-1">&#9788;</span>Schedule to see
                                         any
                                         property for
                                         free. No payment
                                         required.</p>
 
-                                    <div class="modal-checkbox d-flex align-items-baseline">
+                                    <div class="modal-checkbox mx-md-2">
                                         <input type="checkbox" required />
                                         <p class="pl-2">I agree to RentSmallsmall's <a
                                                 href="#"><strong>terms&consitions</strong></a>
@@ -839,6 +840,55 @@
             </div>
         </section>
     </section>
+
+    <section class="main-container py-4 zoom-up">
+        <div class="line-through-black"></div>
+
+
+        <section class="single-neighbourhood mb-5" aria-labelledby="neighbourhood-heading">
+            <h2>Neighbourhood</h2>
+            <div class="neighbourhood-wrapper">
+                <article class="neighbourhood">
+
+                    <figure class="neighbourhood-image d-flex align-items-center">
+                        <img src="../assets/images/pizza-hut.png" alt="Pizza Hut Restaurant in the neighbourhood"
+                            class="mr-2" />
+                        <figcaption class="neighbourhood-details">
+                            <p class="">Pizza hut</p>
+                            <p class="pb-2">Restaurant</p>
+                            <p>Under ₦1000 cab</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="neighbourhood">
+
+                    <figure class="neighbourhood-image d-flex align-items-center">
+                        <img src="../assets/images/beach.png" alt="Civic Centre Beach in the neighbourhood"
+                            class="mr-2" />
+
+                        <figcaption class="neighbourhood-details">
+                            <p class="">Civic centre</p>
+                            <p class="pb-2">Beach</p>
+                            <p>Walking distance</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="neighbourhood">
+
+                    <figure class="neighbourhood-image d-flex align-items-center">
+                        <img src="../assets/images/filmhouse.png" alt="Film House Cinema in the neighbourhood"
+                            class="mr-2" />
+
+                        <figcaption class="neighbourhood-details">
+                            <p class="">Film house</p>
+                            <p class="pb-2">Cinema</p>
+                            <p>Under ₦500 cab</p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+    </section>
     <section class="single-apartment-details-wrapper-sticky mb-5 zoom-up" aria-labelledby="apartment-details-heading">
 
         <div>
@@ -892,54 +942,6 @@
             <button class="btn" type="button" data-toggle="modal" data-target="#subscribing"
                 aria-label="Subscribe to this apartment">Subscribe now</button>
         </div>
-    </section>
-    <section class="main-container py-4 zoom-up">
-        <div class="line-through-black"></div>
-
-
-        <section class="single-neighbourhood mb-5" aria-labelledby="neighbourhood-heading">
-            <h2>Neighbourhood</h2>
-            <div class="neighbourhood-wrapper">
-                <article class="neighbourhood">
-
-                    <figure class="neighbourhood-image d-flex align-items-center">
-                        <img src="../assets/images/pizza-hut.png" alt="Pizza Hut Restaurant in the neighbourhood"
-                            class="mr-2" />
-                        <figcaption class="neighbourhood-details">
-                            <p class="">Pizza hut</p>
-                            <p class="pb-2">Restaurant</p>
-                            <p>Under ₦1000 cab</p>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="neighbourhood">
-
-                    <figure class="neighbourhood-image d-flex align-items-center">
-                        <img src="../assets/images/beach.png" alt="Civic Centre Beach in the neighbourhood"
-                            class="mr-2" />
-
-                        <figcaption class="neighbourhood-details">
-                            <p class="">Civic centre</p>
-                            <p class="pb-2">Beach</p>
-                            <p>Walking distance</p>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="neighbourhood">
-
-                    <figure class="neighbourhood-image d-flex align-items-center">
-                        <img src="../assets/images/filmhouse.png" alt="Film House Cinema in the neighbourhood"
-                            class="mr-2" />
-
-                        <figcaption class="neighbourhood-details">
-                            <p class="">Film house</p>
-                            <p class="pb-2">Cinema</p>
-                            <p>Under ₦500 cab</p>
-                        </figcaption>
-                    </figure>
-                </article>
-            </div>
-        </section>
     </section>
 
     <!-- Footer -->

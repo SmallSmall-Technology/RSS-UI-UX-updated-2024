@@ -592,6 +592,9 @@ ul li {
 }
 
 .single-apartment-details-wrapper-sticky {
+  position: sticky;
+  background-color: white;
+  bottom: 0;
   inline-size: 96%;
   margin: auto;
   display: flex;
@@ -721,6 +724,11 @@ ul li {
   margin: 0;
 }
 
+.modal-title {
+  font-weight: 700;
+  /* padding-inline: 1rem; */
+}
+
 .modal-header .close {
   padding: 0;
   margin: 0;
@@ -731,21 +739,33 @@ ul li {
   border-radius: 10px;
 }
 
+.modal-body-wrapper > p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .modal-body {
   border: 1.5px solid #b0b0b0;
   border-radius: 15px;
   padding: 0;
+  margin-inline: 0.8rem;
 }
 
 .modal-body select {
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .form-group select {
   outline: none;
   border: none;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-inline-end: 3.5rem;
 }
 
 select,
@@ -832,7 +852,7 @@ input:focus {
 }
 
 .subscription-details-wrapper p:first-child {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -843,6 +863,7 @@ input:focus {
 
 .subscription-details p:first-child {
   font-weight: 400;
+  font-size: 16px;
 }
 
 .subscription-details p span {
@@ -882,14 +903,17 @@ input:focus {
 }
 
 .modal-footer .btn {
-  color: black;
-  text-decoration: underline;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border: 2px solid transparent;
 }
 
 .modal-footer .btn:hover {
-  background-color: black;
-  color: white;
+  color: black;
+  background-color: white;
   text-decoration: none;
+  border: 2px solid black;
 }
 
 .input-container input {
@@ -897,13 +921,53 @@ input:focus {
   outline: none;
 }
 
+.modal-body-wrapper .schedule-text {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.modal-checkbox {
+  font-size: 11px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.modal-checkbox p {
+  margin: 0;
+}
+
 @media (width <= 768px) {
+  .modal-checkbox > * {
+    justify-content: center;
+  }
+
   .modal-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .modal-footer .btn {
     inline-size: 80%;
+  }
+
+  .modal-body {
+    margin-inline: initial;
+  }
+
+  .subscription-details {
+    gap: initial;
+  }
+
+  .subscription-total {
+    gap: initial;
+  }
+
+  .form-group,
+  .subscription-plan,
+  .subscription-details-wrapper {
+    padding-inline: initial;
   }
 }
