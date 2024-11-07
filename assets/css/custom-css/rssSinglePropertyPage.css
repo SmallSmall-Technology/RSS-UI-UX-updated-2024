@@ -138,7 +138,6 @@ body {
 
 .single-apartment-header-payment small {
   font-size: 12px;
-  /* font-weight: bold; */
 }
 
 .availability-status {
@@ -853,7 +852,7 @@ input:focus {
 
 .subscription-details-wrapper p:first-child {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .subscription-details {

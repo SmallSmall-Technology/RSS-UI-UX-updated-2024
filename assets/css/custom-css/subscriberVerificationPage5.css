@@ -282,6 +282,7 @@ aside {
       border-radius: 20px;
       block-size: 40px;
       inline-size: 20%;
+      border: 1px solid transparent;
     }
   }
   .footer {
@@ -355,7 +356,6 @@ aside {
 
   & .main-header {
     padding-top: 20px;
-    /* margin-inline-end: 60px; */
     display: flex;
     flex-direction: column;
     text-align: end;
