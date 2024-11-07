@@ -184,6 +184,10 @@ header {
     margin: auto;
   }
 
+  .homePage-hero-section-h2 p {
+    max-width: 300px;
+  }
+
   .homePage-hero-section p {
     max-width: 300px;
   }
@@ -204,7 +208,6 @@ header {
     border-radius: 15px;
     overflow: clip;
     margin-block-start: -100px;
-
     margin-block-end: 40px;
   }
 
@@ -343,7 +346,7 @@ header {
 }
 
 .rss-slider-image-bg {
-  background: url(../../images/Slider-bg.png);
+  background: url(../../images/Slider-bg.svg);
   background-size: cover;
   background-position: 20%;
   background-repeat: no-repeat;
@@ -639,7 +642,7 @@ header {
 }
 
 .item-1 {
-  background: url(../../images/left-apartment.png);
+  background: url(../../images/first-apartment-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 90%;
@@ -650,7 +653,7 @@ header {
 }
 
 .item-2 {
-  background: url(../../images/middle-apartment.png);
+  background: url(../../images/second-apartment-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -661,7 +664,7 @@ header {
 }
 
 .item-3 {
-  background: url(../../images/top-right-apartment.png);
+  background: url(../../images/third-apartment-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -672,7 +675,7 @@ header {
 }
 
 .item-4 {
-  background: url(../../images/bottom-right-apartment.png);
+  background: url(../../images/fourth-apartment-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -692,7 +695,7 @@ header {
 }
 
 .explore-our-homes-apartments .left-apartment {
-  background: url(../../images/left-apartment.png);
+  background: url(../../images/first-apartment.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -711,7 +714,7 @@ header {
 }
 
 .explore-our-homes-apartments .top-middle-apartment {
-  background: url(../../images/middle-apartment.png);
+  background: url(../../images/second-apartment.svg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -741,7 +744,7 @@ header {
 }
 
 .explore-our-homes-apartments .top-right-apartment {
-  background: url(../../images/top-right-apartment.png);
+  background: url(../../images/third-apartment.svg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -752,7 +755,7 @@ header {
 }
 
 .explore-our-homes-apartments .bottom-right-apartment {
-  background: url(../../images/bottom-right-apartment.png);
+  background: url(../../images/fourth-apartment.svg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -802,6 +805,7 @@ header {
     inline-size: 100%;
   }
 }
+
 /* Styling the Find a Neighborhood Section  */
 
 .find-a-neighbourhood {
@@ -938,13 +942,14 @@ header {
   .find-a-neighbourhood {
     inline-size: 100%;
     padding-block: 60px;
-    padding-inline: 40px;
+    padding-inline: 20px;
     padding-bottom: 150px;
   }
 
   .find-a-neighbourhood-header h2 {
-    font-size: 30px;
+    font-size: 29.5px;
   }
+
   .apartment-dropdown p {
     font-size: 0.9rem;
   }
@@ -1177,6 +1182,11 @@ header {
     margin-block-end: 60px;
     inline-size: 95%;
   }
+
+  .accordion .card-header button span,
+  i {
+    font-size: 18px;
+  }
 }
 
 /* Styling the Speak with us Section */
@@ -1265,7 +1275,6 @@ header {
   }
 
   .speak-with-us-content p {
-    max-width: 170px;
     font-size: 1rem;
   }
 
