@@ -379,6 +379,24 @@ header {
     justify-content: center;
   }
 
+  .single-apartment-status-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    inline-size: 360px;
+    padding: 10px;
+    top: 0;
+  }
+
+  .single-apartment-img-wrapper {
+    inline-size: 370px;
+    block-size: 361px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-block-end: 10px;
+  }
+
   .rss-inspection-page-main-section {
     display: flex;
     justify-content: space-between;

@@ -992,7 +992,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  margin-block-end: 100px;
+  margin-block-end: 140px;
 }
 
 .result-analytics-data {
