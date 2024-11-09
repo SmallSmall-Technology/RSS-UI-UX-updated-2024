@@ -263,6 +263,10 @@ body {
   .single-apartment-details-mobile h2 {
     display: none;
   }
+
+  .apartment-location-header {
+    margin-top: 2rem;
+  }
 }
 
 @media (width <= 500px) {
@@ -343,7 +347,6 @@ ul li {
 .single-apartment-extras ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -422,9 +425,14 @@ ul li {
     font-weight: 700;
   }
 
+  .single-apartment-header-payment li:nth-child(4) {
+    align-self: self-start;
+  }
+
   .single-apartment-header-payment {
     display: flex;
     justify-content: space-between;
+    /* align-items: start; */
   }
 
   .single-apartment-details-mobile {
@@ -452,15 +460,14 @@ ul li {
 
   .single-apartment-extras ul {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: initial;
   }
 
   .single-apartment-extras ul li {
     display: flex;
     list-style-type: none;
     align-items: center;
-    gap: 5px;
   }
 
   .single-apartment-extras .btn {
@@ -477,26 +484,22 @@ ul li {
     display: flex;
     justify-content: center;
   }
+}
 
-  .single-apartment-extras {
-    /* flex: 1; */
-  }
-
+@media (width <= 375px) {
   .bull:nth-child(6) {
     display: none;
   }
-}
 
-@media (width <= 320px) {
-  .bull:nth-child(6) {
-    display: block;
+  .single-apartment-extras ul {
+    display: flex;
+    justify-content: space-between;
+    gap: initial;
   }
 
-  .bull:nth-child(4) {
-    /* display: none; */
-  }
-
-  .single-apartment-extras {
+  .single-apartment-extras ul li a {
+    font-size: 13px;
+    gap: 4px;
   }
 }
 
@@ -517,6 +520,15 @@ ul li {
   gap: 5px;
 }
 
+@media (width <= 768px) {
+  .single-property-amenities ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    inline-size: 90%;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
 .single-property-rules ul {
   list-style-type: none;
   font-weight: 400;
@@ -530,6 +542,13 @@ ul li {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+@media (width <= 768px) {
+  .single-property-rules ul li {
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
 /* Styling the affordability calculator */

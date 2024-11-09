@@ -47,7 +47,6 @@ aside {
   position: relative;
   flex: 1;
   block-size: auto;
-  /* margin-inline-start: 35px; */
   min-inline-size: 350px;
 
   & header img {
@@ -187,6 +186,11 @@ aside {
       background-color: var(--white);
       z-index: 99;
       padding-inline: 19px;
+    }
+
+    .main-header,
+    .sub-header {
+      margin-inline: 0.5rem;
     }
 
     & .line-through {
@@ -389,10 +393,14 @@ aside {
       margin-block-start: 30px;
     }
 
+    .form-title {
+      margin-block-start: 1px;
+    }
+
     & .verification-wrapper {
       display: flex;
       justify-content: space-between;
-      margin-block-end: 120px;
+      margin-block-end: 116px;
       align-items: flex-start;
 
       & .verification {
@@ -413,6 +421,7 @@ aside {
             & p {
               margin-block-start: 3px;
               font-size: 14px;
+              min-width: 30px;
             }
           }
 
@@ -451,17 +460,13 @@ aside {
   .checkbox {
     display: flex;
     justify-content: end;
-    margin-block-end: 40px;
+    /* margin-block-end: 70px; */
 
     & input {
       cursor: pointer;
     }
   }
 }
-/* .main-footer-wrapper {
-  margin-top: -0.8rem;
-  block-size: 20svh;
-} */
 
 /* State of the button */
 
@@ -480,7 +485,6 @@ aside {
   block-size: 5px;
   background-color: #e0e0e0;
   min-inline-size: 100%;
-  /* position: relative; */
   margin: 20px 0;
 }
 
@@ -508,6 +512,9 @@ aside {
     padding: 10px;
     justify-content: center;
     margin-inline-end: 1.5rem;
+    margin-left: auto;
+    inline-size: fit-content;
+    margin-block-end: 18px;
   }
 
   & .circle-unicode {
@@ -562,12 +569,16 @@ aside {
 
     & .main-container {
       margin: 0;
-      /* display: none; */
 
       & .verification-wrapper {
+        margin-block-end: 50px;
         & .verification {
           inline-size: 100%;
         }
+      }
+
+      & .form-title {
+        margin-block-start: 20px;
       }
     }
 
@@ -581,6 +592,13 @@ aside {
     .next {
       margin-inline-end: 20px;
       margin-block-end: 20px;
+    }
+
+    .completed-btn.mobile {
+      & .completed {
+        display: flex;
+        margin-left: auto;
+      }
     }
   }
 

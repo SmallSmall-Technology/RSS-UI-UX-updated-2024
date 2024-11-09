@@ -166,11 +166,14 @@ aside {
     font-weight: 600;
   }
 
-  ::placeholder {
-    color: #bababa;
-    font-size: 14px;
-    font-weight: 500;
+  @media (width <= 768px) {
+    h1 {
+      color: #03100d;
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
+
   .form-span {
     text-align: center;
   }
@@ -193,6 +196,17 @@ aside {
           margin-block-start: 5px;
         }
       }
+
+      & select {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    ::placeholder {
+      color: #bababa;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     & .btn {
@@ -274,8 +288,6 @@ footer {
       min-inline-size: 100%;
     }
     .second-logo {
-      height: 80px;
-      width: 80%;
       margin: start;
       margin-block-end: 30px;
       padding-top: 20px;
