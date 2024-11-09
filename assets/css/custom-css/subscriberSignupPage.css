@@ -263,6 +263,22 @@ footer {
 
 /* Mobile Responsiveness */
 @media (width <= 768px) {
+  .fix-header {
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    min-inline-size: 100%;
+    background-color: var(--white);
+    z-index: 99;
+    padding: 20px;
+  }
+
+  .form-container {
+    margin-top: 70px;
+    margin-inline: 1rem;
+  }
+
   aside {
     display: none;
   }
@@ -272,12 +288,15 @@ footer {
     & .btn {
       min-inline-size: 100%;
     }
-    .second-logo {
-      height: 80px;
-      width: 80%;
-      margin: start;
-      margin-block-end: 30px;
-      padding-top: 20px;
+
+    & h1 {
+      font-size: 18px;
+    }
+
+    .company-logo {
+      position: fixed;
+      background-color: white;
+      inline-size: 100%;
     }
 
     & header {

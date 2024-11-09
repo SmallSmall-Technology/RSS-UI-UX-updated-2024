@@ -64,7 +64,7 @@
 
                 <hr class="d-md-none d-block" />
 
-                <section>
+                <section class="sub-header">
                     <h1>Let's begin your renting journey</h1>
                     <p>
                         This step will guide you to provide important information about yourself to help us verify you.
@@ -125,23 +125,26 @@
                     <section class="main-container">
                         <div class="form-container">
                             <form action="" class="form">
-                                <h1 class="form-title text-start mb-4">Rental history</h1>
+                                <h1 class="form-title text-start mb-3">Rental history</h1>
                                 <div class="form-group">
                                     <label for="name">Current renting status</label>
                                     <select class="form-control" id="rentingStatus" name="rentingStatus" required
                                         style="font-size: 12px;">
-                                        <option value="">Renting</option>
-                                        <option value="option1">Option 1</option>
-                                        <option value="option2">Option 2</option>
+                                        <option value="option1">Renting</option>
+                                        <option value="option2">Not renting</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Time at this address</label>
                                     <select class="form-control" id="time" name="time" style="font-size: 12px;"
                                         required>
-                                        <option value="">Choose</option>
-                                        <option value="option1">Option 1</option>
-                                        <option value="option2">Option 2</option>
+                                        <option value="" disabled>Choose</option>
+                                        <option value="option1">1 year</option>
+                                        <option value="option2">2 years</option>
+                                        <option value="option3">3 years</option>
+                                        <option value="option4">4 years</option>
+                                        <option value="option5">More than 5 years</option>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -155,20 +158,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="current-address" class="mb-2">Current address</label>
-                                    <textarea id="current-address" class="form-control" required
-                                        style="background-color: inherit; padding: 0; margin-top: -7px; height: 100px; overflow-y: scroll;">
-                                </textarea>
+                                    <textarea class="form-control" id="current-address" rows="3" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="reasons-leaving" class="mb-2">Reasons for leaving</label>
-                                    <textarea id="reasons-leaving" class="form-control" required
-                                        style="background-color: inherit; padding: 0; margin-top: -7px; height: 100px; overflow-y: scroll;">
-                                </textarea>
+                                    <textarea class="form-control" id="reasons-leaving" rows="3" required></textarea>
+
                                 </div>
                                 <div style="margin-top: 2rem; margin-bottom: 2rem;">
                                     <hr class="line-through" />
                                 </div>
-                                <h1 class="form-title">Landlord info</h1>
+                                <h1 class="form-title mb-3">Landlord info</h1>
                                 <div class="form-group">
                                     <label for="name">Name of current landlord</label>
                                     <input type="text" id="income" class="form-control" required placeholder="Name" />
@@ -180,15 +180,14 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="phone">Phone number</label>
-                                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone"
-                                        style="font-size: 12px;" />
+                                    <label for="tel">Phone number</label>
+                                    <input type="tel" pattern="[0-9]*" id="tel" name="tek" class="form-control" required
+                                        placeholder="Phone" oninput="this.value=this.value.replace(/\D/g,'')" />
                                 </div>
                                 <div class="form-group">
                                     <label for="landlord-address" class="mb-2">Address</label>
-                                    <textarea id="landlord-address" class="form-control" required
-                                        style="background-color: inherit; padding: 0; margin-top: -7px; height: 100px; overflow-y: scroll;">
-                                </textarea>
+                                    <textarea class="form-control" id="landlord-address" rows="3" required></textarea>
+
                                 </div>
 
                             </form>

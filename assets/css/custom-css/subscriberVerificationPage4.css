@@ -505,62 +505,34 @@ aside {
 .slide.active {
   background-color: var(--blue);
 }
-
 /* Mobile Screen Responsiveness for the Main element */
 @media (width <= 767px) {
+  .main-header,
+  .sub-header {
+    margin-inline: 0.5rem;
+  }
+
   .main-container-wrapper {
     background-color: var(--white);
+    inline-size: 100%;
+
+    & .main-container {
+      block-size: initial;
+      inline-size: 100%;
+    }
   }
 
   .form-title {
     margin-block-start: 20px;
   }
-}
 
-@media (width <= 500px) {
-  .main-container-wrapper {
-    margin: auto;
-    inline-size: 100%;
-    flex: 1;
-    background-color: var(--white);
-    padding-inline-start: 5px;
-
-    & .main-container {
-      inline-size: 100%;
-      block-size: initial;
-    }
-
-    & .form-container {
-      inline-size: 350px;
-
-      & input {
-        inline-size: 100%;
-      }
-    }
+  .next {
+    margin-inline-end: 20px;
+    margin-block-end: 20px;
   }
-}
 
-@media (width <= 350px) {
-  .main-container-wrapper {
-    margin: auto;
-    inline-size: 100%;
-    flex: 1;
-    background-color: var(--white);
-    padding-inline-start: 5px;
-
-    & .main-container {
-      inline-size: 100%;
-    }
-
-    & .form-container {
-      inline-size: 300px;
-
-      & input {
-        inline-size: 100%;
-      }
-    }
-    .next {
-      margin: 0;
-    }
+  & .form-container {
+    inline-size: 85%;
+    margin-inline: 1rem;
   }
 }

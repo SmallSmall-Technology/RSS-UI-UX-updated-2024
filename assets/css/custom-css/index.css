@@ -1222,7 +1222,7 @@ header {
 .speak-with-us-content h1 {
   font-size: 36px;
   font-weight: 700;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .speak-with-us-content p {
@@ -1295,5 +1295,16 @@ header {
     justify-content: center;
     height: auto;
     padding: 20px;
+  }
+
+  .speak-with-us-content .btn {
+    inline-size: 100%;
+  }
+}
+
+@media (width <= 425px) {
+  .speak-with-us-content h1 {
+    max-width: 350px;
+    font-size: 24px;
   }
 }

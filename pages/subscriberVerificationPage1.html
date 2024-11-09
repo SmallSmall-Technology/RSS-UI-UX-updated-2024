@@ -63,7 +63,7 @@
 
                 <hr class="d-md-none d-block" />
 
-                <section>
+                <section class="sub-header">
                     <h1>Let's begin your renting journey</h1>
                     <p>
                         This step will guide you to provide important information about yourself to help us verify you.
@@ -124,35 +124,33 @@
                     <section class="main-container">
                         <div class="form-container">
                             <form action="" class="form">
-                                <h1 class="form-title text-start mb-4">Personal details</h1>
+                                <h1 class="form-title text-start mb-3">Personal details</h1>
                                 <div class="row">
                                     <div class="col-5">
                                         <div class="form-group">
                                             <label for="name">Name</label>
                                             <input type="text" id="name" class="form-control" readonly
-                                                placeholder="Bright Nwachukwu"
-                                                style="border: none; background-color: inherit; padding: 0; margin-top: -7px;" />
+                                                placeholder="Bright Nwachukwu" />
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-7">
                                         <div class="form-group">
-                                            <label for="email" style="margin-inline-start: -14px">Email</label>
+                                            <label for="email">Email</label>
                                             <input type="text" id="email" class="form-control" readonly
-                                                placeholder="brightnwachukwu@gmail.com"
-                                                style="border: none; width: 215px; background-color: inherit; padding: 0; margin-top: -7px; margin-inline-start: -14px;" />
+                                                placeholder="brightnwachukwu@gmail.com" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="number">Phone number</label>
                                     <input type="text" id="number" class="form-control" readonly
-                                        placeholder="0809 0303 0940"
-                                        style="border: none; background-color: inherit; padding: 0; margin-top: -7px;" />
+                                        placeholder="0809 0303 0940" />
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <label for="income">Monthly income</label>
-                                    <input type="text" id="income" class="form-control" required placeholder="N0.00" />
+                                    <input type="tel" pattern="[0-9]*" id="income" class="form-control" required
+                                        placeholder="N0.00" oninput="this.value=this.value.replace(/\D/g,'')" />
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
@@ -177,19 +175,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="maritalStatus">Marital Status</label>
-                                    <select class="form-control" id="maritalStatus" name="maritalStatus" required
-                                        style="font-size: 12px;">
+                                    <select class="form-control" id="maritalStatus" name="maritalStatus" required>
                                         <option value="">Select your marital status</option>
                                         <option value="single">Single</option>
                                         <option value="married">Married</option>
                                         <option value="divorced">Divorced</option>
-                                        <option value="widowed">Widowed</option>
+                                        <option value="widowed">Widow</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="dob">Date of Birth</label>
-                                    <input type="date" class="form-control" id="dob" name="dob" style="font-size: 12px;"
-                                        required />
+                                    <input type="date" class="form-control" id="dob" name="dob" required />
                                 </div>
                             </form>
                         </div>
