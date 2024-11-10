@@ -316,9 +316,8 @@ ul li {
 }
 
 .single-apartment-details-mobile {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  gap: 7px;
 }
 
 .single-apartment-details-mobile-content {
@@ -456,6 +455,15 @@ ul li {
     border: 1.5px solid #dddddd;
     padding: 8px;
     border-radius: 10px;
+  }
+
+  .single-apartment-extras {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+    inline-size: 90%;
+    padding: 1rem;
   }
 
   .single-apartment-extras ul {
@@ -731,6 +739,20 @@ ul li {
 
 /* Styling the Modal */
 
+/* Apply the sliding animation */
+.modal.slide-from-bottom .modal-dialog {
+  animation: slide-from-bottom 0.9s ease-in-out;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-content {
   margin-top: 4rem;
   border-radius: 10px;
@@ -815,6 +837,11 @@ input:focus {
   /* z-index: 0; */
 }
 
+.form-group-wrapper {
+  border: 1.5px solid #b0b0b0;
+  border-radius: 10px;
+}
+
 .form-group {
   padding: 10px;
   padding-bottom: 0;
@@ -829,6 +856,10 @@ input:focus {
   padding-inline: 10px;
 }
 
+.border-left {
+  height: 60px;
+}
+
 .subscription-price p {
   font-size: 16px;
   font-weight: bold;
@@ -838,8 +869,6 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1rem;
-  overflow: clip;
 }
 
 .subscription-payment-plan {
@@ -887,6 +916,95 @@ input:focus {
 .subscription-details p span {
   font-weight: 400;
   font-size: 11px;
+  margin-left: 3px;
+}
+
+.schedule-text {
+  display: flex;
+  font-size: 14px;
+}
+
+@media (width <= 768px) {
+  .form-group {
+    inline-size: 100%;
+    margin-inline-start: 15px;
+
+    & select {
+      inline-size: 90%;
+    }
+  }
+  .subscription-plan {
+    font-size: 14px;
+  }
+
+  .subscription-payment-plan:first-child {
+    margin-inline-start: 15px;
+    inline-size: 50%;
+  }
+
+  .subscription-payment-plan:last-child {
+    margin-inline-start: 0px;
+    padding-inline-end: 20px;
+    inline-size: 50%;
+  }
+
+  .subscription-payment-plan label {
+    display: flex;
+    margin: 0;
+  }
+
+  .subscription-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 10px;
+  }
+
+  .subscription-details-wrapper > p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-inline: 10px;
+  }
+
+  .subscription-details p:first-child {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .subscription-details p:last-child {
+    font-weight: 400;
+    font-size: 16px;
+    display: grid;
+    margin-inline-start: 2rem;
+  }
+
+  .subscription-details p span {
+    display: flex;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .subscription-total {
+    margin-inline: 15px;
+  }
+
+  .subscription-total p:first-child {
+    font-weight: 500;
+  }
+
+  .subscription-total p:last-child {
+    font-weight: 600;
+    margin-inline-start: 2rem;
+  }
+
+  .modal-checkbox-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .schedule-text-wrapper {
+    display: flex;
+    padding-inline: 1rem;
+  }
 }
 
 .subscription-details p:last-child {

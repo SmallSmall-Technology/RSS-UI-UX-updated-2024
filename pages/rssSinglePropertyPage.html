@@ -524,7 +524,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="single-apartment-extras zoom-up">
+                    <div class="single-apartment-extras zoom-up d-none d-md-block">
                         <ul>
                             <li>
                                 <a href="#" style="color: black;" class="d-flex align-items-center"
@@ -561,7 +561,7 @@
 
                     <!-- Apartment Subscription Modal -->
 
-                    <div class="modal fade px-md-4
+                    <div class="modal fade px-md-4 slide-from-bottom
                     " id="subscribing" tabindex="-1" role="dialog" aria-labelledby="subscribing" aria-hidden="true">
 
                         <div class="modal-dialog" role="document">
@@ -581,7 +581,7 @@
 
                                     <div class="modal-body mb-5" aria-labelledby="modal body">
                                         <div class="form-group ">
-                                            <select class="form-control p-0 ml-2" id="inspectionType"
+                                            <select class="form-control p-0 " id="inspectionType"
                                                 style="border: black;">
                                                 <option selected disabled>Duration</option>
                                                 <option>Option 1</option>
@@ -590,7 +590,7 @@
                                         </div>
 
                                         <div class="subscription-plan">
-                                            <div class="subscription-payment-plan ml-2">
+                                            <div class="subscription-payment-plan ">
                                                 <select>
                                                     <option>Payment plan</option>
                                                 </select>
@@ -608,17 +608,17 @@
                                             <p>Subscription details</p>
                                             <div class="subscription-details">
                                                 <p>Subscription fee</p>
-                                                <p>₦220,000.00<span class="ml-2">monthly</span></p>
+                                                <p>₦220,000.00<span>monthly</span></p>
                                             </div>
 
                                             <!-- If user is yet to log in, don't show these. -->
                                             <div class="subscription-details">
                                                 <p>Service charge</p>
-                                                <p>₦40,000.00<span class="ml-2">monthly</span></p>
+                                                <p>₦40,000.00<span>monthly</span></p>
                                             </div>
                                             <div class="subscription-details">
                                                 <p>Security & Eviction deposit</p>
-                                                <p>₦440,000.00<span class="ml-2">refundable</span></p>
+                                                <p>₦440,000.00<span>refundable</span></p>
                                             </div>
                                             <hr />
                                             <div class="subscription-total">
@@ -637,8 +637,12 @@
                                     </div>
 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn d-none d-md-block"
+                                            data-dismiss="modal">Cancel</button>
                                         <button type="button" class="btn">Subcribe now</button>
+                                        <button type="button" class="btn d-block d-md-none"
+                                            data-dismiss="modal">Cancel</button>
+
                                     </div>
                                 </div>
                             </div>
@@ -646,7 +650,7 @@
                     </div>
 
                     <!-- Inspection Scheduling Modal -->
-                    <div class="modal fade" id="schedulingInspection" tabindex="-1" role="dialog"
+                    <div class="modal fade slide-from-bottom" id="schedulingInspection" tabindex="-1" role="dialog"
                         aria-labelledby="schedulingInspectionTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -664,8 +668,8 @@
                                 </div>
                                 <div class="modal-body-wrapper mx-md-3">
                                     <p>Request to inspect</p>
-                                    <div style="border: 1.5px solid #B0B0B0; border-radius: 10px;">
-                                        <div class="form-group px-3 pt-2">
+                                    <div class="form-group-wrapper">
+                                        <div class="form-group  pt-2">
                                             <select class="form-control p-0" id="inspectionType">
                                                 <option selected disabled>Inspection Type</option>
                                                 <option>Physical</option>
@@ -681,7 +685,7 @@
                                                 </label>
                                             </div>
 
-                                            <div class="border-left mx-3" style="height: 60px;"></div>
+                                            <div class="border-left mx-3"></div>
                                             <div class="subscription-payment-plan">
                                                 <label id="time" class="input-container">
                                                     <input type="time" id="time" />
@@ -690,24 +694,35 @@
                                         </div>
 
                                     </div>
-                                    <p class="schedule-text pb-3 mt-4 mx-md-2" style="font-size: 14px;"><span
-                                            class="pr-1">&#9788;</span>Schedule to see
-                                        any
-                                        property for
-                                        free. No payment
-                                        required.</p>
-
-                                    <div class="modal-checkbox mx-md-2">
-                                        <input type="checkbox" required />
-                                        <p class="pl-2">I agree to RentSmallsmall's <a
-                                                href="#"><strong>terms&consitions</strong></a>
+                                    <div class="schedule-text-wrapper">
+                                        <div class="schedule-text pb-3 mt-4">
+                                            <span class="pr-1">&#9788;</span>
+                                            <p>
+                                                Schedule to see
+                                                any
+                                                property for
+                                                free. No payment
+                                                required.
+                                            </p>
+                                        </div>
                                     </div>
-                                    </p>
+                                    <div class="modal-checkbox-wrapper">
+                                        <div class="modal-checkbox">
+                                            <input type="checkbox" required />
+                                            <p class="pl-2">I agree to RentSmallsmall's <a
+                                                    href="#"><strong>terms&consitions</strong></a>
+                                        </div>
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="modal-footer">
-                                    <button type=" button" class="btn" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn">Schedule visit</button>
+                                    <button type="button" class="btn d-none d-md-block"
+                                        data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn">Schedule now</button>
+                                    <button type="button" class="btn d-block d-md-none"
+                                        data-dismiss="modal">Cancel</button>
+
                                 </div>
                             </div>
                         </div>
@@ -943,6 +958,36 @@
                 aria-label="Subscribe to this apartment">Subscribe now</button>
         </div>
     </section>
+
+    <div class="single-apartment-extras zoom-up d-block d-md-none">
+        <ul>
+            <li>
+                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Verified Property">
+                    Verified Property <span><img src="../assets/images/shield-tick.svg"
+                            alt="Verified Property Icon" /></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Share">
+                    Share <span><img src="../assets/images/share-icon1.svg" alt="Share Video Icon" /></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Video Tour">
+                    Video tour <span><img src="../assets/images/video-recorder.svg" alt="Video Tour Icon" /></span>
+                </a>
+            </li>
+        </ul>
+        <hr />
+        <div class="btn-wrapper">
+            <button type="button" class="btn" data-toggle="modal" data-target="#schedulingInspection">Schedule a
+                visit</button>
+
+            <button type="button" class="btn" data-toggle="modal" data-target="#subscribing">Subscribe
+                now</button>
+        </div>
+
+    </div>
 
     <!-- Footer -->
     <footer class="rss-footer-wrapper zoom-up" aria-label="Footer">

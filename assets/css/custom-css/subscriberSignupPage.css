@@ -272,11 +272,13 @@ footer {
     background-color: var(--white);
     z-index: 99;
     padding: 20px;
+    padding-inline-start: 2rem;
+    margin-top: 10px;
   }
 
   .form-container {
     margin-top: 70px;
-    margin-inline: 1rem;
+    margin-inline: 1.3rem;
   }
 
   aside {
@@ -291,12 +293,6 @@ footer {
 
     & h1 {
       font-size: 18px;
-    }
-
-    .company-logo {
-      position: fixed;
-      background-color: white;
-      inline-size: 100%;
     }
 
     & header {
