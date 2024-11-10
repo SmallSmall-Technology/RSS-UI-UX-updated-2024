@@ -766,7 +766,6 @@ ul li {
 
 .modal-title {
   font-weight: 700;
-  /* padding-inline: 1rem; */
 }
 
 .modal-header .close {
@@ -806,6 +805,7 @@ ul li {
 
 .form-group {
   margin-inline-end: 3.5rem;
+  margin-inline-start: 0.5rem;
 }
 
 select,
@@ -845,6 +845,8 @@ input:focus {
 .form-group {
   padding: 10px;
   padding-bottom: 0;
+  inline-size: 100%;
+  padding-inline-end: 2rem;
 }
 
 .subscription-plan {
@@ -869,6 +871,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 1rem;
 }
 
 .subscription-payment-plan {
@@ -878,7 +881,16 @@ input:focus {
   align-items: center;
 }
 
+.subscription-payment-plan:last-child {
+  inline-size: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-inline-start: 3rem;
+}
+
 .subscription-payment-plan select {
+  margin-inline-start: 0.5rem;
   border: none;
   outline: none;
 }
@@ -901,6 +913,15 @@ input:focus {
 .subscription-details-wrapper p:first-child {
   font-size: 18px;
   font-weight: bold;
+}
+
+.subscription-payment-plan:last-child {
+  padding-inline-start: initial;
+}
+
+#date,
+#time {
+  margin-bottom: 0;
 }
 
 .subscription-details {
@@ -933,6 +954,25 @@ input:focus {
       inline-size: 90%;
     }
   }
+
+  .subscription-payment-plan-wrapper {
+    padding-inline: initial;
+  }
+
+  .subscription-payment-plan:last-child {
+    inline-size: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-inline-start: initial;
+  }
+
+  .subscription-payment-plan select {
+    margin-inline-start: initial;
+    border: none;
+    outline: none;
+  }
+
   .subscription-plan {
     font-size: 14px;
   }
@@ -1014,6 +1054,15 @@ input:focus {
 .subscription-total {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.subscription-total p:first-child {
+  font-weight: 500;
+}
+
+.subscription-total p:last-child {
+  font-weight: 600;
+  margin-inline-start: 2rem;
 }
 
 .subscription-caution p {
@@ -1105,5 +1154,31 @@ input:focus {
   .subscription-plan,
   .subscription-details-wrapper {
     padding-inline: initial;
+  }
+
+  #time {
+    margin-inline-start: 5px;
+  }
+}
+
+@media (width <= 425px) {
+  #time {
+    margin-inline-start: 18px;
+  }
+}
+
+@media (width <= 399px) {
+  #time {
+    margin-inline-start: 10px;
+  }
+}
+
+@media (width >= 1000px) {
+  #time {
+    margin-inline-start: 30px;
+  }
+
+  .move-in-date {
+    margin-inline-start: 20px;
   }
 }
