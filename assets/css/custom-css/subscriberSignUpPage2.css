@@ -80,7 +80,7 @@ h6 {
 aside {
   background-color: #03100d;
   color: white;
-  background: url(../../images/asidebackground.png);
+  background: url(../../images/asidebackground.svg);
   background-repeat: no-repeat;
   background-size: fill;
   flex: 1;
@@ -141,6 +141,7 @@ aside {
 /* Styling the main component */
 
 .form-wrapper {
+  height: 100;
   & .company-logo {
     margin-block-end: 2rem;
     margin-block-start: -2rem;
