@@ -492,6 +492,21 @@ ul li {
     display: flex;
     justify-content: center;
   }
+
+  .single-apartment-header-payment {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .single-apartment-header-line-divider.last {
+    display: none;
+  }
+
+  .list-unstyled {
+    inline-size: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (width <= 375px) {
@@ -502,11 +517,11 @@ ul li {
   .single-apartment-extras ul {
     display: flex;
     justify-content: space-between;
-    gap: initial;
+    gap: 1px;
   }
 
   .single-apartment-extras ul li a {
-    font-size: 13px;
+    font-size: 11px;
     gap: 4px;
   }
 }

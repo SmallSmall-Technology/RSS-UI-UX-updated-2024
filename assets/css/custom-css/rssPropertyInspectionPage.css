@@ -679,3 +679,17 @@ header {
 
 @media (width <= 768px) {
 }
+
+/* Apply the sliding animation */
+.slide-from-bottom {
+  animation: slide-from-bottom 0.9s ease-in-out;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

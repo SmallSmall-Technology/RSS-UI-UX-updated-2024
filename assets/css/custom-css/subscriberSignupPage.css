@@ -80,12 +80,12 @@ h6 {
 aside {
   background-color: #03100d;
   color: white;
-  background: url(../../images/asidebackground.png);
+  background: url(../../images/asidebackground.svg);
   background-repeat: no-repeat;
   background-size: fill;
   flex: 1;
   padding: 20px;
-  height: 100%;
+  height: 100svh;
   position: relative;
 
   & h1 {
