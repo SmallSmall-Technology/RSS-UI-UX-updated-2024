@@ -180,11 +180,12 @@
 
 /* Small devices (landscape phones, 480px and below) */
 @media screen and (max-width: 480px) {
-  /* .banner-section {
-  background-color: #94e0ff;
-  padding-bottom: 15em;
-  border-radius: 0px 0px 20px 20px;
-} */
+  /* .header-section,
+  .banner-section {
+    inline-size: 95%;
+    margin-inline: auto;
+  } */
+
   .banner-content {
     padding: 20px;
     width: 100%;
@@ -226,10 +227,22 @@
     width: 100%;
     height: 100%;
   }
+
+  .custom-btn-acc-faq {
+    font-size: 18px;
+  }
+
+  .section-container {
+    margin: 7em 0;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (min-width: 576px) {
+  /* .banner-section {
+    inline-size: 95%;
+    margin-inline: auto;
+  } */
 }
 
 /* Medium devices (tablets, 768px and up)*/
