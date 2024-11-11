@@ -47,6 +47,9 @@ header {
 
 .modal-dialog-custom {
   max-width: 900px;
+  top: 65px;
+  left: 23px;
+  margin: 0;
 }
 
 .custom-btn-white {
