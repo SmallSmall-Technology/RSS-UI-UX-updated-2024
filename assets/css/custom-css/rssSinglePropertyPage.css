@@ -263,6 +263,10 @@ body {
   .single-apartment-details-mobile h2 {
     display: none;
   }
+
+  .apartment-location-header {
+    margin-top: 2rem;
+  }
 }
 
 @media (width <= 500px) {
@@ -312,9 +316,8 @@ ul li {
 }
 
 .single-apartment-details-mobile {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  gap: 7px;
 }
 
 .single-apartment-details-mobile-content {
@@ -343,7 +346,6 @@ ul li {
 .single-apartment-extras ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -422,9 +424,14 @@ ul li {
     font-weight: 700;
   }
 
+  .single-apartment-header-payment li:nth-child(4) {
+    align-self: self-start;
+  }
+
   .single-apartment-header-payment {
     display: flex;
     justify-content: space-between;
+    /* align-items: start; */
   }
 
   .single-apartment-details-mobile {
@@ -450,17 +457,25 @@ ul li {
     border-radius: 10px;
   }
 
+  .single-apartment-extras {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+    inline-size: 90%;
+    padding: 1rem;
+  }
+
   .single-apartment-extras ul {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: initial;
   }
 
   .single-apartment-extras ul li {
     display: flex;
     list-style-type: none;
     align-items: center;
-    gap: 5px;
   }
 
   .single-apartment-extras .btn {
@@ -477,26 +492,22 @@ ul li {
     display: flex;
     justify-content: center;
   }
+}
 
-  .single-apartment-extras {
-    /* flex: 1; */
-  }
-
+@media (width <= 375px) {
   .bull:nth-child(6) {
     display: none;
   }
-}
 
-@media (width <= 320px) {
-  .bull:nth-child(6) {
-    display: block;
+  .single-apartment-extras ul {
+    display: flex;
+    justify-content: space-between;
+    gap: initial;
   }
 
-  .bull:nth-child(4) {
-    /* display: none; */
-  }
-
-  .single-apartment-extras {
+  .single-apartment-extras ul li a {
+    font-size: 13px;
+    gap: 4px;
   }
 }
 
@@ -517,6 +528,15 @@ ul li {
   gap: 5px;
 }
 
+@media (width <= 768px) {
+  .single-property-amenities ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    inline-size: 90%;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
 .single-property-rules ul {
   list-style-type: none;
   font-weight: 400;
@@ -530,6 +550,13 @@ ul li {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+@media (width <= 768px) {
+  .single-property-rules ul li {
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
 /* Styling the affordability calculator */
@@ -712,6 +739,20 @@ ul li {
 
 /* Styling the Modal */
 
+/* Apply the sliding animation */
+.modal.slide-from-bottom .modal-dialog {
+  animation: slide-from-bottom 0.9s ease-in-out;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-content {
   margin-top: 4rem;
   border-radius: 10px;
@@ -725,7 +766,6 @@ ul li {
 
 .modal-title {
   font-weight: 700;
-  /* padding-inline: 1rem; */
 }
 
 .modal-header .close {
@@ -765,6 +805,7 @@ ul li {
 
 .form-group {
   margin-inline-end: 3.5rem;
+  margin-inline-start: 0.5rem;
 }
 
 select,
@@ -796,9 +837,16 @@ input:focus {
   /* z-index: 0; */
 }
 
+.form-group-wrapper {
+  border: 1.5px solid #b0b0b0;
+  border-radius: 10px;
+}
+
 .form-group {
   padding: 10px;
   padding-bottom: 0;
+  inline-size: 100%;
+  padding-inline-end: 2rem;
 }
 
 .subscription-plan {
@@ -808,6 +856,10 @@ input:focus {
   border-bottom: 1px solid #dddddd;
   border-top: 1px solid #dddddd;
   padding-inline: 10px;
+}
+
+.border-left {
+  height: 60px;
 }
 
 .subscription-price p {
@@ -820,7 +872,6 @@ input:focus {
   justify-content: space-between;
   align-items: center;
   padding-inline: 1rem;
-  overflow: clip;
 }
 
 .subscription-payment-plan {
@@ -830,7 +881,16 @@ input:focus {
   align-items: center;
 }
 
+.subscription-payment-plan:last-child {
+  inline-size: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-inline-start: 3rem;
+}
+
 .subscription-payment-plan select {
+  margin-inline-start: 0.5rem;
   border: none;
   outline: none;
 }
@@ -855,6 +915,15 @@ input:focus {
   font-weight: bold;
 }
 
+.subscription-payment-plan:last-child {
+  padding-inline-start: initial;
+}
+
+#date,
+#time {
+  margin-bottom: 0;
+}
+
 .subscription-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -868,6 +937,114 @@ input:focus {
 .subscription-details p span {
   font-weight: 400;
   font-size: 11px;
+  margin-left: 3px;
+}
+
+.schedule-text {
+  display: flex;
+  font-size: 14px;
+}
+
+@media (width <= 768px) {
+  .form-group {
+    inline-size: 100%;
+    margin-inline-start: 15px;
+
+    & select {
+      inline-size: 90%;
+    }
+  }
+
+  .subscription-payment-plan-wrapper {
+    padding-inline: initial;
+  }
+
+  .subscription-payment-plan:last-child {
+    inline-size: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-inline-start: initial;
+  }
+
+  .subscription-payment-plan select {
+    margin-inline-start: initial;
+    border: none;
+    outline: none;
+  }
+
+  .subscription-plan {
+    font-size: 14px;
+  }
+
+  .subscription-payment-plan:first-child {
+    margin-inline-start: 15px;
+    inline-size: 50%;
+  }
+
+  .subscription-payment-plan:last-child {
+    margin-inline-start: 0px;
+    padding-inline-end: 20px;
+    inline-size: 50%;
+  }
+
+  .subscription-payment-plan label {
+    display: flex;
+    margin: 0;
+  }
+
+  .subscription-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 10px;
+  }
+
+  .subscription-details-wrapper > p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-inline: 10px;
+  }
+
+  .subscription-details p:first-child {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .subscription-details p:last-child {
+    font-weight: 400;
+    font-size: 16px;
+    display: grid;
+    margin-inline-start: 2rem;
+  }
+
+  .subscription-details p span {
+    display: flex;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .subscription-total {
+    margin-inline: 15px;
+  }
+
+  .subscription-total p:first-child {
+    font-weight: 500;
+  }
+
+  .subscription-total p:last-child {
+    font-weight: 600;
+    margin-inline-start: 2rem;
+  }
+
+  .modal-checkbox-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .schedule-text-wrapper {
+    display: flex;
+    padding-inline: 1rem;
+  }
 }
 
 .subscription-details p:last-child {
@@ -877,6 +1054,15 @@ input:focus {
 .subscription-total {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.subscription-total p:first-child {
+  font-weight: 500;
+}
+
+.subscription-total p:last-child {
+  font-weight: 600;
+  margin-inline-start: 2rem;
 }
 
 .subscription-caution p {
@@ -968,5 +1154,31 @@ input:focus {
   .subscription-plan,
   .subscription-details-wrapper {
     padding-inline: initial;
+  }
+
+  #time {
+    margin-inline-start: 5px;
+  }
+}
+
+@media (width <= 425px) {
+  #time {
+    margin-inline-start: 18px;
+  }
+}
+
+@media (width <= 399px) {
+  #time {
+    margin-inline-start: 10px;
+  }
+}
+
+@media (width >= 1000px) {
+  #time {
+    margin-inline-start: 30px;
+  }
+
+  .move-in-date {
+    margin-inline-start: 20px;
   }
 }

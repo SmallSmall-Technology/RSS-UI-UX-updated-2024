@@ -63,7 +63,7 @@
 
                 <hr class="d-md-none d-block" />
 
-                <section class="aside-header">
+                <section class="aside-header sub-header">
                     <h1>Let's begin your renting journey</h1>
                     <p>
                         This step will guide you to provide important information about yourself to help us verify
@@ -73,18 +73,18 @@
                     <!-- Renting Steps -->
                     <nav class="renting-steps">
                         <ul class="number-list">
-                            <li class="">1</li>
-                            <li class="">2</li>
-                            <li class="">3</li>
-                            <li class="">4</li>
-                            <li class="">5</li>
+                            <li class="active">1</li>
+                            <li class="active">2</li>
+                            <li class="active">3</li>
+                            <li class="active">4</li>
+                            <li class="active">5</li>
                         </ul>
                         <ul class="text-list">
-                            <li class="">Personal details</li>
-                            <li class="">Rental history</li>
-                            <li class="">Employment history</li>
-                            <li class="">Guarantor's details</li>
-                            <li class="">Income and ID verify</li>
+                            <li class="active">Personal details</li>
+                            <li class="active">Rental history</li>
+                            <li class="active">Employment history</li>
+                            <li class="active">Guarantor's details</li>
+                            <li class="active">Income and ID verify</li>
                         </ul>
                     </nav>
                 </section>
@@ -123,7 +123,7 @@
 
                     <!-- Form Section -->
                     <section class="main-container">
-                        <h1 class="form-title text-start mb-4" style="margin-block-start: 2px;">Income & ID verify</h1>
+                        <h1 class="form-title text-start mb-4">Income & ID verify</h1>
                         <section class="verification-wrapper">
                             <div class="verification">
                                 <div class="income-verification">
@@ -137,7 +137,7 @@
                                 <div class="income-verification">
                                     <div class="income-text">
                                         <img src="../assets/images/face-id.svg" alt="face-id image" />
-                                        <p style="min-width: 30px;">ID Verification</p>
+                                        <p>ID Verification</p>
                                     </div>
                                     <button class="btn inactive">Verify</button>
                                 </div>
@@ -148,20 +148,24 @@
                                     <span>&#10003;</span></button>
                             </div>
                         </section>
+                        <div class="completed-btn mobile d-lg-none d-block">
+                            <button class=" btn completed">Completed
+                                <span class="pl-1">&#10003;</span></button>
+                        </div>
                         <hr class="d-md-block d-none " style="width: 90%;" />
-                        <label class="pt-2">
+                        <label class="">
                             <input type="checkbox" required />
                             <p>I agree that the submission of this information does not guarantee that RentSmallSmall
                                 will offer this property to me and that RentSmallSmall may reject the application
                                 without giving any reasons. <a href="#" target="_blank">See Subscription terms</a></p>
 
                         </label>
-                        <div class="checkbox px-lg-2 ">
+                        <div class="checkbox px-lg-2">
                             <input type="checkbox" class="d-md-block d-none" required />
                         </div>
                     </section>
                 </div>
-                <div class="mb-5">
+                <div>
                     <!-- Pagination and Continue Button -->
                     <nav class="pagination">
                         <span class="slide active"></span>

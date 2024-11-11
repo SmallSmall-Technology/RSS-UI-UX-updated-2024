@@ -77,11 +77,18 @@ h6 {
 }
 
 body {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  margin-top: 30px;
 }
 
 .form-wrapper {
+  margin-top: -2rem;
   padding-inline: 1rem;
   & h1 {
     font-size: 29px;
@@ -102,6 +109,8 @@ body {
         font-size: 12px;
         font-weight: 500;
         inline-size: 100%;
+        margin-block-end: -3px;
+
         & input {
           margin-block-start: 5px;
         }
@@ -128,14 +137,54 @@ body {
 footer {
   display: flex;
   justify-self: start;
-  margin-inline-start: 2rem;
-  & ul li {
-    font-size: 12px;
-    font-weight: 400;
-    color: #03100d;
+  inline-size: 80%;
+  margin-block-end: 20px;
+  & ul {
+    gap: initial;
+    display: flex;
+    justify-content: space-between;
+    & li {
+      font-size: 12px;
+      font-weight: 400;
+      color: #03100d;
 
-    & a {
-      color: #000;
+      & a {
+        color: #000;
+      }
+    }
+  }
+}
+
+@media (width <= 768px) {
+  header {
+    inline-size: 100%;
+    padding-top: 0px;
+    padding-inline-start: 2rem;
+    margin-top: 10px;
+  }
+
+  .form-wrapper {
+    padding-inline: 2.5rem;
+    margin-top: initial;
+    margin-top: -3rem;
+  }
+
+  main {
+    margin-inline: 1rem;
+  }
+
+  footer {
+    justify-content: center;
+    margin-inline-start: initial;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    & li {
+      font-size: 10px;
     }
   }
 }
