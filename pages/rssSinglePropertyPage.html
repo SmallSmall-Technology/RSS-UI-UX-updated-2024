@@ -491,7 +491,7 @@
                             </li>
                         </ul>
 
-                        <ul class=" single-apartment-header-payment list-unstyled">
+                        <ul class="single-apartment-header-payment list-unstyled">
                             <li class="">
                                 <small>Subscription Price</small>
                                 <h3>₦220,000 /mo</h3>
@@ -510,18 +510,30 @@
                             </li>
 
                             <div class="single-apartment-header-line-divider last mx-4 "></div>
+                            <div class="sub-single-apartment-header-payment">
 
-                            <li class="list-unstyled">
-                                <div class="availability-status">
-                                    <p style="color: #00CDA6;">
-                                        Available
-                                    </p>
-                                    <!-- Render this when the apartment is not available -->
-                                    <!-- <p class="unavailable" aria-live="polite">
+                                <li class="d-flex d-md-none">
+                                    <span><img src="../assets/images/shield-tick.svg"
+                                            alt="Verified Property Icon" /></span>
+                                    <a href="#" style="color: black;" class="d-flex align-items-center"
+                                        aria-label="Verified Property">
+                                        Verified Property
+                                    </a>
+                                </li>
+
+                                <li class="list-unstyled">
+                                    <div class="availability-status">
+                                        <p style="color: #00CDA6;">
+                                            Available
+                                        </p>
+                                        <!-- Render this when the apartment is not available -->
+                                        <!-- <p class="unavailable" aria-live="polite">
                                         Unavailable
                                     </p> -->
-                                </div>
-                            </li>
+                                    </div>
+                                </li>
+                            </div>
+
                         </ul>
                     </div>
                     <div class="single-apartment-extras zoom-up d-none d-md-block">
@@ -961,22 +973,16 @@
     <div class="single-apartment-extras zoom-up d-block d-md-none">
         <ul>
             <li>
-                <span><img src="../assets/images/shield-tick.svg" alt="Verified Property Icon" /></span>
-                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Verified Property">
-                    Verified Property
-                </a>
-            </li>
-            <li>
-                <span><img src="../assets/images/share-icon1.svg" alt="Share Video Icon" /></span>
-                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Share">
+                <a href="#" style="color: black;" class="d-flex align-items-center mr-2" aria-label="Share">
                     Share
                 </a>
+                <span><img src="../assets/images/share-icon1.svg" alt="Share Video Icon" /></span>
             </li>
             <li>
-                <span><img src="../assets/images/video-recorder.svg" alt="Video Tour Icon" /></span>
-                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Video Tour">
+                <a href="#" style="color: black;" class="d-flex align-items-center mr-2" aria-label="Video Tour">
                     Video tour
                 </a>
+                <span><img src="../assets/images/video-recorder.svg" alt="Video Tour Icon" /></span>
             </li>
         </ul>
         <hr />

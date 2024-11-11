@@ -417,6 +417,8 @@ ul li {
     flex-direction: column;
     gap: 10px;
     padding-bottom: 0;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
   }
 
   .single-apartment-header-payment h3 {
@@ -431,7 +433,6 @@ ul li {
   .single-apartment-header-payment {
     display: flex;
     justify-content: space-between;
-    /* align-items: start; */
   }
 
   .single-apartment-details-mobile {
@@ -468,8 +469,29 @@ ul li {
 
   .single-apartment-extras ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: initial;
+  }
+
+  .sub-single-apartment-header-payment {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    inline-size: 100%;
+  }
+
+  .availability-status p {
+    margin-bottom: 0;
+  }
+
+  .sub-single-apartment-header-payment li:first-child {
+    inline-size: 100%;
+    display: flex;
+    align-items: last baseline;
+    gap: 2px;
+    font-size: 14px;
+    padding: 0;
+    padding-inline-start: 1.5rem;
   }
 
   .single-apartment-extras ul li {
@@ -514,7 +536,7 @@ ul li {
     display: none;
   }
 
-  .single-apartment-extras ul {
+  /* .single-apartment-extras ul {
     display: flex;
     justify-content: space-between;
     gap: 1px;
@@ -523,7 +545,7 @@ ul li {
   .single-apartment-extras ul li a {
     font-size: 11px;
     gap: 4px;
-  }
+  } */
 }
 
 .single-property-amenities ul {
