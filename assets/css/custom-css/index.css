@@ -413,17 +413,17 @@ header {
 
 .rss-slider-carousel-text {
   color: white;
-  font-weight: 500;
   max-width: 400px;
 }
 
 .rss-slider-carousel-text p:first-child {
   margin-block-end: -2px;
   font-weight: 500;
+  font-size: 18px;
 }
 
 .rss-slider-carousel-text p:nth-child(2) {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .rss-sliders .btn {
@@ -493,13 +493,9 @@ header {
   .rss-sliders {
     padding-inline: 0;
   }
+
   .rss-slider-carousel-logo {
     margin-inline-start: 20px;
-  }
-
-  .rss-slider-carousel-text p {
-    text-wrap: balance;
-    font-size: 14px;
   }
 
   .rss-slider-carousel-text p:nth-child(2) {
@@ -521,10 +517,6 @@ header {
 }
 
 @media (width <= 425px) {
-  .rss-slider-carousel {
-    margin-block-start: initial;
-  }
-
   .rss-slider-text h1 {
     inline-size: 100%;
     font-size: 35px;
@@ -535,7 +527,30 @@ header {
   }
 }
 
-@media (width <= 320px) {
+@media (width <= 400px) {
+  .rss-slider-carousel-logo {
+    margin-inline-start: 15px;
+  }
+
+  .rss-slider-carousel-text p:first-child {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .carousel-pagination {
+    margin-inline-start: 63px;
+  }
+
+  .rss-slider-carousel-text p:nth-child(2) {
+    margin-top: 7px;
+    max-width: initial;
+    font-size: 14px;
+    font-weight: 400;
+    text-wrap: balance;
+  }
+}
+
+@media (width <= 375px) {
   .rss-slider-text h1 {
     inline-size: 100%;
     font-size: 30px;
@@ -547,7 +562,6 @@ header {
     padding: 10px 20px;
     margin: auto;
     display: grid;
-    /* place-items: center; */
   }
 }
 
