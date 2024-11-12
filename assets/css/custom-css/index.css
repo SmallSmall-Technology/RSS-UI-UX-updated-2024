@@ -497,10 +497,14 @@ header {
     margin-inline-start: 20px;
   }
 
+  .rss-slider-carousel-text p {
+    text-wrap: balance;
+    font-size: 14px;
+  }
+
   .rss-slider-carousel-text p:nth-child(2) {
     font-weight: 500;
     max-width: 350px;
-    text-wrap: wrap;
   }
 
   .rss-slider-carousel {
