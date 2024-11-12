@@ -21,6 +21,70 @@ filterApartmentCloseBtn.addEventListener("click", () => {
   filterApartmentMenu.setAttribute("hidden", "hidden");
 });
 
+// Function to change the inner text selected
+$(document).ready(function () {
+  // Handle City Dropdown
+  $("#cityDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#cityDropdown").text(selectedText).attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Bedroom Dropdown
+  $("#bedroomDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#bedroomDropdown")
+        .text(selectedText)
+        .attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Bathroom Dropdown
+  $("#bathroomDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#bathroomDropdown")
+        .text(selectedText)
+        .attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Furnishing Dropdown
+  $("#furnishingDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#furnishingDropdown")
+        .text(selectedText)
+        .attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Budget Dropdown
+  $("#budgetDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#budgetDropdown").text(selectedText).attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+});
+
 // function for filtering apartments
 document.addEventListener("DOMContentLoaded", () => {
   const bedroomButtons = document.querySelectorAll(

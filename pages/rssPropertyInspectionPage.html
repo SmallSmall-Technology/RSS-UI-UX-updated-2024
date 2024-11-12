@@ -359,56 +359,94 @@
         <form class="rss-inspection-page-main-section d-md-flex d-none zoom-up" role="form">
             <section class="single-section">
                 <label for="cityDropdown">City</label>
-                <select class="form-control" id="cityDropdown" name="city" aria-label="Select City">
-                    <option value="all">All Locations</option>
-                    <option value="lagos">Lagos</option>
-                    <option value="abuja">Abuja</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color:#98A0B4;" type="button" id="cityDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select City">
+                        All Locations
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="cityDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All Locations</a>
+                        <a class="dropdown-item" href="#" data-value="lagos">Lagos</a>
+                        <a class="dropdown-item" href="#" data-value="abuja">Abuja</a>
+                    </div>
+                </div>
             </section>
 
             <hr />
 
             <section class="single-section">
                 <label for="bedroomDropdown">Bedroom</label>
-                <select class="form-control" id="bedroomDropdown" name="bedroom" aria-label="Select Bedroom">
-                    <option value="all">All Bedrooms</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color:#98A0B4;" type="button" id="bedroomDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select Bedrooms">
+                        All Bedrooms
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="bedroomDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All Bedrooms</a>
+                        <a class="dropdown-item" href="#" data-value="1">1</a>
+                        <a class="dropdown-item" href="#" data-value="2">2</a>
+                    </div>
+                </div>
             </section>
 
             <hr />
 
             <section class="single-section">
                 <label for="bathroomDropdown">Bathroom</label>
-                <select class="form-control" id="bathroomDropdown" name="bathroom" aria-label="Select Bathroom">
-                    <option value="all">All Bathrooms</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color: #98A0B4;" type="button" id="bathroomDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select Bathroom">
+                        All Bathrooms
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="bathroomDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All Bathrooms</a>
+                        <a class="dropdown-item" href="#" data-value="1">1</a>
+                        <a class="dropdown-item" href="#" data-value="2">2</a>
+                    </div>
+                </div>
             </section>
 
             <hr />
 
             <section class="single-section">
                 <label for="furnishingDropdown">Furnishing</label>
-                <select class="form-control" id="furnishingDropdown" name="furnishing" aria-label="Select Furnishing">
-                    <option value="all">All</option>
-                    <option value="furnished">Furnished</option>
-                    <option value="unfurnished">Unfurnished</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color: #98A0B4;" type="button" id="furnishingDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Select Furnishing">
+                        All
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="furnishingDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All</a>
+                        <a class="dropdown-item" href="#" data-value="furnished">Furnished</a>
+                        <a class="dropdown-item" href="#" data-value="unfurnished">Unfurnished</a>
+                    </div>
+                </div>
             </section>
+
 
             <hr />
 
             <section class="single-section">
                 <label for="budgetDropdown">Budget</label>
-                <select class="form-control" id="budgetDropdown" name="budget" aria-label="Select Budget">
-                    <option value="any">Any</option>
-                    <option value="100000-300000">₦100,000 - ₦300,000</option>
-                    <option value="300000-500000">₦300,000 - ₦500,000</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color: #98A0B4;" type="button" id="budgetDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select Budget">
+                        Any
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="budgetDropdown">
+                        <a class="dropdown-item" href="#" data-value="any">Any</a>
+                        <a class="dropdown-item" href="#" data-value="100000-300000">₦100,000 - ₦300,000</a>
+                        <a class="dropdown-item" href="#" data-value="300000-500000">₦300,000 - ₦500,000</a>
+                    </div>
+                </div>
             </section>
+
 
             <button type="submit" class="btn">Filter</button>
         </form>
