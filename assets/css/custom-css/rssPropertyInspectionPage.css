@@ -422,7 +422,7 @@ header {
   }
 
   .single-apartment-img-wrapper {
-    inline-size: 340px;
+    inline-size: 335px;
   }
 
   .single-apartment-img-wrapper img {
@@ -430,7 +430,7 @@ header {
   }
 
   .single-apartment-status-wrapper {
-    inline-size: 100%;
+    inline-size: 95%;
   }
 }
 
