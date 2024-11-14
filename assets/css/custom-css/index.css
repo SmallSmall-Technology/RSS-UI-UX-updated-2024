@@ -522,6 +522,15 @@ header {
     font-size: 35px;
   }
 
+  .rss-slider-carousel-text p:nth-child(2) {
+    margin-top: 7px;
+    max-width: initial;
+    font-size: 14px;
+    font-weight: 400;
+    text-wrap: balance;
+    max-width: 90%;
+  }
+
   .rss-slider-section {
     block-size: 600px;
   }
@@ -1203,7 +1212,7 @@ header {
 
   .accordion .card-header button span,
   i {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 

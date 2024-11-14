@@ -1053,7 +1053,7 @@ input:focus {
     font-weight: 400;
     font-size: 16px;
     display: grid;
-    margin-inline-start: 2rem;
+    margin-inline-start: 1rem;
   }
 
   .subscription-details p span {
@@ -1072,7 +1072,7 @@ input:focus {
 
   .subscription-total p:last-child {
     font-weight: 600;
-    margin-inline-start: 2rem;
+    margin-inline-start: 14px;
   }
 
   .modal-checkbox-wrapper {
@@ -1101,7 +1101,7 @@ input:focus {
 
 .subscription-total p:last-child {
   font-weight: 600;
-  margin-inline-start: 2rem;
+  /* margin-inline-start: 2rem; */
 }
 
 .subscription-caution p {
