@@ -485,10 +485,14 @@ header {
     border: 1px solid #dddddd;
   }
 
+  .modal {
+    z-index: 2000;
+  }
+
   .modal-header1 {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding-block: 15px;
     padding-inline: 20px;
   }
 
@@ -550,15 +554,9 @@ header {
     font-weight: 600;
   }
 
-  .budget-plan .payment-line {
-    border: 3px solid #dddddd;
-    border-radius: 10px;
-    inline-size: 100%;
-    margin-block-end: -30px;
-  }
-
   .form-range {
     inline-size: 100%;
+    border: 1px solid #dddddd;
   }
 
   input[type="range"] {
@@ -637,31 +635,6 @@ header {
     inline-size: 100%;
     background-color: white;
     color: black;
-  }
-
-  #rss-apartments-settings-apartment-dropdown-menu-close {
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-    padding: 10px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-  }
-
-  #rss-apartments-settings-apartment-dropdown-menu-close:hover {
-    border: 2px solid #b0b0b0;
-    transform: scale(1.5);
-  }
-
-  .rss-apartments-settings-dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 20010;
-    padding-top: 20px;
-    inline-size: 100%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
   }
 }
 
