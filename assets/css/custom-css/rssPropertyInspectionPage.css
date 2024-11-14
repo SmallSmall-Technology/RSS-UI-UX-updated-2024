@@ -161,6 +161,10 @@ header {
   .main-container .rss-inspection-page-main-section {
     display: none;
   }
+
+  .rss-inspection-page-main-section .btn {
+    padding: 5px 10px;
+  }
 }
 
 /* Styling the Apartment Component */
@@ -244,8 +248,9 @@ header {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  inline-size: 300px;
+  inline-size: 100%;
   padding: 10px;
+  padding-top: 12px;
   top: 0;
 }
 
@@ -381,13 +386,7 @@ header {
   }
 
   .single-apartment-status-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    inline-size: 360px;
-    padding: 10px;
-    top: 0;
+    padding-top: 15px;
   }
 
   .single-apartment-img-wrapper {
@@ -414,6 +413,24 @@ header {
   .rss-inspection-page-main-section hr {
     height: initial;
     border: 1px solid #98a0b4;
+  }
+}
+
+@media (width <= 400px) {
+  .single-apartment {
+    inline-size: 90%;
+  }
+
+  .single-apartment-img-wrapper {
+    inline-size: 340px;
+  }
+
+  .single-apartment-img-wrapper img {
+    inline-size: 95%;
+  }
+
+  .single-apartment-status-wrapper {
+    inline-size: 100%;
   }
 }
 
@@ -633,7 +650,6 @@ header {
     z-index: 20010;
     padding-top: 20px;
     inline-size: 100%;
-    /* margin-inline: auto; */
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }
