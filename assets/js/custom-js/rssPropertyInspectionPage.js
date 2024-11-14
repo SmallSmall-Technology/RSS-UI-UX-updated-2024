@@ -17,9 +17,9 @@ filterApartmentBtn.addEventListener("click", () => {
 });
 
 // Close the dropdown when the close Icon is clicked
-filterApartmentCloseBtn.addEventListener("click", () => {
-  filterApartmentMenu.setAttribute("hidden", "hidden");
-});
+// filterApartmentCloseBtn.addEventListener("click", () => {
+//   filterApartmentMenu.setAttribute("hidden", "hidden");
+// });
 
 // Function to change the inner text selected
 $(document).ready(function () {
@@ -202,27 +202,3 @@ gsap.utils.toArray(".zoom-up").forEach((element) => {
     },
   });
 });
-
-const rangeInput = document.getElementById("customRange1");
-const rangeLabel = document.getElementById("rangeLabel");
-
-const updateLabel = () => {
-  rangeLabel.textContent = `₦${rangeInput.value}`;
-};
-
-const updateRangeBackground = () => {
-  const value =
-    ((rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min)) *
-    100;
-  rangeInput.style.background = `linear-gradient(to right, black ${value}%, white ${value}%)`;
-};
-
-// Update both the label and background on input change
-rangeInput.addEventListener("input", () => {
-  updateLabel();
-  updateRangeBackground();
-});
-
-// Initialize both on page load
-updateLabel();
-updateRangeBackground();
