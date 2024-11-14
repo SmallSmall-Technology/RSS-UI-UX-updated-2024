@@ -524,11 +524,11 @@ header {
 
   .rss-slider-carousel-text p:nth-child(2) {
     margin-top: 7px;
-    max-width: initial;
     font-size: 14px;
     font-weight: 400;
     text-wrap: balance;
     max-width: 90%;
+    padding-inline-end: 10px;
   }
 
   .rss-slider-section {
@@ -548,14 +548,6 @@ header {
 
   .carousel-pagination {
     margin-inline-start: 63px;
-  }
-
-  .rss-slider-carousel-text p:nth-child(2) {
-    margin-top: 7px;
-    max-width: initial;
-    font-size: 14px;
-    font-weight: 400;
-    text-wrap: balance;
   }
 }
 

@@ -499,18 +499,19 @@ header {
   .rss-inspection-page-main-section button:hover {
     background-color: black;
     color: white;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   .rss-inspection-page-main-section button:focus {
-    outline: 1px solid black;
-    outline-offset: 2px;
+    outline: 0.5px solid black;
+    outline-offset: 0.5px;
   }
 
   .single-section-btn-wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+    padding-inline: 3px;
   }
 
   .single-section-btn-wrapper .btn {
@@ -521,7 +522,7 @@ header {
     border: 1px solid #dddddd;
     display: flex;
     justify-content: center;
-    inline-size: 100%;
+    inline-size: 96%;
     border-radius: 25px;
     gap: 10px;
   }
@@ -607,26 +608,34 @@ header {
   .rss-apartments-settings-dropdown-menu .filter-btn {
     margin-block-start: 20px;
     margin-bottom: 40px;
-    background: none;
+    background: black;
     border: 1px solid #dddddd;
     padding: 6px 13px;
     border-radius: 7px;
     transition: all 0.3s ease-in;
-    font-size: 14px;
-    font-weight: 500;
-    color: #414042;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
     inline-size: 80%;
   }
+
   .filter-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
     transform: scale(1.05);
   }
 
   .rss-inspection-page-main-section .btn {
-    inline-size: 90%;
+    inline-size: 100%;
     background-color: white;
     color: black;
+  }
+
+  .rss-inspection-page-main-section .scroll-container {
+    height: 50svh;
+    overflow-y: scroll;
+    inline-size: 100%;
   }
 
   #rss-apartments-settings-apartment-dropdown-menu-close {
