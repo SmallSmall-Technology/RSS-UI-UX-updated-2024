@@ -236,31 +236,29 @@ header {
   inline-size: 90%;
 }
 
+.rss-article-wrapper-mobile {
+  display: none;
+  margin: auto;
+  margin-block-end: 30px;
+  inline-size: 90%;
+}
+
 .rss-articles {
   display: grid;
   grid-template-columns: 40% 1fr;
   grid-template-rows: auto;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .rss-box {
-  position: relative;
-}
-
-.box-text {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  justify-content: center;
-  padding: 20px;
-  padding-inline-start: 50px;
+  background-color: #f7f7f7;
+  padding-inline: 20px;
 }
 
 .box-text h2 {
   font-size: 35px;
   font-weight: 600;
-  margin-top: 100px;
 }
 
 .box-text small {
@@ -268,16 +266,21 @@ header {
   font-weight: 400;
 }
 
-.third-box .box-text {
-  max-inline-size: 600px;
+.first-box .box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 20px;
+  gap: 40px;
+}
+
+.second-box .box-text {
+  padding-inline: 20px;
 }
 
 .rss-articles .first-box {
-  block-size: 400px;
+  height: 596px;
   border-radius: 15px;
-  background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .rss-box:hover {
@@ -285,20 +288,33 @@ header {
 }
 
 .rss-articles .second-box {
-  block-size: 400px;
+  height: 596px;
   border-radius: 15px;
-  background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.rss-articles .third-box {
-  grid-column: span 2;
-  block-size: 400px;
+.third-box {
   border-radius: 15px;
-  background: url(https://plus.unsplash.com/premium_photo-1661378669684-6572d36f9511?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8);
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding: 40px;
+  background: #eaf9ff;
+  height: 596px;
+}
+
+.third-box .box-text {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  gap: 50px;
+  padding-inline-end: 3rem;
+
+  & img:first-child {
+    float: right;
+    margin-right: 2rem;
+    margin-bottom: -6rem;
+  }
+
+  & .box-text-wrapper {
+    margin-top: 2rem;
+  }
 }
 
 /* Mobile Responsiveness Styling for the Slider Section */
@@ -310,30 +326,88 @@ header {
     flex-wrap: wrap;
   }
 
+  .rss-articles {
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
   .rss-box {
     inline-size: 100%;
     margin-inline: 0;
   }
+
+  .rss-articles > * {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .first-box .box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 20px;
+    gap: 80px;
+  }
+
+  .rss-box {
+    height: initial;
+  }
+
+  .third-box .box-text {
+    display: flex;
+    flex-direction: column;
+    gap: initial;
+    padding-inline-end: initial;
+
+    & img:first-child {
+      float: right;
+      margin-right: initial;
+      margin-bottom: -6rem;
+    }
+
+    & img:last-child {
+      margin: auto;
+      inline-size: 90%;
+    }
+
+    & .diameter {
+      display: none;
+    }
+
+    & .box-text-wrapper {
+      order: 1;
+      text-align: center;
+    }
+  }
 }
 
 @media (width <= 425px) {
-  .box-text {
-    padding: 0px 0px 20px 20px;
+  img {
+    inline-size: 90%;
   }
-}
 
-@media (width <= 375px) {
-  .rss-articles .first-box {
-    padding-top: 40px;
-    height: 350px;
+  .third-box .box-text {
+    display: grid;
+    gap: initial;
+    padding-inline-end: initial;
+    padding-inline: 20px;
+
+    & img:first-child {
+      float: right;
+      margin-right: 2rem;
+      margin-bottom: -6rem;
+      display: none;
+    }
+
+    & .box-text-wrapper {
+      order: 1;
+      text-align: center;
+    }
   }
-  .rss-articles .second-box {
-    height: 350px;
-    padding: 0;
-  }
-  .rss-articles .third-box {
-    padding-top: 40px;
-    height: 350px;
+  .rss-box {
+    padding-inline: 0px;
   }
 }
 
