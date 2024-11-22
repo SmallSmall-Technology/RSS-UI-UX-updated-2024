@@ -157,12 +157,30 @@
   right: -56px;
   bottom: unset;
 }
+
+.img-ad-1 {
+  position: absolute;
+  bottom: 48px;
+  width: 50%;
+  right: -56px;
+}
+
+.img-ad-1 > div:nth-child(1) {
+  position: relative;
+  left: 40px;
+}
+
 .img-ad-2 {
   position: absolute;
+  bottom: 20px;
+  width: 50%;
+  right: -56px;
+  /* position: absolute;
   top: 103px;
   right: -36px;
-  width: 248px;
+  width: 248px; */
 }
+
 .img-ad-location {
   position: absolute;
   top: 28px;
@@ -171,19 +189,19 @@
 
 .img-ad-date {
   position: absolute;
-  top: 110px;
-  right: -127px;
-  bottom: unset;
+  bottom: 20px;
+  width: 50%;
+  right: -106px;
 }
 
 .img-ad-background {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 20px;
+  padding: 10px;
 }
 
 .video-section {
@@ -247,19 +265,33 @@
     top: unset;
   }
 
-  .img-ad-2 {
+  .img-ad-1 {
     position: absolute;
+    bottom: 48px;
+    width: 50%;
+    left: 14px;
+    width: 100%;
+  }
+
+  .img-ad-2 {
+    /* position: absolute;
     bottom: 32px;
     top: unset;
     right: 50px;
-    width: 248px;
+    width: 248px; */
+
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    left: 45px;
+    /* right: unset; */
   }
 
   .img-ad-date {
     position: absolute;
-    bottom: 38px;
-    right: 28px;
-    top: unset;
+    bottom: 20px;
+    left: 69px;
+    width: 70%;
   }
 
   .video-section {
