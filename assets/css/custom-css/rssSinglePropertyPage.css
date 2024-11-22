@@ -1140,6 +1140,13 @@ input:focus {
   border: 2px solid black;
 }
 
+.modal-footer .btn:last-child {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid black;
+}
+
 .input-container input {
   border: none;
   outline: none;
