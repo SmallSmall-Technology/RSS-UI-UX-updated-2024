@@ -62,7 +62,13 @@
                                                 <button class="" id="nav-profile-tab" data-toggle="tab"
                                                     data-target="#nav-profile" type="button" role="tab"
                                                     aria-controls="nav-profile" aria-selected="false">Abuja</button>
-
+                                                <a href="./upcomingProperty.html">
+                                                    <button type="button" role="tab" aria-controls="nav-profile"
+                                                        aria-selected="false">
+                                                        Upcoming
+                                                        property
+                                                    </button>
+                                                </a>
                                             </div>
                                         </nav>
                                         <div class="tab-content tab-content-menu p-3" id="nav-tabContent">
@@ -156,7 +162,7 @@
                             How it Works
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Tenant</a>
+                            <a class="dropdown-item" href="./howItWorks.html">Tenant</a>
                             <a class="dropdown-item" href="#">Landlord</a>
 
                         </div>
@@ -491,15 +497,15 @@
                             </li>
                         </ul>
 
-                        <ul class=" single-apartment-header-payment list-unstyled">
-                            <li class="d-md-block d-none">
+                        <ul class="single-apartment-header-payment list-unstyled">
+                            <li class="">
                                 <small>Subscription Price</small>
                                 <h3>₦220,000 /mo</h3>
                             </li>
-                            <li class="d-md-none subscription-price-mobile">
+                            <!-- <li class="d-md-none subscription-price-mobile">
                                 <small>Subscription Price</small>
                                 <h3>₦220,000 <br /> <small>Monthly</small></h3>
-                            </li>
+                            </li> -->
 
                             <div class="single-apartment-header-line-divider mx-4"></div>
 
@@ -509,19 +515,31 @@
                                     </small></h3>
                             </li>
 
-                            <div class="single-apartment-header-line-divider mx-4"></div>
+                            <div class="single-apartment-header-line-divider  last mx-4 "></div>
+                            <div class="sub-single-apartment-header-payment">
 
-                            <li class="list-unstyled">
-                                <div class="availability-status">
-                                    <p style="color: #00CDA6;">
-                                        Available
-                                    </p>
-                                    <!-- Render this when the apartment is not available -->
-                                    <!-- <p class="unavailable" aria-live="polite">
+                                <li class="d-flex d-md-none">
+                                    <span><img src="../assets/images/shield-tick.svg"
+                                            alt="Verified Property Icon" /></span>
+                                    <a href="#" style="color: black;" class="d-flex align-items-center"
+                                        aria-label="Verified Property">
+                                        Verified Property
+                                    </a>
+                                </li>
+
+                                <li class="list-unstyled">
+                                    <div class="availability-status">
+                                        <p style="color: #00CDA6;">
+                                            Available
+                                        </p>
+                                        <!-- Render this when the apartment is not available -->
+                                        <!-- <p class="unavailable" aria-live="polite">
                                         Unavailable
                                     </p> -->
-                                </div>
-                            </li>
+                                    </div>
+                                </li>
+                            </div>
+
                         </ul>
                     </div>
                     <div class="single-apartment-extras zoom-up d-none d-md-block">
@@ -590,7 +608,7 @@
                                         </div>
 
                                         <div class="subscription-plan">
-                                            <div class="subscription-payment-plan ">
+                                            <div class="subscription-payment-plan">
                                                 <select>
                                                     <option>Payment plan</option>
                                                 </select>
@@ -656,7 +674,6 @@
                             <div class="modal-content">
                                 <div class="modal-header ">
                                     <div class="ml-md-4">
-
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -962,20 +979,16 @@
     <div class="single-apartment-extras zoom-up d-block d-md-none">
         <ul>
             <li>
-                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Verified Property">
-                    Verified Property <span><img src="../assets/images/shield-tick.svg"
-                            alt="Verified Property Icon" /></span>
+                <a href="#" style="color: black;" class="d-flex align-items-center mr-2" aria-label="Share">
+                    Share
                 </a>
+                <span><img src="../assets/images/share-icon1.svg" alt="Share Video Icon" /></span>
             </li>
             <li>
-                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Share">
-                    Share <span><img src="../assets/images/share-icon1.svg" alt="Share Video Icon" /></span>
+                <a href="#" style="color: black;" class="d-flex align-items-center mr-2" aria-label="Video Tour">
+                    Video tour
                 </a>
-            </li>
-            <li>
-                <a href="#" style="color: black;" class="d-flex align-items-center" aria-label="Video Tour">
-                    Video tour <span><img src="../assets/images/video-recorder.svg" alt="Video Tour Icon" /></span>
-                </a>
+                <span><img src="../assets/images/video-recorder.svg" alt="Video Tour Icon" /></span>
             </li>
         </ul>
         <hr />
@@ -990,32 +1003,32 @@
     </div>
 
     <!-- Footer -->
-    <footer class="rss-footer-wrapper zoom-up" aria-label="Footer">
+    <footer class="rss-footer-wrapper zoom-up">
         <div class="rss-footer-contents d-flex">
-            <section class="rss-footer-content" aria-labelledby="company-logo">
+            <section class="rss-footer-content">
                 <a href="#top" class="text-decoration-none">
                     <img src="../assets/images/RSSWhiteLogo.svg" alt="Company Logo" class="img-fluid"
                         style="max-width: 100%; height: auto;">
                 </a>
 
                 <div class="rss-footer-content-list">
-                    <ul aria-labelledby="explore-products">
-                        <li><small id="explore-products" style="color: #94E0FF;">Explore Products</small></li>
+                    <ul>
+                        <small style="color: #94E0FF;">Explore Products</small>
                         <li><a href="#" class="text-white text-decoration-none">Rent</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Nightly stay</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Buy</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Lease with us</a></li>
                     </ul>
 
-                    <ul aria-labelledby="company-info">
-                        <li><small id="company-info" style="color: #94E0FF;">Company</small></li>
+                    <ul>
+                        <small style="color: #94E0FF;">Company</small>
                         <li><a href="#" class="text-white text-decoration-none">About us</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
                     </ul>
 
-                    <ul aria-labelledby="customer-support">
-                        <li><small id="customer-support" style="color: #94E0FF;">Customer Support</small></li>
+                    <ul>
+                        <small style="color: #94E0FF;">Customer Support</small>
                         <li>
                             <a href="mailto:customerexperience@smallsmall.com"
                                 class="email text-white text-decoration-none">
@@ -1041,42 +1054,38 @@
                 </div>
             </section>
 
-            <section class="rss-footer-content" aria-labelledby="download-section">
+            <section class="rss-footer-content">
                 <div class="rss-footer-app-download">
                     <p class="text-white text-decoration-none">Download the Mobile app</p>
                     <div class="rss-download-wrapper">
-                        <a href="https://play.google.com/store" target="_blank">
-                            <img src="../assets/images/kindpng_255271 6 1.png" alt="Google Play Download Logo"
+                        <a href="https://play.google.com/store/apps/details?id=com.smallsmallfair.app&hl=en"
+                            target="_blank">
+                            <img src="../assets/images/googledownload.svg" alt="Google Play Download Logo"
                                 class="img-fluid" style="max-width: 100%; height: auto;">
                         </a>
-                        <a href="https://www.apple.com/app-store/" target="_blank"
-                            aria-label="Download on the App Store">
-                            <img src="../assets/images/kindpng_255271 5 1.png" alt="App Store Download Logo"
-                                class="img-fluid" style="max-width: 100%; height: auto;">
+                        <a href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="../assets/images/appStor.svg" alt="App Store Download Logo" class="img-fluid"
+                                style="max-width: 100%; height: auto;">
                         </a>
                     </div>
                 </div>
 
                 <div class="rss-footer-social-logos-wrapper">
                     <small style="color: #94E0FF;">Follow us</small>
-                    <div class="rss-social-media-logos" aria-labelledby="social-media">
-                        <a href="https://x.com/smallsmallhq" target="_blank" aria-label="Follow us on X">
+                    <div class="rss-social-media-logos">
+                        <a href="https://x.com/smallsmallhq" target="_blank">
                             <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
                         </a>
-                        <a href="https://www.instagram.com/smallsmallhq/" target="_blank"
-                            aria-label="Follow us on Instagram">
+                        <a href="https://www.instagram.com/smallsmallhq/" target="_blank">
                             <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/small-small-technology/" target="_blank"
-                            aria-label="Follow us on LinkedIn">
+                        <a href="https://www.linkedin.com/company/small-small-technology/" target="_blank">
                             <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
                         </a>
-                        <a href="https://www.facebook.com/smallsmallhq/" target="_blank"
-                            aria-label="Follow us on Facebook">
+                        <a href="https://www.facebook.com/smallsmallhq/" target="_blank">
                             <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
                         </a>
-                        <a href="https://www.youtube.com/@thesmallsmallhq" target="_blank"
-                            aria-label="Follow us on YouTube">
+                        <a href="https://www.youtube.com/@thesmallsmallhq" target="_blank">
                             <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
                         </a>
                     </div>

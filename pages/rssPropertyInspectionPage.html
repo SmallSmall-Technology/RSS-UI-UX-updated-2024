@@ -65,7 +65,13 @@
                                                 <button class="" id="nav-profile-tab" data-toggle="tab"
                                                     data-target="#nav-profile" type="button" role="tab"
                                                     aria-controls="nav-profile" aria-selected="false">Abuja</button>
-
+                                                <a href="./upcomingProperty.html">
+                                                    <button type="button" role="tab" aria-controls="nav-profile"
+                                                        aria-selected="false">
+                                                        Upcoming
+                                                        property
+                                                    </button>
+                                                </a>
                                             </div>
                                         </nav>
                                         <div class="tab-content tab-content-menu p-3" id="nav-tabContent">
@@ -161,7 +167,7 @@
                             How it Works
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Tenant</a>
+                            <a class="dropdown-item" href="./howItWorks.html">Tenant</a>
                             <a class="dropdown-item" href="#">Landlord</a>
 
                         </div>
@@ -356,62 +362,95 @@
     <main class="main-container">
 
         <!-- Main Nav -->
-        <form class="rss-inspection-page-main-section d-md-flex d-none zoom-up" role="form">
+        <form class="rss-inspection-page-main-section zoom-up" role="form">
+            <!-- <div class="mr-2"> -->
+
             <section class="single-section">
                 <label for="cityDropdown">City</label>
-                <select class="form-control" id="cityDropdown" name="city" aria-label="Select City">
-                    <option value="all">All Locations</option>
-                    <option value="lagos">Lagos</option>
-                    <option value="abuja">Abuja</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color:#98A0B4;" type="button" id="cityDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select City">
+                        All Locations
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="cityDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All Locations</a>
+                        <a class="dropdown-item" href="#" data-value="lagos">Lagos</a>
+                        <a class="dropdown-item" href="#" data-value="abuja">Abuja</a>
+                    </div>
+                </div>
             </section>
-
             <hr />
-
             <section class="single-section">
                 <label for="bedroomDropdown">Bedroom</label>
-                <select class="form-control" id="bedroomDropdown" name="bedroom" aria-label="Select Bedroom">
-                    <option value="all">All Bedrooms</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color:#98A0B4;" type="button" id="bedroomDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select Bedrooms">
+                        All Bedrooms
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="bedroomDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All Bedrooms</a>
+                        <a class="dropdown-item" href="#" data-value="1">1</a>
+                        <a class="dropdown-item" href="#" data-value="2">2</a>
+                    </div>
+                </div>
             </section>
-
             <hr />
-
             <section class="single-section">
                 <label for="bathroomDropdown">Bathroom</label>
-                <select class="form-control" id="bathroomDropdown" name="bathroom" aria-label="Select Bathroom">
-                    <option value="all">All Bathrooms</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color: #98A0B4;" type="button" id="bathroomDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select Bathroom">
+                        All Bathrooms
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="bathroomDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All Bathrooms</a>
+                        <a class="dropdown-item" href="#" data-value="1">1</a>
+                        <a class="dropdown-item" href="#" data-value="2">2</a>
+                    </div>
+                </div>
             </section>
-
             <hr />
-
             <section class="single-section">
                 <label for="furnishingDropdown">Furnishing</label>
-                <select class="form-control" id="furnishingDropdown" name="furnishing" aria-label="Select Furnishing">
-                    <option value="all">All</option>
-                    <option value="furnished">Furnished</option>
-                    <option value="unfurnished">Unfurnished</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color: #98A0B4;" type="button" id="furnishingDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        aria-label="Select Furnishing">
+                        All
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="furnishingDropdown">
+                        <a class="dropdown-item" href="#" data-value="all">All</a>
+                        <a class="dropdown-item" href="#" data-value="furnished">Furnished</a>
+                        <a class="dropdown-item" href="#" data-value="unfurnished">Unfurnished</a>
+                    </div>
+                </div>
             </section>
-
             <hr />
-
-            <section class="single-section">
+            <section class="single-section mr-3">
                 <label for="budgetDropdown">Budget</label>
-                <select class="form-control" id="budgetDropdown" name="budget" aria-label="Select Budget">
-                    <option value="any">Any</option>
-                    <option value="100000-300000">₦100,000 - ₦300,000</option>
-                    <option value="300000-500000">₦300,000 - ₦500,000</option>
-                </select>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle form-control"
+                        style="background-color: transparent; color: #98A0B4;" type="button" id="budgetDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select Budget">
+                        Any
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="budgetDropdown">
+                        <a class="dropdown-item" href="#" data-value="any">Any</a>
+                        <a class="dropdown-item" href="#" data-value="100000-300000">₦100,000 - ₦300,000</a>
+                        <a class="dropdown-item" href="#" data-value="300000-500000">₦300,000 - ₦500,000</a>
+                    </div>
+                </div>
             </section>
+            <!-- </div> -->
+
 
             <button type="submit" class="btn">Filter</button>
         </form>
+
         <hr class=" mb-5 d-none d-md-block" />
         <!-- Apartment Component -->
         <section class="apartments-wrapper">
@@ -421,122 +460,136 @@
                     <p> &#x263C; Schedule to see any property for free, Inspect between Monday to Saturday.</p>
                 </div>
 
-                <div class=" d-md-none d-block">
-                    <!-- Dropdown Button -->
-                    <button class="rss-apartments-settings" type="button" aria-expanded="false"
-                        id="rss-apartments-settings-apartment-dropdown-btn">
-                        <img src="/assets/images/settings-sliders 2.png" alt="setting-icon" />
+                <div class="rss-inspection-page-mobile">
+                    <!-- Button to Open Modal -->
+                    <button type="button" class="btn rss-apartments-settings" data-toggle="modal"
+                        data-target="#filterModal">
+                        <img src="/assets/images/settings-sliders 2.svg" alt="setting-icon" />
                     </button>
 
-                    <!-- Dropdown Menu -->
-                    <div class="rss-apartments-settings-dropdown-menu" hidden
-                        id="rss-apartments-settings-apartment-dropdown-menu">
-                        <div class="d-flex mx-4 justify-content-between">
-                            <i class="fas fa-times" id="rss-apartments-settings-apartment-dropdown-menu-close"></i>
-                            <p class="d-md-none d-block">Filter</p>
-                            <span></span>
+                    <!-- Bootstrap 4 Modal -->
+                    <div class="modal fade slide-from-bottom" id="filterModal" tabindex="-1" role="dialog"
+                        aria-labelledby="filterModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header1">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h5 class="modal-title d-md-none d-block" id="filterModalLabel">Filter</h5>
+                                    <span></span>
+                                </div>
+                                <div class="modal-body">
+                                    <section
+                                        class="rss-inspection-page-main-section d-md-none d-block open-settings zoom-up">
+                                        <!-- Reset All -->
+                                        <a class="pb-4 d-inline-block d-flex justify-content-end"
+                                            style="cursor: pointer; color: #000;">
+                                            Reset all
+                                        </a>
+
+                                        <!-- Location Filter -->
+                                        <section class="single-section">
+                                            <p>Location</p>
+                                            <select class="form-control location-filter py-2 px-1">
+                                                <option>Any location</option>
+                                                <option>Lekki</option>
+                                                <option>Abuja</option>
+                                            </select>
+                                        </section>
+                                        <hr />
+
+                                        <!-- Bedroom Filter -->
+                                        <section class="single-section">
+                                            <p class="pb-2">Bedroom</p>
+                                            <div class="single-section-btn-wrapper pb-4">
+                                                <button class="btn btn-light bedroom">Any</button>
+                                                <button class="btn btn-light bedroom">1</button>
+                                                <button class="btn btn-light bedroom">2</button>
+                                                <button class="btn btn-light bedroom">3</button>
+                                                <button class="btn btn-light bedroom">4+</button>
+                                            </div>
+                                        </section>
+                                        <hr />
+
+                                        <!-- Bathroom Filter -->
+                                        <section class="single-section">
+                                            <p class="pb-2">Bathroom</p>
+                                            <div class="single-section-btn-wrapper pb-4">
+                                                <button class="btn btn-light bathroom">Any</button>
+                                                <button class="btn btn-light bathroom">1</button>
+                                                <button class="btn btn-light bathroom">2</button>
+                                                <button class="btn btn-light bathroom">3</button>
+                                                <button class="btn btn-light bathroom">4+</button>
+                                            </div>
+                                        </section>
+                                        <hr />
+
+                                        <!-- Furnishing Filter -->
+                                        <section class="single-section">
+                                            <p class="pb-2">Furnishing</p>
+                                            <div class="single-section-btn-wrapper pb-4">
+                                                <div class="btn-wrapper">
+                                                    <button class="btn btn-light furnishing">Unfurnished</button>
+                                                    <button class="btn btn-light furnishing">Furnished</button>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <hr />
+
+                                        <!-- Budget Filter -->
+                                        <section class="single-section">
+                                            <p class="pb-2">Budget</p>
+                                            <div class="budget-plan">
+                                                <div class="budget-plan-price">
+                                                    <small>₦50k</small>
+                                                    <small for="customRange1" class="form-label"
+                                                        id="rangeLabel"></small>
+                                                </div>
+                                                <input type="range" class="form-range" min="50" max="1000000" step="50"
+                                                    id="customRange1">
+                                            </div>
+                                        </section>
+                                    </section>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="filter-btn" id="filter-btn">Filter</button>
+                                </div>
+                            </div>
                         </div>
-                        <hr />
-                        <section class="rss-inspection-page-main-section d-md-none d-block open-settings zoom-up">
-
-                            <!-- Reset All -->
-                            <a class="pb-4 d-inline-block d-flex justify-content-end"
-                                style="cursor: pointer; color: #000;">Reset all</a>
-
-                            <!-- Location Filter -->
-                            <section class="single-section">
-                                <label class="pb-2">Location</label>
-                                <select class="form-control location-filter">
-                                    <option>Any location</option>
-                                    <option>Lekki</option>
-                                    <option>Abuja</option>
-                                </select>
-                            </section>
-                            <hr />
-
-                            <!-- Bedroom Filter -->
-                            <section class="single-section">
-                                <p class="pb-2">Bedroom</p>
-                                <div class="single-section-btn-wrapper pb-4">
-                                    <button class="btn btn-light bedroom">Any</button>
-                                    <button class="btn btn-light bedroom">1</button>
-                                    <button class="btn btn-light bedroom">2</button>
-                                    <button class="btn btn-light bedroom">3</button>
-                                    <button class="btn btn-light bedroom">4+</button>
-                                </div>
-                            </section>
-                            <hr />
-
-                            <!-- Bathroom Filter -->
-                            <section class="single-section">
-                                <p class="pb-2">Bathroom</p>
-                                <div class="single-section-btn-wrapper pb-4">
-                                    <button class="btn btn-light bathroom">Any</button>
-                                    <button class="btn btn-light bathroom">1</button>
-                                    <button class="btn btn-light bathroom">2</button>
-                                    <button class="btn btn-light bathroom">3</button>
-                                    <button class="btn btn-light bathroom">4+</button>
-                                </div>
-                            </section>
-                            <hr />
-
-                            <!-- Furnishing Filter -->
-                            <section class="single-section">
-                                <p class="pb-2">Furnishing</p>
-                                <div class="single-section-btn-wrapper pb-4">
-                                    <div class="btn-wrapper">
-                                        <button class="btn btn-light furnishing">Unfurnished</button>
-                                        <button class="btn btn-light furnishing">Furnished</button>
-                                    </div>
-                                </div>
-                            </section>
-                            <hr />
-
-                            <!-- Budget Filter -->
-                            <section class="single-section">
-                                <p class="pb-2">Budget</p>
-                                <div class="budget-plan">
-                                    <div class="budget-plan-price">
-                                        <small>₦50k</small>
-                                        <small for="customRange1" class="form-label" id="rangeLabel"></small>
-                                    </div>
-                                    <input type="range" class="form-range" min="50" max="1000000" step="50"
-                                        id="customRange1">
-                                </div>
-                            </section>
-                        </section>
-                        <hr />
-                        <!-- Filter Button -->
-                        <button class="btn btn-primary filter-btn" id="filter-btn">Filter</button>
                     </div>
+
+
                 </div>
+            </div>
         </section>
         <section class="apartments mb-5">
             <article class="single-apartment zoom-up">
                 <div class="single-apartment-img-wrapper">
                     <img src="../assets/images/Olivia-Court.png" alt="apartment image" />
-                </div>
-                <div class="single-apartment-status-wrapper">
-                    <div class="single-apartment-current-status">
-                        <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
-                        <p>Available: <span>Now</span></p>
-                    </div>
+                    <div class="single-apartment-status-wrapper">
+                        <div class="single-apartment-current-status">
+                            <span><img src="../assets/images/Checkbox.png" alt="checkbox" /></span>
+                            <p>Available: <span>Now</span></p>
+                        </div>
 
-                    <!-- Display this when the apartment is not avaialable yet -->
-                    <!-- <div class="single-apartment-current-status">
-                            <span><img src="../assets/images/time-delete 1.png" alt="checkbox" /></span>
-                            <p>Available: <span>Oct 2024</span></p>
-                        </div> -->
-                    <div class="share-apartment-icon">
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-share-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
-                            </svg>
-                        </button>
+                        <!-- Display this when the apartment is not avaialable yet -->
+                        <!-- <div class="single-apartment-current-status">
+                                <span><img src="../assets/images/time-delete 1.png" alt="checkbox" /></span>
+                                <p>Available: <span>Oct 2024</span></p>
+                            </div> -->
+                        <div class="share-apartment-icon">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-share-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
+
                 <div class="single-apartment-details">
                     <a href="">
                         <p class="single-apartment-name">2 bedroom at Cardinal Heritage Estate VGC</p>
@@ -1060,13 +1113,14 @@
                 <div class="rss-footer-app-download">
                     <p class="text-white text-decoration-none">Download the Mobile app</p>
                     <div class="rss-download-wrapper">
-                        <a href="https://play.google.com/store" target="_blank">
-                            <img src="../assets/images/kindpng_255271 6 1.png" alt="Google Play Download Logo"
+                        <a href="https://play.google.com/store/apps/details?id=com.smallsmallfair.app&hl=en"
+                            target="_blank">
+                            <img src="../assets/images/googledownload.svg" alt="Google Play Download Logo"
                                 class="img-fluid" style="max-width: 100%; height: auto;">
                         </a>
                         <a href="https://www.apple.com/app-store/" target="_blank">
-                            <img src="../assets/images/kindpng_255271 5 1.png" alt="App Store Download Logo"
-                                class="img-fluid" style="max-width: 100%; height: auto;">
+                            <img src="../assets/images/appStor.svg" alt="App Store Download Logo" class="img-fluid"
+                                style="max-width: 100%; height: auto;">
                         </a>
                     </div>
                 </div>
@@ -1102,6 +1156,37 @@
             </section>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const rangeInput = document.getElementById("customRange1");
+            const rangeLabel = document.getElementById("rangeLabel");
+
+            // Update the label with the selected range value
+            const updateLabel = () => {
+                rangeLabel.textContent = `₦${parseInt(rangeInput.value).toLocaleString()}`;
+            };
+
+            // Update the range input background color
+            const updateRangeBackground = () => {
+                const value =
+                    ((rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min)) *
+                    100;
+                rangeInput.style.background = `linear-gradient(to right, black ${value}%, white ${value}%)`;
+            };
+
+            // Event listener for input change
+            rangeInput.addEventListener("input", () => {
+                updateLabel();
+                updateRangeBackground();
+            });
+
+            // Initialize values on page load
+            updateLabel();
+            updateRangeBackground();
+        });
+    </script>
+
 
     <!-- jQuery  -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

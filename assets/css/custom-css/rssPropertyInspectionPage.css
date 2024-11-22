@@ -102,9 +102,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  inline-size: 70%;
-  padding: 5px 35px;
-  border-radius: 20px;
+  inline-size: 65%;
+  padding: 7px 35px;
+  padding-bottom: 9px;
+  border-radius: 10px;
   margin: auto;
   border: 1.5px solid #e6ebf1;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -137,7 +138,7 @@ header {
 .rss-inspection-page-main-section .btn {
   background-color: #007dc1;
   color: white;
-  padding: 5px 20px;
+  padding: 5px 35px;
   border-radius: 7px;
   cursor: pointer;
   transition: all 0.3s ease-in;
@@ -154,11 +155,24 @@ header {
   border: 1px solid #98a0b4;
 }
 
+.rss-inspection-page-mobile {
+  display: none;
+}
+
 /* Mobile Responsiveness Styling the Main section */
 
-@media (width <= 768px) {
+@media (width <= 1000px) {
   .main-container .rss-inspection-page-main-section {
     display: none;
+  }
+
+  .rss-inspection-page-mobile {
+    display: block;
+  }
+}
+@media (width <= 768px) {
+  .rss-inspection-page-main-section .btn {
+    padding: 5px 10px;
   }
 }
 
@@ -243,8 +257,9 @@ header {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  inline-size: 300px;
+  inline-size: 100%;
   padding: 10px;
+  padding-top: 12px;
   top: 0;
 }
 
@@ -380,13 +395,7 @@ header {
   }
 
   .single-apartment-status-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    inline-size: 360px;
-    padding: 10px;
-    top: 0;
+    padding-top: 15px;
   }
 
   .single-apartment-img-wrapper {
@@ -397,22 +406,69 @@ header {
     margin-block-end: 10px;
   }
 
+  .single-apartment-details .single-apartment-name {
+    inline-size: initial;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .single-apartment-details {
+    inline-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .single-apartment-extras {
+    inline-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .single-apartment-price-wrapper {
+    inline-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
   .rss-inspection-page-main-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    inline-size: 90%;
+    inline-size: 100%;
     padding: 5px 15px;
     border-radius: 20px;
     margin: auto;
     border: none;
     box-shadow: initial;
-    margin-block-end: 74px;
+    margin-block-end: 20px;
   }
 
   .rss-inspection-page-main-section hr {
     height: initial;
     border: 1px solid #98a0b4;
+  }
+}
+
+@media (width <= 425px) {
+  .single-apartment {
+    inline-size: 90%;
+    margin: auto;
+  }
+
+  .single-apartment-img-wrapper {
+    inline-size: 100%;
+  }
+
+  .single-apartment-img-wrapper img {
+    inline-size: 100%;
+  }
+
+  .single-apartment-status-wrapper {
+    inline-size: 100%;
   }
 }
 
@@ -422,7 +478,7 @@ header {
   font-weight: 500;
 }
 
-.single-section select {
+.single-section button {
   background-color: transparent;
   border: none;
   padding-inline-start: 0;
@@ -432,7 +488,7 @@ header {
   color: #98a0b4;
 }
 
-.single-section select:active {
+.single-section button:focus {
   outline: none;
   border: none;
 }
@@ -444,6 +500,10 @@ header {
 
 /* Styling the apartment Dropdown Menu */
 @media (width <=768px) {
+  .rss-inspection-page-main-section {
+    border: 3px solid red;
+  }
+
   .rss-inspection-page-main-section .single-section p,
   label {
     font-size: 18px;
@@ -467,6 +527,17 @@ header {
     border: 1px solid #dddddd;
   }
 
+  .modal {
+    z-index: 2000;
+  }
+
+  .modal-header1 {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 15px;
+    padding-inline: 20px;
+  }
+
   .rss-inspection-page-main-section button {
     background: none;
     border: 1px solid #dddddd;
@@ -481,18 +552,18 @@ header {
   .rss-inspection-page-main-section button:hover {
     background-color: black;
     color: white;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 
   .rss-inspection-page-main-section button:focus {
     outline: 1px solid black;
-    outline-offset: 2px;
+    outline-offset: 1px;
   }
 
   .single-section-btn-wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
   }
 
   .single-section-btn-wrapper .btn {
@@ -525,15 +596,9 @@ header {
     font-weight: 600;
   }
 
-  .budget-plan .payment-line {
-    border: 3px solid #dddddd;
-    border-radius: 10px;
-    inline-size: 100%;
-    margin-block-end: -30px;
-  }
-
   .form-range {
     inline-size: 100%;
+    border: 1px solid #dddddd;
   }
 
   input[type="range"] {
@@ -586,55 +651,32 @@ header {
     border-radius: 50%;
   }
 
-  .rss-apartments-settings-dropdown-menu .filter-btn {
-    margin-block-start: 20px;
-    margin-bottom: 40px;
-    background: none;
+  .modal-footer .filter-btn {
+    background: black;
     border: 1px solid #dddddd;
     padding: 6px 13px;
     border-radius: 7px;
     transition: all 0.3s ease-in;
-    font-size: 14px;
-    font-weight: 500;
-    color: #414042;
-    inline-size: 80%;
-  }
-  .filter-btn:hover {
-    background-color: black;
+    font-size: 16px;
+    font-weight: 600;
     color: white;
+    inline-size: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .modal-footer .filter-btn:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
     transform: scale(1.05);
   }
 
   .rss-inspection-page-main-section .btn {
-    inline-size: 90%;
+    inline-size: 100%;
     background-color: white;
     color: black;
-  }
-
-  #rss-apartments-settings-apartment-dropdown-menu-close {
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-    padding: 10px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-  }
-
-  #rss-apartments-settings-apartment-dropdown-menu-close:hover {
-    border: 2px solid #b0b0b0;
-    transform: scale(1.1);
-  }
-
-  .rss-apartments-settings-dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 20010;
-    padding-top: 20px;
-    inline-size: 100%;
-    /* margin-inline: auto; */
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
   }
 }
 
@@ -678,4 +720,18 @@ header {
 /* Mobile Responsiveness Styling for the Pagination Component */
 
 @media (width <= 768px) {
+}
+
+/* Apply the sliding animation */
+.slide-from-bottom {
+  animation: slide-from-bottom 0.9s ease-in-out;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

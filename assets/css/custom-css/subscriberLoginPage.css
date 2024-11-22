@@ -85,10 +85,12 @@ body {
 
 .header {
   margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .form-wrapper {
-  margin-top: -2rem;
   padding-inline: 1rem;
   & h1 {
     font-size: 29px;
@@ -102,14 +104,13 @@ body {
       & .far {
         position: absolute;
         transform: translateX(50%);
-        top: 53%;
+        top: 50%;
         left: 90%;
       }
       & label {
         font-size: 12px;
         font-weight: 500;
         inline-size: 100%;
-        margin-block-end: -3px;
 
         & input {
           margin-block-start: 5px;
@@ -156,17 +157,15 @@ footer {
 }
 
 @media (width <= 768px) {
-  header {
-    inline-size: 100%;
-    padding-top: 0px;
+  .header {
+    display: flex;
+    justify-content: flex-start;
     padding-inline-start: 2rem;
-    margin-top: 10px;
   }
 
   .form-wrapper {
     padding-inline: 2.5rem;
     margin-top: initial;
-    margin-top: -3rem;
   }
 
   main {

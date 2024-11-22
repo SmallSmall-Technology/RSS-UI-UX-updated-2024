@@ -417,6 +417,8 @@ ul li {
     flex-direction: column;
     gap: 10px;
     padding-bottom: 0;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
   }
 
   .single-apartment-header-payment h3 {
@@ -431,7 +433,7 @@ ul li {
   .single-apartment-header-payment {
     display: flex;
     justify-content: space-between;
-    /* align-items: start; */
+    flex-wrap: wrap;
   }
 
   .single-apartment-details-mobile {
@@ -468,8 +470,29 @@ ul li {
 
   .single-apartment-extras ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: initial;
+  }
+
+  .sub-single-apartment-header-payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100%;
+  }
+
+  .availability-status p {
+    margin-bottom: 0;
+  }
+
+  .sub-single-apartment-header-payment li:first-child {
+    inline-size: 50%;
+    display: flex;
+    align-items: last baseline;
+    gap: 2px;
+    font-size: 14px;
+    padding: 0;
+    padding-inline-start: 1.5rem;
   }
 
   .single-apartment-extras ul li {
@@ -485,10 +508,37 @@ ul li {
   .bull {
     margin-inline: 5px;
   }
+
+  .single-apartment-header-line-divider.last {
+    border: 1px solid transparent;
+  }
 }
 
 @media (width <= 425px) {
   .single-apartment-details-mobile-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .single-apartment-header-payment {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .single-apartment-header-line-divider.last {
+    display: none;
+  }
+
+  .sub-single-apartment-header-payment li:last-child {
+    inline-size: 50%;
+    display: flex;
+    align-items: last baseline;
+    padding-inline-start: 2rem;
+    justify-content: flex-start;
+  }
+
+  .list-unstyled {
+    inline-size: 100%;
     display: flex;
     justify-content: center;
   }
@@ -497,17 +547,6 @@ ul li {
 @media (width <= 375px) {
   .bull:nth-child(6) {
     display: none;
-  }
-
-  .single-apartment-extras ul {
-    display: flex;
-    justify-content: space-between;
-    gap: initial;
-  }
-
-  .single-apartment-extras ul li a {
-    font-size: 13px;
-    gap: 4px;
   }
 }
 
@@ -1014,7 +1053,7 @@ input:focus {
     font-weight: 400;
     font-size: 16px;
     display: grid;
-    margin-inline-start: 2rem;
+    margin-inline-start: 1rem;
   }
 
   .subscription-details p span {
@@ -1033,7 +1072,7 @@ input:focus {
 
   .subscription-total p:last-child {
     font-weight: 600;
-    margin-inline-start: 2rem;
+    margin-inline-start: 14px;
   }
 
   .modal-checkbox-wrapper {
@@ -1062,7 +1101,7 @@ input:focus {
 
 .subscription-total p:last-child {
   font-weight: 600;
-  margin-inline-start: 2rem;
+  /* margin-inline-start: 2rem; */
 }
 
 .subscription-caution p {
@@ -1095,6 +1134,13 @@ input:focus {
 }
 
 .modal-footer .btn:hover {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+.modal-footer .btn:last-child {
   color: black;
   background-color: white;
   text-decoration: none;

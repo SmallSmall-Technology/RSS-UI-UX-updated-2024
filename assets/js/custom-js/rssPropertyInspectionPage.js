@@ -17,8 +17,72 @@ filterApartmentBtn.addEventListener("click", () => {
 });
 
 // Close the dropdown when the close Icon is clicked
-filterApartmentCloseBtn.addEventListener("click", () => {
-  filterApartmentMenu.setAttribute("hidden", "hidden");
+// filterApartmentCloseBtn.addEventListener("click", () => {
+//   filterApartmentMenu.setAttribute("hidden", "hidden");
+// });
+
+// Function to change the inner text selected
+$(document).ready(function () {
+  // Handle City Dropdown
+  $("#cityDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#cityDropdown").text(selectedText).attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Bedroom Dropdown
+  $("#bedroomDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#bedroomDropdown")
+        .text(selectedText)
+        .attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Bathroom Dropdown
+  $("#bathroomDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#bathroomDropdown")
+        .text(selectedText)
+        .attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Furnishing Dropdown
+  $("#furnishingDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#furnishingDropdown")
+        .text(selectedText)
+        .attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
+
+  // Handle Budget Dropdown
+  $("#budgetDropdown")
+    .siblings(".dropdown-menu")
+    .on("click", ".dropdown-item", function (event) {
+      event.preventDefault();
+      const selectedText = $(this).text();
+      const selectedValue = $(this).data("value");
+      $("#budgetDropdown").text(selectedText).attr("data-value", selectedValue);
+      // .css("color", "#000");
+    });
 });
 
 // function for filtering apartments
@@ -138,27 +202,3 @@ gsap.utils.toArray(".zoom-up").forEach((element) => {
     },
   });
 });
-
-const rangeInput = document.getElementById("customRange1");
-const rangeLabel = document.getElementById("rangeLabel");
-
-const updateLabel = () => {
-  rangeLabel.textContent = `₦${rangeInput.value}`;
-};
-
-const updateRangeBackground = () => {
-  const value =
-    ((rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min)) *
-    100;
-  rangeInput.style.background = `linear-gradient(to right, black ${value}%, white ${value}%)`;
-};
-
-// Update both the label and background on input change
-rangeInput.addEventListener("input", () => {
-  updateLabel();
-  updateRangeBackground();
-});
-
-// Initialize both on page load
-updateLabel();
-updateRangeBackground();
