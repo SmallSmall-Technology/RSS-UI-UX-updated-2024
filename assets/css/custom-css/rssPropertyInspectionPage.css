@@ -155,13 +155,22 @@ header {
   border: 1px solid #98a0b4;
 }
 
+.rss-inspection-page-mobile {
+  display: none;
+}
+
 /* Mobile Responsiveness Styling the Main section */
 
-@media (width <= 768px) {
+@media (width <= 1000px) {
   .main-container .rss-inspection-page-main-section {
     display: none;
   }
 
+  .rss-inspection-page-mobile {
+    display: block;
+  }
+}
+@media (width <= 768px) {
   .rss-inspection-page-main-section .btn {
     padding: 5px 10px;
   }
@@ -397,6 +406,34 @@ header {
     margin-block-end: 10px;
   }
 
+  .single-apartment-details .single-apartment-name {
+    inline-size: initial;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .single-apartment-details {
+    inline-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .single-apartment-extras {
+    inline-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .single-apartment-price-wrapper {
+    inline-size: initial;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
   .rss-inspection-page-main-section {
     display: flex;
     justify-content: space-between;
@@ -416,21 +453,22 @@ header {
   }
 }
 
-@media (width <= 400px) {
+@media (width <= 425px) {
   .single-apartment {
     inline-size: 90%;
+    margin: auto;
   }
 
   .single-apartment-img-wrapper {
-    inline-size: 335px;
+    inline-size: 100%;
   }
 
   .single-apartment-img-wrapper img {
-    inline-size: 95%;
+    inline-size: 100%;
   }
 
   .single-apartment-status-wrapper {
-    inline-size: 95%;
+    inline-size: 100%;
   }
 }
 
@@ -462,6 +500,10 @@ header {
 
 /* Styling the apartment Dropdown Menu */
 @media (width <=768px) {
+  .rss-inspection-page-main-section {
+    border: 3px solid red;
+  }
+
   .rss-inspection-page-main-section .single-section p,
   label {
     font-size: 18px;
