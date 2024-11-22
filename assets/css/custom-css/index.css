@@ -1287,40 +1287,38 @@ header {
   inline-size: 90%;
   margin: auto;
   margin-block-end: 120px;
+  block-size: 313px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
 }
 
 .speak-with-us {
-  background: url(../../images/LadyOnYellow.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  block-size: 479px;
-  inline-size: 100%;
   border-radius: 15px;
-  position: relative;
-  padding: 40px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 70% 30%;
 }
 
 .speak-with-us-content {
-  justify-content: start;
-  background-color: white;
-  border-radius: 15px;
-  position: absolute;
-  bottom: 80px;
-  left: 80px;
-  padding: 40px 40px;
-  min-width: 200px;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: auto;
+  padding-inline-start: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-top: -1rem;
 }
 
 .speak-with-us-content h1 {
   font-size: 36px;
   font-weight: 700;
-  max-width: 350px;
 }
 
 .speak-with-us-content p {
-  max-width: 250px;
   font-size: 1rem;
+  margin-block-end: 2rem;
 }
 
 .speak-with-us-content .btn {
@@ -1328,13 +1326,12 @@ header {
   font-weight: 600;
   background-color: black;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 65px;
   border-radius: 7px;
   cursor: pointer;
   inline-size: fit-content;
   transition: all 0.3s ease-in;
   display: flex;
-  margin: auto;
 }
 
 .speak-with-us-content .btn:hover {
@@ -1344,60 +1341,79 @@ header {
   border: 1px solid black;
 }
 
+.speak-with-us-img {
+  background: url(../../images/ladyonyellow.svg);
+  block-size: 313px;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & img {
+    background-size: cover;
+    block-size: 100%;
+    inline-size: 100%;
+  }
+}
+
 /* Mobile Responsiveness Styling for the Speak with us Section */
 @media (width <= 768px) {
+  .speak-with-us-wrapper {
+    inline-size: 90%;
+    margin: auto;
+    margin-block-end: 120px;
+    block-size: auto;
+  }
+
   .speak-with-us {
-    block-size: 500px;
-    background-position: 60%;
+    border-radius: 15px;
     display: flex;
-    align-items: end;
+    flex-direction: column-reverse;
+    text-align: center;
     justify-content: center;
+  }
+
+  .speak-with-us-img {
+    background: url(../../images/ladiinyellowmobile.svg);
+    block-size: 212px;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    & img {
+      block-size: 100%;
+      inline-size: 100%;
+    }
   }
 
   .speak-with-us-content {
-    position: initial;
-    inline-size: 70%;
+    inline-size: 100%;
+    block-size: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
-  }
+    gap: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-inline: 10px;
+    padding-block-start: 2rem;
+    padding-block-end: 5rem;
+    line-height: 1.5;
+    margin-top: initial;
 
-  .speak-with-us-content h1 {
-    font-size: 26px;
-  }
+    & h1 {
+      font-size: 30px;
+      margin: auto;
+    }
 
-  .speak-with-us-content p {
-    font-size: 1rem;
-  }
-
-  .speak-with-us-content .btn {
-    inline-size: 80%;
-    display: flex;
-    justify-content: center;
-    /* padding-inline: 80px; */
-  }
-}
-
-@media (width <= 425px) {
-  .speak-with-us-content {
-    position: initial;
-    inline-size: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    padding: 20px;
-  }
-
-  .speak-with-us-content .btn {
-    inline-size: 100%;
-  }
-}
-
-@media (width <= 425px) {
-  .speak-with-us-content h1 {
-    max-width: 350px;
-    font-size: 24px;
+    & p {
+      font-weight: 400;
+      margin: auto;
+    }
+    & a {
+      margin: auto;
+    }
   }
 }
