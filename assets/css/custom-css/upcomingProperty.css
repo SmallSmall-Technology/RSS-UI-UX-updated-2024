@@ -67,6 +67,36 @@ header {
 
 /* Mobile responsiveness for the header */
 
+@media (width <= 768px) {
+  header {
+    margin-block-end: 0px;
+  }
+
+  .nav-bar {
+    padding: 20px 15px;
+    margin: 0;
+    inline-size: 100%;
+    border-radius: initial;
+    background-color: white;
+  }
+
+  .middle-nav {
+    inline-size: 100%;
+    margin-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .login-btn {
+    width: initial;
+  }
+
+  .user_icon--dropdown {
+    inline-size: initial;
+    right: 0;
+  }
+}
+
 /* Styling the Apartment Component */
 
 .main-container {
@@ -343,6 +373,14 @@ header {
   z-index: 10099;
 }
 
+.modal-header {
+  padding-inline: 0;
+
+  & .close {
+    margin-left: -1rem;
+  }
+}
+
 .modal-body-wrapper {
   margin: auto;
   margin-top: 30px;
@@ -377,14 +415,20 @@ header {
     }
   }
 
+  .lockdown-payment-plan {
+    & .input-container {
+      & input {
+        inline-size: 100%;
+      }
+    }
+  }
+
   .modal-checkbox {
     display: flex;
     align-items: center;
-
     & input {
       cursor: pointer;
     }
-
     & p {
       margin: 0;
     }
@@ -421,18 +465,24 @@ header {
   text-decoration: underline;
 }
 
-@media (width<= 768px) {
+@media (width <= 768px) {
   .modal label {
     inline-size: 100%;
     margin-block: 2px;
 
     & input {
-      inline-size: 100%;
-
       ::placeholder {
         font-weight: 500;
         font-size: 14px;
       }
+    }
+  }
+
+  .modal-header {
+    padding-inline: initial;
+
+    & .close {
+      margin-left: initial;
     }
   }
 
