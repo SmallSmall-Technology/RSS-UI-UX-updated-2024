@@ -254,6 +254,10 @@ header {
 .rss-box {
   background-color: #f7f7f7;
   padding-inline: 20px;
+
+  & p {
+    font-size: 18px;
+  }
 }
 
 .box-text h2 {
@@ -279,7 +283,6 @@ header {
 }
 
 .rss-articles .first-box {
-  height: 596px;
   border-radius: 15px;
 }
 
@@ -288,7 +291,6 @@ header {
 }
 
 .rss-articles .second-box {
-  height: 596px;
   border-radius: 15px;
 }
 
@@ -296,24 +298,26 @@ header {
   border-radius: 15px;
   padding: 40px;
   background: #eaf9ff;
-  height: 596px;
 }
 
 .third-box .box-text {
   display: flex;
-  justify-content: space-between;
-  margin: auto;
-  gap: 50px;
-  padding-inline-end: 3rem;
-
-  & img:first-child {
-    float: right;
-    margin-right: 2rem;
-    margin-bottom: -6rem;
+  align-items: flex-end;
+  inline-size: 100%;
+  & p {
+    font-size: 18px;
   }
 
   & .box-text-wrapper {
-    margin-top: 2rem;
+    inline-size: 50%;
+  }
+
+  & img:nth-child(1) {
+    margin-top: -6rem;
+  }
+
+  & img:last-child {
+    inline-size: initial;
   }
 }
 
@@ -355,59 +359,48 @@ header {
     height: initial;
   }
 
+  .third-box {
+    padding: 0;
+    padding-top: 10px;
+  }
+
   .third-box .box-text {
     display: flex;
     flex-direction: column;
-    gap: initial;
-    padding-inline-end: initial;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
 
-    & img:first-child {
-      float: right;
-      margin-right: initial;
-      margin-bottom: -6rem;
-    }
-
-    & img:last-child {
-      margin: auto;
-      inline-size: 90%;
-    }
-
-    & .diameter {
-      display: none;
-    }
+    /* padding-inline: 20px; */
 
     & .box-text-wrapper {
-      order: 1;
-      text-align: center;
+      inline-size: 100%;
+      margin: auto;
+      display: grid;
+      place-items: center;
     }
+    & .box-text-wrapper:first-child {
+      margin-block-end: -7.5rem;
+    }
+  }
+  .legal-header {
+    margin: auto;
+    margin-bottom: 1rem;
   }
 }
-
 @media (width <= 425px) {
-  img {
-    inline-size: 90%;
+  .third-box {
+    padding: 10px;
+    padding-block: 0;
   }
-
-  .third-box .box-text {
-    display: grid;
-    gap: initial;
-    padding-inline-end: initial;
-    padding-inline: 20px;
-
-    & img:first-child {
-      float: right;
-      margin-right: 2rem;
-      margin-bottom: -6rem;
-      display: none;
-    }
-
-    & .box-text-wrapper {
-      order: 1;
-      text-align: center;
-    }
-  }
+}
+@media (width <= 375px) {
   .rss-box {
     padding-inline: 0px;
+  }
+
+  .rss-mobile-image {
+    width: 250px !important;
   }
 }
 
