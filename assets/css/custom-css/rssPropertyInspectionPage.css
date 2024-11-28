@@ -500,10 +500,6 @@ header {
 
 /* Styling the apartment Dropdown Menu */
 @media (width <=768px) {
-  .rss-inspection-page-main-section {
-    border: 3px solid red;
-  }
-
   .rss-inspection-page-main-section .single-section p,
   label {
     font-size: 18px;
