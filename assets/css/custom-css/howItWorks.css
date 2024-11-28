@@ -144,21 +144,64 @@
 .image-container {
   position: relative;
 }
-.img-ad {
+
+.img-ad1 {
   position: absolute;
   top: 110px;
-  right: -127px;
+  right: -97px;
+  bottom: unset;
 }
+.img-ad2 {
+  position: absolute;
+  top: 201px;
+  right: -56px;
+  bottom: unset;
+}
+
+.img-ad-1 {
+  position: absolute;
+  bottom: 48px;
+  width: 50%;
+  right: -56px;
+}
+
+.img-ad-1 > div:nth-child(1) {
+  position: relative;
+  left: 40px;
+}
+
 .img-ad-2 {
   position: absolute;
+  bottom: 20px;
+  width: 50%;
+  right: -56px;
+  /* position: absolute;
   top: 103px;
   right: -36px;
-  width: 248px;
+  width: 248px; */
 }
+
 .img-ad-location {
   position: absolute;
   top: 28px;
   left: -39px;
+}
+
+.img-ad-date {
+  position: absolute;
+  bottom: 20px;
+  width: 50%;
+  right: -106px;
+}
+
+.img-ad-background {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
 }
 
 .video-section {
@@ -202,20 +245,53 @@
     font-size: 11px;
   }
 
-  .img-ad,
-  .img-ad-2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    top: unset;
-    padding: 10px;
-    width: 100%;
-  }
   .img-ad-location {
     position: absolute;
     left: unset;
     top: -27px !important;
     right: 16px;
+  }
+
+  .img-ad1 {
+    left: unset;
+    bottom: 115px !important;
+    right: 9px;
+    top: unset;
+  }
+  .img-ad2 {
+    left: unset;
+    bottom: 24px !important;
+    right: 42px;
+    top: unset;
+  }
+
+  .img-ad-1 {
+    position: absolute;
+    bottom: 48px;
+    width: 50%;
+    left: 14px;
+    width: 100%;
+  }
+
+  .img-ad-2 {
+    /* position: absolute;
+    bottom: 32px;
+    top: unset;
+    right: 50px;
+    width: 248px; */
+
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    left: 45px;
+    /* right: unset; */
+  }
+
+  .img-ad-date {
+    position: absolute;
+    bottom: 20px;
+    left: 69px;
+    width: 70%;
   }
 
   .video-section {
